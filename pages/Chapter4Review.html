@@ -70,7 +70,7 @@
             <p class="ans-zh"><u>一个进程的所有线程共享该进程的内存与资源，并与其他线程共享对这些资源的访问。</u></p>
             <p class="ans-en"><strong>Multithreading</strong> <u>is the ability of an OS to support multiple, concurrent paths of execution within a single process.</u></p>
             <p class="ans-zh"><strong>多线程</strong>：<u>操作系统在一个进程内支持多条并发执行路径的能力。</u></p>
-            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; original slides: <a href="chapter4/page-02.html" target="_blank" rel="noopener">p.2</a>, <a href="chapter4/page-03.html" target="_blank" rel="noopener">p.3</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -90,7 +90,7 @@
             <p class="ans-zh"><u>还包括受保护的对处理器、对其他进程（用于进程间通信）、对文件以及对 I/O 资源（设备与通道）的访问。</u></p>
             <p class="ans-en"><u>Suspending a process involves suspending all threads of the process, and termination of a process terminates all threads within the process.</u></p>
             <p class="ans-zh"><u>挂起一个进程意味着挂起它的所有线程；终止一个进程也会终止它内部的所有线程。</u></p>
-            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; original slides: <a href="chapter4/page-06.html" target="_blank" rel="noopener">p.6</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -114,7 +114,7 @@
             <p class="ans-zh"><u>线程更优的原因：创建新线程比创建进程快，终止线程比终止进程快，两个线程之间切换也比两个进程之间切换快。</u></p>
             <p class="ans-en"><u>Threads also enhance communication: all threads of a process share the same address space and the same data, so when one thread alters an item of data in memory the other threads see the results immediately.</u></p>
             <p class="ans-zh"><u>线程还使通信更高效：一个进程的所有线程共享同一地址空间和同一份数据，一个线程修改了内存中的数据，其他线程立刻就能看到结果。</u></p>
-            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; original slides: <a href="chapter4/page-09.html" target="_blank" rel="noopener">p.9</a>, <a href="chapter4/page-10.html" target="_blank" rel="noopener">p.10</a>, <a href="chapter4/page-13.html" target="_blank" rel="noopener">p.13</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -138,7 +138,7 @@
             <p class="ans-zh"><u>两项例子：线程的</u><strong>执行状态</strong><u>（运行、就绪、阻塞）与它的</u><strong>程序计数器</strong><u>。</u></p>
             <p class="ans-en"><u>Others: the saved thread context (register contents) when the thread is not running, the execution stack and the per-thread static storage for local variables.</u></p>
             <p class="ans-zh"><u>其他还有：线程未运行时保存的线程上下文（寄存器内容）、执行栈以及用于局部变量的线程私有静态存储。</u></p>
-            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; original slides: <a href="chapter4/page-08.html" target="_blank" rel="noopener">p.8</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -158,7 +158,7 @@
             <p class="ans-zh"><u>若只有一个线程，等待期间整个进程都会被阻塞，程序就会停止响应。</u></p>
             <p class="ans-en"><u>Threads also cost less: creating, terminating and switching threads is faster than doing the same with processes, and they give a cleaner modular program structure.</u></p>
             <p class="ans-zh"><u>线程的开销也更小：创建、终止和切换线程都比进程更快，而且程序结构更加模块化。</u></p>
-            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; original slides: <a href="chapter4/page-14.html" target="_blank" rel="noopener">p.14</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -182,7 +182,7 @@
             <p class="ans-zh"><strong>结束（Finish）</strong>：<u>线程执行完毕，其寄存器上下文与栈被释放。</u></p>
             <p class="ans-en"><u>There is no thread suspend state: suspending is done to a process and involves suspending all of its threads.</u></p>
             <p class="ans-zh"><u>线程没有挂起状态：挂起是针对进程的操作，并且会挂起它的所有线程。</u></p>
-            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; original slides: <a href="chapter4/page-12.html" target="_blank" rel="noopener">p.12</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -202,7 +202,7 @@
             <p class="ans-zh"><u>线程只是进程内部的分派单位；被挂起时换出到磁盘的资源属于进程所有。</u></p>
             <p class="ans-en"><u>In the same way, termination of a process terminates all threads within the process.</u></p>
             <p class="ans-zh"><u>同理，终止一个进程也会终止它内部的全部线程。</u></p>
-            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch04v2a.pdf&rdquo; &mdash; original slides: <a href="chapter4/page-11.html" target="_blank" rel="noopener">p.11</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>

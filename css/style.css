@@ -718,6 +718,8 @@ body.has-sidebar .topbar {
 }
 .qa-answer-inner strong { color: var(--accent-1); font-weight: 700; }
 .qa-answer-inner .src { display: block; margin-top: 0.75rem; color: var(--text-faint); font-size: 0.78rem; font-family: var(--mono); }
+.qa-answer-inner .src a { color: var(--accent-1); text-decoration: underline; text-underline-offset: 2px; font-weight: 700; }
+.qa-answer-inner .src a:hover { color: var(--accent-2); }
 
 /* the worked numeric result (e.g. "3 + 2 = 5") is a fixed answer too */
 .panel.original .code-block {

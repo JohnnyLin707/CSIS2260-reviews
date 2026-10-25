@@ -66,7 +66,7 @@
             <p class="ans-zh"><strong>它是一个活动单位</strong>：<u>由一串指令的执行、当前状态以及一组相关的系统资源来刻画。</u></p>
             <p class="ans-en">A process has <strong>two essential elements</strong>: <u>program code, and a set of data associated with that code (which may be shared with other processes running the same program).</u></p>
             <p class="ans-zh"><u>进程有两个基本要素：程序代码，以及与该代码相关的一组数据（可与运行同一程序的其他进程共享）。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-04.html" target="_blank" rel="noopener">p.4</a>, <a href="chapter3/page-33.html" target="_blank" rel="noopener">p.33</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -90,7 +90,7 @@
             <p class="ans-zh"><strong>进程映像的三个要素（例如）</strong>：<u>用户数据、用户程序、栈（每个进程有一个或多个后进先出栈，用于保存参数和调用地址）。</u></p>
             <p class="ans-en"><u>The fourth element is the </u><strong>process control block</strong><u> itself: the data the OS needs to control the process.</u></p>
             <p class="ans-zh"><u>第四个要素就是进程控制块本身：操作系统控制进程所需的数据。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-06.html" target="_blank" rel="noopener">p.6</a>, <a href="chapter3/page-33.html" target="_blank" rel="noopener">p.33</a>, <a href="chapter3/page-34.html" target="_blank" rel="noopener">p.34</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -108,7 +108,7 @@
             <p class="ans-zh"><u>处理器的行为可以通过展示各进程的轨迹如何交错来刻画。</u></p>
             <p class="ans-en">The <strong>dispatcher</strong> <u>is the small program that switches the processor from one process to another; it appears at the switching points between the traces.</u></p>
             <p class="ans-zh"><strong>分派程序（dispatcher）</strong>：<u>把处理器从一个进程切换到另一个进程的小程序，出现在各轨迹的交错点上。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-08.html" target="_blank" rel="noopener">p.8</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -128,7 +128,7 @@
             <p class="ans-zh"><strong>3. 操作系统为提供服务而创建</strong>：<u>操作系统代表用户程序创建进程来完成某项功能。</u></p>
             <p class="ans-en">4. <strong>Spawned by an existing process</strong>: <u>for modularity or to exploit parallelism, a user program can dictate the creation of new processes; the original creating process is the parent and the new process is the child.</u></p>
             <p class="ans-zh"><strong>4. 由已有进程派生</strong>：<u>出于模块化或利用并行性，用户程序可以要求创建新进程；发起创建的进程是父进程，新进程是子进程。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-14.html" target="_blank" rel="noopener">p.14</a>, <a href="chapter3/page-15.html" target="_blank" rel="noopener">p.15</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -148,7 +148,7 @@
             <p class="ans-zh"><strong>3. 内存不足</strong>：<u>进程需要的内存超过了系统能提供的数量。</u></p>
             <p class="ans-en"><u>Others: bounds violation, protection error, arithmetic error (for example division by zero), time overrun, I/O failure, invalid instruction, privileged instruction, data misuse, operator or OS intervention (for example a deadlock), parent termination and parent request.</u></p>
             <p class="ans-zh"><u>其他还有：越界、保护错误、算术错误（例如除以零）、超时、I/O 故障、非法指令、特权指令、数据误用、操作员或操作系统干预（例如出现死锁）、父进程终止以及父进程请求。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-16.html" target="_blank" rel="noopener">p.16</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -180,7 +180,7 @@
             <p class="ans-zh"><strong>事件等待（Event Wait）</strong>：运行 → 阻塞。<strong>事件发生（Event Occurs）</strong>：阻塞 → 就绪。<strong>释放（Release）</strong>：运行 → 退出。</p>
             <p class="ans-en"><strong>Suspend</strong>: <u>Ready to Ready/Suspend and Blocked to Blocked/Suspend (swapping).</u> <strong>Activate</strong>: <u>Ready/Suspend back to Ready and Blocked/Suspend back to Blocked.</u></p>
             <p class="ans-zh"><strong>挂起（Suspend）</strong>：就绪 → 就绪/挂起，阻塞 → 阻塞/挂起（通过交换换出）。<strong>激活（Activate）</strong>：就绪/挂起 → 就绪，阻塞/挂起 → 阻塞。</p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-22.html" target="_blank" rel="noopener">p.22</a>, <a href="chapter3/page-23.html" target="_blank" rel="noopener">p.23</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -200,7 +200,7 @@
             <p class="ans-zh"><strong>文件表</strong>：<u>记录文件是否存在、在二级存储器上的位置、当前状态和其他属性。</u></p>
             <p class="ans-en"><strong>Process tables</strong>: <u>the primary process table manages the processes themselves; it must contain some reference to memory, I/O and files, directly or indirectly.</u></p>
             <p class="ans-zh"><strong>进程表</strong>：<u>主进程表管理进程本身，必须直接或间接地包含对内存、I/O 和文件的某种引用。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-27.html" target="_blank" rel="noopener">p.27</a>, <a href="chapter3/page-28.html" target="_blank" rel="noopener">p.28</a>, <a href="chapter3/page-29.html" target="_blank" rel="noopener">p.29</a>, <a href="chapter3/page-30.html" target="_blank" rel="noopener">p.30</a>, <a href="chapter3/page-31.html" target="_blank" rel="noopener">p.31</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -220,7 +220,7 @@
             <p class="ans-zh"><u>其他例子还有：用户可见寄存器、控制与状态寄存器、程序计数器以及栈指针。</u></p>
             <p class="ans-en"><u>This information is saved when the process is interrupted so that it can later be resumed as if the interruption had not occurred.</u></p>
             <p class="ans-zh"><u>进程被中断时要保存这些信息，之后才能恢复执行，就好像中断从未发生过一样。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-37.html" target="_blank" rel="noopener">p.37</a>, <a href="chapter3/page-40.html" target="_blank" rel="noopener">p.40</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -240,7 +240,7 @@
             <p class="ans-zh"><u>在内核态下可以执行特权指令、访问受保护的内存区域；在用户态下则不可以。</u></p>
             <p class="ans-en"><u>The processor enters kernel mode when an interrupt occurs, when an exception (trap) is generated, or when a system call (supervisor call) is issued.</u></p>
             <p class="ans-zh"><u>处理器在发生中断、产生异常（陷阱）或发出系统调用（管态调用）时进入内核态。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-45.html" target="_blank" rel="noopener">p.45</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -264,7 +264,7 @@
             <p class="ans-zh"><strong>内核之外</strong>：<u>文件系统与打印服务，在微内核结构中它们只是普通的服务器进程。</u></p>
             <p class="ans-en">Outside the <strong>kernel</strong>: <u>network protocols and device drivers, which can execute within user processes or as separate processes (Figure 3.15 b and c); a microkernel assigns only a few essential functions to the kernel.</u></p>
             <p class="ans-zh"><strong>内核之外</strong>：<u>网络协议与设备驱动程序，它们可以在用户进程内执行，或作为独立进程执行（图 3.15 b、c）；微内核只把少数最基本的功能留给内核。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-46.html" target="_blank" rel="noopener">p.46</a>, <a href="chapter3/page-52.html" target="_blank" rel="noopener">p.52</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -286,7 +286,7 @@
             <p class="ans-zh"><strong>建立相应的链接</strong>：<u>例如把 PCB 放入就绪队列或进程链表中。</u></p>
             <p class="ans-en"><strong>Creates or expands other data structures</strong>: <u>for example the memory, I/O and file tables that the OS keeps for the process.</u></p>
             <p class="ans-zh"><strong>创建或扩充其他数据结构</strong>：<u>例如操作系统为该进程维护的存储器表、I/O 表和文件表。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-47.html" target="_blank" rel="noopener">p.47</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
@@ -308,7 +308,7 @@
             <p class="ans-zh"><strong>管态调用（Supervisor call）</strong>：<u>程序自己发出的明确请求，即调用操作系统的某个功能。</u></p>
             <p class="ans-en"><u>All three give control to the OS, so a </u><strong>process switch</strong><u> may occur whenever the OS has gained control from the currently running process.</u></p>
             <p class="ans-zh"><u>三者都会把控制权交给操作系统，因此只要操作系统从当前运行进程取得控制权，就可能发生进程切换。</u></p>
-            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; lecture slides</span>
+            <span class="src">Source: &ldquo;Ch03v2a.pdf&rdquo; &mdash; original slides: <a href="chapter3/page-48.html" target="_blank" rel="noopener">p.48</a>, <a href="chapter3/page-49.html" target="_blank" rel="noopener">p.49</a><span class="item-zh">（点击链接可跳转查看原教材）</span></span>
           </div>
         </div>
       </article>
