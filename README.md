@@ -100,6 +100,7 @@ Questions **54–60** (7 questions): processes vs. threads (unit of resource own
 - **Slide-by-slide pages** — one HTML page per slide, 254 in total across five decks.
 - **The real slide image** — a full-width scan of the actual slide at the top of every page (254 images). Plain display: not clickable, and always scaled to fit the screen width.
 - **Back / Next at the top and the bottom** — page through a whole deck without scrolling back down.
+- **Responsive navigation bar** — a sticky, collapsible menu at the top of the home page. On desktop every chapter opens as a dropdown (slides + review questions); on phones the whole row collapses behind a hamburger button and each group becomes an accordion, so you can jump straight to the chapter you want to revise.
 - **Bilingual** — every original line is followed by its Chinese translation.
 - **Read-aloud** — a speaker button after the title and after every English line reads it with the built-in Web Speech API (Chinese lines are skipped).
 - **Textbook answers highlighted** — model answers on warm highlight chips, slide points on numbered low-glare cards, Chinese lines on soft mint chips.

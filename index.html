@@ -16,6 +16,71 @@
   </div>
   <div class="grid-overlay" aria-hidden="true"></div>
 
+  <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+    <div class="site-shell site-nav-inner">
+      <a class="site-nav-brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">OS</span>
+        <span class="brand-text">CSIS2260<small>Review Hub</small></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 1<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="pages/chapter1.html">Chapter 1 Slides<span class="dd-zh">第 1 章幻灯片</span><span class="dd-n">59</span></a>
+              <a href="pages/Chapter1Review.html">Chapter 1 Review<span class="dd-zh">第 1 章复习题</span><span class="dd-n">18</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 2<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="pages/chapter2.html">Chapter 2 Slides<span class="dd-zh">第 2 章幻灯片</span><span class="dd-n">75</span></a>
+              <a href="pages/Chapter2Review.html">Chapter 2 Review<span class="dd-zh">第 2 章复习题</span><span class="dd-n">23</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 3<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="pages/chapter3.html">Chapter 3 Slides<span class="dd-zh">第 3 章幻灯片</span><span class="dd-n">58</span></a>
+              <a href="pages/Chapter3Review.html">Chapter 3 Review<span class="dd-zh">第 3 章复习题</span><span class="dd-n">12</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 4<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="pages/chapter4.html">Chapter 4 Slides<span class="dd-zh">第 4 章幻灯片</span><span class="dd-n">22</span></a>
+              <a href="pages/Chapter4Review.html">Chapter 4 Review<span class="dd-zh">第 4 章复习题</span><span class="dd-n">7</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/WindowsLabsReview.html">Windows Labs<span class="dd-zh">Windows 实验</span></a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Quizzes<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="pages/Quiz1importantShortAnswer.html">Short Answer Drill<span class="dd-zh">重点简答题</span><span class="dd-n">17</span></a>
+              <a href="pages/Quiz1keyQuestions.html">Quiz 1 Key Questions<span class="dd-zh">重点回忆题</span><span class="dd-n">25</span></a>
+              <a href="pages/Quiz1Fall2026.html">Quiz 1 Fall 2026<span class="dd-zh">2026 秋季真题</span><span class="dd-n">5</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">More<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="pages/intro-hw.html">Intro to Hardware<span class="dd-zh">计算机硬件导论</span><span class="dd-n">40</span></a>
+              <a href="pages/UnixCommands.html">UNIX Commands<span class="dd-zh">UNIX 命令速查表</span><span class="dd-n">29</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <header class="site-shell">
     <section class="hero">
       <span class="hero-badge"><span class="dot"></span> &middot; Review Hub</span>
@@ -269,6 +334,7 @@
   </footer>
 
   <script src="javascript/main.js"></script>
+  <script src="javascript/site-nav.js"></script>
   <script src="javascript/animations.js"></script>
   <script src="javascript/home-quiz.js"></script>
 </body>

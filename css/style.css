@@ -1226,3 +1226,164 @@ kbd {
 /* small mono / meta lines keep their original, smaller size:
    .qa-answer-inner .src (0.78rem), .sc-tip (0.82rem),
    .sc-missing (0.8rem), .hq-fix (0.83rem) */
+
+/* =====================================================================
+   HOME PAGE — sticky, collapsible site navigation
+   Desktop: one horizontal row, groups open as dropdowns (hover or click).
+   Mobile (<= 900px): the whole row collapses behind a hamburger button and
+   each group becomes an accordion.
+   Appended last on purpose: a media query adds no specificity, so these
+   rules must come after the base ones to win.
+   -------------------------------------------------------------------- */
+.site-nav {
+  position: sticky; top: 0; z-index: 60;
+  background: linear-gradient(180deg, rgba(7, 11, 22, 0.95), rgba(7, 11, 22, 0.80));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--stroke-soft);
+}
+
+.site-nav-inner {
+  display: flex; align-items: center; gap: 0.9rem;
+  min-height: 66px;
+  padding-top: 0.6rem; padding-bottom: 0.6rem;
+}
+
+.site-nav-brand {
+  display: inline-flex; align-items: center; gap: 0.62rem;
+  text-decoration: none; color: var(--text);
+}
+.brand-mark {
+  width: 34px; height: 34px; flex: 0 0 auto; border-radius: 10px;
+  display: grid; place-items: center;
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 800; color: #04211c;
+  background: linear-gradient(140deg, var(--accent-1), var(--accent-2));
+}
+.brand-text { line-height: 1.15; font-size: 0.98rem; font-weight: 800; letter-spacing: -0.2px; }
+.brand-text small {
+  display: block; font-weight: 650; font-size: 0.7rem; letter-spacing: 0.6px;
+  text-transform: uppercase; color: var(--text-faint);
+}
+
+.nav-menu { margin-left: auto; }
+.nav-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; align-items: center; gap: 0.15rem;
+}
+.nav-item { position: relative; }
+
+.nav-link,
+.nav-group-toggle {
+  appearance: none; -webkit-appearance: none;
+  background: transparent; border: 1px solid transparent;
+  color: var(--text-dim); font: inherit; font-size: 0.95rem; font-weight: 650;
+  padding: 0.5rem 0.7rem; border-radius: 10px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.38rem; text-decoration: none;
+  transition: color .18s var(--ease), background .18s var(--ease), border-color .18s var(--ease);
+}
+.nav-link:hover,
+.nav-group-toggle:hover,
+.nav-item.open > .nav-group-toggle {
+  color: #fff; background: var(--glass); border-color: var(--stroke-soft);
+}
+
+.nav-caret {
+  width: 0; height: 0; opacity: 0.75;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform .2s var(--ease);
+}
+.nav-item.open > .nav-group-toggle .nav-caret { transform: rotate(180deg); }
+
+.nav-dropdown {
+  position: absolute; top: calc(100% + 8px); left: 0; min-width: 250px;
+  padding: 0.4rem; border-radius: 14px;
+  background: linear-gradient(180deg, rgba(19, 28, 56, 0.98), rgba(13, 20, 40, 0.98));
+  border: 1px solid var(--stroke); box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity .16s var(--ease), transform .16s var(--ease), visibility .16s;
+  z-index: 5;
+}
+.nav-item.open > .nav-dropdown { opacity: 1; visibility: visible; transform: none; }
+
+.nav-dropdown a {
+  display: flex; align-items: baseline; gap: 0.5rem;
+  padding: 0.52rem 0.65rem; border-radius: 10px;
+  color: var(--text-dim); text-decoration: none;
+  font-size: 0.94rem; font-weight: 620;
+  transition: background .16s var(--ease), color .16s var(--ease);
+}
+.nav-dropdown a:hover { background: rgba(94, 234, 212, 0.10); color: #fff; }
+.nav-dropdown a .dd-zh,
+.nav-link .dd-zh {
+  font-size: 0.8rem; font-weight: 500; color: var(--text-faint);
+}
+.nav-dropdown a:hover .dd-zh { color: #a5e5d2; }
+.nav-dropdown a .dd-n { margin-left: auto; font-family: var(--mono); font-size: 0.72rem; color: var(--text-faint); }
+
+/* pointer devices (desktop): also open the group while hovering */
+@media (hover: hover) and (min-width: 901px) {
+  .nav-item:hover > .nav-dropdown { opacity: 1; visibility: visible; transform: none; }
+}
+
+.nav-toggle {
+  display: none; margin-left: auto;
+  align-items: center; gap: 0.5rem;
+  padding: 0.52rem 0.8rem; border-radius: 10px;
+  background: var(--glass); border: 1px solid var(--stroke);
+  color: var(--text); font: inherit; font-size: 0.92rem; font-weight: 700;
+  cursor: pointer;
+}
+.nav-toggle:hover { border-color: rgba(255, 255, 255, 0.22); }
+.nav-toggle-bars { display: grid; gap: 3px; }
+.nav-toggle-bars span {
+  display: block; width: 18px; height: 2px; border-radius: 2px;
+  background: var(--accent-1);
+  transition: transform .2s var(--ease), opacity .2s var(--ease);
+}
+.site-nav.nav-open .nav-toggle-bars span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.site-nav.nav-open .nav-toggle-bars span:nth-child(2) { opacity: 0; }
+.site-nav.nav-open .nav-toggle-bars span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+/* --------------------------------------------------------- mobile ----- */
+@media (max-width: 900px) {
+  .nav-toggle { display: inline-flex; }
+
+  .nav-menu {
+    position: absolute; left: 0; right: 0; top: 100%;
+    background: linear-gradient(180deg, rgba(7, 11, 22, 0.99), rgba(13, 20, 40, 0.99));
+    border-bottom: 1px solid var(--stroke);
+    max-height: 0; overflow: hidden;
+    transition: max-height .28s var(--ease);
+  }
+  .site-nav.nav-open .nav-menu {
+    max-height: min(80vh, 640px);
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-list { display: block; padding: 0.4rem 1.4rem 1rem; gap: 0; }
+  .nav-item { border-bottom: 1px solid var(--stroke-soft); }
+  .nav-item:last-child { border-bottom: 0; }
+
+  .nav-link,
+  .nav-group-toggle {
+    width: 100%; justify-content: space-between;
+    padding: 0.72rem 0.2rem; font-size: 1.1rem; border-radius: 8px;
+  }
+
+  .nav-dropdown {
+    position: static; min-width: 0; box-shadow: none; border: 0;
+    background: transparent; padding: 0 0 0.4rem 0.2rem;
+    max-height: 0; overflow: hidden;
+    opacity: 1; visibility: visible; transform: none;
+    transition: max-height .25s var(--ease);
+  }
+  .nav-item.open > .nav-dropdown { max-height: 360px; }
+  .nav-dropdown a { padding: 0.6rem 0.5rem; font-size: 1.05rem; }
+  .nav-dropdown a .dd-zh { font-size: 0.9rem; }
+}
+
+@media (max-width: 400px) {
+  .brand-text small { display: none; }
+  .nav-list { padding: 0.4rem 1.1rem 1rem; }
+}
