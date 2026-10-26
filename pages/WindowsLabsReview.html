@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Windows Labs 1&ndash;4: Predicted Exam Questions &middot; Midterm Review</title>
+  <meta name="description" content="Predicted midterm questions for the Microsoft Windows labs (Lab1v2-Lab4v1.pdf) with exam-ready English answers, based on the four lab handouts and the submitted answer files jinran1-jinran4.docx.">
+  <link rel="stylesheet" href="../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="review-page" data-topic="windowslabs" data-page="1" data-selfcheck="off">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <a class="btn btn-home" href="https://johnnylin707.github.io/CSIS2260-reviews/index.html">&#8962; Home Page</a>
+      </div>
+      <div class="topbar-center">
+        <div class="topbar-title">Windows Labs 1&ndash;4: Predicted Exam Questions<span>&middot; 37 questions</span></div>
+      </div>
+      <div class="topbar-right">
+        <span class="pdf-tag">Lab1v2&ndash;Lab4v1.pdf</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <header class="page-head">
+      <div class="page-meta"><span>Predicted questions &middot; 37</span></div>
+      <h1 class="page-title reveal">Windows Labs 1&ndash;4: Predicted Exam Questions</h1>
+      <p class="page-title-zh reveal">What the midterm is most likely to ask about the Microsoft Windows labs</p>
+      <div class="source-badge reveal">Professor&rsquo;s hint: &ldquo;There may also be one or two questions focusing on the Microsoft Windows based lab1&ndash;Lab4.pdf.&rdquo; Built from <strong>Lab1v2.pdf, Lab2v2.pdf, Lab3.pdf, Lab4v1.pdf</strong> plus the correct submitted answers in <strong>jinran1&ndash;jinran4.docx</strong>. Answers are written as short-answer exam responses (2&ndash;4 sentences), in the style of Quiz 1.</div>
+    </header>
+
+    <nav class="top-nav" aria-label="Top review navigation">
+      <a class="btn btn-back" href="Chapter4Review.html">&#8592; Chapter 4: Review Questions</a>
+      <a class="btn btn-next" href="../index.html">Home &#8594;</a>
+    </nav>
+
+    <section class="panel original reveal">
+      <h2>If the exam asks only one or two questions, bet on these</h2>
+      <ul class="content-list">
+        <li><a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q15">Q15 &mdash; What is a paging file, and why does Windows use one?</a></li>
+        <li><a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q13">Q13 &mdash; Standard user vs. Administrator account</a></li>
+        <li><a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q17">Q17 &mdash; The four resources monitored by Resource Monitor</a></li>
+        <li><a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q30">Q30 &mdash; What a restore point / System Restore does</a></li>
+        <li><a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q7">Q7 &mdash; What VirtualBox is, and what type of hypervisor it is</a></li>
+        <li><a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q18">Q18 &mdash; What a hard fault is</a></li>
+      </ul>
+    </section>
+
+    <section class="panel original reveal">
+      <h2>Lab 1 &mdash; Windows 10 System Information &amp; Basic Settings</h2>
+      <ul class="content-list">
+        <li>System information: <strong>Start &gt; All apps &gt; Windows System &gt; right-click This PC &gt; Properties</strong> (Windows 11: Settings &gt; System &gt; About).</li>
+        <li>It shows <strong>Processor</strong>, <strong>Installed memory (RAM)</strong> and <strong>System type</strong> (e.g. &ldquo;64-bit operating system, x64-based processor&rdquo;).</li>
+        <li>Windows Settings main items: System, Bluetooth &amp; devices, Network &amp; internet, Personalization, Accounts, Time &amp; language, Privacy &amp; security, Update &amp; security, Apps, Gaming, Accessibility.</li>
+        <li>Display: Settings &gt; System &gt; <strong>Display</strong> &rarr; resolution. Storage: Settings &gt; System &gt; <strong>Storage</strong> &rarr; total and used space on C:.</li>
+        <li>Recovery: Settings &gt; Update &amp; Security &gt; <strong>Recovery</strong> &rarr; Reset this PC, Advanced startup.</li>
+      </ul>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Lab 1 &middot; Predicted Questions</span>
+        <span class="count">(6 questions &middot; click to reveal)</span>
+      </div>
+
+      <article class="qa-card reveal" id="q1">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q1</span>
+          <span class="q-text">Where in Windows 10 do you find the processor, the installed RAM and the system type?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en">From <strong>Start &gt; All apps &gt; Windows System</strong>, right-click <strong>This PC</strong> and select <strong>Properties</strong> (in Windows 11: <strong>Settings &gt; System &gt; About</strong>). <u>The window shows the Processor, the Installed memory (RAM) and the System type.</u></p>
+            <p class="ans-en">Example from the lab: <u>Processor = Intel(R) Core(TM) i5-14500 (2.60 GHz); Installed memory = 16.0 GB; System type = 64-bit operating system, x64-based processor.</u></p>
+            <span class="src">Source: Lab1v2.pdf (Part A, Q1) &middot; jinran1.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q2">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q2</span>
+          <span class="q-text">What does a system type of &ldquo;64-bit operating system, x64-based processor&rdquo; mean, and why does it matter?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>It means the operating system is a 64-bit version and the CPU is an x64-based (64-bit) processor.</u> The two halves match, so the OS can use the full 64-bit instruction set of the CPU.</p>
+            <p class="ans-en">It matters because <u>a 64-bit OS can address far more than 4 GB of RAM and can run 64-bit applications</u>, whereas a 32-bit OS is limited to about 4 GB of address space.</p>
+            <span class="src">Source: Lab1v2.pdf (Part A, Q1) &middot; jinran1.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q3">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q3</span>
+          <span class="q-text">Name four of the main items shown in the Windows Settings window.</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Any four of: System, Bluetooth &amp; devices, Network &amp; internet, Personalization, Accounts, Time &amp; language, Privacy &amp; security, Update &amp; security, Apps, Gaming, Accessibility.</u></p>
+            <p class="ans-en">For example: <u>(1) System, (2) Bluetooth &amp; devices, (3) Network &amp; internet, (4) Personalization.</u></p>
+            <span class="src">Source: Lab1v2.pdf (Part A, Q2) &middot; jinran1.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q4">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q4</span>
+          <span class="q-text">What functions are provided under Settings &gt; Update &amp; Security &gt; Recovery?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>The Recovery page provides &ldquo;Reset this PC&rdquo; and &ldquo;Advanced startup&rdquo;</u> (newer Windows 10/11 builds also show &ldquo;Go back to the previous version of Windows&rdquo; and &ldquo;Quick machine recovery&rdquo;).</p>
+            <p class="ans-en"><u>&ldquo;Reset this PC&rdquo; reinstalls Windows (optionally keeping personal files), while &ldquo;Advanced startup&rdquo; restarts the computer into the Windows Recovery Environment.</u></p>
+            <span class="src">Source: Lab1v2.pdf (Part A, Q4) &middot; jinran1.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q5">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q5</span>
+          <span class="q-text">How do you check the total storage space and the used space on the C: drive?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Open Settings &gt; System &gt; Storage; the page shows how much space is used and how much is left on each drive.</u> The same figures appear in File Explorer under <strong>This PC</strong>.</p>
+            <p class="ans-en">Lab example: <u>total storage on C: = 471 GB, used space = 233 GB.</u></p>
+            <span class="src">Source: Lab1v2.pdf (Part A, Q3b) &middot; jinran1.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q6">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q6</span>
+          <span class="q-text">What is display resolution, and where do you change it?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Display resolution is the number of pixels shown on the screen, written as width &times; height (for example 1920 &times; 1080).</u> You change it under <strong>Settings &gt; System &gt; Display &gt; Display resolution</strong>.</p>
+            <p class="ans-en"><u>A higher resolution shows more content and sharper text but makes items smaller; a lower resolution shows less content but larger items.</u> Lab examples: 1920&times;1080, 1600&times;900, 1024&times;768.</p>
+            <span class="src">Source: Lab1v2.pdf (Part A, Q3a) &middot; jinran1.docx</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel original reveal">
+      <h2>Lab 2 &mdash; Virtual Machine Import &amp; User Account Management</h2>
+      <ul class="content-list">
+        <li>Oracle VirtualBox: open-source virtualization software for x86 and AMD64/Intel64; a <strong>Type 2 hypervisor</strong> that runs as an application on a host OS.</li>
+        <li>Import: <strong>File &gt; Import Appliance</strong> &rarr; select the <strong>.ova</strong> file; rename the VM, set the Machine Base Folder, generate new MAC addresses, import hard drive as VDI.</li>
+        <li>Virtual disk: <strong>virtual size</strong> = maximum capacity (50.00 GB); <strong>actual size</strong> = space used on the host (11.91 GB).</li>
+        <li>Accounts: <strong>Standard User</strong> (restricted) vs <strong>Administrator</strong> (complete control); located at Settings &gt; Accounts &gt; Family &amp; other users or Control Panel &gt; User Accounts.</li>
+      </ul>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Lab 2 &middot; Predicted Questions</span>
+        <span class="count">(8 questions &middot; click to reveal)</span>
+      </div>
+
+      <article class="qa-card reveal" id="q7">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q7</span>
+          <span class="q-text">What is Oracle VirtualBox, and what type of hypervisor is it?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Oracle VirtualBox is a general-purpose, open-source virtualization software application for x86 and AMD64/Intel64 architectures; it is used to create virtual machines that can run various operating systems.</u></p>
+            <p class="ans-en"><u>It is categorized as a Type 2 hypervisor, which runs as an application on top of an operating system</u> (the host OS), unlike a Type 1 hypervisor that runs directly on the hardware.</p>
+            <span class="src">Source: Lab2v2.pdf (Introduction) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q8">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q8</span>
+          <span class="q-text">What is the difference between a Type 1 and a Type 2 hypervisor?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>A Type 1 hypervisor runs directly on the bare hardware (bare-metal), so the guest OS runs on the hypervisor with no host OS in between</u> (for example VMware ESXi, Microsoft Hyper-V).</p>
+            <p class="ans-en"><u>A Type 2 hypervisor runs as an ordinary application on a host operating system</u> (for example Oracle VirtualBox, VMware Workstation), which is why VirtualBox needs Windows installed first.</p>
+            <span class="src">Source: Lab2v2.pdf (Introduction) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q9">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q9</span>
+          <span class="q-text">What is an .ova file, and how is it imported into VirtualBox?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>An .ova file is an Open Virtualization Appliance: one package that contains the virtual machine&rsquo;s configuration plus its virtual hard disk(s), so the whole VM can be moved between computers.</u></p>
+            <p class="ans-en"><u>In VirtualBox, use File &gt; Import Appliance, select the .ova file, expand Settings to change the VM name and Machine Base Folder, choose &ldquo;Generate new MAC addresses for all network adapters&rdquo;, keep &ldquo;Import hard drive as VDI&rdquo; checked, then click Finish.</u></p>
+            <span class="src">Source: Lab2v2.pdf (Part A, steps 2&ndash;5) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q10">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q10</span>
+          <span class="q-text">After the import, which two items appear inside the VM folder?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>(1) The virtual machine folder itself, e.g. &ldquo;Windows 10 VM USB&rdquo;, which holds the VM configuration, and (2) the virtual disk file, e.g. &ldquo;Windows 10 VM-disk001.vdi&rdquo;.</u></p>
+            <p class="ans-en">The .vdi file is the virtual hard disk that the VM boots from and stores its files on.</p>
+            <span class="src">Source: Lab2v2.pdf (Part A, Q after step 7) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q11">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q11</span>
+          <span class="q-text">What is the difference between the virtual size and the actual size of a virtual hard disk?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>The virtual size is the maximum capacity that the virtual disk can ever reach</u> (for example 50.00 GB), i.e. the size the guest OS sees as its hard drive.</p>
+            <p class="ans-en"><u>The actual size is how much space the .vdi file currently occupies on the host machine</u> (for example 11.91 GB). It is smaller because the disk is dynamically allocated and grows only as data is written to it.</p>
+            <span class="src">Source: Lab2v2.pdf (Part A, Q) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q12">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q12</span>
+          <span class="q-text">What is a MAC address, and why should new MAC addresses be generated when importing a VM?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>A MAC address is the unique 48-bit hardware address of a network adapter</u>, written as six hexadecimal pairs (for example 08:00:27:67:6F:DA). It is used to identify a device on a local network.</p>
+            <p class="ans-en"><u>Generating new MAC addresses on import prevents duplicate MAC addresses</u> when the same appliance is imported on several computers or run next to the original VM, which would cause network conflicts.</p>
+            <span class="src">Source: Lab2v2.pdf (Part A, step 5c and Q) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q13">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q13</span>
+          <span class="q-text">What are the two Windows account types, and how do they differ?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>(1) Standard User: an account designed for daily computing that carries restricted privileges to protect the system; it cannot change system-wide settings or install most software.</u></p>
+            <p class="ans-en"><u>(2) Administrator: an account with complete control over system files, security settings and user configurations</u>, including creating and changing other accounts and installing software.</p>
+            <p class="ans-en">In the lab the newly created local account was a <u>Standard User</u>, and the other available option was <u>Administrator</u>.</p>
+            <span class="src">Source: Lab2v2.pdf (Part B, Q5a&ndash;b, Q6) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q14">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q14</span>
+          <span class="q-text">Why could the Standard user not open the CSIS user&rsquo;s folders in C:\Users, while the Administrator account could?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Each user profile under C:\Users is protected by NTFS permissions</u>, so a Standard user is denied access to another user&rsquo;s folders unless the administrator password is supplied.</p>
+            <p class="ans-en"><u>An Administrator can click Continue and approve the User Account Control (UAC) prompt, which grants the required access.</u> In the lab, access with the Standard account was &ldquo;No&rdquo; and with the Administrator account it was &ldquo;Yes&rdquo;.</p>
+            <span class="src">Source: Lab2v2.pdf (Part B, Q5e&ndash;g, Q9) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel original reveal">
+      <h2>Lab 3 &mdash; Windows 10 System Performance</h2>
+      <ul class="content-list">
+        <li><strong>Paging file:</strong> a reserved portion of the hard drive/SSD used as an extension of physical RAM (virtual memory).</li>
+        <li><strong>Resource Monitor</strong> (Windows Administrative Tools): real-time CPU, Memory, Disk and Network; Memory tab shows usage, available memory and <strong>Hard Faults/sec</strong>.</li>
+        <li><strong>Performance Monitor</strong>: Data Collector Sets &gt; System Performance / System Diagnostics; reports under Reports &gt; System.</li>
+        <li><strong>winsat formal</strong> runs the System Assessment tool; Desktop Rating gives CPUScore, DiskScore and MemoryScore.</li>
+        <li><strong>Task Manager</strong>: Apps, Background processes, Performance (network link speed), Startup.</li>
+      </ul>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Lab 3 &middot; Predicted Questions</span>
+        <span class="count">(10 questions &middot; click to reveal)</span>
+      </div>
+
+      <article class="qa-card reveal" id="q15">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q15</span>
+          <span class="q-text">Briefly describe the term &ldquo;paging file&rdquo;, and explain why Windows uses one.</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>A paging file (swap file) is a reserved portion of a computer&rsquo;s hard drive or SSD that acts as an extension of its physical memory (RAM).</u></p>
+            <p class="ans-en"><u>Windows moves the least-recently-used pages out of RAM into the paging file, freeing physical memory for active programs.</u> This is the basis of virtual memory: the system can run more or larger programs than the installed RAM alone would allow, at the cost of slower disk access.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q2a) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q16">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q16</span>
+          <span class="q-text">What is virtual memory?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Virtual memory is a memory-management technique that gives programs a logical address space larger than the physical RAM actually installed.</u></p>
+            <p class="ans-en"><u>The OS keeps the active pages in RAM and the rest on disk (the paging file), swapping pages in and out as needed</u>, so programs do not have to fit entirely in physical memory.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q2) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q17">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q17</span>
+          <span class="q-text">What are the four main resources whose performance Resource Monitor tracks?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>The four main resources are (1) CPU, (2) Memory, (3) Disk and (4) Network.</u></p>
+            <p class="ans-en">Each has its own tab showing per-process usage, and the Overview tab graphs all four together in real time.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q3a) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q18">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q18</span>
+          <span class="q-text">What is a hard fault?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>A hard fault is an event in which the operating system must fetch the required data from the storage drive instead of from fast physical memory (RAM).</u></p>
+            <p class="ans-en"><u>A high number of hard faults per second means the system is short of RAM and is paging heavily to disk</u>, which slows the computer down. A soft (page) fault, by contrast, is resolved from RAM or the standby list without touching the disk.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q3c) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q19">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q19</span>
+          <span class="q-text">What is the difference between Resource Monitor and Performance Monitor?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Resource Monitor gives a real-time, per-process view of the four resources (CPU, memory, disk and network)</u> and is used for a quick look at what is happening right now.</p>
+            <p class="ans-en"><u>Performance Monitor collects data over time using Data Collector Sets (System Performance, System Diagnostics) and presents it as counters and reports under Reports &gt; System</u>, so it is used for measurement, logging and diagnosis rather than a quick glance.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q3&ndash;Q5) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q20">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q20</span>
+          <span class="q-text">What does the command <code>winsat formal</code> do, and what scores does it produce?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>It runs the Windows System Assessment Tool (WinSAT), which benchmarks the computer&rsquo;s CPU, disk, memory and graphics performance.</u> It must be run from an administrator command prompt and takes a few minutes.</p>
+            <p class="ans-en"><u>The results appear in Performance Monitor under System Diagnostics &gt; Hardware Configuration &gt; Desktop Rating as CPUScore, DiskScore and MemoryScore</u> (plus graphics scores), each on a scale up to 9.9.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q5) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q21">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q21</span>
+          <span class="q-text">Which five main items are checked under System Diagnostics &gt; Basic System Checks?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>(1) OS Checks, (2) Disk Checks, (3) Security Center Tests, (4) Hardware Device and Driver Checks, (5) System Service Checks.</u></p>
+            <p class="ans-en">The report marks each item as passed or failed, so a failed check immediately points to the subsystem that needs attention.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q5a) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q22">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q22</span>
+          <span class="q-text">Briefly describe the DHCP, LSM and SPOOLER services.</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>DHCP (Dynamic Host Configuration Protocol) Client manages network configuration by automatically registering and updating the computer&rsquo;s IP address, DNS name and other network parameters.</u></p>
+            <p class="ans-en"><u>LSM (Local Session Manager) manages local and remote user sessions: sign-ins, desktop creation, fast user switching and Remote Desktop (RDP) connectivity.</u></p>
+            <p class="ans-en"><u>SPOOLER (Print Spooler) manages print jobs: it loads print drivers, intercepts print files and queues them to be sent to the printer.</u> All three were running in the lab.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q5b) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q23">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q23</span>
+          <span class="q-text">Why is the total number of threads in the system much higher than the number of processes?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Because a process can create multiple threads, and the thread is the unit that is actually scheduled and dispatched.</u></p>
+            <p class="ans-en"><u>Each process therefore contributes one or more threads, so the system-wide thread count is always larger than the process count</u>; in the lab the mean thread count was about 1,000 while the process count was far smaller.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q4d note) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q24">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q24</span>
+          <span class="q-text">In Task Manager, what is the difference between Apps, Background processes and Startup?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Apps are foreground programs that have a visible window and are being used by the user.</u></p>
+            <p class="ans-en"><u>Background processes are programs and services running without a visible window</u> (for example system services, updaters and hidden helper processes).</p>
+            <p class="ans-en"><u>The Startup tab lists the programs that are configured to start automatically when the user signs in</u>; disabling entries there shortens boot time and frees memory. The Performance tab also shows the network link speed.</p>
+            <span class="src">Source: Lab3.pdf (Part A, Q6) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel original reveal">
+      <h2>Lab 4 &mdash; Disk Management &amp; System Restoration</h2>
+      <ul class="content-list">
+        <li><strong>Disk Management</strong> (right-click This PC &gt; Manage): number of disks, capacity, file system; shrink / create / delete / extend volumes.</li>
+        <li><strong>Disk Defragmenter</strong> (Optimize Drives): HDD only, never SSD; <strong>Disk Cleanup</strong> removes unnecessary files.</li>
+        <li><strong>System Restore:</strong> Control Panel &gt; Recovery &gt; Configure System Restore &gt; System Protection &gt; Turn on system protection &gt; Create a restore point.</li>
+        <li><strong>Windows RE:</strong> Shift + Restart &gt; Troubleshoot &gt; Advanced options; Startup Settings.</li>
+      </ul>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Lab 4 &middot; Predicted Questions</span>
+        <span class="count">(10 questions &middot; click to reveal)</span>
+      </div>
+
+      <article class="qa-card reveal" id="q25">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q25</span>
+          <span class="q-text">What is Disk Management used for, and what information does it show?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Disk Management is the Windows tool for viewing and managing the disks and partitions of the computer.</u> It is opened by right-clicking <strong>This PC &gt; Manage &gt; Disk Management</strong>.</p>
+            <p class="ans-en"><u>It shows the number of installed hard disks, the capacity of each drive and the file system used on each volume (for example C: = NTFS, 50.00 GB).</u> From there you can shrink, create, delete and extend volumes.</p>
+            <span class="src">Source: Lab4v1.pdf (Part A, Q3) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q26">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q26</span>
+          <span class="q-text">What is a partition, and what does Shrink Volume do?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>A partition is a logical division of a physical disk that the OS treats as a separate volume with its own drive letter and file system.</u></p>
+            <p class="ans-en"><u>Shrink Volume reduces an existing volume (for example C: by 1,000 MB) and turns the freed space into unallocated space</u>, which can then be formatted as a new simple volume (for example drive D: of 999 MB). Deleting the volume and extending C: returns the space to the original drive.</p>
+            <span class="src">Source: Lab4v1.pdf (Part A, Q4) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q27">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q27</span>
+          <span class="q-text">What is NTFS, and why does the C: drive use it?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>NTFS (New Technology File System) is the file system used by modern Windows versions on the C: drive.</u></p>
+            <p class="ans-en"><u>It supports very large volumes and files, file- and folder-level permissions, journaling for crash recovery, compression, encryption (EFS) and disk quotas</u>, which is why Windows installs on NTFS rather than on the older FAT file systems.</p>
+            <span class="src">Source: Lab4v1.pdf (Part A, Q3c) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q28">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q28</span>
+          <span class="q-text">Why is disk defragmentation only for hard disk drives (HDDs) and not for SSDs?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>An HDD stores data on rotating platters with a moving read/write head, so fragmented files force extra head movement and slow access; defragmentation rearranges the files into contiguous blocks to speed up reading.</u></p>
+            <p class="ans-en"><u>An SSD has no moving parts and accesses any block at the same speed, so defragmentation brings no speed benefit and only wastes the limited write cycles</u>, shortening the drive&rsquo;s life. Windows therefore runs TRIM/optimization instead of defragmentation on SSDs.</p>
+            <span class="src">Source: Lab4v1.pdf (Part B, Q1 note) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q29">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q29</span>
+          <span class="q-text">What does Disk Cleanup do, and what types of files does it suggest for removal?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Disk Cleanup reduces the number of unnecessary files on the hard disk to free up disk space and help the computer run faster.</u></p>
+            <p class="ans-en"><u>It suggests categories such as Downloaded Program Files, Temporary Internet Files, Thumbnails, Recycle Bin and temporary files</u>; you tick the boxes for the categories you want to delete.</p>
+            <span class="src">Source: Lab4v1.pdf (Part B, Q2) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q30">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q30</span>
+          <span class="q-text">What is a restore point, and what is System Restore used for?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>A restore point is a saved snapshot of the system&rsquo;s files, settings and registry at a particular moment in time.</u></p>
+            <p class="ans-en"><u>System Restore uses it to roll the system back to that earlier state when the computer becomes unstable after an update or a new software installation</u>, without deleting the user&rsquo;s personal documents. It is therefore advisable to create a restore point before making any major change, and a restore can be undone by running Open System Restore again.</p>
+            <span class="src">Source: Lab4v1.pdf (Part C) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q31">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q31</span>
+          <span class="q-text">How do you enable System Protection and create a restore point in Windows 10?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Open Control Panel (Small icons view) &gt; Recovery &gt; Configure System Restore &gt; System Protection tab &gt; select the C: drive &gt; Configure &gt; Turn on system protection &gt; OK.</u></p>
+            <p class="ans-en"><u>Then click Create, type a description (for example &ldquo;Lab 4&rdquo;) and click Create again</u>; Windows saves the restore point and confirms when it is finished.</p>
+            <span class="src">Source: Lab4v1.pdf (Part C, steps 1&ndash;2) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q32">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q32</span>
+          <span class="q-text">What is the Windows Recovery Environment (WinRE), and how can you boot into it manually?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>WinRE is a minimal recovery environment that Windows can boot into when the normal system cannot start</u>, giving access to repair and recovery tools.</p>
+            <p class="ans-en"><u>You can enter it manually by holding <strong>Shift</strong> while clicking <strong>Restart</strong></u> (Shift + Restart) and then choosing <strong>Troubleshoot &gt; Advanced options</strong>.</p>
+            <span class="src">Source: Lab4v1.pdf (Part D) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q33">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q33</span>
+          <span class="q-text">Under what conditions does Windows automatically boot into the Advanced Startup Options?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>(1) Two consecutive failed attempts to start Windows; (2) two consecutive unexpected shutdowns that occur within two minutes of boot completion; (3) a Secure Boot error (except for issues related to Bootmgr.efi); (4) a BitLocker error on touch-only devices.</u></p>
+            <p class="ans-en">In all four cases Windows cannot start normally, so it falls back to the recovery menu instead of failing completely.</p>
+            <span class="src">Source: Lab4v1.pdf (Part D, introduction) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q34">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q34</span>
+          <span class="q-text">Which recovery options are available under Troubleshoot &gt; Advanced options, and what is Startup Settings?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>The recovery options are (1) Startup Repair, (2) Startup Settings, (3) Command Prompt, (4) Uninstall Updates, (5) System Restore and (6) System Image Recovery.</u></p>
+            <p class="ans-en"><u>Startup Settings restarts Windows and lets you change startup behaviour for troubleshooting.</u> Four of its options are: <u>Enable debugging, Enable boot logging, Enable Safe Mode with Networking, and Disable automatic restart after failure</u> (others include Enable Safe Mode, Safe Mode with Command Prompt and Disable driver signature enforcement).</p>
+            <span class="src">Source: Lab4v1.pdf (Part D, Q3&ndash;Q5) &middot; jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Cross-Lab Comparison Questions</span>
+        <span class="count">(3 questions &middot; click to reveal)</span>
+      </div>
+
+      <article class="qa-card reveal" id="q35">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q35</span>
+          <span class="q-text">Compare Task Manager, Resource Monitor and Performance Monitor: what is each one best for?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>Task Manager is best for a quick overview and for stopping a program: it lists Apps, Background processes and Startup items, and its Performance tab gives simple graphs of CPU, memory, disk, network and link speed.</u></p>
+            <p class="ans-en"><u>Resource Monitor is best for finding which process is using which resource right now: it shows per-process CPU, memory, disk and network activity and details such as Hard Faults/sec.</u></p>
+            <p class="ans-en"><u>Performance Monitor is best for measurement over time and for diagnosis: it runs Data Collector Sets such as System Performance and System Diagnostics and produces reports (utilization, process/thread counts, services, desktop rating).</u></p>
+            <span class="src">Source: Lab3.pdf (Part A, Q3&ndash;Q6) &middot; jinran3.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q36">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q36</span>
+          <span class="q-text">Compare System Restore, Reset this PC and System Image Recovery.</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>System Restore rolls system files, settings and the registry back to a restore point while keeping personal files; it is the lightest option and is reversible.</u></p>
+            <p class="ans-en"><u>Reset this PC reinstalls Windows from scratch, optionally keeping personal files but removing installed programs and settings; it is used when the system is badly broken.</u></p>
+            <p class="ans-en"><u>System Image Recovery restores the entire system from a previously created system image, returning both the OS and all data and programs to the state captured in the image.</u> It is the most complete, and the slowest, of the three.</p>
+            <span class="src">Source: Lab1v2.pdf (Recovery) + Lab4v1.pdf (Parts C&ndash;D) &middot; jinran1.docx / jinran4.docx</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal" id="q37">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q37</span>
+          <span class="q-text">What is the relationship between user accounts and User Account Control (UAC)?</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en"><u>A Standard User runs with restricted privileges, while an Administrator has complete control over the system.</u> To limit the damage a compromised program could do, even an Administrator normally runs with a standard token.</p>
+            <p class="ans-en"><u>When an action needs administrator rights, UAC shows a consent or credential prompt; only after approval is the elevated token used.</u> This is why a Standard user must supply the administrator password to open another user&rsquo;s folder, while an Administrator only has to click Continue.</p>
+            <span class="src">Source: Lab2v2.pdf (Part B) &middot; jinran2.docx</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Review navigation">
+      <a class="btn btn-back" href="Chapter4Review.html">&#8592; Chapter 4: Review Questions</a>
+      <a class="btn btn-next" href="../index.html">Home &#8594;</a>
+    </nav>
+
+    <div class="kbd-hint">
+      <kbd>&#8592;</kbd> Back &nbsp; <kbd>&#8594;</kbd> Next &nbsp; <kbd>Esc</kbd> Home
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    Midterm Review &middot; Windows Labs 1&ndash;4 &middot; predicted from Lab1v2&ndash;Lab4v1.pdf and jinran1&ndash;jinran4.docx.
+  </footer>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/animations.js"></script>
+  <script src="../javascript/speech.js"></script>
+</body>
+</html>
