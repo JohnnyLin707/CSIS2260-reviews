@@ -10,6 +10,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ## ✨ 本次更新
 
+- **新增单元 `pages/MidtermPracticeSheet.html`** —— 把整份 `ReviewQuestions - Midterm.pdf` 做成**可打印练习卷**：全部 60 道题（第 1–4 章），**只显示题目、不含答案**，整体是一个等宽代码块。每题下方有中文备注、**建议分值（1 个得分点 1 分）**以及**每个分值对应一条点线书写行**。整卷宽 78 列，正好放入 **US Letter 纸**（Word 中用 Courier New 10 pt），页面自带 `@page { size: Letter }` 打印样式与「Copy sheet」一键复制按钮；复制到 Word 后打印即可手写答题。卷首写明教授的考试规格：**60 分钟 · 12 道题 · 共计 45 分**，并提示可任选约 45 分的 12 道题做限时模拟。
 - **新增单元 `pages/WindowsLabsReview.html`（37 道预测题）** —— 英文为主、每句英文后附括号中文翻译的 Windows 实验期中预测题。教授提示"可能有一两道关于 lab1–Lab4.pdf 的题"，因此本单元把 `Lab1v2–Lab4v1.pdf` 与 `jinran1–jinran4.docx` 中的正确答案整理成考前可直接背诵的问答题：每个实验一张速查表、37 道点击展开题（答案 2–4 句，含完整操作路径）、"只考一两题时最可能考的 6 题"清单，以及 3 道跨实验对比题。
 - **新增复习问答题单元 —— `pages/Chapter3Review.html`（12 道）与 `pages/Chapter4Review.html`（7 道）** —— 第 42–60 题，格式与第 1、2 章单元完全一致：英文原题 + 中文翻译，答案用课件原词写成最简单的英文，每条答案下方都有简体中文翻译。第 3 章覆盖进程定义、进程控制块与进程映像要素、进程轨迹与分派程序、进程的创建与终止、七种进程状态及转换、操作系统控制表、处理器状态信息、用户态与内核态、内核内外功能，以及中断/陷阱/管态调用的区别；第 4 章覆盖进程与线程、进程为何仍需要、线程优于进程的三个例子、PCB 与 TCB、单核上的线程、线程状态与操作，以及单个线程为何不能被挂起。
 - **新增单元 `pages/chapter4.html`** —— Stallings 第 4 章《线程》全部 **22 张幻灯片**、**38 道考题**：进程与线程（资源拥有的单位 vs 调度的单位）、单线程与多线程方式、线程各自拥有什么与共享什么、线程的好处、线程状态与 spawn/block/unblock/finish 操作、线程同步，以及用户级线程（ULT）与内核级线程（KLT）。`Ch04v2a-images/` 新增 22 张扫描图，全部 254 个复习页顶部都有真实幻灯片的整宽扫描图。
@@ -40,9 +41,10 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 | 12 | 第 3 章：复习问答题 / Chapter 3: Review Questions | `Ch03v2a.pdf` | — | 12 |
 | 13 | 第 4 章：复习问答题 / Chapter 4: Review Questions | `Ch04v2a.pdf` | — | 7 |
 | 14 | Windows 实验 1–4：考题预测 / Windows Labs 1–4: Predicted Exam Questions | `Lab1v2–Lab4v1.pdf` + `jinran1–4.docx` | — | 37 |
+| 15 | 期中考练习卷 / Midterm Practice Sheet | `ReviewQuestions - Midterm.pdf` | — | 60（同 60 道复习题，见下方说明） |
 | | **合计** | | **254** | **761** |
 
-单元 11 是命令速查表（29 个小节、235 个中英对照知识点），不属于幻灯片单元，因此不计入幻灯片数与考题总数。
+单元 11 是命令速查表（29 个小节、235 个中英对照知识点），不属于幻灯片单元，因此不计入幻灯片数与考题总数。单元 15 只是把单元 09、10、12、13 已计入的 60 道复习题重新排版成可打印练习卷，同样不再重复计入总数。
 
 ### 单元 01 —— 计算机硬件导论
 硬件与软件、二进制数、PC 组成部件、主板、存储设备、总线、BIOS/UEFI 以及供电系统。
@@ -92,6 +94,9 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ### 单元 14 —— Windows 实验 1–4：考题预测
 依据四份实验讲义 `Lab1v2.pdf`、`Lab2v2.pdf`、`Lab3.pdf`、`Lab4v1.pdf` 与已提交且正确的 `jinran1–jinran4.docx` 整理的 **37 道英文预测题**（教授提示"可能有一两道关于 lab1–Lab4.pdf 的题"）。实验 1：系统信息、设置、分辨率、存储、恢复选项；实验 2：VirtualBox 与 Type 2 虚拟机监控器、.ova 导入、虚拟/实际磁盘大小、MAC 地址、标准用户与管理员；实验 3：分页文件与虚拟内存、资源监视器（四大资源、硬故障）、性能监视器与 `winsat`、五项基本系统检查、DHCP/LSM/SPOOLER、线程与进程、任务管理器；实验 4：磁盘管理与分区、NTFS、碎片整理（HDD vs SSD）、磁盘清理、还原点、WinRE/高级启动及恢复与启动设置选项。另含 3 道跨实验对比题与"最可能考的 6 题"清单。
+
+### 单元 15 —— 期中考练习卷
+把整份 `ReviewQuestions - Midterm.pdf` 的**全部 60 道题**（第 1 章 1–18、第 2 章 19–41、第 3 章 42–53、第 4 章 54–60）做成**只含题目、不含答案**的可打印练习卷。每题包含：英文原题、下方的**中文备注**、**建议分值**（1 个得分点 1 分，全卷 225 分，平均每题 3.75 分），以及**每个分值对应一条点线书写行**。带小问的题目（Q4、Q14、Q23、Q43、Q51、Q57）按 `a) b) c)` 分行，每项两行书写空间。整卷是一个 78 列宽的等宽代码块，可直接粘进 **Microsoft Word**（Courier New 10 pt）并用 **US Letter** 纸打印；页面自带 `@page { size: Letter }` 打印样式与「Copy sheet」一键复制按钮。卷首写明教授的考试规格 —— **60 分钟 · 12 道题 · 共计 45 分**，并提示可挑选约 45 分的 12 道题做限时模拟。
 
 ---
 
@@ -169,7 +174,8 @@ CSIS-2260review/
 │   ├── UnixCommands.html                # 单元 11 —— UNIX 命令速查表（29 个小节）
 │   ├── Chapter3Review.html              # 单元 12 —— 第 3 章复习问答题 12 道（第 42–53 题）
 │   ├── Chapter4Review.html              # 单元 13 —— 第 4 章复习问答题 7 道（第 54–60 题）
-│   └── WindowsLabsReview.html           # 单元 14 —— Windows 实验 1–4 考题预测 37 道
+│   ├── WindowsLabsReview.html           # 单元 14 —— Windows 实验 1–4 考题预测 37 道
+│   └── MidtermPracticeSheet.html        # 单元 15 —— 期中考练习卷（60 题 / 225 分，可打印）
 ├── Ch01v2a-images/            # 单元 02 的幻灯片扫描图（59 张）
 ├── Ch02v2a-images/            # 单元 03 的幻灯片扫描图（75 张）
 ├── Ch03v2a-images/            # 单元 04 的幻灯片扫描图（58 张）

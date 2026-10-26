@@ -10,6 +10,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 
 ## ✨ Latest additions
 
+- **New deck — `pages/MidtermPracticeSheet.html`** — the whole `ReviewQuestions - Midterm.pdf` as a **printable practice sheet**: all 60 questions (Chapter 1–4), **questions only, no answers**, shown in one monospace code block. Every question has a Chinese note underneath, a **suggested mark (1 mark per answer point)** and **one dotted handwriting line per mark**. Layout is 78 columns wide so it fits **US Letter** with Courier New 10 pt; a “Copy sheet” button puts it on the clipboard, then paste into Word, print and hand-write. The header carries the professor’s format: **60 minutes · 12 questions · 45 marks**, so you can pick any 12 questions worth ~45 marks and time yourself.
 - **New deck — `pages/WindowsLabsReview.html` (37 predicted questions)** — bilingual (English + 中文) midterm predictions for the Microsoft Windows labs. The professor hinted that “there may also be one or two questions focusing on the Microsoft Windows based lab1–Lab4.pdf”, so this deck turns `Lab1v2–Lab4v1.pdf` and the correct answers in `jinran1–jinran4.docx` into exam-ready questions: per-lab cheat sheets, 37 click-to-reveal questions with 2–4 sentence answers and the exact tool paths, a Top-6 shortlist for the “only one or two questions” scenario, and three cross-lab comparisons.
 - **New review-question decks — `pages/Chapter3Review.html` (12 questions) and `pages/Chapter4Review.html` (7 questions)** — questions 42–60, in the same format as the Chapter 1 and Chapter 2 decks: the original English question with a 中文 translation, and an answer written in the simplest English using the wording of the lecture slides, with a 简体中文 line under every answer. Chapter 3 covers processes, the PCB and process image, traces, creation / termination, all seven process states, control tables, processor state information, user vs. kernel mode, kernel functions, and interrupt vs. trap vs. supervisor call. Chapter 4 covers processes vs. threads, why processes are still needed, where threads beat processes, PCB vs. TCB, threads on a single core, thread states and operations, and why a single thread cannot be suspended.
 - **New deck — `pages/chapter4.html`** — Stallings Chapter 4 *Threads*, all **22 slides** with **38 exam questions**: processes vs. threads (unit of resource ownership vs. unit of dispatching), single-threaded and multithreaded approaches, what each thread has on its own and what it shares, the benefits of threads, thread states and the spawn / block / unblock / finish operations, thread synchronization, and user-level (ULT) vs kernel-level (KLT) threads. 22 new slide scans under `Ch04v2a-images/`, so all 254 review pages now open with a full-width scan of the real slide.
@@ -40,9 +41,10 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 | 12 | Chapter 3: Review Questions / 第 3 章：复习问答题 | `Ch03v2a.pdf` | — | 12 |
 | 13 | Chapter 4: Review Questions / 第 4 章：复习问答题 | `Ch04v2a.pdf` | — | 7 |
 | 14 | Windows Labs 1–4: Predicted Exam Questions / Windows 实验 1–4：考题预测 | `Lab1v2–Lab4v1.pdf` + `jinran1–4.docx` | — | 37 |
+| 15 | Midterm Practice Sheet / 期中考练习卷 | `ReviewQuestions - Midterm.pdf` | — | 60 (re-formatted, see note) |
 | | **Total** | | **254** | **761** |
 
-Deck 11 is a command cheat sheet (29 sections, 235 bilingual knowledge points) rather than a slide deck, so it is not counted in the slide and exam-question totals.
+Deck 11 is a command cheat sheet (29 sections, 235 bilingual knowledge points) rather than a slide deck, so it is not counted in the slide and exam-question totals. Deck 15 is the same 60 review questions already counted in decks 09, 10, 12 and 13, re-formatted as a printable practice sheet, so it is not added to the totals either.
 
 ### Deck 01 — Introduction to Computer Hardware
 Hardware vs. software, binary numbers, PC components, the motherboard, storage devices, buses, BIOS/UEFI, and the electrical system.
@@ -92,6 +94,9 @@ Questions **54–60** (7 questions): processes vs. threads (unit of resource own
 
 ### Deck 14 — Windows Labs 1–4: Predicted Exam Questions
 **37 predicted questions**, each English sentence followed by a 中文 translation in parentheses, built from the four lab handouts `Lab1v2.pdf`, `Lab2v2.pdf`, `Lab3.pdf`, `Lab4v1.pdf` and the correct submitted answers `jinran1–jinran4.docx`, after the professor's hint that “there may also be one or two questions focusing on the Microsoft Windows based lab1–Lab4.pdf”. Lab 1: system information, Settings, display resolution, storage, Recovery. Lab 2: VirtualBox and Type 2 hypervisors, .ova import, virtual vs. actual disk size, MAC addresses, Standard vs. Administrator. Lab 3: paging file and virtual memory, Resource Monitor (four resources, hard faults), Performance Monitor and `winsat`, the five Basic System Checks, DHCP/LSM/SPOOLER, threads vs. processes, Task Manager. Lab 4: Disk Management and partitions, NTFS, defragmentation (HDD vs. SSD), Disk Cleanup, restore points, WinRE / Advanced Startup and the recovery and Startup Settings options. Plus three cross-lab comparison questions and a Top-6 shortlist. Every English sentence, bullet and panel heading has a 中文 translation in parentheses directly underneath it.
+
+### Deck 15 — Midterm Practice Sheet
+The complete `ReviewQuestions - Midterm.pdf` — **all 60 questions** (Ch 1: 1–18, Ch 2: 19–41, Ch 3: 42–53, Ch 4: 54–60) — as a **printable practice sheet with no answers**. Each question shows: the English question, a **中文 note** underneath, a **suggested mark** (1 mark per answer point, 225 marks in total, average 3.75 per question), and **one dotted handwriting line per mark**. Questions with sub-parts (Q4, Q14, Q23, Q43, Q51, Q57) are laid out as `a) b) c)` rows, each with two writing lines. The whole sheet is one monospace block, 78 columns wide, so it drops straight into **Microsoft Word** (Courier New, 10 pt) and prints on **US Letter**; the page also has its own `@page { size: Letter }` print styles and a **Copy sheet** button. Header block carries the professor's exam format — **60 minutes · 12 questions · 45 marks** — plus a tip to simulate the exam by picking 12 questions worth about 45 marks.
 
 ---
 
@@ -169,7 +174,8 @@ CSIS-2260review/
 │   ├── UnixCommands.html                # Deck 11 — UNIX commands cheat sheet (29 sections)
 │   ├── Chapter3Review.html              # Deck 12 — 12 Ch.3 review questions (Q42-Q53)
 │   ├── Chapter4Review.html              # Deck 13 — 7 Ch.4 review questions (Q54-Q60)
-│   └── WindowsLabsReview.html           # Deck 14 — 37 predicted Windows Labs 1-4 questions
+│   ├── WindowsLabsReview.html           # Deck 14 — 37 predicted Windows Labs 1-4 questions
+│   └── MidtermPracticeSheet.html        # Deck 15 — printable practice sheet (60 questions, 225 marks)
 ├── Ch01v2a-images/            # Slide scans for deck 02 (59 images)
 ├── Ch02v2a-images/            # Slide scans for deck 03 (75 images)
 ├── Ch03v2a-images/            # Slide scans for deck 04 (58 images)
