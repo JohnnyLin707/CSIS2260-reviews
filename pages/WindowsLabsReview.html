@@ -50,48 +50,48 @@
         <li>
           <strong>1. What is a paging file, and why does Windows use one?</strong>
           <span class="item-zh">（什么是分页文件？Windows 为什么使用它？）</span>
-          <u>It is a part of the hard drive that Windows uses as extra memory. Windows puts the pages it is not using into it, so more programs can run at the same time.</u>
-          <span class="item-zh">（它是硬盘上的一块空间，Windows 把它当作额外的内存。Windows 把暂时不用的页面放进去，这样就能同时运行更多程序。）</span>
+          <u>A paging file is reserved space on the hard drive. It acts as an extension of RAM, which gives the system virtual memory.</u>
+          <span class="item-zh">（分页文件是硬盘上预留的一块空间。它作为 RAM（内存）的扩展，让系统获得虚拟内存。）</span>
           <a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q15">Full answer for Q15 &#8594;</a>
           <span class="item-zh">（查看第 15 题的完整答案 →）</span>
         </li>
         <li>
-          <strong>2. What is the difference between a Standard user and an Administrator?</strong>
+          <strong>2. What is the difference between a Standard User and an Administrator?</strong>
           <span class="item-zh">（标准用户与管理员有什么区别？）</span>
-          <u>A Standard user can only do everyday work and is not allowed to change the system. An Administrator can change everything: system files, settings and other accounts.</u>
-          <span class="item-zh">（标准用户只能做日常操作，不能更改系统。管理员可以更改一切：系统文件、设置和其他账户。）</span>
+          <u>A Standard User has restricted privileges. An Administrator has complete control over system files, security settings and user configurations.</u>
+          <span class="item-zh">（标准用户权限受限。管理员对系统文件、安全设置和用户配置拥有完全控制权。）</span>
           <a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q13">Full answer for Q13 &#8594;</a>
           <span class="item-zh">（查看第 13 题的完整答案 →）</span>
         </li>
         <li>
-          <strong>3. What are the four resources that Resource Monitor watches?</strong>
-          <span class="item-zh">（资源监视器监视哪四种资源？）</span>
-          <u>They are the CPU, the memory, the disk and the network. It shows how much of each one every process is using, right now.</u>
-          <span class="item-zh">（它们是 CPU、内存、磁盘和网络。资源监视器会实时显示每个进程使用了多少。）</span>
+          <strong>3. What are the four main resources that Resource Monitor monitors?</strong>
+          <span class="item-zh">（资源监视器监视的四种主要资源是什么？）</span>
+          <u>They are the CPU, Memory, Disk and Network. Each has its own tab showing what every process is using.</u>
+          <span class="item-zh">（它们是 CPU、内存、磁盘和网络。每个都有各自的选项卡，显示每个进程正在使用的量。）</span>
           <a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q17">Full answer for Q17 &#8594;</a>
           <span class="item-zh">（查看第 17 题的完整答案 →）</span>
         </li>
         <li>
           <strong>4. What is a restore point, and what is System Restore for?</strong>
           <span class="item-zh">（什么是还原点？系统还原有什么用？）</span>
-          <u>A restore point is a saved copy of the system files and settings at one moment. If the computer stops working well after an update, System Restore takes the system back to that moment and keeps your own files.</u>
-          <span class="item-zh">（还原点是某个时刻系统文件和设置的保存副本。如果更新后计算机出现问题，系统还原会把系统恢复到那个时刻，并保留你的个人文件。）</span>
+          <u>A restore point is a saved snapshot of the system files, settings and registry. System Restore rolls the system back to it when the system is unstable; personal files are kept.</u>
+          <span class="item-zh">（还原点是系统文件、设置和注册表的一份已保存快照。系统不稳定时，系统还原会把系统回滚到该快照，个人文件会被保留。）</span>
           <a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q30">Full answer for Q30 &#8594;</a>
           <span class="item-zh">（查看第 30 题的完整答案 →）</span>
         </li>
         <li>
           <strong>5. What is VirtualBox, and what type of hypervisor is it?</strong>
           <span class="item-zh">（VirtualBox 是什么？它属于哪种虚拟机监控器？）</span>
-          <u>VirtualBox is free software that makes virtual computers inside your computer. It is a Type 2 hypervisor: it runs as a normal program on top of Windows, and each virtual computer can run its own operating system.</u>
-          <span class="item-zh">（VirtualBox 是免费软件，用来在你的计算机里创建虚拟计算机。它是 Type 2（宿主型）虚拟机监控器：作为普通程序运行在 Windows 之上，每台虚拟计算机都能运行自己的操作系统。）</span>
+          <u>Oracle VirtualBox is open-source virtualization software for x86 and AMD64/Intel64. It is a Type 2 hypervisor: it runs as an application on a host OS, and every VM runs its own OS.</u>
+          <span class="item-zh">（Oracle VirtualBox 是面向 x86 与 AMD64/Intel64 的开源虚拟化软件。它是 Type 2 虚拟机监控器：作为应用程序运行在宿主 OS 上，每个虚拟机都运行各自的操作系统。）</span>
           <a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q7">Full answer for Q7 &#8594;</a>
           <span class="item-zh">（查看第 7 题的完整答案 →）</span>
         </li>
         <li>
           <strong>6. What is a hard fault?</strong>
           <span class="item-zh">（什么是硬故障？）</span>
-          <u>It is when Windows has to read the data it needs from the disk instead of from the memory. Many hard faults mean the computer does not have enough memory, so it becomes slow.</u>
-          <span class="item-zh">（它是指 Windows 必须从磁盘而不是从内存中读取所需数据。硬故障很多说明计算机内存不足，因此变慢了。）</span>
+          <u>It is when the OS must fetch data from the storage drive instead of from RAM. Many hard faults mean the system is short of RAM and is paging to disk.</u>
+          <span class="item-zh">（它是指操作系统必须从存储驱动器而不是从 RAM 中获取数据。硬故障很多说明系统内存不足，正在向磁盘分页。）</span>
           <a style="color:var(--accent-1);text-decoration:underline;font-weight:700;" href="#q18">Full answer for Q18 &#8594;</a>
           <span class="item-zh">（查看第 18 题的完整答案 →）</span>
         </li>
