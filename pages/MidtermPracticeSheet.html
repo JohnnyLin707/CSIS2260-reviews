@@ -534,17 +534,17 @@ Q43. [6 marks] Name three elements of a process control block and three
                elements of a process image.
     [中文] 举出进程控制块的三个要素和进程映像的三个要素。
 
-    a) PCB 1 .................................................................
+    PCB 1) ...................................................................
        .......................................................................
-    b) PCB 2 .................................................................
+    PCB 2) ...................................................................
        .......................................................................
-    c) PCB 3 .................................................................
+    PCB 3) ...................................................................
        .......................................................................
-    d) Image 1 ...............................................................
+    Image 1) .................................................................
        .......................................................................
-    e) Image 2 ...............................................................
+    Image 2) .................................................................
        .......................................................................
-    f) Image 3 ...............................................................
+    Image 3) .................................................................
        .......................................................................
 
 Q44. [2 marks] What is a process trace?
@@ -615,17 +615,17 @@ Q51. [6 marks] Briefly explain three typical functions of an operating system
     [中文] 简要说明操作系统内核的三个典型功能，以及三个位于内核之外的操作系统
            功能。
 
-    a) Kernel 1 ..............................................................
+    Kernel 1) ................................................................
        .......................................................................
-    b) Kernel 2 ..............................................................
+    Kernel 2) ................................................................
        .......................................................................
-    c) Kernel 3 ..............................................................
+    Kernel 3) ................................................................
        .......................................................................
-    d) Outside 1 .............................................................
+    Outside 1) ...............................................................
        .......................................................................
-    e) Outside 2 .............................................................
+    Outside 2) ...............................................................
        .......................................................................
-    f) Outside 3 .............................................................
+    Outside 3) ...............................................................
        .......................................................................
 
 Q52. [5 marks] Briefly explain the steps that are necessary when a process is
@@ -683,13 +683,13 @@ Q57. [4 marks] In an operating system that supports multithreading, give two
     [中文] 在支持多线程的操作系统中，分别举出进程控制块和线程控制块中的两项具
            体信息。
 
-    a) PCB 1 .................................................................
+    PCB 1) ...................................................................
        .......................................................................
-    b) PCB 2 .................................................................
+    PCB 2) ...................................................................
        .......................................................................
-    c) TCB 1 .................................................................
+    TCB 1) ...................................................................
        .......................................................................
-    d) TCB 2 .................................................................
+    TCB 2) ...................................................................
        .......................................................................
 
 Q58. [3 marks] Do threads make sense even on computers with only a single CPU
@@ -777,6 +777,488 @@ Q8. [2 marks] What is the difference between a Type 1 and a Type 2 hypervisor?
 </pre>
     </div>
 
+    <div class="sheet-wrap">
+      <div class="sheet-bar">
+        <span class="sheet-title">answer_key.txt</span>
+        <button class="sheet-btn" id="copyKey" type="button">Copy key</button>
+      </div>
+      <pre class="exam-sheet" id="key">==============================================================================
+ CSIS 2260  -  MIDTERM PRACTICE SHEET : ANSWER KEY
+ Part 1: Chapter 1-4 Review Questions     60 questions   225 marks
+ Part 2: Windows Labs 1-4 high-yield picks    8 questions    16 marks
+ Total                                   68 questions   241 marks
+==============================================================================
+
+ HOW TO READ
+ * Each numbered line = ONE answer point = 1 mark.
+ * Only 2-3 words per point: memorize these, then expand them into full
+   sentences when you write the exam.
+ * Same order and numbering as the question sheet above.
+
+
+------------------------------------------------------------------------------
+ ANSWER KEY  -  CHAPTER 1  -  COMPUTER SYSTEM OVERVIEW     (Q1-18)
+------------------------------------------------------------------------------
+
+Q1. [4 marks] What are the four basic elements of a computer, and what is
+              their purpose?
+    1) Processor - controls
+    2) Main memory - stores
+    3) I/O modules - move data
+    4) System bus - connects
+
+Q2. [4 marks] Explain the main differences between primary and secondary
+              memory.
+    1) Primary: CPU-direct
+    2) Primary: volatile
+    3) Secondary: non-volatile
+    4) Secondary: cheaper, larger
+
+Q3. [3 marks] What different types of I/O devices are there?
+    1) Human-readable
+    2) Machine-readable
+    3) Communication
+
+Q4. [3 marks] Briefly explain the following CPU elements:
+    a) GPU - SIMD, graphics
+    b) DSP - Audio/video signals
+    c) Cache - Fast CPU buffer
+
+Q5. [3 marks] Modern CPUs are typically SoCs. What does this mean?
+    1) System on chip
+    2) CPU + GPU + memory
+    3) Smaller, less power
+
+Q6. [3 marks] What is the main reason for the introduction of interrupts?
+    1) I/O slower than CPU
+    2) Polling wastes time
+    3) Overlap I/O, compute
+
+Q7. [4 marks] What are the four main classes of interrupts?
+    1) Program
+    2) Timer
+    3) I/O
+    4) Hardware failure
+
+Q8. [4 marks] How does the use of interrupts improve computer performance?
+    1) Start I/O, continue
+    2) Overlap processor/device
+    3) Interrupt when ready
+    4) No polling
+
+Q9. [3 marks] What happens in modern computers when an interrupt occurs while
+              another interrupt is still being processed?
+    1) Each has priority
+    2) Lower: pending
+    3) Higher: preempts
+
+Q10. [5 marks] Modern computers have a memory hierarchy, i.e. a combination of
+               several levels of memory of different access speed and sizes.
+               Why is this the case, and what are the main tradeoffs between
+               the different levels?
+    1) No ideal memory
+    2) Down: cheaper, larger
+    3) Fast levels small
+    4) Large levels slow
+    5) Locality makes it work
+
+Q11. [4 marks] What is the principle of locality, why does it hold, and why is
+               it important?
+    1) References cluster
+    2) Temporal: reuse
+    3) Spatial: neighbours
+    4) Enables cache
+
+Q12. [4 marks] Briefly explain how cache memory works, and how it improves
+               performance.
+    1) Small fast buffer
+    2) Check cache first
+    3) Hit: fast
+    4) Miss: fetch memory
+
+Q13. [6 marks] What are some design decisions with regard to the design of a
+               cache system?
+    1) Cache size
+    2) Block size
+    3) Mapping function
+    4) Replacement algorithm
+    5) Write policy
+    6) Number of levels
+
+Q14. [6 marks] In the context of the design of a cache system in a modern
+               computer, explain the main tradeoffs when making decisions
+               about:
+    a) Cache size - More hits, costlier
+    b) Block size - Spatial locality
+    c) Mapping function - Simple vs flexible
+    d) Replacement algorithms - LRU good, costly
+    e) Write policy - Speed vs consistency
+    f) Number of cache levels - More = faster
+
+Q15. [4 marks] In a cache system, LRU (or an approximation of LRU) is often
+               used as replacement algorithm. What does LRU stand for, what is
+               the main idea behind it, and why is it a good choice as a
+               replacement algorithm?
+    1) Least Recently Used
+    2) Replace least-recent block
+    3) Recently used reused
+    4) Matches locality
+
+Q16. [3 marks] Briefly explain the main differences between programmed I/O,
+               interrupt-driven I/O and DMA.
+    1) Programmed: polls
+    2) Interrupt: signals
+    3) DMA: whole block
+
+Q17. [4 marks] What is a SMP system, and what are its main advantages?
+    1) Multiple processors
+    2) Shared memory
+    3) Performance, availability
+    4) Incremental growth
+
+Q18. [3 marks] What is a multicore computer?
+    1) Several cores
+    2) One chip
+    3) Parallel work
+
+
+------------------------------------------------------------------------------
+ ANSWER KEY  -  CHAPTER 2  -  OPERATING SYSTEM OVERVIEW     (Q19-41)
+------------------------------------------------------------------------------
+
+Q19. [3 marks] Briefly explain what the ISA, ABI and API of a computer system
+               are.
+    1) ISA: instructions
+    2) ABI: binary interface
+    3) API: library calls
+
+Q20. [4 marks] Give some reasons why operating systems need to evolve over
+               time.
+    1) New hardware
+    2) New services
+    3) Fix errors
+    4) Improve efficiency
+
+Q21. [4 marks] Operating systems evolved from serial processing systems over
+               simple batch systems and multiprogrammed batch systems to time
+               sharing systems. Briefly explain the main problems or
+               limitations of each of these systems, and how the next system
+               in the development overcame it.
+    1) Serial: setup time
+    2) Batch: monitor
+    3) Multiprogramming: overlap
+    4) Time sharing: interactivity
+
+Q22. [2 marks] In batch systems, what is JCL, and what is it used for?
+    1) Job Control Language
+    2) Describes job steps
+
+Q23. [4 marks] In batch systems, why is it desirable to have a processor with:
+    a) Memory protection - Protect monitor
+    b) Timers - Prevent hogging
+    c) Privileged instructions - OS only
+    d) Interrupts - Return control
+
+Q24. [3 marks] What is the difference between user mode and kernel mode?
+    1) User: less privileged
+    2) Kernel: more privileged
+    3) Switch: interrupt/call
+
+Q25. [3 marks] Briefly describe how multiprogramming improves computer
+               performance compared to uniprogramming.
+    1) Jobs stay in memory
+    2) Overlap I/O, compute
+    3) Higher utilization
+
+Q26. [3 marks] In contrast to batch systems, what is the main focus of time
+               sharing systems?
+    1) Interactive users
+    2) Fast response
+    3) Time slices
+
+Q27. [3 marks] In a modern operating system, what is a process?
+    1) Program in execution
+    2) Assigned to processor
+    3) Instructions, state, resources
+
+Q28. [4 marks] Briefly describe some of the errors that can happen in
+               multi-process systems.
+    1) Shared-data race
+    2) Deadlock
+    3) Starvation
+    4) Overwrites another
+
+Q29. [5 marks] What are some of the responsibilities of memory management in a
+               modern operating system?
+    1) Track usage
+    2) Allocate, deallocate
+    3) Protect processes
+    4) Map virtual addresses
+    5) Swap, share
+
+Q30. [4 marks] What are the main ideas behind virtual memory paging?
+    1) Large virtual space
+    2) Program = pages
+    3) Memory = frames
+    4) Page table maps
+
+Q31. [4 marks] What are the main components of information system security?
+    1) Confidentiality
+    2) Integrity
+    3) Availability
+    4) Authentication
+
+Q32. [4 marks] What are the main priorities for the scheduling and resource
+               management component of a modern operating system?
+    1) Fairness
+    2) Efficiency
+    3) Fast response
+    4) Deadlines
+
+Q33. [3 marks] Briefly explain the difference between when control passes from
+               a user process to the operating system through an interrupt and
+               through a service call.
+    1) Interrupt: external
+    2) Service call: explicit
+    3) Both run OS code
+
+Q34. [3 marks] Briefly describe the difference between a monolithic and a
+               microkernel operating system.
+    1) All in kernel
+    2) Fast, direct calls
+    3) Minimal kernel, services
+
+Q35. [3 marks] Briefly explain the main ideas behind multithreading.
+    1) Process to threads
+    2) Run concurrently
+    3) Cheaper create/switch
+
+Q36. [4 marks] Briefly explain the main four advantages of Symmetric
+               Multiprocessing.
+    1) Performance
+    2) Availability
+    3) Incremental growth
+    4) Scaling
+
+Q37. [3 marks] How is a distributed operating system different from a SMP
+               system?
+    1) SMP: shared memory
+    2) Distributed: independent
+    3) Message passing
+
+Q38. [4 marks] In the context of fault tolerance, briefly explain reliability,
+               MTTF, MTTR and Availability, and how they are measured.
+    1) Reliability: works
+    2) MTTF: mean fail
+    3) MTTR: mean repair
+    4) Availability = MTTF/(MTTF+MTTR)
+
+Q39. [4 marks] Give four different types of faults that could occur in a
+               computer system.
+    1) Permanent
+    2) Transient
+    3) Intermittent
+    4) Software fault
+
+Q40. [3 marks] Faults can be either permanent or temporary. Temporary faults
+               can be classified into two subtypes. What are they? Give an
+               example of each.
+    1) Transient
+    2) Intermittent
+    3) Examples: glitch, loose joint
+
+Q41. [3 marks] Name three specific mechanisms how Microsoft Windows increases
+               fault tolerance.
+    1) NTFS transaction logging
+    2) Protected subsystems
+    3) Driver verification
+
+
+------------------------------------------------------------------------------
+ ANSWER KEY  -  CHAPTER 3  -  PROCESS DESCRIPTION AND CONTROL     (Q42-53)
+------------------------------------------------------------------------------
+
+Q42. [4 marks] In the context of an operating system, what is a process?
+    1) Program in execution
+    2) Assigned to processor
+    3) Instructions + state
+    4) Code + data
+
+Q43. [6 marks] Name three elements of a process control block and three
+               elements of a process image.
+    PCB 1) Identifier
+    PCB 2) State
+    PCB 3) Priority
+    Image 1) User data
+    Image 2) User program
+    Image 3) Stack
+
+Q44. [2 marks] What is a process trace?
+    1) Instruction sequence
+    2) Dispatcher switches
+
+Q45. [3 marks] Briefly describe three different ways how a process can be
+               created.
+    1) New batch job
+    2) Interactive logon
+    3) OS service / spawn
+
+Q46. [3 marks] Briefly describe three different ways how a process can end.
+    1) Normal completion
+    2) Time limit
+    3) Memory unavailable
+
+Q47. [8 marks] A process can be in one of the following states: New, Ready,
+               Running, Blocked, Ready/Suspend, Blocked/Suspend and Exit.
+               Briefly explain each of these states, and how processes
+               transition between them.
+    1) New: created
+    2) Ready: waits processor
+    3) Running: executing
+    4) Blocked: waits event
+    5) Ready/Suspend: swapped
+    6) Blocked/Suspend: swapped
+    7) Exit: released
+    8) Transitions: admit, dispatch, timeout, event, release
+
+Q48. [4 marks] What types of resources do the main control tables of an
+               operating system keep track of?
+    1) Memory tables
+    2) I/O tables
+    3) File tables
+    4) Process tables
+
+Q49. [3 marks] Give and briefly explain an example of processor state
+               information.
+    1) Processor registers
+    2) PSW: flags
+    3) PC, stack pointers
+
+Q50. [3 marks] Briefly describe the difference between user and system (or
+               kernel) mode.
+    1) User: less privileged
+    2) Kernel: more privileged
+    3) Privileged instructions
+
+Q51. [6 marks] Briefly explain three typical functions of an operating system
+               kernel, and three operating system functions that would reside
+               outside of the kernel.
+    Kernel 1) Process creation
+    Kernel 2) Scheduling
+    Kernel 3) Memory allocation
+    Outside 1) I/O buffers
+    Outside 2) Shell
+    Outside 3) File system
+
+Q52. [5 marks] Briefly explain the steps that are necessary when a process is
+               created.
+    1) Assign identifier
+    2) Allocate space
+    3) Initialize PCB
+    4) Set linkages
+    5) Create other structures
+
+Q53. [3 marks] The execution of user processes can be interrupted by
+               interrupts, traps and supervisor calls. Briefly explain the
+               difference between these three ways.
+    1) Interrupt: external, async
+    2) Trap: internal, sync
+    3) Supervisor: explicit
+
+
+------------------------------------------------------------------------------
+ ANSWER KEY  -  CHAPTER 4  -  THREADS     (Q54-60)
+------------------------------------------------------------------------------
+
+Q54. [4 marks] Briefly explain the difference between processes and threads.
+    1) Process: resource ownership
+    2) Thread: dispatching
+    3) Threads share space
+    4) Thread: own PC, stack
+
+Q55. [3 marks] In an operating system that supports threads, are processes
+               still needed, and if so, for what?
+    1) Unit of allocation
+    2) Unit of protection
+    3) Suspend ends threads
+
+Q56. [3 marks] Give three specific examples in which the use of threads is
+               superior to the use of separate processes.
+    1) Foreground/background
+    2) Asynchronous processing
+    3) Overlapped compute/I-O
+
+Q57. [4 marks] In an operating system that supports multithreading, give two
+               specific examples each of information in the process control
+               block and the thread control block.
+    PCB 1) Identifier
+    PCB 2) Address space
+    TCB 1) Execution state
+    TCB 2) Program counter
+
+Q58. [3 marks] Do threads make sense even on computers with only a single CPU
+               core?
+    1) Yes
+    2) Threads interleave
+    3) One waits, others work
+
+Q59. [5 marks] What states can threads be in, and what are the main operations
+               leading to a change of thread state?
+    1) Running, Ready, Blocked
+    2) Spawn: created
+    3) Block: waits event
+    4) Unblock: event occurs
+    5) Finish: completes
+
+Q60. [3 marks] Can individual threads be suspended? Why or why not?
+    1) No
+    2) Process-level operation
+    3) Threads share space
+
+
+------------------------------------------------------------------------------
+ ANSWER KEY  -  PART 2  -  WINDOWS LABS 1-4 : HIGH-YIELD PICKS   (Q1-Q8)
+------------------------------------------------------------------------------
+
+Q1. [2 marks] What is a paging file, and why does Windows use one?
+    1) Reserved disk space
+    2) Extends RAM
+
+Q2. [2 marks] What is the difference between a Standard User and an
+              Administrator?
+    1) Standard: restricted
+    2) Administrator: full control
+
+Q3. [2 marks] What are the four main resources that Resource Monitor monitors?
+    1) CPU, Memory
+    2) Disk, Network
+
+Q4. [2 marks] What is a restore point, and what is System Restore for?
+    1) Saved snapshot
+    2) Rolls system back
+
+Q5. [2 marks] What is VirtualBox, and what type of hypervisor is it?
+    1) Open-source virtualization
+    2) Type 2 hypervisor
+
+Q6. [2 marks] What is a hard fault?
+    1) Fetch from disk
+    2) Not from RAM
+
+Q7. [2 marks] What is Oracle VirtualBox, and what type of hypervisor is it?
+    1) Virtualization software
+    2) Type 2 hypervisor
+
+Q8. [2 marks] What is the difference between a Type 1 and a Type 2 hypervisor?
+    1) Type 1: bare metal
+    2) Type 2: on host OS
+
+==============================================================================
+ END OF ANSWER KEY  -  68 questions  -  241 marks
+==============================================================================
+</pre>
+    </div>
+
     <nav class="bottom-nav" aria-label="Bottom navigation">
       <a class="btn btn-back" href="WindowsLabsReview.html">&#8592; Windows Labs 1&ndash;4</a>
       <a class="btn btn-next" href="../index.html">Home &#8594;</a>
@@ -795,32 +1277,34 @@ Q8. [2 marks] What is the difference between a Type 1 and a Type 2 hypervisor?
   <script src="../javascript/animations.js"></script>
   <script>
     (function () {
-      var btn = document.getElementById("copySheet");
-      var pre = document.getElementById("sheet");
-      if (!btn || !pre) return;
-      btn.addEventListener("click", function () {
-        var text = pre.textContent;
-        var done = function () {
-          var old = btn.textContent;
-          btn.textContent = "Copied!";
-          setTimeout(function () { btn.textContent = old; }, 1600);
-        };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(done, fallback);
-        } else {
-          fallback();
-        }
-        function fallback() {
-          var ta = document.createElement("textarea");
-          ta.value = text;
-          ta.setAttribute("readonly", "");
-          ta.style.position = "fixed";
-          ta.style.top = "-1000px";
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand("copy"); done(); } catch (e) {}
-          document.body.removeChild(ta);
-        }
+      [["copySheet", "sheet"], ["copyKey", "key"]].forEach(function (pair) {
+        var btn = document.getElementById(pair[0]);
+        var pre = document.getElementById(pair[1]);
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent;
+          var done = function () {
+            var old = btn.textContent;
+            btn.textContent = "Copied!";
+            setTimeout(function () { btn.textContent = old; }, 1600);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, fallback);
+          } else {
+            fallback();
+          }
+          function fallback() {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.top = "-1000px";
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand("copy"); done(); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+        });
       });
     })();
   </script>
