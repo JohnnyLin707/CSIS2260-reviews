@@ -1395,7 +1395,7 @@ kbd {
    -------------------------------------------------------------------- */
 body.qa-static .qa-card { cursor: default; }
 body.qa-static .qa-card:hover { border-color: var(--stroke-soft); }
-body.qa-static .qa-question { cursor: default; }
+body.qa-static .qa-question { cursor: default; user-select: text; -webkit-user-select: text; }
 body.qa-static .qa-card.open .qa-question { background: transparent; }
 body.qa-static .chev { display: none; }
 body.qa-static .qa-answer {
