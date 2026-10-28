@@ -793,6 +793,7 @@ Q8. [2 marks] What is the difference between a Type 1 and a Type 2 hypervisor?
  * Each numbered line = ONE answer point = 1 mark.
  * Only 2-3 words per point: memorize these, then expand them into full
    sentences when you write the exam.
+ * The Chinese translation of every point follows in parentheses.
  * Same order and numbering as the question sheet above.
 
 
@@ -802,124 +803,124 @@ Q8. [2 marks] What is the difference between a Type 1 and a Type 2 hypervisor?
 
 Q1. [4 marks] What are the four basic elements of a computer, and what is
               their purpose?
-    1) Processor - controls
-    2) Main memory - stores
-    3) I/O modules - move data
-    4) System bus - connects
+    1) Processor - controls（处理器 - 控制）
+    2) Main memory - stores（主存 - 存储）
+    3) I/O modules - move data（I/O 模块 - 传送数据）
+    4) System bus - connects（系统总线 - 连接）
 
 Q2. [4 marks] Explain the main differences between primary and secondary
               memory.
-    1) Primary: CPU-direct
-    2) Primary: volatile
-    3) Secondary: non-volatile
-    4) Secondary: cheaper, larger
+    1) Primary: CPU-direct（主存：CPU 直接访问）
+    2) Primary: volatile（主存：易失）
+    3) Secondary: non-volatile（外存：非易失）
+    4) Secondary: cheaper, larger（外存：更便宜、更大）
 
 Q3. [3 marks] What different types of I/O devices are there?
-    1) Human-readable
-    2) Machine-readable
-    3) Communication
+    1) Human-readable（人类可读）
+    2) Machine-readable（机器可读）
+    3) Communication（通信）
 
 Q4. [3 marks] Briefly explain the following CPU elements:
-    a) GPU - SIMD, graphics
-    b) DSP - Audio/video signals
-    c) Cache - Fast CPU buffer
+    a) GPU - SIMD, graphics（SIMD、图形）
+    b) DSP - Audio/video signals（音频/视频信号）
+    c) Cache - Fast CPU buffer（CPU 的高速缓冲）
 
 Q5. [3 marks] Modern CPUs are typically SoCs. What does this mean?
-    1) System on chip
-    2) CPU + GPU + memory
-    3) Smaller, less power
+    1) System on chip（片上系统）
+    2) CPU + GPU + memory（CPU + GPU + 内存）
+    3) Smaller, less power（更小、更省电）
 
 Q6. [3 marks] What is the main reason for the introduction of interrupts?
-    1) I/O slower than CPU
-    2) Polling wastes time
-    3) Overlap I/O, compute
+    1) I/O slower than CPU（I/O 比 CPU 慢）
+    2) Polling wastes time（轮询浪费时间）
+    3) Overlap I/O, compute（I/O 与计算重叠）
 
 Q7. [4 marks] What are the four main classes of interrupts?
-    1) Program
-    2) Timer
-    3) I/O
-    4) Hardware failure
+    1) Program（程序中断）
+    2) Timer（定时器中断）
+    3) I/O（I/O 中断）
+    4) Hardware failure（硬件故障中断）
 
 Q8. [4 marks] How does the use of interrupts improve computer performance?
-    1) Start I/O, continue
-    2) Overlap processor/device
-    3) Interrupt when ready
-    4) No polling
+    1) Start I/O, continue（启动 I/O 后继续）
+    2) Overlap processor/device（处理器与设备并行）
+    3) Interrupt when ready（就绪时才中断）
+    4) No polling（无需轮询）
 
 Q9. [3 marks] What happens in modern computers when an interrupt occurs while
               another interrupt is still being processed?
-    1) Each has priority
-    2) Lower: pending
-    3) Higher: preempts
+    1) Each has priority（每个中断有优先级）
+    2) Lower: pending（较低：挂起等待）
+    3) Higher: preempts（较高：抢占当前）
 
 Q10. [5 marks] Modern computers have a memory hierarchy, i.e. a combination of
                several levels of memory of different access speed and sizes.
                Why is this the case, and what are the main tradeoffs between
                the different levels?
-    1) No ideal memory
-    2) Down: cheaper, larger
-    3) Fast levels small
-    4) Large levels slow
-    5) Locality makes it work
+    1) No ideal memory（没有理想存储器）
+    2) Down: cheaper, larger（往下：更便宜、更大）
+    3) Fast levels small（快的层级小）
+    4) Large levels slow（大的层级慢）
+    5) Locality makes it work（局部性使其可行）
 
 Q11. [4 marks] What is the principle of locality, why does it hold, and why is
                it important?
-    1) References cluster
-    2) Temporal: reuse
-    3) Spatial: neighbours
-    4) Enables cache
+    1) References cluster（访问成簇）
+    2) Temporal: reuse（时间局部性：重用）
+    3) Spatial: neighbours（空间局部性：相邻）
+    4) Enables cache（使缓存可行）
 
 Q12. [4 marks] Briefly explain how cache memory works, and how it improves
                performance.
-    1) Small fast buffer
-    2) Check cache first
-    3) Hit: fast
-    4) Miss: fetch memory
+    1) Small fast buffer（小而快的缓冲）
+    2) Check cache first（先查缓存）
+    3) Hit: fast（命中：快）
+    4) Miss: fetch memory（未命中：取主存）
 
 Q13. [6 marks] What are some design decisions with regard to the design of a
                cache system?
-    1) Cache size
-    2) Block size
-    3) Mapping function
-    4) Replacement algorithm
-    5) Write policy
-    6) Number of levels
+    1) Cache size（Cache 大小）
+    2) Block size（块大小）
+    3) Mapping function（映射函数）
+    4) Replacement algorithm（替换算法）
+    5) Write policy（写策略）
+    6) Number of levels（Cache 级数）
 
 Q14. [6 marks] In the context of the design of a cache system in a modern
                computer, explain the main tradeoffs when making decisions
                about:
-    a) Cache size - More hits, costlier
-    b) Block size - Spatial locality
-    c) Mapping function - Simple vs flexible
-    d) Replacement algorithms - LRU good, costly
-    e) Write policy - Speed vs consistency
-    f) Number of cache levels - More = faster
+    a) Cache size - More hits, costlier（命中率高，更贵）
+    b) Block size - Spatial locality（利用空间局部性）
+    c) Mapping function - Simple vs flexible（简单 vs 灵活）
+    d) Replacement algorithms - LRU good, costly（LRU 好，开销大）
+    e) Write policy - Speed vs consistency（速度 vs 一致性）
+    f) Number of cache levels - More = faster（级数多 = 更快）
 
 Q15. [4 marks] In a cache system, LRU (or an approximation of LRU) is often
                used as replacement algorithm. What does LRU stand for, what is
                the main idea behind it, and why is it a good choice as a
                replacement algorithm?
-    1) Least Recently Used
-    2) Replace least-recent block
-    3) Recently used reused
-    4) Matches locality
+    1) Least Recently Used（最近最少使用）
+    2) Replace least-recent block（替换最久未用块）
+    3) Recently used reused（最近用过会再用）
+    4) Matches locality（符合局部性）
 
 Q16. [3 marks] Briefly explain the main differences between programmed I/O,
                interrupt-driven I/O and DMA.
-    1) Programmed: polls
-    2) Interrupt: signals
-    3) DMA: whole block
+    1) Programmed: polls（程序控制：轮询）
+    2) Interrupt: signals（中断驱动：模块发信号）
+    3) DMA: whole block（DMA：整块传送）
 
 Q17. [4 marks] What is a SMP system, and what are its main advantages?
-    1) Multiple processors
-    2) Shared memory
-    3) Performance, availability
-    4) Incremental growth
+    1) Multiple processors（多个处理器）
+    2) Shared memory（共享内存）
+    3) Performance, availability（性能、可用性）
+    4) Incremental growth（可增量扩展）
 
 Q18. [3 marks] What is a multicore computer?
-    1) Several cores
-    2) One chip
-    3) Parallel work
+    1) Several cores（多个核心）
+    2) One chip（同一芯片）
+    3) Parallel work（并行工作）
 
 
 ------------------------------------------------------------------------------
@@ -928,150 +929,150 @@ Q18. [3 marks] What is a multicore computer?
 
 Q19. [3 marks] Briefly explain what the ISA, ABI and API of a computer system
                are.
-    1) ISA: instructions
-    2) ABI: binary interface
-    3) API: library calls
+    1) ISA: instructions（ISA：指令集）
+    2) ABI: binary interface（ABI：二进制接口）
+    3) API: library calls（API：库调用）
 
 Q20. [4 marks] Give some reasons why operating systems need to evolve over
                time.
-    1) New hardware
-    2) New services
-    3) Fix errors
-    4) Improve efficiency
+    1) New hardware（新硬件）
+    2) New services（新服务）
+    3) Fix errors（修复错误）
+    4) Improve efficiency（提高效率）
 
 Q21. [4 marks] Operating systems evolved from serial processing systems over
                simple batch systems and multiprogrammed batch systems to time
                sharing systems. Briefly explain the main problems or
                limitations of each of these systems, and how the next system
                in the development overcame it.
-    1) Serial: setup time
-    2) Batch: monitor
-    3) Multiprogramming: overlap
-    4) Time sharing: interactivity
+    1) Serial: setup time（串行：准备时间长）
+    2) Batch: monitor（批处理：监视程序）
+    3) Multiprogramming: overlap（多道：重叠 I/O）
+    4) Time sharing: interactivity（分时：交互性）
 
 Q22. [2 marks] In batch systems, what is JCL, and what is it used for?
-    1) Job Control Language
-    2) Describes job steps
+    1) Job Control Language（作业控制语言）
+    2) Describes job steps（描述作业步骤）
 
 Q23. [4 marks] In batch systems, why is it desirable to have a processor with:
-    a) Memory protection - Protect monitor
-    b) Timers - Prevent hogging
-    c) Privileged instructions - OS only
-    d) Interrupts - Return control
+    a) Memory protection - Protect monitor（保护监视程序）
+    b) Timers - Prevent hogging（防止独占处理器）
+    c) Privileged instructions - OS only（仅 OS 可执行）
+    d) Interrupts - Return control（交还控制权）
 
 Q24. [3 marks] What is the difference between user mode and kernel mode?
-    1) User: less privileged
-    2) Kernel: more privileged
-    3) Switch: interrupt/call
+    1) User: less privileged（用户态：特权低）
+    2) Kernel: more privileged（内核态：特权高）
+    3) Switch: interrupt/call（切换：中断/调用）
 
 Q25. [3 marks] Briefly describe how multiprogramming improves computer
                performance compared to uniprogramming.
-    1) Jobs stay in memory
-    2) Overlap I/O, compute
-    3) Higher utilization
+    1) Jobs stay in memory（多道作业驻留内存）
+    2) Overlap I/O, compute（I/O 与计算重叠）
+    3) Higher utilization（利用率更高）
 
 Q26. [3 marks] In contrast to batch systems, what is the main focus of time
                sharing systems?
-    1) Interactive users
-    2) Fast response
-    3) Time slices
+    1) Interactive users（交互式用户）
+    2) Fast response（快速响应）
+    3) Time slices（时间片）
 
 Q27. [3 marks] In a modern operating system, what is a process?
-    1) Program in execution
-    2) Assigned to processor
-    3) Instructions, state, resources
+    1) Program in execution（正在执行的程序）
+    2) Assigned to processor（可分派到处理器）
+    3) Instructions, state, resources（指令、状态、资源）
 
 Q28. [4 marks] Briefly describe some of the errors that can happen in
                multi-process systems.
-    1) Shared-data race
-    2) Deadlock
-    3) Starvation
-    4) Overwrites another
+    1) Shared-data race（共享数据竞争）
+    2) Deadlock（死锁）
+    3) Starvation（饥饿）
+    4) Overwrites another（覆写他人数据）
 
 Q29. [5 marks] What are some of the responsibilities of memory management in a
                modern operating system?
-    1) Track usage
-    2) Allocate, deallocate
-    3) Protect processes
-    4) Map virtual addresses
-    5) Swap, share
+    1) Track usage（跟踪使用情况）
+    2) Allocate, deallocate（分配与回收）
+    3) Protect processes（保护各进程）
+    4) Map virtual addresses（虚拟地址映射）
+    5) Swap, share（换入换出、共享）
 
 Q30. [4 marks] What are the main ideas behind virtual memory paging?
-    1) Large virtual space
-    2) Program = pages
-    3) Memory = frames
-    4) Page table maps
+    1) Large virtual space（大的虚拟空间）
+    2) Program = pages（程序 = 页）
+    3) Memory = frames（内存 = 帧）
+    4) Page table maps（页表映射）
 
 Q31. [4 marks] What are the main components of information system security?
-    1) Confidentiality
-    2) Integrity
-    3) Availability
-    4) Authentication
+    1) Confidentiality（机密性）
+    2) Integrity（完整性）
+    3) Availability（可用性）
+    4) Authentication（身份认证）
 
 Q32. [4 marks] What are the main priorities for the scheduling and resource
                management component of a modern operating system?
-    1) Fairness
-    2) Efficiency
-    3) Fast response
-    4) Deadlines
+    1) Fairness（公平）
+    2) Efficiency（效率）
+    3) Fast response（快速响应）
+    4) Deadlines（满足时限）
 
 Q33. [3 marks] Briefly explain the difference between when control passes from
                a user process to the operating system through an interrupt and
                through a service call.
-    1) Interrupt: external
-    2) Service call: explicit
-    3) Both run OS code
+    1) Interrupt: external（中断：外部事件）
+    2) Service call: explicit（服务调用：显式请求）
+    3) Both run OS code（两者都运行 OS 代码）
 
 Q34. [3 marks] Briefly describe the difference between a monolithic and a
                microkernel operating system.
-    1) All in kernel
-    2) Fast, direct calls
-    3) Minimal kernel, services
+    1) All in kernel（全部在内核）
+    2) Fast, direct calls（直接调用，快）
+    3) Minimal kernel, services（微内核最小，服务在外）
 
 Q35. [3 marks] Briefly explain the main ideas behind multithreading.
-    1) Process to threads
-    2) Run concurrently
-    3) Cheaper create/switch
+    1) Process to threads（进程分为线程）
+    2) Run concurrently（并发运行）
+    3) Cheaper create/switch（创建/切换更便宜）
 
 Q36. [4 marks] Briefly explain the main four advantages of Symmetric
                Multiprocessing.
-    1) Performance
-    2) Availability
-    3) Incremental growth
-    4) Scaling
+    1) Performance（性能）
+    2) Availability（可用性）
+    3) Incremental growth（增量扩展）
+    4) Scaling（可伸缩）
 
 Q37. [3 marks] How is a distributed operating system different from a SMP
                system?
-    1) SMP: shared memory
-    2) Distributed: independent
-    3) Message passing
+    1) SMP: shared memory（SMP：共享内存）
+    2) Distributed: independent（分布式：多台独立计算机）
+    3) Message passing（消息传递）
 
 Q38. [4 marks] In the context of fault tolerance, briefly explain reliability,
                MTTF, MTTR and Availability, and how they are measured.
-    1) Reliability: works
-    2) MTTF: mean fail
-    3) MTTR: mean repair
-    4) Availability = MTTF/(MTTF+MTTR)
+    1) Reliability: works（可靠性：正常工作）
+    2) MTTF: mean fail（MTTF：平均无故障时间）
+    3) MTTR: mean repair（MTTR：平均修复时间）
+    4) Availability = MTTF/(MTTF+MTTR)（可用性 = MTTF/(MTTF+MTTR)）
 
 Q39. [4 marks] Give four different types of faults that could occur in a
                computer system.
-    1) Permanent
-    2) Transient
-    3) Intermittent
-    4) Software fault
+    1) Permanent（永久性故障）
+    2) Transient（瞬时故障）
+    3) Intermittent（间歇故障）
+    4) Software fault（软件故障）
 
 Q40. [3 marks] Faults can be either permanent or temporary. Temporary faults
                can be classified into two subtypes. What are they? Give an
                example of each.
-    1) Transient
-    2) Intermittent
-    3) Examples: glitch, loose joint
+    1) Transient（瞬时故障）
+    2) Intermittent（间歇故障）
+    3) Examples: glitch, loose joint（例如电源毛刺、虚焊）
 
 Q41. [3 marks] Name three specific mechanisms how Microsoft Windows increases
                fault tolerance.
-    1) NTFS transaction logging
-    2) Protected subsystems
-    3) Driver verification
+    1) NTFS transaction logging（NTFS 事务日志）
+    2) Protected subsystems（受保护子系统）
+    3) Driver verification（驱动程序验证）
 
 
 ------------------------------------------------------------------------------
@@ -1079,91 +1080,92 @@ Q41. [3 marks] Name three specific mechanisms how Microsoft Windows increases
 ------------------------------------------------------------------------------
 
 Q42. [4 marks] In the context of an operating system, what is a process?
-    1) Program in execution
-    2) Assigned to processor
-    3) Instructions + state
-    4) Code + data
+    1) Program in execution（正在执行的程序）
+    2) Assigned to processor（可分派到处理器执行）
+    3) Instructions + state（指令序列 + 当前状态）
+    4) Code + data（程序代码 + 数据）
 
 Q43. [6 marks] Name three elements of a process control block and three
                elements of a process image.
-    PCB 1) Identifier
-    PCB 2) State
-    PCB 3) Priority
-    Image 1) User data
-    Image 2) User program
-    Image 3) Stack
+    PCB 1) Identifier（标识符）
+    PCB 2) State（状态）
+    PCB 3) Priority（优先级）
+    Image 1) User data（用户数据）
+    Image 2) User program（用户程序）
+    Image 3) Stack（栈）
 
 Q44. [2 marks] What is a process trace?
-    1) Instruction sequence
-    2) Dispatcher switches
+    1) Instruction sequence（执行的指令序列）
+    2) Dispatcher switches（分派程序切换）
 
 Q45. [3 marks] Briefly describe three different ways how a process can be
                created.
-    1) New batch job
-    2) Interactive logon
-    3) OS service / spawn
+    1) New batch job（新批处理作业）
+    2) Interactive logon（交互式登录）
+    3) OS service / spawn（OS 服务 / 派生）
 
 Q46. [3 marks] Briefly describe three different ways how a process can end.
-    1) Normal completion
-    2) Time limit
-    3) Memory unavailable
+    1) Normal completion（正常完成）
+    2) Time limit（超过时限）
+    3) Memory unavailable（内存不足）
 
 Q47. [8 marks] A process can be in one of the following states: New, Ready,
                Running, Blocked, Ready/Suspend, Blocked/Suspend and Exit.
                Briefly explain each of these states, and how processes
                transition between them.
-    1) New: created
-    2) Ready: waits processor
-    3) Running: executing
-    4) Blocked: waits event
-    5) Ready/Suspend: swapped
-    6) Blocked/Suspend: swapped
-    7) Exit: released
-    8) Transitions: admit, dispatch, timeout, event, release
+    1) New: created（新建：刚创建）
+    2) Ready: waits processor（就绪：等待处理器）
+    3) Running: executing（运行：正在执行）
+    4) Blocked: waits event（阻塞：等待事件）
+    5) Ready/Suspend: swapped（就绪/挂起：已换出）
+    6) Blocked/Suspend: swapped（阻塞/挂起：已换出）
+    7) Exit: released（退出：已释放）
+    8) Transitions: admit, dispatch, timeout, event, release（转换：接纳、分派
+       、超时、事件、释放）
 
 Q48. [4 marks] What types of resources do the main control tables of an
                operating system keep track of?
-    1) Memory tables
-    2) I/O tables
-    3) File tables
-    4) Process tables
+    1) Memory tables（存储器表）
+    2) I/O tables（I/O 表）
+    3) File tables（文件表）
+    4) Process tables（进程表）
 
 Q49. [3 marks] Give and briefly explain an example of processor state
                information.
-    1) Processor registers
-    2) PSW: flags
-    3) PC, stack pointers
+    1) Processor registers（处理器寄存器）
+    2) PSW: flags（PSW：标志位）
+    3) PC, stack pointers（程序计数器、栈指针）
 
 Q50. [3 marks] Briefly describe the difference between user and system (or
                kernel) mode.
-    1) User: less privileged
-    2) Kernel: more privileged
-    3) Privileged instructions
+    1) User: less privileged（用户态：特权低）
+    2) Kernel: more privileged（内核态：特权高）
+    3) Privileged instructions（可执行特权指令）
 
 Q51. [6 marks] Briefly explain three typical functions of an operating system
                kernel, and three operating system functions that would reside
                outside of the kernel.
-    Kernel 1) Process creation
-    Kernel 2) Scheduling
-    Kernel 3) Memory allocation
-    Outside 1) I/O buffers
-    Outside 2) Shell
-    Outside 3) File system
+    Kernel 1) Process creation（进程创建与终止）
+    Kernel 2) Scheduling（调度与分派）
+    Kernel 3) Memory allocation（地址空间分配）
+    Outside 1) I/O buffers（缓冲区管理）
+    Outside 2) Shell（命令解释程序）
+    Outside 3) File system（文件系统服务）
 
 Q52. [5 marks] Briefly explain the steps that are necessary when a process is
                created.
-    1) Assign identifier
-    2) Allocate space
-    3) Initialize PCB
-    4) Set linkages
-    5) Create other structures
+    1) Assign identifier（分配唯一标识符）
+    2) Allocate space（分配空间）
+    3) Initialize PCB（初始化 PCB）
+    4) Set linkages（建立链接）
+    5) Create other structures（创建其他数据结构）
 
 Q53. [3 marks] The execution of user processes can be interrupted by
                interrupts, traps and supervisor calls. Briefly explain the
                difference between these three ways.
-    1) Interrupt: external, async
-    2) Trap: internal, sync
-    3) Supervisor: explicit
+    1) Interrupt: external, async（中断：外部、异步）
+    2) Trap: internal, sync（陷阱：内部、同步）
+    3) Supervisor: explicit（管态调用：显式请求）
 
 
 ------------------------------------------------------------------------------
@@ -1171,49 +1173,49 @@ Q53. [3 marks] The execution of user processes can be interrupted by
 ------------------------------------------------------------------------------
 
 Q54. [4 marks] Briefly explain the difference between processes and threads.
-    1) Process: resource ownership
-    2) Thread: dispatching
-    3) Threads share space
-    4) Thread: own PC, stack
+    1) Process: resource ownership（进程：资源拥有单位）
+    2) Thread: dispatching（线程：分派单位）
+    3) Threads share space（线程共享地址空间）
+    4) Thread: own PC, stack（线程自有 PC、栈）
 
 Q55. [3 marks] In an operating system that supports threads, are processes
                still needed, and if so, for what?
-    1) Unit of allocation
-    2) Unit of protection
-    3) Suspend ends threads
+    1) Unit of allocation（资源分配单位）
+    2) Unit of protection（保护单位）
+    3) Suspend ends threads（挂起即挂起全部线程）
 
 Q56. [3 marks] Give three specific examples in which the use of threads is
                superior to the use of separate processes.
-    1) Foreground/background
-    2) Asynchronous processing
-    3) Overlapped compute/I-O
+    1) Foreground/background（前台/后台工作）
+    2) Asynchronous processing（异步处理）
+    3) Overlapped compute/I-O（计算与 I/O 重叠）
 
 Q57. [4 marks] In an operating system that supports multithreading, give two
                specific examples each of information in the process control
                block and the thread control block.
-    PCB 1) Identifier
-    PCB 2) Address space
-    TCB 1) Execution state
-    TCB 2) Program counter
+    PCB 1) Identifier（标识符）
+    PCB 2) Address space（虚拟地址空间）
+    TCB 1) Execution state（执行状态）
+    TCB 2) Program counter（程序计数器）
 
 Q58. [3 marks] Do threads make sense even on computers with only a single CPU
                core?
-    1) Yes
-    2) Threads interleave
-    3) One waits, others work
+    1) Yes（有意义）
+    2) Threads interleave（线程交错执行）
+    3) One waits, others work（一个等待，其他继续）
 
 Q59. [5 marks] What states can threads be in, and what are the main operations
                leading to a change of thread state?
-    1) Running, Ready, Blocked
-    2) Spawn: created
-    3) Block: waits event
-    4) Unblock: event occurs
-    5) Finish: completes
+    1) Running, Ready, Blocked（运行、就绪、阻塞）
+    2) Spawn: created（Spawn：创建线程）
+    3) Block: waits event（Block：等待事件）
+    4) Unblock: event occurs（Unblock：事件发生）
+    5) Finish: completes（Finish：执行完毕）
 
 Q60. [3 marks] Can individual threads be suspended? Why or why not?
-    1) No
-    2) Process-level operation
-    3) Threads share space
+    1) No（不可以）
+    2) Process-level operation（挂起是进程级操作）
+    3) Threads share space（线程共享地址空间）
 
 
 ------------------------------------------------------------------------------
@@ -1221,37 +1223,37 @@ Q60. [3 marks] Can individual threads be suspended? Why or why not?
 ------------------------------------------------------------------------------
 
 Q1. [2 marks] What is a paging file, and why does Windows use one?
-    1) Reserved disk space
-    2) Extends RAM
+    1) Reserved disk space（硬盘上预留的空间）
+    2) Extends RAM（作为 RAM 的扩展）
 
 Q2. [2 marks] What is the difference between a Standard User and an
               Administrator?
-    1) Standard: restricted
-    2) Administrator: full control
+    1) Standard: restricted（标准用户：权限受限）
+    2) Administrator: full control（管理员：完全控制）
 
 Q3. [2 marks] What are the four main resources that Resource Monitor monitors?
-    1) CPU, Memory
-    2) Disk, Network
+    1) CPU, Memory（CPU、内存）
+    2) Disk, Network（磁盘、网络）
 
 Q4. [2 marks] What is a restore point, and what is System Restore for?
-    1) Saved snapshot
-    2) Rolls system back
+    1) Saved snapshot（已保存的快照）
+    2) Rolls system back（回滚系统）
 
 Q5. [2 marks] What is VirtualBox, and what type of hypervisor is it?
-    1) Open-source virtualization
-    2) Type 2 hypervisor
+    1) Open-source virtualization（开源虚拟化软件）
+    2) Type 2 hypervisor（Type 2 虚拟机监控器）
 
 Q6. [2 marks] What is a hard fault?
-    1) Fetch from disk
-    2) Not from RAM
+    1) Fetch from disk（从磁盘读取数据）
+    2) Not from RAM（而非从内存）
 
 Q7. [2 marks] What is Oracle VirtualBox, and what type of hypervisor is it?
-    1) Virtualization software
-    2) Type 2 hypervisor
+    1) Virtualization software（虚拟化软件）
+    2) Type 2 hypervisor（Type 2 虚拟机监控器）
 
 Q8. [2 marks] What is the difference between a Type 1 and a Type 2 hypervisor?
-    1) Type 1: bare metal
-    2) Type 2: on host OS
+    1) Type 1: bare metal（Type 1：直接运行在硬件上）
+    2) Type 2: on host OS（Type 2：运行在宿主 OS 上）
 
 ==============================================================================
  END OF ANSWER KEY  -  68 questions  -  241 marks
