@@ -56,6 +56,10 @@
 
   /* ------------------------------------------------ Q & A toggle ----- */
   function initQA() {
+    // static review pages (Chapter 1-4 review decks) show every answer
+    // immediately: no accordion, nothing hidden, everything copyable
+    if (document.body.classList.contains("qa-static")) return;
+
     document.querySelectorAll(".qa-card").forEach(function (card) {
       var btn = card.querySelector(".qa-question");
       var ans = card.querySelector(".qa-answer");

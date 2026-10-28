@@ -110,6 +110,7 @@ A **printable practice sheet with no answers**, in two parts, followed by a matc
 - **Read-aloud** — a speaker button after the title and after every English line reads it with the built-in Web Speech API (Chinese lines are skipped).
 - **Textbook answers highlighted** — model answers on warm highlight chips, slide points on numbered low-glare cards, Chinese lines on soft mint chips.
 - **Exam-style Q&A** — 686 click-to-reveal questions with answers and source references on the slide pages, 25 recall questions on the key-questions page, 4 short-answer drills with answer boxes, and the 5-question Fall 2026 quiz.
+- **Fully visible review decks** — the Chapter 1–4 review-question pages show every answer immediately (no click-to-reveal), so the whole page can be read and copied in one go.
 - **Write-and-check drills** — one input box per answer point, marked automatically: order does not matter, English or 中文 both accepted, missing keywords are reported.
 - **Searchable navigation** — a collapsible sidebar with live filtering, plus a keyword filter on each deck page.
 - **Keyboard shortcuts** — `←` previous slide, `→` next slide, `Esc` back to home.
