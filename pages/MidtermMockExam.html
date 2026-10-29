@@ -1,0 +1,3219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Midterm Mock Exam &middot; 68 questions &middot; 241 marks</title>
+  <meta name="description" content="Interactive midterm mock exam: 68 short-answer questions (Chapter 1-4 review questions plus the Windows Labs high-yield picks), 241 scoring points, one input box per point. Graded only when you submit - each point is worth 1 mark and your answer is correct if it contains one English word from the standard answer.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .exam-summary {
+      margin: 1.3rem 0 0; padding: 1.15rem 1.3rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(94, 234, 212, 0.4);
+      background: linear-gradient(158deg, rgba(94,234,212,0.13), rgba(96,165,250,0.08));
+      scroll-margin-top: 96px;
+    }
+    .es-title { font-weight: 800; letter-spacing: .3px; margin-bottom: .8rem; color: var(--accent-1); }
+    .es-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .8rem; }
+    .es-cell {
+      padding: .7rem .85rem; border-radius: 12px;
+      background: rgba(255,255,255,.05); border: 1px solid var(--stroke-soft);
+    }
+    .es-label { display: block; font-size: .8rem; color: var(--text-faint); margin-bottom: .25rem; }
+    .es-num { font-size: 1.45rem; font-weight: 800; color: #fff; }
+    .es-score { color: var(--accent-1); }
+    .es-bar { margin-top: .9rem; height: 10px; border-radius: 6px; background: rgba(255,255,255,.08); overflow: hidden; }
+    .es-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent-1), var(--accent-2)); transition: width .6s var(--ease); }
+    .es-note { margin: .8rem 0 0; font-size: .8rem; color: var(--text-faint); line-height: 1.6; }
+    .exam-actions { display: flex; gap: .7rem; align-items: center; flex-wrap: wrap; margin: 1.1rem 0; }
+    .es-hint { font-size: .82rem; color: var(--text-faint); line-height: 1.5; }
+    .exam-part {
+      margin: 1.7rem 0 .8rem; padding: .6rem .95rem; border-radius: 12px;
+      font-weight: 750; color: var(--accent-2);
+      background: rgba(96,165,250,.10); border: 1px solid rgba(96,165,250,.25);
+    }
+    .q-marks {
+      flex: 0 0 auto; font-family: var(--mono); font-size: .8rem; font-weight: 800;
+      color: #04211c; background: linear-gradient(140deg, var(--accent-4), var(--accent-5));
+      padding: .22rem .55rem; border-radius: 8px;
+    }
+    .q-res { color: var(--accent-1); font-weight: 700; }
+    .pt-key {
+      margin-top: .5rem; padding: .45rem .6rem; border-radius: 9px;
+      background: rgba(94,234,212,.08); border: 1px solid rgba(94,234,212,.22);
+      font-size: .84rem; color: #cfe9df; line-height: 1.55;
+    }
+    .pt-key-label {
+      font-family: var(--mono); font-size: .66rem; font-weight: 800;
+      color: var(--accent-1); margin-right: .4rem;
+    }
+    .exam-part { scroll-margin-top: 96px; }
+  </style>
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="review-page" data-topic="midtermmock" data-page="1" data-selfcheck="off">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <a class="btn btn-home" href="https://johnnylin707.github.io/CSIS2260-reviews/index.html">&#8962; Home Page</a>
+      </div>
+      <div class="topbar-center">
+        <div class="topbar-title">Midterm Mock Exam<span>&middot; 68 questions &middot; 241 marks</span></div>
+      </div>
+      <div class="topbar-right">
+        <span class="pdf-tag">graded on submit</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <header class="page-head">
+      <div class="page-meta"><span>Mock exam &middot; 68 questions &middot; 241 marks</span></div>
+      <h1 class="page-title reveal">Midterm Mock Exam</h1>
+      <p class="page-title-zh reveal">期中模拟考试 &middot; 共 68 题 · 241 个得分点 · 交卷后评分</p>
+      <div class="source-badge reveal">Every scoring point has its own input box. <strong>One point = 1 mark</strong>, and your answer is correct as soon as it contains <strong>ONE English word</strong> from the standard answer. Nothing is graded until you press <strong>Submit · 交卷评分</strong> &mdash; then the paper jumps to the result panel and every question shows its score, accuracy and the standard answers.</div>
+    </header>
+
+    <nav class="top-nav" aria-label="Top navigation">
+      <a class="btn btn-back" href="MidtermPracticeSheet.html">&#8592; Midterm Practice Sheet</a>
+      <a class="btn btn-next" href="../index.html">Home &#8594;</a>
+    </nav>
+
+<div class="exam-summary" id="examSummary" hidden>
+<div class="es-title">YOUR RESULT · 考试结果</div>
+<div class="es-grid">
+<div class="es-cell"><span class="es-label">卷面总分 · Total marks</span><strong class="es-num" id="esTotal">241</strong></div>
+<div class="es-cell"><span class="es-label">你的得分 · Your score</span><strong class="es-num es-score" id="esScore">0</strong></div>
+<div class="es-cell"><span class="es-label">得分率 · Score rate</span><strong class="es-num" id="esRate">0%</strong></div>
+</div>
+<div class="es-bar"><div class="es-fill" id="esFill"></div></div>
+<p class="es-note">Grading happens only when you submit. · 仅在点击交卷后评分；交卷后每题会显示得分、准确率与每个得分点的标准答案。</p>
+</div>
+<div class="exam-actions">
+<button type="button" class="sc-btn sc-btn-primary" id="submitExam">Submit · 交卷评分</button>
+<button type="button" class="sc-btn" id="retakeExam" hidden>Retake · 重新作答</button>
+<span class="es-hint">1 point = 1 mark · your answer is correct if it contains ONE English word from the standard answer · 答案命中标准答案中的 1 个英文单词即得 1 分。</span>
+</div>
+<div class="exam-part">PART 1 · CHAPTER 1-4 REVIEW QUESTIONS &nbsp;(60 questions · 225 marks)</div>
+<article class="sc-item exam-q" data-q="p1q1" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q1</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are the four basic elements of a computer, and what is their purpose?</p>
+<p class="sc-q-zh">[中文] 一台计算机的四个基本组成部分是什么？各自的作用是什么？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Processor - controls" data-zh="处理器 - 控制">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Processor - controls（处理器 - 控制）</div>
+</div>
+<div class="sc-field" data-answer="Main memory - stores" data-zh="主存 - 存储">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Main memory - stores（主存 - 存储）</div>
+</div>
+<div class="sc-field" data-answer="I/O modules - move data" data-zh="I/O 模块 - 传送数据">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> I/O modules - move data（I/O 模块 - 传送数据）</div>
+</div>
+<div class="sc-field" data-answer="System bus - connects" data-zh="系统总线 - 连接">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> System bus - connects（系统总线 - 连接）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q2" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q2</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Explain the main differences between primary and secondary memory.</p>
+<p class="sc-q-zh">[中文] 说明主存储器与二级存储器（外存）的主要区别。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Primary: CPU-direct" data-zh="主存：CPU 直接访问">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Primary: CPU-direct（主存：CPU 直接访问）</div>
+</div>
+<div class="sc-field" data-answer="Primary: volatile" data-zh="主存：易失">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Primary: volatile（主存：易失）</div>
+</div>
+<div class="sc-field" data-answer="Secondary: non-volatile" data-zh="外存：非易失">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Secondary: non-volatile（外存：非易失）</div>
+</div>
+<div class="sc-field" data-answer="Secondary: cheaper, larger" data-zh="外存：更便宜、更大">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Secondary: cheaper, larger（外存：更便宜、更大）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q3" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q3</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What different types of I/O devices are there?</p>
+<p class="sc-q-zh">[中文] I/O 设备有哪些不同类型？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Human-readable" data-zh="人类可读">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Human-readable（人类可读）</div>
+</div>
+<div class="sc-field" data-answer="Machine-readable" data-zh="机器可读">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Machine-readable（机器可读）</div>
+</div>
+<div class="sc-field" data-answer="Communication" data-zh="通信">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Communication（通信）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q4" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q4</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain the following CPU elements:</p>
+<p class="sc-q-zh">[中文] 简要说明下列处理器部件：</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="SIMD, graphics" data-zh="SIMD、图形">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="a) GPU …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> SIMD, graphics（SIMD、图形）</div>
+</div>
+<div class="sc-field" data-answer="Audio/video signals" data-zh="音频/视频信号">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="b) DSP …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Audio/video signals（音频/视频信号）</div>
+</div>
+<div class="sc-field" data-answer="Fast CPU buffer" data-zh="CPU 的高速缓冲">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="c) Cache …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fast CPU buffer（CPU 的高速缓冲）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q5" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q5</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Modern CPUs are typically SoCs. What does this mean?</p>
+<p class="sc-q-zh">[中文] 现代 CPU 通常是 SoC，这是什么意思？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="System on chip" data-zh="片上系统">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> System on chip（片上系统）</div>
+</div>
+<div class="sc-field" data-answer="CPU + GPU + memory" data-zh="CPU + GPU + 内存">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> CPU + GPU + memory（CPU + GPU + 内存）</div>
+</div>
+<div class="sc-field" data-answer="Smaller, less power" data-zh="更小、更省电">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Smaller, less power（更小、更省电）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q6" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q6</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is the main reason for the introduction of interrupts?</p>
+<p class="sc-q-zh">[中文] 引入中断的主要原因是什么？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="I/O slower than CPU" data-zh="I/O 比 CPU 慢">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> I/O slower than CPU（I/O 比 CPU 慢）</div>
+</div>
+<div class="sc-field" data-answer="Polling wastes time" data-zh="轮询浪费时间">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Polling wastes time（轮询浪费时间）</div>
+</div>
+<div class="sc-field" data-answer="Overlap I/O, compute" data-zh="I/O 与计算重叠">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Overlap I/O, compute（I/O 与计算重叠）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q7" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q7</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are the four main classes of interrupts?</p>
+<p class="sc-q-zh">[中文] 中断主要分为哪四类？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Program" data-zh="程序中断">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Program（程序中断）</div>
+</div>
+<div class="sc-field" data-answer="Timer" data-zh="定时器中断">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Timer（定时器中断）</div>
+</div>
+<div class="sc-field" data-answer="I/O" data-zh="I/O 中断">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> I/O（I/O 中断）</div>
+</div>
+<div class="sc-field" data-answer="Hardware failure" data-zh="硬件故障中断">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Hardware failure（硬件故障中断）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q8" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q8</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">How does the use of interrupts improve computer performance?</p>
+<p class="sc-q-zh">[中文] 使用中断如何提高计算机性能？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Start I/O, continue" data-zh="启动 I/O 后继续">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Start I/O, continue（启动 I/O 后继续）</div>
+</div>
+<div class="sc-field" data-answer="Overlap processor/device" data-zh="处理器与设备并行">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Overlap processor/device（处理器与设备并行）</div>
+</div>
+<div class="sc-field" data-answer="Interrupt when ready" data-zh="就绪时才中断">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Interrupt when ready（就绪时才中断）</div>
+</div>
+<div class="sc-field" data-answer="No polling" data-zh="无需轮询">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> No polling（无需轮询）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q9" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q9</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What happens in modern computers when an interrupt occurs while another interrupt is still being processed?</p>
+<p class="sc-q-zh">[中文] 当另一个中断还在处理时又来一个中断，现代计算机会怎么做？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Each has priority" data-zh="每个中断有优先级">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Each has priority（每个中断有优先级）</div>
+</div>
+<div class="sc-field" data-answer="Lower: pending" data-zh="较低：挂起等待">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Lower: pending（较低：挂起等待）</div>
+</div>
+<div class="sc-field" data-answer="Higher: preempts" data-zh="较高：抢占当前">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Higher: preempts（较高：抢占当前）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q10" data-marks="5">
+<div class="sc-item-head">
+<span class="sc-num">Q10</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Modern computers have a memory hierarchy, i.e. a combination of several levels of memory of different access speed and sizes. Why is this the case, and what are the main tradeoffs between the different levels?</p>
+<p class="sc-q-zh">[中文] 现代计算机采用存储器层次结构，原因是什么？各层之间的主要取舍是什么？</p>
+<p class="sc-tip">5 boxes · 5 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">5</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="No ideal memory" data-zh="没有理想存储器">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> No ideal memory（没有理想存储器）</div>
+</div>
+<div class="sc-field" data-answer="Down: cheaper, larger" data-zh="往下：更便宜、更大">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Down: cheaper, larger（往下：更便宜、更大）</div>
+</div>
+<div class="sc-field" data-answer="Fast levels small" data-zh="快的层级小">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fast levels small（快的层级小）</div>
+</div>
+<div class="sc-field" data-answer="Large levels slow" data-zh="大的层级慢">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Large levels slow（大的层级慢）</div>
+</div>
+<div class="sc-field" data-answer="Locality makes it work" data-zh="局部性使其可行">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 5 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Locality makes it work（局部性使其可行）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q11" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q11</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is the principle of locality, why does it hold, and why is it important?</p>
+<p class="sc-q-zh">[中文] 什么是局部性原理？它为什么成立？为什么重要？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="References cluster" data-zh="访问成簇">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> References cluster（访问成簇）</div>
+</div>
+<div class="sc-field" data-answer="Temporal: reuse" data-zh="时间局部性：重用">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Temporal: reuse（时间局部性：重用）</div>
+</div>
+<div class="sc-field" data-answer="Spatial: neighbours" data-zh="空间局部性：相邻">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Spatial: neighbours（空间局部性：相邻）</div>
+</div>
+<div class="sc-field" data-answer="Enables cache" data-zh="使缓存可行">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Enables cache（使缓存可行）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q12" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q12</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain how cache memory works, and how it improves performance.</p>
+<p class="sc-q-zh">[中文] 简要说明高速缓存如何工作，以及它如何提高性能。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Small fast buffer" data-zh="小而快的缓冲">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Small fast buffer（小而快的缓冲）</div>
+</div>
+<div class="sc-field" data-answer="Check cache first" data-zh="先查缓存">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Check cache first（先查缓存）</div>
+</div>
+<div class="sc-field" data-answer="Hit: fast" data-zh="命中：快">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Hit: fast（命中：快）</div>
+</div>
+<div class="sc-field" data-answer="Miss: fetch memory" data-zh="未命中：取主存">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Miss: fetch memory（未命中：取主存）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q13" data-marks="6">
+<div class="sc-item-head">
+<span class="sc-num">Q13</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are some design decisions with regard to the design of a cache system?</p>
+<p class="sc-q-zh">[中文] 设计 Cache 系统时有哪些设计要点（决策）？</p>
+<p class="sc-tip">6 boxes · 6 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">6</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Cache size" data-zh="Cache 大小">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Cache size（Cache 大小）</div>
+</div>
+<div class="sc-field" data-answer="Block size" data-zh="块大小">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Block size（块大小）</div>
+</div>
+<div class="sc-field" data-answer="Mapping function" data-zh="映射函数">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Mapping function（映射函数）</div>
+</div>
+<div class="sc-field" data-answer="Replacement algorithm" data-zh="替换算法">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Replacement algorithm（替换算法）</div>
+</div>
+<div class="sc-field" data-answer="Write policy" data-zh="写策略">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 5 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Write policy（写策略）</div>
+</div>
+<div class="sc-field" data-answer="Number of levels" data-zh="Cache 级数">
+<span class="sc-badge">6</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 6 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Number of levels（Cache 级数）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q14" data-marks="6">
+<div class="sc-item-head">
+<span class="sc-num">Q14</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In the context of the design of a cache system in a modern computer, explain the main tradeoffs when making decisions about:</p>
+<p class="sc-q-zh">[中文] 分别说明下列决策的主要取舍：</p>
+<p class="sc-tip">6 boxes · 6 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">6</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="More hits, costlier" data-zh="命中率高，更贵">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="a) Cache size …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> More hits, costlier（命中率高，更贵）</div>
+</div>
+<div class="sc-field" data-answer="Spatial locality" data-zh="利用空间局部性">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="b) Block size …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Spatial locality（利用空间局部性）</div>
+</div>
+<div class="sc-field" data-answer="Simple vs flexible" data-zh="简单 vs 灵活">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="c) Mapping function …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Simple vs flexible（简单 vs 灵活）</div>
+</div>
+<div class="sc-field" data-answer="LRU good, costly" data-zh="LRU 好，开销大">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="d) Replacement algorithms …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> LRU good, costly（LRU 好，开销大）</div>
+</div>
+<div class="sc-field" data-answer="Speed vs consistency" data-zh="速度 vs 一致性">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="e) Write policy …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Speed vs consistency（速度 vs 一致性）</div>
+</div>
+<div class="sc-field" data-answer="More = faster" data-zh="级数多 = 更快">
+<span class="sc-badge">6</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="f) Number of cache levels …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> More = faster（级数多 = 更快）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q15" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q15</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In a cache system, LRU (or an approximation of LRU) is often used as replacement algorithm. What does LRU stand for, what is the main idea behind it, and why is it a good choice as a replacement algorithm?</p>
+<p class="sc-q-zh">[中文] Cache 中常用 LRU 作为替换算法。LRU 代表什么？基本思想是什么？为什么它是好选择？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Least Recently Used" data-zh="最近最少使用">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Least Recently Used（最近最少使用）</div>
+</div>
+<div class="sc-field" data-answer="Replace least-recent block" data-zh="替换最久未用块">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Replace least-recent block（替换最久未用块）</div>
+</div>
+<div class="sc-field" data-answer="Recently used reused" data-zh="最近用过会再用">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Recently used reused（最近用过会再用）</div>
+</div>
+<div class="sc-field" data-answer="Matches locality" data-zh="符合局部性">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Matches locality（符合局部性）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q16" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q16</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain the main differences between programmed I/O, interrupt-driven I/O and DMA.</p>
+<p class="sc-q-zh">[中文] 简要说明程序控制 I/O、中断驱动 I/O 与 DMA 的主要区别。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Programmed: polls" data-zh="程序控制：轮询">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Programmed: polls（程序控制：轮询）</div>
+</div>
+<div class="sc-field" data-answer="Interrupt: signals" data-zh="中断驱动：模块发信号">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Interrupt: signals（中断驱动：模块发信号）</div>
+</div>
+<div class="sc-field" data-answer="DMA: whole block" data-zh="DMA：整块传送">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> DMA: whole block（DMA：整块传送）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q17" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q17</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is a SMP system, and what are its main advantages?</p>
+<p class="sc-q-zh">[中文] 什么是 SMP 系统？它的主要优点是什么？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Multiple processors" data-zh="多个处理器">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Multiple processors（多个处理器）</div>
+</div>
+<div class="sc-field" data-answer="Shared memory" data-zh="共享内存">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Shared memory（共享内存）</div>
+</div>
+<div class="sc-field" data-answer="Performance, availability" data-zh="性能、可用性">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Performance, availability（性能、可用性）</div>
+</div>
+<div class="sc-field" data-answer="Incremental growth" data-zh="可增量扩展">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Incremental growth（可增量扩展）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q18" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q18</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is a multicore computer?</p>
+<p class="sc-q-zh">[中文] 什么是多核计算机？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Several cores" data-zh="多个核心">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Several cores（多个核心）</div>
+</div>
+<div class="sc-field" data-answer="One chip" data-zh="同一芯片">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> One chip（同一芯片）</div>
+</div>
+<div class="sc-field" data-answer="Parallel work" data-zh="并行工作">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Parallel work（并行工作）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q19" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q19</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain what the ISA, ABI and API of a computer system are.</p>
+<p class="sc-q-zh">[中文] 简要说明计算机系统的 ISA、ABI 与 API 分别是什么。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="ISA: instructions" data-zh="ISA：指令集">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> ISA: instructions（ISA：指令集）</div>
+</div>
+<div class="sc-field" data-answer="ABI: binary interface" data-zh="ABI：二进制接口">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> ABI: binary interface（ABI：二进制接口）</div>
+</div>
+<div class="sc-field" data-answer="API: library calls" data-zh="API：库调用">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> API: library calls（API：库调用）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q20" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q20</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Give some reasons why operating systems need to evolve over time.</p>
+<p class="sc-q-zh">[中文] 举出操作系统需要不断发展演进的原因。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="New hardware" data-zh="新硬件">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> New hardware（新硬件）</div>
+</div>
+<div class="sc-field" data-answer="New services" data-zh="新服务">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> New services（新服务）</div>
+</div>
+<div class="sc-field" data-answer="Fix errors" data-zh="修复错误">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fix errors（修复错误）</div>
+</div>
+<div class="sc-field" data-answer="Improve efficiency" data-zh="提高效率">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Improve efficiency（提高效率）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q21" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q21</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Operating systems evolved from serial processing systems over simple batch systems and multiprogrammed batch systems to time sharing systems. Briefly explain the main problems or limitations of each of these systems, and how the next system in the development overcame it.</p>
+<p class="sc-q-zh">[中文] 操作系统从串行处理、简单批处理、多道程序批处理发展到分时系统。请说明各系统的主要问题，以及后一种系统如何解决。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Serial: setup time" data-zh="串行：准备时间长">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Serial: setup time（串行：准备时间长）</div>
+</div>
+<div class="sc-field" data-answer="Batch: monitor" data-zh="批处理：监视程序">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Batch: monitor（批处理：监视程序）</div>
+</div>
+<div class="sc-field" data-answer="Multiprogramming: overlap" data-zh="多道：重叠 I/O">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Multiprogramming: overlap（多道：重叠 I/O）</div>
+</div>
+<div class="sc-field" data-answer="Time sharing: interactivity" data-zh="分时：交互性">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Time sharing: interactivity（分时：交互性）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q22" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q22</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In batch systems, what is JCL, and what is it used for?</p>
+<p class="sc-q-zh">[中文] 在批处理系统中，什么是 JCL？它用来做什么？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Job Control Language" data-zh="作业控制语言">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Job Control Language（作业控制语言）</div>
+</div>
+<div class="sc-field" data-answer="Describes job steps" data-zh="描述作业步骤">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Describes job steps（描述作业步骤）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q23" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q23</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In batch systems, why is it desirable to have a processor with:</p>
+<p class="sc-q-zh">[中文] 在批处理系统中，为什么希望处理器具备：</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Protect monitor" data-zh="保护监视程序">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="a) Memory protection …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Protect monitor（保护监视程序）</div>
+</div>
+<div class="sc-field" data-answer="Prevent hogging" data-zh="防止独占处理器">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="b) Timers …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Prevent hogging（防止独占处理器）</div>
+</div>
+<div class="sc-field" data-answer="OS only" data-zh="仅 OS 可执行">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="c) Privileged instructions …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> OS only（仅 OS 可执行）</div>
+</div>
+<div class="sc-field" data-answer="Return control" data-zh="交还控制权">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="d) Interrupts …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Return control（交还控制权）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q24" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q24</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is the difference between user mode and kernel mode?</p>
+<p class="sc-q-zh">[中文] 用户态与内核态有什么区别？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="User: less privileged" data-zh="用户态：特权低">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> User: less privileged（用户态：特权低）</div>
+</div>
+<div class="sc-field" data-answer="Kernel: more privileged" data-zh="内核态：特权高">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Kernel: more privileged（内核态：特权高）</div>
+</div>
+<div class="sc-field" data-answer="Switch: interrupt/call" data-zh="切换：中断/调用">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Switch: interrupt/call（切换：中断/调用）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q25" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q25</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly describe how multiprogramming improves computer performance compared to uniprogramming.</p>
+<p class="sc-q-zh">[中文] 与单道程序设计相比，多道程序设计如何提高计算机性能？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Jobs stay in memory" data-zh="多道作业驻留内存">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Jobs stay in memory（多道作业驻留内存）</div>
+</div>
+<div class="sc-field" data-answer="Overlap I/O, compute" data-zh="I/O 与计算重叠">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Overlap I/O, compute（I/O 与计算重叠）</div>
+</div>
+<div class="sc-field" data-answer="Higher utilization" data-zh="利用率更高">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Higher utilization（利用率更高）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q26" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q26</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In contrast to batch systems, what is the main focus of time sharing systems?</p>
+<p class="sc-q-zh">[中文] 与批处理系统相比，分时系统的主要目标是什么？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Interactive users" data-zh="交互式用户">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Interactive users（交互式用户）</div>
+</div>
+<div class="sc-field" data-answer="Fast response" data-zh="快速响应">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fast response（快速响应）</div>
+</div>
+<div class="sc-field" data-answer="Time slices" data-zh="时间片">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Time slices（时间片）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q27" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q27</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In a modern operating system, what is a process?</p>
+<p class="sc-q-zh">[中文] 在现代操作系统中，什么是进程？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Program in execution" data-zh="正在执行的程序">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Program in execution（正在执行的程序）</div>
+</div>
+<div class="sc-field" data-answer="Assigned to processor" data-zh="可分派到处理器">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Assigned to processor（可分派到处理器）</div>
+</div>
+<div class="sc-field" data-answer="Instructions, state, resources" data-zh="指令、状态、资源">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Instructions, state, resources（指令、状态、资源）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q28" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q28</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly describe some of the errors that can happen in multi-process systems.</p>
+<p class="sc-q-zh">[中文] 简要说明多进程系统中可能出现的一些错误。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Shared-data race" data-zh="共享数据竞争">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Shared-data race（共享数据竞争）</div>
+</div>
+<div class="sc-field" data-answer="Deadlock" data-zh="死锁">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Deadlock（死锁）</div>
+</div>
+<div class="sc-field" data-answer="Starvation" data-zh="饥饿">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Starvation（饥饿）</div>
+</div>
+<div class="sc-field" data-answer="Overwrites another" data-zh="覆写他人数据">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Overwrites another（覆写他人数据）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q29" data-marks="5">
+<div class="sc-item-head">
+<span class="sc-num">Q29</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are some of the responsibilities of memory management in a modern operating system?</p>
+<p class="sc-q-zh">[中文] 现代操作系统中存储器管理有哪些职责？</p>
+<p class="sc-tip">5 boxes · 5 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">5</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Track usage" data-zh="跟踪使用情况">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Track usage（跟踪使用情况）</div>
+</div>
+<div class="sc-field" data-answer="Allocate, deallocate" data-zh="分配与回收">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Allocate, deallocate（分配与回收）</div>
+</div>
+<div class="sc-field" data-answer="Protect processes" data-zh="保护各进程">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Protect processes（保护各进程）</div>
+</div>
+<div class="sc-field" data-answer="Map virtual addresses" data-zh="虚拟地址映射">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Map virtual addresses（虚拟地址映射）</div>
+</div>
+<div class="sc-field" data-answer="Swap, share" data-zh="换入换出、共享">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 5 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Swap, share（换入换出、共享）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q30" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q30</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are the main ideas behind virtual memory paging?</p>
+<p class="sc-q-zh">[中文] 虚拟存储器分页的主要思想是什么？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Large virtual space" data-zh="大的虚拟空间">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Large virtual space（大的虚拟空间）</div>
+</div>
+<div class="sc-field" data-answer="Program = pages" data-zh="程序 = 页">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Program = pages（程序 = 页）</div>
+</div>
+<div class="sc-field" data-answer="Memory = frames" data-zh="内存 = 帧">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Memory = frames（内存 = 帧）</div>
+</div>
+<div class="sc-field" data-answer="Page table maps" data-zh="页表映射">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Page table maps（页表映射）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q31" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q31</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are the main components of information system security?</p>
+<p class="sc-q-zh">[中文] 信息系统安全的主要组成部分有哪些？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Confidentiality" data-zh="机密性">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Confidentiality（机密性）</div>
+</div>
+<div class="sc-field" data-answer="Integrity" data-zh="完整性">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Integrity（完整性）</div>
+</div>
+<div class="sc-field" data-answer="Availability" data-zh="可用性">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Availability（可用性）</div>
+</div>
+<div class="sc-field" data-answer="Authentication" data-zh="身份认证">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Authentication（身份认证）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q32" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q32</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are the main priorities for the scheduling and resource management component of a modern operating system?</p>
+<p class="sc-q-zh">[中文] 现代操作系统的调度与资源管理部分主要考虑哪些目标？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Fairness" data-zh="公平">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fairness（公平）</div>
+</div>
+<div class="sc-field" data-answer="Efficiency" data-zh="效率">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Efficiency（效率）</div>
+</div>
+<div class="sc-field" data-answer="Fast response" data-zh="快速响应">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fast response（快速响应）</div>
+</div>
+<div class="sc-field" data-answer="Deadlines" data-zh="满足时限">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Deadlines（满足时限）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q33" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q33</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain the difference between when control passes from a user process to the operating system through an interrupt and through a service call.</p>
+<p class="sc-q-zh">[中文] 说明通过中断和通过服务调用把控制权从用户进程交给操作系统的区别。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Interrupt: external" data-zh="中断：外部事件">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Interrupt: external（中断：外部事件）</div>
+</div>
+<div class="sc-field" data-answer="Service call: explicit" data-zh="服务调用：显式请求">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Service call: explicit（服务调用：显式请求）</div>
+</div>
+<div class="sc-field" data-answer="Both run OS code" data-zh="两者都运行 OS 代码">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Both run OS code（两者都运行 OS 代码）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q34" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q34</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly describe the difference between a monolithic and a microkernel operating system.</p>
+<p class="sc-q-zh">[中文] 说明整体式（单内核）操作系统与微内核操作系统的区别。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="All in kernel" data-zh="全部在内核">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> All in kernel（全部在内核）</div>
+</div>
+<div class="sc-field" data-answer="Fast, direct calls" data-zh="直接调用，快">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fast, direct calls（直接调用，快）</div>
+</div>
+<div class="sc-field" data-answer="Minimal kernel, services" data-zh="微内核最小，服务在外">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Minimal kernel, services（微内核最小，服务在外）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q35" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q35</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain the main ideas behind multithreading.</p>
+<p class="sc-q-zh">[中文] 简要说明多线程的主要思想。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Process to threads" data-zh="进程分为线程">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Process to threads（进程分为线程）</div>
+</div>
+<div class="sc-field" data-answer="Run concurrently" data-zh="并发运行">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Run concurrently（并发运行）</div>
+</div>
+<div class="sc-field" data-answer="Cheaper create/switch" data-zh="创建/切换更便宜">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Cheaper create/switch（创建/切换更便宜）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q36" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q36</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain the main four advantages of Symmetric Multiprocessing.</p>
+<p class="sc-q-zh">[中文] 简要说明对称多处理的四个主要优点。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Performance" data-zh="性能">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Performance（性能）</div>
+</div>
+<div class="sc-field" data-answer="Availability" data-zh="可用性">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Availability（可用性）</div>
+</div>
+<div class="sc-field" data-answer="Incremental growth" data-zh="增量扩展">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Incremental growth（增量扩展）</div>
+</div>
+<div class="sc-field" data-answer="Scaling" data-zh="可伸缩">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Scaling（可伸缩）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q37" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q37</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">How is a distributed operating system different from a SMP system?</p>
+<p class="sc-q-zh">[中文] 分布式操作系统与 SMP 系统有什么不同？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="SMP: shared memory" data-zh="SMP：共享内存">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> SMP: shared memory（SMP：共享内存）</div>
+</div>
+<div class="sc-field" data-answer="Distributed: independent" data-zh="分布式：多台独立计算机">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Distributed: independent（分布式：多台独立计算机）</div>
+</div>
+<div class="sc-field" data-answer="Message passing" data-zh="消息传递">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Message passing（消息传递）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q38" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q38</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In the context of fault tolerance, briefly explain reliability, MTTF, MTTR and Availability, and how they are measured.</p>
+<p class="sc-q-zh">[中文] 在容错方面，简要说明可靠性、MTTF、MTTR 和可用性，以及它们如何度量。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Reliability: works" data-zh="可靠性：正常工作">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Reliability: works（可靠性：正常工作）</div>
+</div>
+<div class="sc-field" data-answer="MTTF: mean fail" data-zh="MTTF：平均无故障时间">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> MTTF: mean fail（MTTF：平均无故障时间）</div>
+</div>
+<div class="sc-field" data-answer="MTTR: mean repair" data-zh="MTTR：平均修复时间">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> MTTR: mean repair（MTTR：平均修复时间）</div>
+</div>
+<div class="sc-field" data-answer="Availability = MTTF/(MTTF+MTTR)" data-zh="可用性 = MTTF/(MTTF+MTTR)">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Availability = MTTF/(MTTF+MTTR)（可用性 = MTTF/(MTTF+MTTR)）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q39" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q39</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Give four different types of faults that could occur in a computer system.</p>
+<p class="sc-q-zh">[中文] 举出计算机系统中可能出现的四种不同类型的故障。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Permanent" data-zh="永久性故障">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Permanent（永久性故障）</div>
+</div>
+<div class="sc-field" data-answer="Transient" data-zh="瞬时故障">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Transient（瞬时故障）</div>
+</div>
+<div class="sc-field" data-answer="Intermittent" data-zh="间歇故障">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Intermittent（间歇故障）</div>
+</div>
+<div class="sc-field" data-answer="Software fault" data-zh="软件故障">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Software fault（软件故障）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q40" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q40</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Faults can be either permanent or temporary. Temporary faults can be classified into two subtypes. What are they? Give an example of each.</p>
+<p class="sc-q-zh">[中文] 故障分为永久性和临时性。临时性故障又分两个子类，它们是什么？各举一例。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Transient" data-zh="瞬时故障">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Transient（瞬时故障）</div>
+</div>
+<div class="sc-field" data-answer="Intermittent" data-zh="间歇故障">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Intermittent（间歇故障）</div>
+</div>
+<div class="sc-field" data-answer="Examples: glitch, loose joint" data-zh="例如电源毛刺、虚焊">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Examples: glitch, loose joint（例如电源毛刺、虚焊）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q41" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q41</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Name three specific mechanisms how Microsoft Windows increases fault tolerance.</p>
+<p class="sc-q-zh">[中文] 举出 Microsoft Windows 提高容错性的三种具体机制。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="NTFS transaction logging" data-zh="NTFS 事务日志">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> NTFS transaction logging（NTFS 事务日志）</div>
+</div>
+<div class="sc-field" data-answer="Protected subsystems" data-zh="受保护子系统">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Protected subsystems（受保护子系统）</div>
+</div>
+<div class="sc-field" data-answer="Driver verification" data-zh="驱动程序验证">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Driver verification（驱动程序验证）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q42" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q42</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In the context of an operating system, what is a process?</p>
+<p class="sc-q-zh">[中文] 在操作系统的语境下，什么是进程？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Program in execution" data-zh="正在执行的程序">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Program in execution（正在执行的程序）</div>
+</div>
+<div class="sc-field" data-answer="Assigned to processor" data-zh="可分派到处理器执行">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Assigned to processor（可分派到处理器执行）</div>
+</div>
+<div class="sc-field" data-answer="Instructions + state" data-zh="指令序列 + 当前状态">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Instructions + state（指令序列 + 当前状态）</div>
+</div>
+<div class="sc-field" data-answer="Code + data" data-zh="程序代码 + 数据">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Code + data（程序代码 + 数据）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q43" data-marks="6">
+<div class="sc-item-head">
+<span class="sc-num">Q43</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Name three elements of a process control block and three elements of a process image.</p>
+<p class="sc-q-zh">[中文] 举出进程控制块的三个要素和进程映像的三个要素。</p>
+<p class="sc-tip">6 boxes · 6 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">6</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Identifier" data-zh="标识符">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="PCB 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Identifier（标识符）</div>
+</div>
+<div class="sc-field" data-answer="State" data-zh="状态">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="PCB 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> State（状态）</div>
+</div>
+<div class="sc-field" data-answer="Priority" data-zh="优先级">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="PCB 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Priority（优先级）</div>
+</div>
+<div class="sc-field" data-answer="User data" data-zh="用户数据">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Image 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> User data（用户数据）</div>
+</div>
+<div class="sc-field" data-answer="User program" data-zh="用户程序">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Image 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> User program（用户程序）</div>
+</div>
+<div class="sc-field" data-answer="Stack" data-zh="栈">
+<span class="sc-badge">6</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Image 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Stack（栈）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q44" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q44</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is a process trace?</p>
+<p class="sc-q-zh">[中文] 什么是进程轨迹？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Instruction sequence" data-zh="执行的指令序列">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Instruction sequence（执行的指令序列）</div>
+</div>
+<div class="sc-field" data-answer="Dispatcher switches" data-zh="分派程序切换">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Dispatcher switches（分派程序切换）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q45" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q45</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly describe three different ways how a process can be created.</p>
+<p class="sc-q-zh">[中文] 简要描述创建一个进程的三种不同方式。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="New batch job" data-zh="新批处理作业">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> New batch job（新批处理作业）</div>
+</div>
+<div class="sc-field" data-answer="Interactive logon" data-zh="交互式登录">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Interactive logon（交互式登录）</div>
+</div>
+<div class="sc-field" data-answer="OS service / spawn" data-zh="OS 服务 / 派生">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> OS service / spawn（OS 服务 / 派生）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q46" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q46</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly describe three different ways how a process can end.</p>
+<p class="sc-q-zh">[中文] 简要描述进程结束的三种不同方式。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Normal completion" data-zh="正常完成">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Normal completion（正常完成）</div>
+</div>
+<div class="sc-field" data-answer="Time limit" data-zh="超过时限">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Time limit（超过时限）</div>
+</div>
+<div class="sc-field" data-answer="Memory unavailable" data-zh="内存不足">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Memory unavailable（内存不足）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q47" data-marks="8">
+<div class="sc-item-head">
+<span class="sc-num">Q47</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">A process can be in one of the following states: New, Ready, Running, Blocked, Ready/Suspend, Blocked/Suspend and Exit. Briefly explain each of these states, and how processes transition between them.</p>
+<p class="sc-q-zh">[中文] 进程可以处于以下状态：新建、就绪、运行、阻塞、就绪/挂起、阻塞/挂起和退出。简要说明每种状态以及状态之间如何转换。</p>
+<p class="sc-tip">8 boxes · 8 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">8</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="New: created" data-zh="新建：刚创建">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> New: created（新建：刚创建）</div>
+</div>
+<div class="sc-field" data-answer="Ready: waits processor" data-zh="就绪：等待处理器">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Ready: waits processor（就绪：等待处理器）</div>
+</div>
+<div class="sc-field" data-answer="Running: executing" data-zh="运行：正在执行">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Running: executing（运行：正在执行）</div>
+</div>
+<div class="sc-field" data-answer="Blocked: waits event" data-zh="阻塞：等待事件">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Blocked: waits event（阻塞：等待事件）</div>
+</div>
+<div class="sc-field" data-answer="Ready/Suspend: swapped" data-zh="就绪/挂起：已换出">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 5 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Ready/Suspend: swapped（就绪/挂起：已换出）</div>
+</div>
+<div class="sc-field" data-answer="Blocked/Suspend: swapped" data-zh="阻塞/挂起：已换出">
+<span class="sc-badge">6</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 6 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Blocked/Suspend: swapped（阻塞/挂起：已换出）</div>
+</div>
+<div class="sc-field" data-answer="Exit: released" data-zh="退出：已释放">
+<span class="sc-badge">7</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 7 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Exit: released（退出：已释放）</div>
+</div>
+<div class="sc-field" data-answer="Transitions: admit, dispatch, timeout, event, release" data-zh="转换：接纳、分派、超时、事件、释放">
+<span class="sc-badge">8</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 8 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Transitions: admit, dispatch, timeout, event, release（转换：接纳、分派、超时、事件、释放）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q48" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q48</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What types of resources do the main control tables of an operating system keep track of?</p>
+<p class="sc-q-zh">[中文] 操作系统的主要控制表分别跟踪哪些类型的资源？</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Memory tables" data-zh="存储器表">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Memory tables（存储器表）</div>
+</div>
+<div class="sc-field" data-answer="I/O tables" data-zh="I/O 表">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> I/O tables（I/O 表）</div>
+</div>
+<div class="sc-field" data-answer="File tables" data-zh="文件表">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> File tables（文件表）</div>
+</div>
+<div class="sc-field" data-answer="Process tables" data-zh="进程表">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Process tables（进程表）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q49" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q49</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Give and briefly explain an example of processor state information.</p>
+<p class="sc-q-zh">[中文] 举出一个处理器状态信息的例子并简要说明。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Processor registers" data-zh="处理器寄存器">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Processor registers（处理器寄存器）</div>
+</div>
+<div class="sc-field" data-answer="PSW: flags" data-zh="PSW：标志位">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> PSW: flags（PSW：标志位）</div>
+</div>
+<div class="sc-field" data-answer="PC, stack pointers" data-zh="程序计数器、栈指针">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> PC, stack pointers（程序计数器、栈指针）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q50" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q50</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly describe the difference between user and system (or kernel) mode.</p>
+<p class="sc-q-zh">[中文] 简要说明用户态与系统态（内核态）的区别。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="User: less privileged" data-zh="用户态：特权低">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> User: less privileged（用户态：特权低）</div>
+</div>
+<div class="sc-field" data-answer="Kernel: more privileged" data-zh="内核态：特权高">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Kernel: more privileged（内核态：特权高）</div>
+</div>
+<div class="sc-field" data-answer="Privileged instructions" data-zh="可执行特权指令">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Privileged instructions（可执行特权指令）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q51" data-marks="6">
+<div class="sc-item-head">
+<span class="sc-num">Q51</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain three typical functions of an operating system kernel, and three operating system functions that would reside outside of the kernel.</p>
+<p class="sc-q-zh">[中文] 简要说明操作系统内核的三个典型功能，以及三个位于内核之外的操作系统功能。</p>
+<p class="sc-tip">6 boxes · 6 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">6</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Process creation" data-zh="进程创建与终止">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Kernel 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Process creation（进程创建与终止）</div>
+</div>
+<div class="sc-field" data-answer="Scheduling" data-zh="调度与分派">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Kernel 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Scheduling（调度与分派）</div>
+</div>
+<div class="sc-field" data-answer="Memory allocation" data-zh="地址空间分配">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Kernel 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Memory allocation（地址空间分配）</div>
+</div>
+<div class="sc-field" data-answer="I/O buffers" data-zh="缓冲区管理">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Outside 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> I/O buffers（缓冲区管理）</div>
+</div>
+<div class="sc-field" data-answer="Shell" data-zh="命令解释程序">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Outside 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Shell（命令解释程序）</div>
+</div>
+<div class="sc-field" data-answer="File system" data-zh="文件系统服务">
+<span class="sc-badge">6</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="Outside 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> File system（文件系统服务）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q52" data-marks="5">
+<div class="sc-item-head">
+<span class="sc-num">Q52</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain the steps that are necessary when a process is created.</p>
+<p class="sc-q-zh">[中文] 简要说明创建进程时需要的步骤。</p>
+<p class="sc-tip">5 boxes · 5 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">5</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Assign identifier" data-zh="分配唯一标识符">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Assign identifier（分配唯一标识符）</div>
+</div>
+<div class="sc-field" data-answer="Allocate space" data-zh="分配空间">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Allocate space（分配空间）</div>
+</div>
+<div class="sc-field" data-answer="Initialize PCB" data-zh="初始化 PCB">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Initialize PCB（初始化 PCB）</div>
+</div>
+<div class="sc-field" data-answer="Set linkages" data-zh="建立链接">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Set linkages（建立链接）</div>
+</div>
+<div class="sc-field" data-answer="Create other structures" data-zh="创建其他数据结构">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 5 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Create other structures（创建其他数据结构）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q53" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q53</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">The execution of user processes can be interrupted by interrupts, traps and supervisor calls. Briefly explain the difference between these three ways.</p>
+<p class="sc-q-zh">[中文] 用户进程的执行可以被中断、陷阱和管态调用打断。简要说明这三种方式的区别。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Interrupt: external, async" data-zh="中断：外部、异步">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Interrupt: external, async（中断：外部、异步）</div>
+</div>
+<div class="sc-field" data-answer="Trap: internal, sync" data-zh="陷阱：内部、同步">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Trap: internal, sync（陷阱：内部、同步）</div>
+</div>
+<div class="sc-field" data-answer="Supervisor: explicit" data-zh="管态调用：显式请求">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Supervisor: explicit（管态调用：显式请求）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q54" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q54</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Briefly explain the difference between processes and threads.</p>
+<p class="sc-q-zh">[中文] 简要说明进程与线程的区别。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Process: resource ownership" data-zh="进程：资源拥有单位">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Process: resource ownership（进程：资源拥有单位）</div>
+</div>
+<div class="sc-field" data-answer="Thread: dispatching" data-zh="线程：分派单位">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Thread: dispatching（线程：分派单位）</div>
+</div>
+<div class="sc-field" data-answer="Threads share space" data-zh="线程共享地址空间">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Threads share space（线程共享地址空间）</div>
+</div>
+<div class="sc-field" data-answer="Thread: own PC, stack" data-zh="线程自有 PC、栈">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Thread: own PC, stack（线程自有 PC、栈）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q55" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q55</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In an operating system that supports threads, are processes still needed, and if so, for what?</p>
+<p class="sc-q-zh">[中文] 在支持线程的操作系统中，进程仍然需要吗？如果需要，是做什么用的？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Unit of allocation" data-zh="资源分配单位">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Unit of allocation（资源分配单位）</div>
+</div>
+<div class="sc-field" data-answer="Unit of protection" data-zh="保护单位">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Unit of protection（保护单位）</div>
+</div>
+<div class="sc-field" data-answer="Suspend ends threads" data-zh="挂起即挂起全部线程">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Suspend ends threads（挂起即挂起全部线程）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q56" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q56</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Give three specific examples in which the use of threads is superior to the use of separate processes.</p>
+<p class="sc-q-zh">[中文] 举出三个使用线程优于使用独立进程的具体例子。</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Foreground/background" data-zh="前台/后台工作">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Foreground/background（前台/后台工作）</div>
+</div>
+<div class="sc-field" data-answer="Asynchronous processing" data-zh="异步处理">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Asynchronous processing（异步处理）</div>
+</div>
+<div class="sc-field" data-answer="Overlapped compute/I-O" data-zh="计算与 I/O 重叠">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Overlapped compute/I-O（计算与 I/O 重叠）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q57" data-marks="4">
+<div class="sc-item-head">
+<span class="sc-num">Q57</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">In an operating system that supports multithreading, give two specific examples each of information in the process control block and the thread control block.</p>
+<p class="sc-q-zh">[中文] 在支持多线程的操作系统中，分别举出进程控制块和线程控制块中的两项具体信息。</p>
+<p class="sc-tip">4 boxes · 4 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">4</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Identifier" data-zh="标识符">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="PCB 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Identifier（标识符）</div>
+</div>
+<div class="sc-field" data-answer="Address space" data-zh="虚拟地址空间">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="PCB 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Address space（虚拟地址空间）</div>
+</div>
+<div class="sc-field" data-answer="Execution state" data-zh="执行状态">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="TCB 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Execution state（执行状态）</div>
+</div>
+<div class="sc-field" data-answer="Program counter" data-zh="程序计数器">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="TCB 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Program counter（程序计数器）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q58" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q58</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Do threads make sense even on computers with only a single CPU core?</p>
+<p class="sc-q-zh">[中文] 在只有一个 CPU 核心的计算机上，线程还有意义吗？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Yes" data-zh="有意义">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Yes（有意义）</div>
+</div>
+<div class="sc-field" data-answer="Threads interleave" data-zh="线程交错执行">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Threads interleave（线程交错执行）</div>
+</div>
+<div class="sc-field" data-answer="One waits, others work" data-zh="一个等待，其他继续">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> One waits, others work（一个等待，其他继续）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q59" data-marks="5">
+<div class="sc-item-head">
+<span class="sc-num">Q59</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What states can threads be in, and what are the main operations leading to a change of thread state?</p>
+<p class="sc-q-zh">[中文] 线程可以处于哪些状态？导致线程状态变化的主要操作有哪些？</p>
+<p class="sc-tip">5 boxes · 5 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">5</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Running, Ready, Blocked" data-zh="运行、就绪、阻塞">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Running, Ready, Blocked（运行、就绪、阻塞）</div>
+</div>
+<div class="sc-field" data-answer="Spawn: created" data-zh="Spawn：创建线程">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Spawn: created（Spawn：创建线程）</div>
+</div>
+<div class="sc-field" data-answer="Block: waits event" data-zh="Block：等待事件">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Block: waits event（Block：等待事件）</div>
+</div>
+<div class="sc-field" data-answer="Unblock: event occurs" data-zh="Unblock：事件发生">
+<span class="sc-badge">4</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 4 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Unblock: event occurs（Unblock：事件发生）</div>
+</div>
+<div class="sc-field" data-answer="Finish: completes" data-zh="Finish：执行完毕">
+<span class="sc-badge">5</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 5 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Finish: completes（Finish：执行完毕）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p1q60" data-marks="3">
+<div class="sc-item-head">
+<span class="sc-num">Q60</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">Can individual threads be suspended? Why or why not?</p>
+<p class="sc-q-zh">[中文] 单个线程可以被挂起吗？为什么可以或不可以？</p>
+<p class="sc-tip">3 boxes · 3 个得分点 · Part 1 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">3</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="No" data-zh="不可以">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> No（不可以）</div>
+</div>
+<div class="sc-field" data-answer="Process-level operation" data-zh="挂起是进程级操作">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Process-level operation（挂起是进程级操作）</div>
+</div>
+<div class="sc-field" data-answer="Threads share space" data-zh="线程共享地址空间">
+<span class="sc-badge">3</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 3 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Threads share space（线程共享地址空间）</div>
+</div>
+</div>
+</article>
+<div class="exam-part">PART 2 · WINDOWS LABS 1-4 : HIGH-YIELD PICKS &nbsp;(8 questions · 16 marks)</div>
+<article class="sc-item exam-q" data-q="p2q1" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q1</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is a paging file, and why does Windows use one?</p>
+<p class="sc-q-zh">[中文] 什么是分页文件？Windows 为什么使用它？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Reserved disk space" data-zh="硬盘上预留的空间">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Reserved disk space（硬盘上预留的空间）</div>
+</div>
+<div class="sc-field" data-answer="Extends RAM" data-zh="作为 RAM 的扩展">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Extends RAM（作为 RAM 的扩展）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p2q2" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q2</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is the difference between a Standard User and an Administrator?</p>
+<p class="sc-q-zh">[中文] 标准用户与管理员有什么区别？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Standard: restricted" data-zh="标准用户：权限受限">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Standard: restricted（标准用户：权限受限）</div>
+</div>
+<div class="sc-field" data-answer="Administrator: full control" data-zh="管理员：完全控制">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Administrator: full control（管理员：完全控制）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p2q3" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q3</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What are the four main resources that Resource Monitor monitors?</p>
+<p class="sc-q-zh">[中文] 资源监视器监视的四种主要资源是什么？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="CPU, Memory" data-zh="CPU、内存">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> CPU, Memory（CPU、内存）</div>
+</div>
+<div class="sc-field" data-answer="Disk, Network" data-zh="磁盘、网络">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Disk, Network（磁盘、网络）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p2q4" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q4</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is a restore point, and what is System Restore for?</p>
+<p class="sc-q-zh">[中文] 什么是还原点？系统还原有什么用？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Saved snapshot" data-zh="已保存的快照">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Saved snapshot（已保存的快照）</div>
+</div>
+<div class="sc-field" data-answer="Rolls system back" data-zh="回滚系统">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Rolls system back（回滚系统）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p2q5" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q5</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is VirtualBox, and what type of hypervisor is it?</p>
+<p class="sc-q-zh">[中文] VirtualBox 是什么？它属于哪种虚拟机监控器？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Open-source virtualization" data-zh="开源虚拟化软件">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Open-source virtualization（开源虚拟化软件）</div>
+</div>
+<div class="sc-field" data-answer="Type 2 hypervisor" data-zh="Type 2 虚拟机监控器">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Type 2 hypervisor（Type 2 虚拟机监控器）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p2q6" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q6</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is a hard fault?</p>
+<p class="sc-q-zh">[中文] 什么是硬故障？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Fetch from disk" data-zh="从磁盘读取数据">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Fetch from disk（从磁盘读取数据）</div>
+</div>
+<div class="sc-field" data-answer="Not from RAM" data-zh="而非从内存">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Not from RAM（而非从内存）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p2q7" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q7</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is Oracle VirtualBox, and what type of hypervisor is it?</p>
+<p class="sc-q-zh">[中文] Oracle VirtualBox 是什么？它属于哪种虚拟机监控器？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Virtualization software" data-zh="虚拟化软件">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Virtualization software（虚拟化软件）</div>
+</div>
+<div class="sc-field" data-answer="Type 2 hypervisor" data-zh="Type 2 虚拟机监控器">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Type 2 hypervisor（Type 2 虚拟机监控器）</div>
+</div>
+</div>
+</article>
+<article class="sc-item exam-q" data-q="p2q8" data-marks="2">
+<div class="sc-item-head">
+<span class="sc-num">Q8</span>
+<div style="flex:1;min-width:0">
+<p class="sc-q-en">What is the difference between a Type 1 and a Type 2 hypervisor?</p>
+<p class="sc-q-zh">[中文] Type 1 与 Type 2 虚拟机监控器有什么区别？</p>
+<p class="sc-tip">2 boxes · 2 个得分点 · Part 2 · <span class="q-res" hidden></span></p></div>
+<span class="q-marks" title="marks">2</span>
+</div>
+<div class="sc-fields">
+<div class="sc-field" data-answer="Type 1: bare metal" data-zh="Type 1：直接运行在硬件上">
+<span class="sc-badge">1</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 1 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Type 1: bare metal（Type 1：直接运行在硬件上）</div>
+</div>
+<div class="sc-field" data-answer="Type 2: on host OS" data-zh="Type 2：运行在宿主 OS 上">
+<span class="sc-badge">2</span>
+<div class="sc-input-wrap">
+<textarea class="sc-input" rows="1" spellcheck="false" autocomplete="off" placeholder="要点 2 …"></textarea>
+<span class="sc-missing" hidden></span>
+</div>
+<span class="sc-verdict" aria-live="polite"></span>
+<div class="pt-key" hidden><span class="pt-key-label">STANDARD · 标准</span> Type 2: on host OS（Type 2：运行在宿主 OS 上）</div>
+</div>
+</div>
+</article>
+<div class="exam-actions">
+<button type="button" class="sc-btn sc-btn-primary" data-submit>Submit · 交卷评分</button>
+<span class="es-hint">241 input boxes · 241 个得分点</span>
+</div>
+
+
+    <nav class="bottom-nav" aria-label="Bottom navigation">
+      <a class="btn btn-back" href="MidtermPracticeSheet.html">&#8592; Midterm Practice Sheet</a>
+      <a class="btn btn-next" href="../index.html">Home &#8594;</a>
+    </nav>
+
+    <div class="kbd-hint">
+      <kbd>&#8592;</kbd> Back &nbsp; <kbd>&#8594;</kbd> Next &nbsp; <kbd>Esc</kbd> Home
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    Midterm Mock Exam &middot; questions from &ldquo;ReviewQuestions &ndash; Midterm.pdf&rdquo; and the Windows Labs decks &middot; 1 mark per scoring point.
+  </footer>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/animations.js"></script>
+  <script>
+    (function () {
+      var fields = Array.prototype.slice.call(document.querySelectorAll(".sc-field[data-answer]"));
+      var summary = document.getElementById("examSummary");
+      var submitBtns = Array.prototype.slice.call(document.querySelectorAll("#submitExam, [data-submit]"));
+      var retakeBtn = document.getElementById("retakeExam");
+      var graded = false;
+
+      var STOP = { a:1, an:1, the:1, of:1, to:1, in:1, on:1, for:1, and:1, or:1, is:1, are:1,
+        be:1, it:1, its:1, as:1, at:1, by:1, with:1, from:1, not:1, no:1, yes:1, vs:1, when:1,
+        that:1, this:1, than:1, then:1, so:1, into:1, per:1, both:1, each:1, one:1, two:1, all:1 };
+
+      function words(s) {
+        return s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean);
+      }
+      function stem(w) {
+        if (w.length > 4 && /ies$/.test(w)) return w.replace(/ies$/, "y");
+        if (w.length > 4 && /sses$/.test(w)) return w.replace(/sses$/, "ss");
+        if (w.length > 3 && /s$/.test(w) && !/ss$/.test(w)) return w.replace(/s$/, "");
+        return w;
+      }
+      function keywords(ans) {
+        var ws = words(ans).filter(function (w) { return w.length >= 3 && !STOP[w]; });
+        if (!ws.length) ws = words(ans);
+        var set = {};
+        ws.forEach(function (w) { set[stem(w)] = 1; });
+        return set;
+      }
+      function hit(ans, input) {
+        var kw = keywords(ans);
+        var have = {};
+        words(input).forEach(function (w) { if (w.length >= 2) have[stem(w)] = 1; });
+        for (var k in kw) { if (have[k]) return true; }
+        return false;
+      }
+
+      function grade() {
+        if (graded) return;
+        graded = true;
+        var total = 0, score = 0, per = {};
+        fields.forEach(function (f) {
+          var input = f.querySelector(".sc-input");
+          var ans = f.getAttribute("data-answer");
+          var ok = hit(ans, input.value);
+          total++;
+          if (ok) score++;
+          f.classList.add("graded", ok ? "ok" : "bad");
+          var v = f.querySelector(".sc-verdict");
+          if (v) v.textContent = ok ? "\u2713 1 mark" : "\u2717 0";
+          var key = f.querySelector(".pt-key");
+          if (key) key.hidden = false;
+          input.readOnly = true;
+          var card = f.closest(".exam-q");
+          if (card) {
+            var id = card.getAttribute("data-q");
+            if (!per[id]) per[id] = { got: 0, max: 0, card: card };
+            per[id].got += ok ? 1 : 0;
+            per[id].max += 1;
+          }
+        });
+        Object.keys(per).forEach(function (id) {
+          var p = per[id];
+          var res = p.card.querySelector(".q-res");
+          if (res) {
+            res.hidden = false;
+            res.textContent = "You scored " + p.got + " / " + p.max + " (" +
+              Math.round(100 * p.got / p.max) + "%)";
+          }
+        });
+        var rate = total ? Math.round(1000 * score / total) / 10 : 0;
+        document.getElementById("esScore").textContent = score + " / " + total;
+        document.getElementById("esRate").textContent = rate + "%";
+        document.getElementById("esFill").style.width = rate + "%";
+        summary.hidden = false;
+        submitBtns.forEach(function (b) { b.hidden = true; });
+        retakeBtn.hidden = false;
+        summary.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function retake() {
+        graded = false;
+        fields.forEach(function (f) {
+          f.classList.remove("graded", "ok", "bad");
+          var input = f.querySelector(".sc-input");
+          if (input) { input.value = ""; input.readOnly = false; }
+          var v = f.querySelector(".sc-verdict");
+          if (v) v.textContent = "";
+          var key = f.querySelector(".pt-key");
+          if (key) key.hidden = true;
+          var card = f.closest(".exam-q");
+          var res = card ? card.querySelector(".q-res") : null;
+          if (res) { res.hidden = true; res.textContent = ""; }
+        });
+        summary.hidden = true;
+        retakeBtn.hidden = true;
+        submitBtns.forEach(function (b) { b.hidden = false; });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      submitBtns.forEach(function (b) { b.addEventListener("click", grade); });
+      if (retakeBtn) retakeBtn.addEventListener("click", retake);
+    })();
+  </script>
+</body>
+</html>
