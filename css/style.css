@@ -184,13 +184,19 @@ body {
 }
 
 /* --------------------------------------------------------- deck cards */
+/* One card per row: every review set owns the full width of the home page
+   and the cards simply stack one after another, top to bottom. */
 .deck-grid {
-  display: grid; gap: 1.6rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: grid; gap: 1.15rem;
+  grid-template-columns: minmax(0, 1fr);
   padding: 1.5rem 0 3rem;
 }
 .deck-card {
-  position: relative; display: block; padding: 2rem 1.9rem 1.7rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  column-gap: 1.5rem;
+  padding: 1.7rem 1.9rem;
   border-radius: var(--radius); border: 1px solid var(--stroke);
   background: linear-gradient(150deg, var(--glass-strong), var(--glass));
   text-decoration: none; color: var(--text);
@@ -207,12 +213,14 @@ body {
 .deck-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.24); box-shadow: 0 30px 60px -26px rgba(0,0,0,0.9); }
 .deck-card:hover::before { opacity: 1; }
 .deck-card .deck-icon {
+  grid-column: 1; grid-row: 1 / span 6;
   display: grid; place-items: center;
-  width: 58px; height: 58px; border-radius: 16px; margin-bottom: 1.15rem;
+  width: 58px; height: 58px; border-radius: 16px; margin-bottom: 0;
   font-size: 1.6rem; font-weight: 800;
   background: linear-gradient(140deg, rgba(94,234,212,0.22), rgba(96,165,250,0.22));
   border: 1px solid var(--stroke);
 }
+.deck-card > *:not(.deck-icon) { grid-column: 2; min-width: 0; }
 .deck-card h2 { margin: 0 0 0.3rem; font-size: 1.35rem; font-weight: 750; letter-spacing: -0.3px; }
 .deck-zh { margin: 0 0 0.5rem; color: #9fe3cf; font-size: 1rem; font-weight: 650; letter-spacing: 1px; }
 .deck-card .deck-file { color: var(--text-faint); font-size: 0.84rem; font-family: var(--mono); }
@@ -225,11 +233,17 @@ body {
   color: var(--text-dim);
 }
 .deck-cta {
-  display: inline-flex; align-items: center; gap: 0.45rem;
+  display: inline-flex; align-items: center; gap: 0.45rem; justify-self: start;
   color: var(--accent-1); font-weight: 700; font-size: 0.92rem;
 }
 .deck-cta .arrow { transition: transform 0.35s var(--ease); }
 .deck-card:hover .deck-cta .arrow { transform: translateX(7px); }
+
+@media (max-width: 640px) {
+  .deck-card { grid-template-columns: minmax(0, 1fr); padding: 1.45rem 1.25rem; }
+  .deck-card .deck-icon { grid-column: 1; grid-row: auto; margin-bottom: 1rem; }
+  .deck-card > *:not(.deck-icon) { grid-column: 1; }
+}
 
 /* ================================================== LEFT VERTICAL NAV */
 .sidebar {
@@ -1049,8 +1063,8 @@ kbd {
 .qa-answer-inner .content-list li { padding-top: 0.6rem; padding-bottom: 0.6rem; }
 
 /* =====================================================================
-   HOME PAGE — fill-in-the-blank drill (rendered by javascript/home-quiz.js)
-   Instruction-cycle trace questions on the hypothetical processor.
+   INSTRUCTION CYCLE DRILL — fill-in-the-blank questions on the dedicated
+   page pages/InstructionCycleDrill.html (rendered by javascript/home-quiz.js).
    ===================================================================== */
 .home-quiz {
   margin: 2.4rem 0 3rem;
@@ -1163,6 +1177,12 @@ kbd {
   .hq-score { margin-left: 0; width: 100%; text-align: right; }
 }
 
+/* ------------------ dedicated Instruction Cycle Drill page ------------ */
+.drill-hero { padding: clamp(2.4rem, 7vh, 4.5rem) 0 0.8rem; }
+.drill-hero h1 { font-size: clamp(1.75rem, 4.4vw, 3rem); }
+.drill-hero p.lead { max-width: 820px; }
+.drill-quiz { max-width: 1000px; margin: 1.8rem auto 0.4rem; }
+
 /* =====================================================================
    Reading text at 1.2rem  —  the same size as the page's Chinese
    subtitle under the page title. All titles / headings keep their
@@ -1195,7 +1215,7 @@ kbd {
 .sc-model li { font-size: 1.2rem; }
 .sc-model .m-zh { font-size: 1.2rem; }
 
-/* home-page fill-in-the-blank drill */
+/* instruction-cycle fill-in-the-blank drill */
 .hq-q { font-size: 1.2rem; }
 .hq-input { font-size: 1.2rem; }
 
@@ -1304,6 +1324,8 @@ kbd {
   transition: opacity .16s var(--ease), transform .16s var(--ease), visibility .16s;
   z-index: 5;
 }
+/* the last group sits at the right edge — keep its dropdown inside the viewport */
+.nav-item:last-child > .nav-dropdown { left: auto; right: 0; }
 .nav-item.open > .nav-dropdown { opacity: 1; visibility: visible; transform: none; }
 
 .nav-dropdown a {

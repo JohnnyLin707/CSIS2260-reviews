@@ -1,6 +1,7 @@
 /* =====================================================================
-   Home page drill — "fill in the blanks" on the hypothetical processor
-   used in the lecture (Load/Store/Add + the two I/O instructions).
+   Instruction Cycle Drill — "fill in the blanks" on the hypothetical
+   processor used in the lecture (Load/Store/Add + the two I/O instructions).
+   Mounted on pages/InstructionCycleDrill.html by the #hqList element.
    Ten questions, each with one or more inputs, auto-marked on submit.
    ===================================================================== */
 (function () {

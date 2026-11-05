@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Fill in the Blanks &middot; Instruction Cycle Drill</title>
+  <meta name="description" content="Ten auto-marked fill-in-the-blank questions on the hypothetical processor's instruction cycle, with the opcode and memory setup from the lecture.">
+  <link rel="stylesheet" href="../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="home-page">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+    <div class="site-shell site-nav-inner">
+      <a class="site-nav-brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">OS</span>
+        <span class="brand-text">CSIS2260<small>Review Hub</small></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 1<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="chapter1.html">Chapter 1 Slides<span class="dd-zh">第 1 章幻灯片</span><span class="dd-n">59</span></a>
+              <a href="Chapter1Review.html">Chapter 1 Review<span class="dd-zh">第 1 章复习题</span><span class="dd-n">18</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 2<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="chapter2.html">Chapter 2 Slides<span class="dd-zh">第 2 章幻灯片</span><span class="dd-n">75</span></a>
+              <a href="Chapter2Review.html">Chapter 2 Review<span class="dd-zh">第 2 章复习题</span><span class="dd-n">23</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 3<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="chapter3.html">Chapter 3 Slides<span class="dd-zh">第 3 章幻灯片</span><span class="dd-n">58</span></a>
+              <a href="Chapter3Review.html">Chapter 3 Review<span class="dd-zh">第 3 章复习题</span><span class="dd-n">12</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Ch 4<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="chapter4.html">Chapter 4 Slides<span class="dd-zh">第 4 章幻灯片</span><span class="dd-n">22</span></a>
+              <a href="Chapter4Review.html">Chapter 4 Review<span class="dd-zh">第 4 章复习题</span><span class="dd-n">7</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="WindowsLabsReview.html">Windows Labs<span class="dd-zh">Windows 实验</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MidtermMockExam.html">Mock Exam<span class="dd-zh">期中模拟考</span></a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">Quizzes<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="Quiz1importantShortAnswer.html">Short Answer Drill<span class="dd-zh">重点简答题</span><span class="dd-n">17</span></a>
+              <a href="Quiz1keyQuestions.html">Quiz 1 Key Questions<span class="dd-zh">重点回忆题</span><span class="dd-n">25</span></a>
+              <a href="Quiz1Fall2026.html">Quiz 1 Fall 2026<span class="dd-zh">2026 秋季真题</span><span class="dd-n">5</span></a>
+              <a href="InstructionCycleDrill.html">Instruction Cycle Drill<span class="dd-zh">指令周期填空练习</span><span class="dd-n">10</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="nav-group-toggle" type="button" aria-expanded="false">More<span class="nav-caret" aria-hidden="true"></span></button>
+            <div class="nav-dropdown">
+              <a href="intro-hw.html">Intro to Hardware<span class="dd-zh">计算机硬件导论</span><span class="dd-n">40</span></a>
+              <a href="UnixCommands.html">UNIX Commands<span class="dd-zh">UNIX 命令速查表</span><span class="dd-n">29</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="site-shell">
+    <section class="hero drill-hero">
+      <span class="hero-badge"><span class="dot"></span> &middot; Practice Drill</span>
+      <h1>Fill in the Blanks &middot; Instruction Cycle Drill</h1>
+      <p class="hero-zh">填空题 &middot; 指令周期练习</p>
+      <p class="lead">
+        Ten short-answer questions on the hypothetical processor from the lecture:
+        opcodes, registers and the fetch&ndash;execute cycle. Every answer box is marked
+        automatically when you press <strong>Check answers</strong>.
+      </p>
+    </section>
+  </header>
+
+  <main class="site-shell">
+    <section class="home-quiz drill-quiz reveal" aria-labelledby="hqTitle">
+      <div class="hq-head">
+        <span class="hq-icon" aria-hidden="true">&#9998;</span>
+        <div>
+          <h2 class="hq-title" id="hqTitle">Ten questions &middot; 12 answer boxes</h2>
+          <p class="hq-sub">
+            Read the setup below, type your answers into the boxes, then press
+            <strong>Check answers</strong>. Capitalisation, spacing and full sentences are not
+            graded &mdash; only the value you write.
+          </p>
+        </div>
+      </div>
+
+      <div class="hq-spec">
+        <h3>The hypothetical processor</h3>
+        <ul>
+          <li><code>0001</code> = 1 = Load AC from memory</li>
+          <li><code>0010</code> = 2 = Store AC to memory</li>
+          <li><code>0101</code> = 5 = Add to AC from memory</li>
+          <li class="hq-io"><code>0011</code> = 3 = Load AC from I/O</li>
+          <li class="hq-io"><code>0111</code> = 7 = Store AC to I/O</li>
+        </ul>
+        <p style="margin:.7rem 0 0">
+          The first 4 bits of an instruction are the opcode; the remaining 12 bits are the argument
+          (a memory address or an I/O device number). The program loaded into memory is:
+          <code>300&nbsp;[3005]</code>&nbsp;&nbsp;<code>301&nbsp;[5940]</code>&nbsp;&nbsp;<code>302&nbsp;[7006]</code>,
+          with <code>940&nbsp;[0002]</code>. Device&nbsp;5 currently holds <code>0004</code>.
+        </p>
+      </div>
+
+      <div class="hq-list" id="hqList"></div>
+
+      <div class="hq-actions">
+        <button class="hq-btn hq-btn-primary" id="hqCheck" type="button">Check answers</button>
+        <button class="hq-btn" id="hqReveal" type="button">Show answers</button>
+        <button class="hq-btn" id="hqReset" type="button">Reset</button>
+        <span class="hq-score" id="hqScore" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Page navigation">
+      <a class="btn btn-back" href="../index.html">&#8592; Back to home</a>
+    </nav>
+  </main>
+
+  <footer class="page-footer">
+    Quiz 1 Review Hub &middot; Fill in the Blanks &middot; Instruction Cycle Drill.
+  </footer>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/site-nav.js"></script>
+  <script src="../javascript/animations.js"></script>
+  <script src="../javascript/home-quiz.js"></script>
+</body>
+</html>

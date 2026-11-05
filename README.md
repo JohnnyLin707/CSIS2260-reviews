@@ -129,7 +129,7 @@ The deck 15 questions as an **interactive graded mock exam**: 68 short-answer qu
 
 | Drill | Where | Questions | Boxes |
 |-------|-------|:---------:|:-----:|
-| Instruction-cycle fill-in-the-blanks | home page — `index.html` | 10 | 12 |
+| Instruction-cycle fill-in-the-blanks | `pages/InstructionCycleDrill.html` | 10 | 12 |
 | Quiz1importantShortAnswer | `pages/Quiz1importantShortAnswer.html` | 4 | 19 |
 
 Both drills mark what you write automatically:
@@ -147,7 +147,7 @@ Both drills mark what you write automatically:
 
 ```
 CSIS-2260review/
-├── index.html                 # Home page — pick a deck + the 10-question drill
+├── index.html                 # Home page — one full-width card per review set
 ├── css/
 │   └── style.css              # All styling (dark theme, answer highlighting, drills)
 ├── javascript/
@@ -155,7 +155,7 @@ CSIS-2260review/
 │   ├── animations.js          # Background orbs / grid / typing effects
 │   ├── speech.js              # Read-aloud via the Web Speech API
 │   ├── quiz.js                # Write-and-check engine: auto-marking, keyword matching
-│   └── home-quiz.js           # Home-page 10-question fill-in-the-blank drill
+│   └── home-quiz.js           # Instruction Cycle Drill (10 questions, 12 boxes)
 ├── pages/
 │   ├── intro-hw.html          # Deck 01 index (all 40 slides)
 │   ├── intro-hw/
@@ -182,7 +182,8 @@ CSIS-2260review/
 │   ├── Chapter4Review.html              # Deck 13 — 7 Ch.4 review questions (Q54-Q60)
 │   ├── WindowsLabsReview.html           # Deck 14 — 37 predicted Windows Labs 1-4 questions
 │   ├── MidtermPracticeSheet.html        # Deck 15 — printable practice sheet (60 questions, 225 marks)
-│   └── MidtermMockExam.html             # Deck 16 — interactive mock exam (68 questions, 241 marks)
+│   ├── MidtermMockExam.html             # Deck 16 — interactive mock exam (68 questions, 241 marks)
+│   └── InstructionCycleDrill.html       # Standalone 10-question instruction-cycle drill
 ├── Ch01v2a-images/            # Slide scans for deck 02 (59 images)
 ├── Ch02v2a-images/            # Slide scans for deck 03 (75 images)
 ├── Ch03v2a-images/            # Slide scans for deck 04 (58 images)

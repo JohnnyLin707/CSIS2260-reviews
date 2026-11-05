@@ -129,7 +129,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 | 练习 | 位置 | 题数 | 输入框 |
 |------|------|:----:|:------:|
-| 指令周期填空题 | 首页 `index.html` | 10 | 12 |
+| 指令周期填空题 | `pages/InstructionCycleDrill.html` | 10 | 12 |
 | Quiz1importantShortAnswer | `pages/Quiz1importantShortAnswer.html` | 4 | 19 |
 
 两套练习都会自动批改你写的内容：
@@ -147,7 +147,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ```
 CSIS-2260review/
-├── index.html                 # 首页 —— 选择复习单元 + 10 道填空题练习
+├── index.html                 # 首页 —— 每个复习单元独占一整行卡片
 ├── css/
 │   └── style.css              # 全部样式（深色主题、答案高亮、练习模块）
 ├── javascript/
@@ -155,7 +155,7 @@ CSIS-2260review/
 │   ├── animations.js          # 背景光球 / 网格 / 打字机效果
 │   ├── speech.js              # 朗读功能（Web Speech API）
 │   ├── quiz.js                # 作答自测引擎：自动判分、关键词匹配
-│   └── home-quiz.js           # 首页 10 道填空题练习
+│   └── home-quiz.js           # 指令周期填空练习（10 题 / 12 个输入框）
 ├── pages/
 │   ├── intro-hw.html          # 单元 01 索引（全部 40 页）
 │   ├── intro-hw/
@@ -182,7 +182,8 @@ CSIS-2260review/
 │   ├── Chapter4Review.html              # 单元 13 —— 第 4 章复习问答题 7 道（第 54–60 题）
 │   ├── WindowsLabsReview.html           # 单元 14 —— Windows 实验 1–4 考题预测 37 道
 │   ├── MidtermPracticeSheet.html        # 单元 15 —— 期中考练习卷（60 题 / 225 分，可打印）
-│   └── MidtermMockExam.html             # 单元 16 —— 期中模拟考试（68 题 / 241 分，交互判分）
+│   ├── MidtermMockExam.html             # 单元 16 —— 期中模拟考试（68 题 / 241 分，交互判分）
+│   └── InstructionCycleDrill.html       # 独立页面 —— 指令周期填空练习（10 题）
 ├── Ch01v2a-images/            # 单元 02 的幻灯片扫描图（59 张）
 ├── Ch02v2a-images/            # 单元 03 的幻灯片扫描图（75 张）
 ├── Ch03v2a-images/            # 单元 04 的幻灯片扫描图（58 张）

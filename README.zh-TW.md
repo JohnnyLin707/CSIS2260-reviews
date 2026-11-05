@@ -129,7 +129,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 | 練習 | 位置 | 題數 | 輸入框 |
 |------|------|:----:|:------:|
-| 指令週期填空題 | 首頁 `index.html` | 10 | 12 |
+| 指令週期填空題 | `pages/InstructionCycleDrill.html` | 10 | 12 |
 | Quiz1importantShortAnswer | `pages/Quiz1importantShortAnswer.html` | 4 | 19 |
 
 兩套練習都會自動批改你所寫的內容：
@@ -147,7 +147,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ```
 CSIS-2260review/
-├── index.html                 # 首頁 —— 選擇複習單元 + 10 題填空練習
+├── index.html                 # 首頁 —— 每個複習單元獨占一整行卡片
 ├── css/
 │   └── style.css              # 全部樣式（深色主題、答案強調、練習模組）
 ├── javascript/
@@ -155,7 +155,7 @@ CSIS-2260review/
 │   ├── animations.js          # 背景光球 / 網格 / 打字機效果
 │   ├── speech.js              # 朗讀功能（Web Speech API）
 │   ├── quiz.js                # 作答自測引擎：自動批改、關鍵字比對
-│   └── home-quiz.js           # 首頁 10 題填空練習
+│   └── home-quiz.js           # 指令週期填空練習（10 題 / 12 個輸入框）
 ├── pages/
 │   ├── intro-hw.html          # 單元 01 索引（全部 40 頁）
 │   ├── intro-hw/
@@ -182,7 +182,8 @@ CSIS-2260review/
 │   ├── Chapter4Review.html              # 單元 13 —— 第 4 章複習問答題 7 題（第 54–60 題）
 │   ├── WindowsLabsReview.html           # 單元 14 —— Windows 實驗 1–4 考題預測 37 題
 │   ├── MidtermPracticeSheet.html        # 單元 15 —— 期中考練習卷（60 題 / 225 分，可列印）
-│   └── MidtermMockExam.html             # 單元 16 —— 期中考模擬測驗（68 題 / 241 分，互動判分）
+│   ├── MidtermMockExam.html             # 單元 16 —— 期中考模擬測驗（68 題 / 241 分，互動判分）
+│   └── InstructionCycleDrill.html       # 獨立頁面 —— 指令週期填空練習（10 題）
 ├── Ch01v2a-images/            # 單元 02 的投影片掃描圖（59 張）
 ├── Ch02v2a-images/            # 單元 03 的投影片掃描圖（75 張）
 ├── Ch03v2a-images/            # 單元 04 的投影片掃描圖（58 張）
