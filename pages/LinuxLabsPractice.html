@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Linux 代码实战 &middot; Labs 5&ndash;8 | CSIS2260 Review</title>
+  <meta name="description" content="Hands-on Linux command drill for CSIS2260 Labs 5-8: every original question in English with a Chinese translation, a command box and an instant check button.">
+  <link rel="stylesheet" href="../css/style.css">
+  <noscript><style>.lx-fallback{display:block !important}</style></noscript>
+</head>
+<body class="home-page">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+    <div class="site-shell site-nav-inner">
+      <a class="site-nav-brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">OS</span>
+        <span class="brand-text">CSIS2260<small>Review Hub</small></span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home<span class="dd-zh">首页</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="UnixCommands.html">UNIX Commands<span class="dd-zh">命令速查</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="InstructionCycleDrill.html">Instruction Cycle<span class="dd-zh">指令周期</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="MidtermMockExam.html">Mock Exam<span class="dd-zh">模拟考</span></a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="site-shell">
+    <section class="hero lx-hero">
+      <span class="hero-badge"><span class="dot"></span> &middot; Hands-on Command Drill</span>
+      <h1>Linux 代码实战 &middot; Labs 5&ndash;8</h1>
+      <p class="hero-zh">Linux 命令实战练习 &middot; 实验 5&ndash;8</p>
+      <p class="lead">
+        Every question from Labs 5&ndash;8, copied verbatim from the lab sheets: the original English
+        is on the <strong>left</strong>, the Chinese translation on the <strong>right</strong>.
+        Type the command below each question and press <strong>Check &amp; Run</strong> to see
+        whether it matches the standard answer.
+      </p>
+      <p class="lead" style="margin-top:.55rem;color:var(--text-faint);font-size:.88rem">
+        每道题左栏为英文原题、右栏为中文翻译，在题目下方的代码框输入命令后点击「检查运行」即可核对。
+        本页仅在浏览器本地核对命令，不会真正执行 shell。
+      </p>
+    </section>
+  </header>
+
+  <main class="site-shell lx-wrap">
+    <section class="lx-panel" aria-label="Drill controls">
+      <div class="lx-panel-top">
+        <div>
+          <h2 class="lx-panel-title">Command drill &middot; 命令练习</h2>
+          <p class="lx-panel-sub">4 labs &middot; 66 tasks &middot; instant, offline checking</p>
+        </div>
+        <div class="lx-score" id="lxScore" role="status" aria-live="polite">0 / 66 passed</div>
+      </div>
+      <div class="lx-jumps">
+        <a class="lx-jump" href="#lab5">Lab 5 &middot; Install Ubuntu</a>
+        <a class="lx-jump" href="#lab6">Lab 6 &middot; Intro to Linux</a>
+        <a class="lx-jump" href="#lab7">Lab 7 &middot; Commands I</a>
+        <a class="lx-jump" href="#lab8">Lab 8 &middot; Commands II</a>
+      </div>
+      <div class="lx-global">
+        <button class="lx-btn lx-btn-primary" id="lxCheckAll" type="button">&#9654; 检查全部 / Check all</button>
+        <button class="lx-btn" id="lxRevealAll" type="button">显示答案 / Show answers</button>
+        <button class="lx-btn" id="lxReset" type="button">重置 / Reset</button>
+      </div>
+    </section>
+
+    <div id="lxMount" aria-live="polite"></div>
+    <p class="lx-fallback" style="display:none;color:var(--text-dim)">This drill needs JavaScript enabled. / 本练习需要启用 JavaScript。</p>
+  </main>
+
+  <footer class="page-footer">
+    CSIS2260 &middot; Linux 代码实战 &middot; Labs 5&ndash;8 &middot; built from the course lab sheets and their model answers.
+  </footer>
+
+  <script>
+  /* =====================================================================
+     Linux Labs 5-8 command drill.
+     Data: original English task wording from Lab5.pdf - Lab8.pdf, Chinese
+     translations, and the canonical answers from the submitted answer docs.
+     No personal information (name / student number) is reproduced here.
+     ===================================================================== */
+  (function () {
+    "use strict";
+
+    var LABS = [
+      {
+        id: "lab5", no: "5",
+        title: "Lab #5 &middot; Installation of Ubuntu",
+        zh: "实验 5 &middot; 安装 Ubuntu",
+        meta: "A. Installation of Ubuntu &middot; 20 marks / 20 分",
+        items: [
+          { sec: "A-1", type: "action",
+            en: "Open up Oracle VM VirtualBox. Click Machine > New to create a new virtual machine for Ubuntu (64-bit). Name the virtual machine as Ubuntu USB. Click Other under the Machine Folder and specify the folder VM on the C: drive to save the virtual machine that you are going to create.",
+            zh: "打开 Oracle VM VirtualBox，点击 Machine > New 新建 Ubuntu（64 位）虚拟机。把虚拟机命名为 Ubuntu USB；在 Machine Folder 下点击 Other，指定 C: 盘上的 VM 文件夹来保存虚拟机。",
+            ans: "Ubuntu USB", ok: ["ubuntu usb", "vm name: ubuntu usb"], any: [["ubuntu", "usb"]] },
+          { sec: "A-2", type: "action",
+            en: "Click on the drop down at the right hand side of the \"ISO Image\" box, click on \"Other\", and navigate to the folder X:\\CSIS\\Michael\\2260\\ubuntu n (where n is from 1 to 3, and you will be assigned a number during class). Click on the ubuntu ISO file and click on \"Open\".",
+            zh: "点击 \"ISO Image\" 框右侧的下拉箭头，选择 \"Other\"，定位到 X:\\CSIS\\Michael\\2260\\ubuntu n 文件夹（n 为 1–3，课堂上会分配）。选中 ubuntu ISO 文件后点击 \"Open\"。",
+            ans: "ubuntu ISO", ok: ["ubuntu iso", "ubuntu iso image", "iso image"], any: [["iso"]] },
+          { sec: "A-3", type: "action",
+            en: "Uncheck the check box next to \"Proceed with Unattended Installation\".",
+            zh: "取消勾选 \"Proceed with Unattended Installation\"（无人值守安装）复选框。",
+            ans: "Uncheck Proceed with Unattended Installation", ok: ["proceed with unattended installation", "unattended installation", "uncheck"], any: [["unattended"]] },
+          { sec: "A-4", type: "value",
+            en: "Expand the section \"Specify virtual hardware\" and change the Base Memory to 4096 MB and the number of CPUs to 4.",
+            zh: "展开 \"Specify virtual hardware\"，把 Base Memory 改为 4096 MB，CPU 数量改为 4。",
+            ans: "4096 MB, 4 CPUs", ok: ["4096 mb, 4 cpus", "4096mb 4", "4096 4", "4096", "4"], any: [["4096", "4"]] },
+          { sec: "A-5", type: "action",
+            en: "Leave the rest of the default setting and click on \"Finish\".",
+            zh: "其余保持默认设置，点击 \"Finish\"。",
+            ans: "Finish", ok: ["finish", "default settings"], any: [["finish"]] },
+          { sec: "A-6", type: "action",
+            en: "Click on \"Start\" to power on the Ubuntu system and start the installation.",
+            zh: "点击 \"Start\" 启动 Ubuntu 系统并开始安装。",
+            ans: "Start", ok: ["start", "power on"], any: [["start"]] },
+          { sec: "A-7", type: "action",
+            en: "In the VM window, hit enter to boot Ubuntu.",
+            zh: "在虚拟机窗口中按 Enter 键启动 Ubuntu。",
+            ans: "Enter", ok: ["enter", "hit enter", "press enter"], any: [["enter"]] },
+          { sec: "A-8", type: "action",
+            en: "If you are using a lab computer (or any other computer without a right control key): While the installation runs, click on \"Input\", \"Keyboard\", \"Keyboard Settings\". Click in the box saying \"Right Ctrl\" and press the F6 key, then hit \"Enter\". This changes the key with which you can \"escape\" the virtual machine with your mouse pointer from the right control key to the F6 key. You should repeat this step every week at the beginning of the lab.",
+            zh: "若使用实验室电脑（或没有右 Ctrl 键的电脑）：安装过程中点击 \"Input\" > \"Keyboard\" > \"Keyboard Settings\"，点击 \"Right Ctrl\" 框并按 F6，再按 Enter。这样就把鼠标脱离虚拟机的按键由右 Ctrl 改为 F6；每周实验开始时都要重复此设置。",
+            ans: "F6", ok: ["f6", "right ctrl f6"], any: [["f6"]] },
+          { sec: "A-9", type: "action",
+            en: "If promoted, click on \"Install Ubuntu\". Then select English and click on Next.",
+            zh: "出现提示时点击 \"Install Ubuntu\"，选择 English 后点击 Next。",
+            ans: "Install Ubuntu / English", ok: ["install ubuntu", "english", "install ubuntu english"], any: [["install", "ubuntu"]] },
+          { sec: "A-10", type: "action",
+            en: "Click next in the following few screens.",
+            zh: "在接下来的几个界面中点击 Next。",
+            ans: "Next", ok: ["next", "click next"], any: [["next"]] },
+          { sec: "A-11", type: "action",
+            en: "Select \"Install Ubuntu\" and click on \"Next\".",
+            zh: "选择 \"Install Ubuntu\" 并点击 \"Next\"。",
+            ans: "Install Ubuntu", ok: ["install ubuntu", "install ubuntu next"], any: [["install", "ubuntu"]] },
+          { sec: "A-12", type: "action",
+            en: "Click \"Next\" for the next few screens.",
+            zh: "接下来几个界面继续点击 \"Next\"。",
+            ans: "Next", ok: ["next", "click next"], any: [["next"]] },
+          { sec: "A-13", type: "action",
+            en: "When prompted \"How do you want to install Ubuntu?\", select Erase disk and install Ubuntu. (The system will not erase your system hard drive, only the virtual hard drive in the VM.)",
+            zh: "当提示 \"How do you want to install Ubuntu?\" 时，选择 Erase disk and install Ubuntu（只会擦除虚拟硬盘，不会擦除物理硬盘）。",
+            ans: "Erase disk and install Ubuntu", ok: ["erase disk and install ubuntu", "erase disk"], any: [["erase", "disk"]] },
+          { sec: "A-14", type: "value",
+            en: "As \"Your name\", enter your first name. Enter csis2260 as the password for your account. Accept the other suggested settings and click on \"Next\".",
+            zh: "在 \"Your name\" 中输入你的名字，账户密码设为 csis2260，其余接受建议设置并点击 \"Next\"。",
+            ans: "csis2260", ok: ["csis2260", "password csis2260"], any: [["csis2260"]] },
+          { sec: "A-15", type: "action",
+            en: "Make sure you are in the correct time zone and click on \"Next\".",
+            zh: "确认时区正确后点击 \"Next\"。",
+            ans: "Time zone / Next", ok: ["time zone", "next"], any: [["time", "zone"], ["next"]] },
+          { sec: "A-16", type: "action",
+            en: "Review the selected choices and click on \"Install\".",
+            zh: "检查所选设置后点击 \"Install\"。",
+            ans: "Install", ok: ["install", "click install"], any: [["install"]] },
+          { sec: "A-17", type: "action",
+            en: "Once the installation is complete, click on \"Restart now\". Press ENTER when asked to remove the installation media.",
+            zh: "安装完成后点击 \"Restart now\"；提示移除安装介质时按 ENTER。",
+            ans: "Restart now", ok: ["restart now", "restart", "enter"], any: [["restart"]] },
+          { sec: "A-18", type: "action",
+            en: "Once Ubuntu has rebooted, enter your password to log on. Skip all the Ubuntu introductory pages/setup pages that might appear.",
+            zh: "Ubuntu 重启后输入密码登录，跳过所有可能出现的新手介绍／设置页面。",
+            ans: "csis2260", ok: ["csis2260", "log on", "login"], any: [["csis2260"]] },
+          { sec: "A-19", type: "action",
+            en: "If prompted (now or at any point later) whether you want to upgrade to Ubuntu 26.04, click on \"Don't Upgrade\".",
+            zh: "若提示是否升级到 Ubuntu 26.04，点击 \"Don't Upgrade\"。",
+            ans: "Don't Upgrade", ok: ["don't upgrade", "dont upgrade", "do not upgrade"], any: [["don't", "upgrade"], ["dont", "upgrade"]] },
+          { sec: "A-20a", type: "value",
+            en: "20. Comparing Ubuntu (Guest OS) and Windows 10/11 (Host OS) system resources usage. a. On Ubuntu, click the Show Applications button at the lower left (the circle with three dots). Look for the app System monitor and open it. Click Resources tab on top. b. On Windows 10/11, click Start > Windows System > Task Manager, then click the Performance tag. c. Compare the system CPU and memory usage. [Ubuntu row: CPU usage (%) / Memory usage (GB, %)]",
+            zh: "20. 比较 Ubuntu（客户机）与 Windows 10/11（宿主机）的系统资源占用。a. 在 Ubuntu 点击左下角 Show Applications，打开 System monitor 并切换到 Resources 标签。b. 在 Windows 打开 Task Manager 的 Performance 标签。c. 比较 CPU 与内存占用。【表格 Ubuntu 一行：CPU 使用率 (%) / 内存使用量 (GB, %)】",
+            ans: "4.9%, 1.3 GB, 31.8%", ok: ["4.9% 1.3 gb 31.8%", "4.9% 1.3 gb, 31.8%", "4.9 1.3 31.8", "4.9%", "1.3 gb, 31.8%"], any: [["4.9", "31.8"]] },
+          { sec: "A-20b", type: "value",
+            en: "[Windows 10/11 row of the table: CPU usage (%) / Memory usage (GB, %)]",
+            zh: "【表格 Windows 10/11 一行：CPU 使用率 (%) / 内存使用量 (GB, %)】",
+            ans: "12%, 12.1 GB, 77%", ok: ["12% 12.1 gb 77%", "12% 12.1 gb, 77%", "12 12.1 77", "12.1 gb, 77%"], any: [["12.1", "77"]] },
+          { sec: "A-21", type: "value",
+            en: "21. Power off Ubuntu (the power button is on the top right of the window). From the Task Manager in Windows 10/11, what is the main memory usage (GB, %) now?",
+            zh: "21. 关闭 Ubuntu（电源按钮在窗口右上角）。此时在 Windows 10/11 的任务管理器中，主内存占用 (GB, %) 是多少？",
+            ans: "9.1 GB, 58%", ok: ["9.1 gb 58%", "9.1 gb, 58%", "9.1 58", "9.1", "58%"], any: [["9.1", "58"]] }
+        ]
+      },
+      {
+        id: "lab6", no: "6",
+        title: "Lab #6 &middot; Introduction to Linux",
+        zh: "实验 6 &middot; Linux 入门",
+        meta: "A. Window Environment &middot; B. Terminal &middot; C. UNIX tutorial &middot; 20 marks / 20 分",
+        items: [
+          { sec: "A-1", type: "action",
+            en: "A. Working in the Ubuntu Window Environment [_____/4] 1. Open the Ubuntu system in VirtualBox that you installed in the previous lab. Log in and click the Show Applications icon at the lower left-hand corner. Look for the Settings icon and click to open it. From the new window that appears, note the settings that you can choose from the manual on the left. Select Background in the section Appearance and change the background of your display. Close the System Settings by clicking the x on the upper right-hand corner of the window.",
+            zh: "A. 使用 Ubuntu 窗口环境 [4 分] 1. 打开上次实验安装的 Ubuntu 并登录，点击左下角 Show Applications，找到并打开 Settings。查看左侧菜单中的设置项，在 Appearance 中选择 Background 更改桌面背景，最后点右上角 x 关闭系统设置。",
+            ans: "Settings > Appearance > Background", ok: ["background", "appearance background", "settings appearance background"], any: [["background"]] },
+          { sec: "A-2", type: "value",
+            en: "2. Click the Show Applications icon again and see other applications that are available. List FOUR other applications that are available.",
+            zh: "2. 再次点击 Show Applications 查看其它可用应用，列出其中四个。",
+            ans: "Image Viewer; Software Updater; System Monitor; Terminal", ok: ["image viewer, software updater, system monitor, terminal", "image viewer; software updater; system monitor; terminal", "image viewer software updater system monitor terminal"], any: [["image viewer", "software updater", "system monitor", "terminal"], ["viewer", "updater", "monitor", "terminal"]] },
+          { sec: "A-3", type: "action",
+            en: "3. Click the Files icon to open a file management window. Select Home on the left, which shows your personal files and subdirectories. Close the Files window.",
+            zh: "3. 点击 Files 图标打开文件管理器，在左侧选择 Home 查看个人文件与子目录，然后关闭 Files 窗口。",
+            ans: "Files > Home", ok: ["home", "files home", "select home"], any: [["home"]] },
+          { sec: "B-2", type: "cmd",
+            en: "B. Working with the terminal [_____/10] 2. Create a new user c2260 with password hello. First, try to type in the following command: adduser c2260. What is the message appeared the on screen?",
+            zh: "B. 使用终端 [10 分] 2. 创建密码为 hello 的新用户 c2260。先输入命令 adduser c2260，屏幕上出现什么信息？",
+            ans: "adduser: Only root may add a user or group to the system.", ok: ["only root may add a user or group to the system", "fatal: only root may add a user or group to the system", "only root may add a user"], any: [["only", "root", "add", "user"]] },
+          { sec: "B-2b", type: "cmd",
+            en: "Now try the following command: sudo adduser c2260. You have to enter your password (csis2260) and then enter opsys2260 as the password for the new user. Note: when you type the password, there is nothing shown on the display. So just type in the password and hit Enter.",
+            zh: "接着输入命令 sudo adduser c2260；先输入你的密码 (csis2260)，再为新用户输入 opsys2260。注意：输入密码时屏幕不会显示任何内容，直接输入后按 Enter 即可。",
+            ans: "sudo adduser c2260", ok: ["sudo adduser c2260", "adduser c2260"], any: [["sudo", "adduser", "c2260"]] },
+          { sec: "B-3", type: "cmd",
+            en: "3. Switch to the newly created account by clicking the down arrow on the upper right of the Ubuntu window, then click Power off/Log out, and select Switch User. Log into the account c2260 and skip through the Ubuntu introductory pages. Open Terminal and try to create a new user account test by using the command sudo adduser test. Enter the password as requested. What is the message displayed?",
+            zh: "3. 点击 Ubuntu 窗口右上角的向下箭头，选择 Power off/Log out > Switch User，登录 c2260 账户并跳过介绍页面。打开终端，输入 sudo adduser test 尝试创建用户 test，按提示输入密码。屏幕显示什么信息？",
+            ans: "c2260 is not in the sudoers file. This incident will be reported.", ok: ["c2260 is not in the sudoers file. this incident will be reported.", "is not in the sudoers file", "not in the sudoers file"], any: [["sudoers", "c2260"], ["sudoers"]] },
+          { sec: "B-3b", type: "cmd",
+            en: "Switch back to your account. In the terminal window, you can grant root privileges to the user c2260 as follow: Type in the command sudo /usr/sbin/visudo (if an error is shown, try sudo visudo). Under User privilege specification, add in the new line for c2260 after the line for root as follow: c2260 ALL=(ALL:ALL) ALL. Press 'ctrl x' to exit the file and then 'Y' to save it, and press Enter next to the file name shown.",
+            zh: "切回原账户，在终端输入 sudo /usr/sbin/visudo（若报错可试 sudo visudo）。在 \"User privilege specification\" 下、root 行之后加入 c2260 ALL=(ALL:ALL) ALL，按 ctrl x 退出、按 Y 保存并按 Enter 确认文件名，以授予 c2260 管理员权限。",
+            ans: "sudo /usr/sbin/visudo", ok: ["sudo /usr/sbin/visudo", "sudo visudo", "c2260 all=(all:all) all"], any: [["visudo"]] },
+          { sec: "B-3c", type: "value",
+            en: "Switch to account c2260 and try to create a new user account test with password opsys1357. Has the account been successfully created?",
+            zh: "切换到 c2260 账户，尝试创建密码为 opsys1357 的新用户 test。账户是否创建成功？",
+            ans: "Yes", ok: ["yes", "yes, the account has been successfully created", "successfully created", "success"], any: [["yes"]] },
+          { sec: "B-4", type: "cmd",
+            en: "4. Delete the newly created account test (try to guess the command needed). What is the command for deleting the user account test?",
+            zh: "4. 删除刚创建的 test 账户（自己推测所需命令）。删除用户 test 的命令是什么？",
+            ans: "sudo deluser test", ok: ["sudo deluser test", "deluser test", "sudo userdel test", "sudo deluser --remove-home test"], any: [["deluser", "test"], ["userdel", "test"]] },
+          { sec: "C-1b-1", type: "cmd",
+            en: "C. UNIX tutorial [_____/6] Exercise 1b. What do you think ls ~ would list?",
+            zh: "C. UNIX 教程 [6 分] 练习 1b：你认为 ls ~ 会列出什么？",
+            ans: "ls ~ — the contents of your home directory", ok: ["it lists the contents of your home directory", "the contents of your home directory", "home directory", "contents of the home directory", "ls ~"], any: [["home", "directory"]] },
+          { sec: "C-1b-2", type: "cmd",
+            en: "What do you think ls ~/.. would list?",
+            zh: "你认为 ls ~/.. 会列出什么？",
+            ans: "ls ~/.. — the parent directory of your home directory", ok: ["it lists the contents of the parent directory of your home directory", "parent directory of your home directory", "the parent directory", "contents of /home", "ls ~/.."], any: [["parent", "directory"]] }
+        ]
+      },
+      {
+        id: "lab7", no: "7",
+        title: "Lab #7 &middot; Introduction to Linux Commands and Scripting (I)",
+        zh: "实验 7 &middot; Linux 命令与脚本入门（一）",
+        meta: "A. UNIX tutorial &middot; B. Review Exercise &middot; 20 marks / 20 分",
+        items: [
+          { sec: "A-2c", type: "cmd",
+            en: "A. UNIX tutorial. Exercise 2c [_____/4] How can you view the last 15 lines of the file?",
+            zh: "A. UNIX 教程。练习 2c [4 分]：如何查看文件的最后 15 行？",
+            ans: "tail -n 15 filename", ok: ["tail -n 15 filename", "tail -n 15 file", "tail -15 filename", "tail -15 file", "tail -n 15 file.txt"], any: [["tail", "15"]] },
+          { sec: "B-1", type: "cmd",
+            en: "B. Review Exercise [_____/16] 1. Create a folder csislab under your home directory.",
+            zh: "B. 复习练习 [16 分] 1. 在主目录下创建文件夹 csislab。",
+            ans: "mkdir csislab", ok: ["mkdir csislab", "mkdir ~/csislab", "mkdir /home/csislab"], any: [["mkdir", "csislab"]] },
+          { sec: "B-2", type: "cmd",
+            en: "2. Go to the folder csislab.",
+            zh: "2. 进入 csislab 文件夹。",
+            ans: "cd ~/csislab", ok: ["cd ~/csislab", "cd csislab", "cd /home/csislab"], any: [["cd", "csislab"]] },
+          { sec: "B-3", type: "cmd",
+            en: "3. Under csislab, create the file test.txt by using the command on the right [man ls > test.txt].",
+            zh: "3. 在 csislab 下，用右侧命令创建文件 test.txt［man ls > test.txt］。",
+            ans: "man ls > test.txt", ok: ["man ls > test.txt", "man ls>test.txt"], any: [["man", "ls", "test.txt"]] },
+          { sec: "B-4", type: "cmd",
+            en: "4. Make a copy of the file test.txt and call it test1.txt.",
+            zh: "4. 复制 test.txt，副本命名为 test1.txt。",
+            ans: "cp test.txt test1.txt", ok: ["cp test.txt test1.txt", "cp test.txt  test1.txt"], any: [["cp", "test.txt", "test1.txt"]] },
+          { sec: "B-5", type: "cmd",
+            en: "5. Create a subfolder temp under csislab.",
+            zh: "5. 在 csislab 下创建子文件夹 temp。",
+            ans: "mkdir temp", ok: ["mkdir temp", "mkdir temp/", "mkdir ~/csislab/temp"], any: [["mkdir", "temp"]] },
+          { sec: "B-6", type: "cmd",
+            en: "6. Make another copy of the file test.txt and call it test.bak",
+            zh: "6. 再次复制 test.txt，副本命名为 test.bak。",
+            ans: "cp test.txt test.bak", ok: ["cp test.txt test.bak"], any: [["cp", "test.txt", "test.bak"]] },
+          { sec: "B-7", type: "cmd",
+            en: "7. Display the files and directory inside csislab",
+            zh: "7. 显示 csislab 中的文件与目录。",
+            ans: "ls", ok: ["ls", "ls -l", "ls ~/csislab"], any: [["ls"]] },
+          { sec: "B-8", type: "cmd",
+            en: "8. Move the file test.bak to the temp.",
+            zh: "8. 把 test.bak 移动到 temp 文件夹。",
+            ans: "mv test.bak temp/", ok: ["mv test.bak temp/", "mv test.bak temp", "mv test.bak ~/csislab/temp/"], any: [["mv", "test.bak", "temp"]] },
+          { sec: "B-9", type: "cmd",
+            en: "9. Display the files and directory inside temp to check if the file test.bak has been moved to temp",
+            zh: "9. 显示 temp 中的文件与目录，确认 test.bak 已被移动进去。",
+            ans: "ls temp/", ok: ["ls temp/", "ls temp", "ls ~/csislab/temp", "ls ~/csislab/temp/", "cd ~/csislab/temp ls"], any: [["ls", "temp"]] },
+          { sec: "B-10", type: "cmd",
+            en: "10. Remove the subfolder temp.",
+            zh: "10. 删除子文件夹 temp。",
+            ans: "rm temp/test.bak; rmdir temp/", ok: ["rmdir temp/", "rmdir temp", "rm temp/test.bak", "rm test.bak", "cd .. rmdir temp/", "rm -r temp", "rmdir ~/csislab/temp"], any: [["rmdir", "temp"]] },
+          { sec: "B-11", type: "cmd",
+            en: "11. Display the files and directory inside csislab to ensure the folder temp has been removed",
+            zh: "11. 显示 csislab 中的文件与目录，确认 temp 文件夹已被删除。",
+            ans: "ls ~/csislab", ok: ["ls ~/csislab", "ls", "ls -l ~/csislab"], any: [["ls", "csislab"], ["ls"]] }
+        ]
+      },
+      {
+        id: "lab8", no: "8",
+        title: "Lab #8 &middot; Introduction to Linux Commands and Scripting (II)",
+        zh: "实验 8 &middot; Linux 命令与脚本入门（二）",
+        meta: "A. UNIX tutorial &middot; B. Review Exercise &middot; 20 marks / 20 分",
+        items: [
+          { sec: "A-4b", type: "cmd",
+            en: "A. UNIX tutorial. Exercise 4b [_____/4] Using pipes, display all lines of list1 and list2 containing the letter 'p', and sort the result. Give the command used for the above.",
+            zh: "A. UNIX 教程。练习 4b [4 分]：用管道显示 list1 与 list2 中所有含字母 'p' 的行，并对结果排序。写出所用命令。",
+            ans: "cat list1 list2 | grep p | sort", ok: ["cat list1 list2 | grep p | sort", "cat list1 list2 | grep 'p' | sort", "cat list1 list2|grep p|sort", "cat list1 list2 | grep \"p\" | sort"], any: [["cat", "list1", "list2", "grep", "sort"]] },
+          { sec: "B-1", type: "cmd",
+            en: "B. Review Exercise [_____/16] 1. Create a file ex1 under your home directory by using the command on the right [man less > ex1].",
+            zh: "B. 复习练习 [16 分] 1. 用右侧命令在主目录下创建文件 ex1［man less > ex1］。",
+            ans: "man less > ex1", ok: ["man less > ex1", "man less>ex1"], any: [["man", "less", "ex1"]] },
+          { sec: "B-2", type: "cmd",
+            en: "2. Display the file using the command on the right [cat].",
+            zh: "2. 用右侧命令显示该文件［cat］。",
+            ans: "cat ex1", ok: ["cat ex1", "cat", "cat < ex1"], any: [["cat"]] },
+          { sec: "B-3", type: "cmd",
+            en: "3. Display the first 10 lines of the file ex1",
+            zh: "3. 显示 ex1 的前 10 行。",
+            ans: "head -n 10 ex1", ok: ["head -n 10 ex1", "head -10 ex1", "head -n10 ex1"], any: [["head", "10", "ex1"]] },
+          { sec: "B-4", type: "cmd",
+            en: "4. Display the last 20 lines of the file ex1",
+            zh: "4. 显示 ex1 的最后 20 行。",
+            ans: "tail -n 20 ex1", ok: ["tail -n 20 ex1", "tail -20 ex1", "tail -n20 ex1"], any: [["tail", "20", "ex1"]] },
+          { sec: "B-5", type: "cmd",
+            en: "5. Search the file ex1 for the word Display and show the corresponding lines.",
+            zh: "5. 在 ex1 中搜索单词 Display 并显示匹配的行。",
+            ans: "grep Display ex1", ok: ["grep display ex1", "grep Display ex1", "grep 'Display' ex1"], any: [["grep", "display", "ex1"]] },
+          { sec: "B-6", type: "cmd",
+            en: "6. Search the file ex1 for the words Display and display, i.e. ignoring the case distinction, and show the corresponding lines.",
+            zh: "6. 在 ex1 中同时搜索 Display 与 display（忽略大小写），并显示匹配的行。",
+            ans: "grep -i 'display' ex1", ok: ["grep -i 'display' ex1", "grep -i display ex1", "grep -i \"display\" ex1", "grep -i 'Display' ex1"], any: [["grep", "-i", "display", "ex1"]] },
+          { sec: "B-7", type: "cmd",
+            en: "7. Search the file ex1 for the words Display and display, i.e. ignoring the case distinction, and count the number of lines that contain the word in the file. How many lines are there that contain the word display/Display?",
+            zh: "7. 忽略大小写统计 ex1 中含 display/Display 的行数。共有多少行？（标准答案文档记录为 68 行）",
+            ans: "grep -i -c 'display' ex1", ok: ["grep -i -c 'display' ex1", "grep -ic 'display' ex1", "grep -i -c display ex1", "grep -i -c \"display\" ex1", "68"], any: [["grep", "-c", "display", "ex1"]] },
+          { sec: "B-8", type: "cmd",
+            en: "8. Create a new file ex2 and enter the following into the file. Mary Jack Alice. What was the command used for creating the file?",
+            zh: "8. 新建文件 ex2 并写入 Mary、Jack、Alice 三行。创建该文件用了什么命令？",
+            ans: "cat > ex2 (then Mary / Jack / Alice, Ctrl+D)", ok: ["cat > ex2", "cat >ex2", "cat > ex2 mary jack alice ctrl+d"], any: [["cat", ">", "ex2"]] },
+          { sec: "B-9", type: "cmd",
+            en: "9. Display the content of the file ex2.",
+            zh: "9. 显示 ex2 的内容。",
+            ans: "cat ex2", ok: ["cat ex2", "more ex2", "less ex2"], any: [["cat", "ex2"]] },
+          { sec: "B-10", type: "cmd",
+            en: "10. Append the following to the file ex2. Nelson Betty Kim. What was the command used for appending the file?",
+            zh: "10. 把 Nelson、Betty、Kim 追加到 ex2。追加内容用了什么命令？",
+            ans: "cat >> ex2 (then Nelson / Betty / Kim, Ctrl+D)", ok: ["cat >> ex2", "cat >>ex2", "cat >> ex2 nelson betty kim ctrl+d"], any: [["cat", ">>", "ex2"]] },
+          { sec: "B-11", type: "cmd",
+            en: "11. Sort the items in file ex2 and save the output to a new file ex3.",
+            zh: "11. 对 ex2 中的内容排序，并把结果保存到新文件 ex3。",
+            ans: "sort ex2 > ex3", ok: ["sort ex2 > ex3", "sort ex2>ex3", "sort ex2 | tee ex3"], any: [["sort", "ex2", "ex3"]] },
+          { sec: "B-12", type: "cmd",
+            en: "12. Display the content of the file ex3.",
+            zh: "12. 显示 ex3 的内容。",
+            ans: "cat ex3", ok: ["cat ex3", "more ex3", "less ex3"], any: [["cat", "ex3"]] },
+          { sec: "B-13", type: "cmd",
+            en: "13. Using pipe, find out how many files under your home directory start with the characters ex.",
+            zh: "13. 用管道统计主目录下以字符 ex 开头的文件数量。",
+            ans: "ls -l | grep '^ex' | wc -l", ok: ["ls -l | grep '^ex' | wc -l", "ls | grep '^ex' | wc -l", "ls -l | grep \"^ex\" | wc -l", "ls | grep ^ex | wc -l", "ls -l|grep '^ex'|wc -l"], any: [["grep", "^ex", "wc", "-l"]] },
+          { sec: "B-14", type: "cmd",
+            en: "14. List the files in your directory to confirm your answer",
+            zh: "14. 列出当前目录的文件以确认答案。",
+            ans: "ls", ok: ["ls", "ls -l", "ls -al"], any: [["ls"]] },
+          { sec: "B-15", type: "cmd",
+            en: "15. Change the access right of your file ex1 so that ONLY you have the read/write access to the file.",
+            zh: "15. 修改 ex1 的权限，使只有你本人对该文件拥有读／写权限。",
+            ans: "chmod go-rwx ex1", ok: ["chmod go-rwx ex1", "chmod 600 ex1", "chmod u=rw,go= ex1", "chmod 0600 ex1"], any: [["chmod", "ex1"]] },
+          { sec: "B-16", type: "cmd",
+            en: "16. List the files in your directory to confirm your answer.",
+            zh: "16. 列出文件以确认权限修改结果。",
+            ans: "ls -l ex1", ok: ["ls -l ex1", "ls -l", "ls -l | grep ex1"], any: [["ls", "-l"]] },
+          { sec: "B-17", type: "cmd",
+            en: "17. Create a job sleep 500.",
+            zh: "17. 创建一个 sleep 500 作业。",
+            ans: "sleep 500", ok: ["sleep 500", "sleep 500 &"], any: [["sleep", "500"]] },
+          { sec: "B-18", type: "cmd",
+            en: "18. Stop the job and move it to the background.",
+            zh: "18. 暂停该作业并把它移到后台。",
+            ans: "Ctrl+Z then bg", ok: ["ctrl+z then bg", "ctrl+z bg", "ctrl + z bg", "bg", "^z bg", "ctrl z", "ctrl+z"], any: [["bg"], ["ctrl", "z"]] },
+          { sec: "B-19", type: "cmd",
+            en: "19. Use ps to view the processes that the system is running. [ps]",
+            zh: "19. 用 ps 查看系统正在运行的进程。［ps］",
+            ans: "ps", ok: ["ps", "ps -ef", "ps aux"], any: [["ps"]] },
+          { sec: "B-20", type: "cmd",
+            en: "20. Terminate the sleep process.",
+            zh: "20. 终止 sleep 进程。",
+            ans: "kill %1", ok: ["kill %1", "kill %1 ", "kill pid", "kill -9 %1"], any: [["kill"]] }
+        ]
+      }
+    ];
+
+    /* ---------------------------------------------------------- helpers */
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+    function norm(s) {
+      return String(s == null ? "" : s)
+        .toLowerCase()
+        .replace(/[\u2018\u2019\u02bc`\u00b4]/g, "'")
+        .replace(/[\u201c\u201d]/g, '"')
+        .replace(/^\s*[$#]\s+/, "")
+        .replace(/\s+/g, " ")
+        .replace(/\s*\|\s*/g, " | ")
+        .trim();
+    }
+    /* keep ">" so that `cat > ex2` and `cat >> ex2` stay distinguishable */
+    function squeeze(s) { return norm(s).replace(/[^a-z0-9%>]/g, ""); }
+
+    function isCorrect(q, raw) {
+      var v = norm(raw);
+      if (!v) return false;
+      var alts = [q.ans].concat(q.ok || []);
+      for (var i = 0; i < alts.length; i++) {
+        if (norm(alts[i]) === v || squeeze(alts[i]) === squeeze(v)) return true;
+      }
+      var sets = q.any || [];
+      for (var j = 0; j < sets.length; j++) {
+        var all = true;
+        for (var k = 0; k < sets[j].length; k++) {
+          if (v.indexOf(norm(sets[j][k])) === -1) { all = false; break; }
+        }
+        if (all) return true;
+      }
+      return false;
+    }
+
+    var TYPE_LABEL = {
+      cmd: "COMMAND / 命令题",
+      value: "OBSERVATION / 观察题",
+      action: "KEY ACTION / 操作要点"
+    };
+    var PLACEHOLDER = {
+      cmd: "$ 在此输入 Linux 命令，例如：ls -l",
+      value: "在此输入观察到的数据 / 答案，例如：4.9%",
+      action: "在此输入本步骤的关键设置或操作（英文关键词）"
+    };
+
+    /* ------------------------------------------------------------ build */
+    var mount = document.getElementById("lxMount");
+    var cards = [];
+    var html = [];
+
+    LABS.forEach(function (lab) {
+      html.push('<section class="lx-lab" id="' + lab.id + '">');
+      html.push('<div class="lx-lab-head"><div><span class="lx-lab-no">LAB ' + lab.no + '</span>');
+      html.push('<h2 class="lx-lab-title">' + lab.title + '</h2>');
+      html.push('<p class="lx-lab-zh">' + lab.zh + '</p>');
+      html.push('<p class="lx-lab-meta">' + lab.meta + '</p></div>');
+      html.push('<span class="lx-lab-count">' + lab.items.length + ' tasks / 题</span></div>');
+      html.push('<div class="lx-cards">');
+
+      lab.items.forEach(function (q, i) {
+        var key = lab.id + "-" + i;
+        html.push('<article class="lx-card" data-key="' + key + '">');
+        html.push('<div class="lx-card-head"><span class="lx-badge">Lab ' + lab.no + ' &middot; ' + esc(q.sec) + '</span>');
+        html.push('<span class="lx-type">' + (TYPE_LABEL[q.type] || TYPE_LABEL.cmd) + '</span>');
+        html.push('<span class="lx-status" data-status></span></div>');
+        html.push('<div class="lx-cols">');
+        html.push('<div class="lx-col lx-col-en"><div class="lx-col-tag">EN &middot; ORIGINAL QUESTION / 英文原题</div><p class="lx-q">' + esc(q.en) + '</p></div>');
+        html.push('<div class="lx-col lx-col-zh"><div class="lx-col-tag">中文 &middot; 题目翻译</div><p class="lx-q">' + esc(q.zh) + '</p></div>');
+        html.push('</div>');
+        html.push('<div class="lx-io"><span class="lx-label">$ 命令输入框 / Command box</span>');
+        html.push('<textarea class="lx-code" rows="2" spellcheck="false" autocomplete="off" placeholder="' + esc(PLACEHOLDER[q.type] || PLACEHOLDER.cmd) + '" aria-label="Command for Lab ' + lab.no + ' ' + esc(q.sec) + '"></textarea>');
+        html.push('<div class="lx-actions"><button class="lx-btn lx-run" type="button" data-run>&#9654; 检查运行</button>');
+        html.push('<button class="lx-btn" type="button" data-show>显示答案</button>');
+        html.push('<span class="lx-mark" data-mark></span></div>');
+        html.push('<div class="lx-out" data-out hidden></div>');
+        html.push('<div class="lx-ans" data-ans hidden><b>标准答案 / Model answer：</b><code>' + esc(q.ans) + '</code></div>');
+        html.push('</div></article>');
+      });
+
+      html.push('</div></section>');
+    });
+
+    mount.innerHTML = html.join("");
+
+    var total = 0;
+    LABS.forEach(function (lab, li) {
+      lab.items.forEach(function (q, i) {
+        var card = mount.querySelector('[data-key="' + lab.id + "-" + i + '"]');
+        cards.push({
+          el: card,
+          q: q,
+          input: card.querySelector(".lx-code"),
+          out: card.querySelector("[data-out]"),
+          ans: card.querySelector("[data-ans]"),
+          mark: card.querySelector("[data-mark]"),
+          status: card.querySelector("[data-status]")
+        });
+        total++;
+      });
+    });
+
+    var scoreEl = document.getElementById("lxScore");
+
+    function updateScore() {
+      var ok = cards.filter(function (c) { return c.el.classList.contains("ok"); }).length;
+      scoreEl.textContent = ok + " / " + total + " passed";
+      scoreEl.classList.toggle("perfect", ok === total);
+    }
+
+    function paint(c, state) {
+      c.el.classList.remove("ok", "bad");
+      if (state) c.el.classList.add(state);
+      c.status.textContent = state === "ok" ? "✓ 通过" : (state === "bad" ? "✗ 未通过" : "");
+      c.status.className = "lx-status" + (state ? " " + state : "");
+      c.mark.textContent = state === "ok" ? "✓ Correct" : (state === "bad" ? "✗ Try again" : "");
+      c.mark.className = "lx-mark" + (state ? " " + state : "");
+    }
+
+    function check(c, fillOutput) {
+      var raw = c.input.value;
+      if (!raw.trim()) {
+        paint(c, "");
+        if (fillOutput) c.out.hidden = true;
+        updateScore();
+        return false;
+      }
+      var good = isCorrect(c.q, raw);
+      paint(c, good ? "ok" : "bad");
+      if (fillOutput) {
+        c.out.hidden = false;
+        c.out.textContent = "$ " + raw.trim().replace(/\n/g, "\n  ") + "\n" +
+          (good
+            ? "[PASS] Command accepted — 命令正确，与标准答案一致。"
+            : "[FAIL] Not the expected command — 命令不正确，可点击「显示答案」查看标准答案。");
+        c.out.className = "lx-out " + (good ? "ok" : "bad");
+      }
+      updateScore();
+      return good;
+    }
+
+    function reveal(c) {
+      c.input.value = c.q.ans;
+      c.ans.hidden = false;
+      paint(c, "ok");
+      c.out.hidden = false;
+      c.out.className = "lx-out ok";
+      c.out.textContent = "$ " + c.q.ans + "\n[PASS] 已填入标准答案 / Model answer filled in.";
+      updateScore();
+    }
+
+    cards.forEach(function (c) {
+      c.input.addEventListener("input", function () {
+        paint(c, "");
+        c.out.hidden = true;
+        updateScore();
+      });
+      c.input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
+          e.preventDefault();
+          check(c, true);
+        }
+      });
+      c.el.querySelector("[data-run]").addEventListener("click", function () { check(c, true); });
+      c.el.querySelector("[data-show]").addEventListener("click", function () { reveal(c); });
+    });
+
+    document.getElementById("lxCheckAll").addEventListener("click", function () {
+      cards.forEach(function (c) { check(c, true); });
+    });
+    document.getElementById("lxRevealAll").addEventListener("click", function () {
+      cards.forEach(reveal);
+    });
+    document.getElementById("lxReset").addEventListener("click", function () {
+      cards.forEach(function (c) {
+        c.input.value = "";
+        c.out.hidden = true;
+        c.ans.hidden = true;
+        paint(c, "");
+      });
+      updateScore();
+    });
+
+    updateScore();
+  })();
+  </script>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/site-nav.js"></script>
+</body>
+</html>
