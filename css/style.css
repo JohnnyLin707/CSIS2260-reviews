@@ -1607,3 +1607,32 @@ body.qa-static .qa-answer {
   .lx-card { padding: 0.95rem 0.9rem; }
   .lx-score { font-size: 0.85rem; }
 }
+
+/* ---------------------------------------------------------------------
+   Top navigation with Ch 7 / Ch 8 added: keep the whole row and every
+   (hidden) dropdown inside the viewport on mid-size desktop screens.
+   --------------------------------------------------------------------- */
+.nav-item:nth-last-child(-n+3) > .nav-dropdown { left: auto; right: 0; }
+
+@media (min-width: 901px) {
+  /* Ten top-level entries share one row: drop the inline Chinese sub-labels
+     on desktop so labels never get squeezed into vertical columns. Chinese
+     stays visible inside the dropdowns and in the phone menu. */
+  .site-nav .nav-link .dd-zh { display: none; }
+  .site-nav .nav-link { white-space: nowrap; }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+  .nav-link,
+  .nav-group-toggle { padding: 0.42rem 0.42rem; font-size: 0.87rem; }
+  .nav-list { gap: 0; }
+  .nav-neon { padding: 0.42rem 0.65rem; font-size: 0.85rem; }
+  .nav-neon small { display: none; }
+}
+
+@media (min-width: 901px) and (max-width: 1000px) {
+  .site-nav-inner { gap: 0.4rem; }
+  .nav-link,
+  .nav-group-toggle { padding: 0.3rem 0.28rem; font-size: 0.8rem; }
+  .nav-neon { padding: 0.35rem 0.5rem; font-size: 0.78rem; }
+}
