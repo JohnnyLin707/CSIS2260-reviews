@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Combined Paging and Segmentation &mdash; Ch08v2a.pdf (Slide 33) | Quiz 1 Review</title>
+  <meta name="description" content="Quiz 1 review notes excerpted from Ch08v2a.pdf, page 33: Combined Paging and Segmentation">
+  <link rel="stylesheet" href="../../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="review-page has-sidebar" data-topic="chapter8" data-page="33" data-selfcheck="off">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Slide navigation">
+    <div class="sidebar-head">
+      <span class="sidebar-title">Slides</span>
+      <button class="sidebar-close" type="button" aria-label="Close navigation">&#10005;</button>
+    </div>
+    <div class="sidebar-search">
+      <input class="sidebar-filter" type="search" placeholder="Jump to slide&hellip;" aria-label="Filter slides">
+    </div>
+    <nav class="sidebar-list">
+      <a class="sidebar-link" href="page-01.html" data-num="01" data-title="Chapter 8: Virtual Memory">
+        <span class="snum">01</span>
+        <span class="sname">Chapter 8: Virtual Memory<span class="sname-zh">第 8 章：虚拟内存</span></span>
+      </a>
+      <a class="sidebar-link" href="page-02.html" data-num="02" data-title="Hardware and Control Structures">
+        <span class="snum">02</span>
+        <span class="sname">Hardware and Control Structures<span class="sname-zh">硬件与控制结构</span></span>
+      </a>
+      <a class="sidebar-link" href="page-03.html" data-num="03" data-title="Table 8.1 Virtual Memory Terminology">
+        <span class="snum">03</span>
+        <span class="sname">Table 8.1 Virtual Memory Terminology<span class="sname-zh">表 8.1 虚拟内存术语</span></span>
+      </a>
+      <a class="sidebar-link" href="page-04.html" data-num="04" data-title="Execution of a Process">
+        <span class="snum">04</span>
+        <span class="sname">Execution of a Process<span class="sname-zh">进程的执行</span></span>
+      </a>
+      <a class="sidebar-link" href="page-05.html" data-num="05" data-title="Execution of a Process (continued)">
+        <span class="snum">05</span>
+        <span class="sname">Execution of a Process (continued)<span class="sname-zh">进程的执行（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-06.html" data-num="06" data-title="Implications">
+        <span class="snum">06</span>
+        <span class="sname">Implications<span class="sname-zh">虚拟内存的意义</span></span>
+      </a>
+      <a class="sidebar-link" href="page-07.html" data-num="07" data-title="Real and Virtual Memory">
+        <span class="snum">07</span>
+        <span class="sname">Real and Virtual Memory<span class="sname-zh">实存与虚存</span></span>
+      </a>
+      <a class="sidebar-link" href="page-08.html" data-num="08" data-title="Table 8.2 Characteristics of Paging and Segmentation">
+        <span class="snum">08</span>
+        <span class="sname">Table 8.2 Characteristics of Paging and Segmentation<span class="sname-zh">表 8.2 分页与分段的特征</span></span>
+      </a>
+      <a class="sidebar-link" href="page-09.html" data-num="09" data-title="Thrashing">
+        <span class="snum">09</span>
+        <span class="sname">Thrashing<span class="sname-zh">抖动</span></span>
+      </a>
+      <a class="sidebar-link" href="page-10.html" data-num="10" data-title="Principle of Locality">
+        <span class="snum">10</span>
+        <span class="sname">Principle of Locality<span class="sname-zh">局部性原理</span></span>
+      </a>
+      <a class="sidebar-link" href="page-11.html" data-num="11" data-title="Support Needed for Virtual Memory">
+        <span class="snum">11</span>
+        <span class="sname">Support Needed for Virtual Memory<span class="sname-zh">虚拟内存所需的硬件支持</span></span>
+      </a>
+      <a class="sidebar-link" href="page-12.html" data-num="12" data-title="Paging">
+        <span class="snum">12</span>
+        <span class="sname">Paging<span class="sname-zh">分页</span></span>
+      </a>
+      <a class="sidebar-link" href="page-13.html" data-num="13" data-title="Memory Management Formats">
+        <span class="snum">13</span>
+        <span class="sname">Memory Management Formats<span class="sname-zh">内存管理格式</span></span>
+      </a>
+      <a class="sidebar-link" href="page-14.html" data-num="14" data-title="Paging Address Translation">
+        <span class="snum">14</span>
+        <span class="sname">Paging Address Translation<span class="sname-zh">分页地址转换</span></span>
+      </a>
+      <a class="sidebar-link" href="page-15.html" data-num="15" data-title="Virtual Address Space">
+        <span class="snum">15</span>
+        <span class="sname">Virtual Address Space<span class="sname-zh">虚拟地址空间</span></span>
+      </a>
+      <a class="sidebar-link" href="page-16.html" data-num="16" data-title="Paging Mechanism">
+        <span class="snum">16</span>
+        <span class="sname">Paging Mechanism<span class="sname-zh">分页机制</span></span>
+      </a>
+      <a class="sidebar-link" href="page-17.html" data-num="17" data-title="Inverted Page Table">
+        <span class="snum">17</span>
+        <span class="sname">Inverted Page Table<span class="sname-zh">倒排页表</span></span>
+      </a>
+      <a class="sidebar-link" href="page-18.html" data-num="18" data-title="Inverted Page Table Structure">
+        <span class="snum">18</span>
+        <span class="sname">Inverted Page Table Structure<span class="sname-zh">倒排页表结构</span></span>
+      </a>
+      <a class="sidebar-link" href="page-19.html" data-num="19" data-title="Inverted Page Table (continued)">
+        <span class="snum">19</span>
+        <span class="sname">Inverted Page Table (continued)<span class="sname-zh">倒排页表（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-20.html" data-num="20" data-title="Translation Lookaside Buffer (TLB)">
+        <span class="snum">20</span>
+        <span class="sname">Translation Lookaside Buffer (TLB)<span class="sname-zh">转换检测缓冲区（TLB）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-21.html" data-num="21" data-title="Figure 8.6 Use of a Translation Lookaside Buffer">
+        <span class="snum">21</span>
+        <span class="sname">Figure 8.6 Use of a Translation Lookaside Buffer<span class="sname-zh">图 8.6 转换检测缓冲区的使用</span></span>
+      </a>
+      <a class="sidebar-link" href="page-22.html" data-num="22" data-title="Figure 8.7 Operation of Paging and Translation Lookaside Buffer (TLB)">
+        <span class="snum">22</span>
+        <span class="sname">Figure 8.7 Operation of Paging and Translation Lookaside Buffer (TLB)<span class="sname-zh">图 8.7 分页与 TLB 的工作过程</span></span>
+      </a>
+      <a class="sidebar-link" href="page-23.html" data-num="23" data-title="Associative Mapping">
+        <span class="snum">23</span>
+        <span class="sname">Associative Mapping<span class="sname-zh">相联映射</span></span>
+      </a>
+      <a class="sidebar-link" href="page-24.html" data-num="24" data-title="Figure 8.8 Direct Versus Associative Lookup for Page Table Entries">
+        <span class="snum">24</span>
+        <span class="sname">Figure 8.8 Direct Versus Associative Lookup for Page Table Entries<span class="sname-zh">图 8.8 页表项的直接查找与相联查找</span></span>
+      </a>
+      <a class="sidebar-link" href="page-25.html" data-num="25" data-title="Figure 8.9 Translation Lookaside Buffer and Cache Operation">
+        <span class="snum">25</span>
+        <span class="sname">Figure 8.9 Translation Lookaside Buffer and Cache Operation<span class="sname-zh">图 8.9 TLB 与高速缓存的操作</span></span>
+      </a>
+      <a class="sidebar-link" href="page-26.html" data-num="26" data-title="Page Size">
+        <span class="snum">26</span>
+        <span class="sname">Page Size<span class="sname-zh">页大小</span></span>
+      </a>
+      <a class="sidebar-link" href="page-27.html" data-num="27" data-title="Page Fault Rate">
+        <span class="snum">27</span>
+        <span class="sname">Page Fault Rate<span class="sname-zh">缺页率</span></span>
+      </a>
+      <a class="sidebar-link" href="page-28.html" data-num="28" data-title="Page Size Examples">
+        <span class="snum">28</span>
+        <span class="sname">Page Size Examples<span class="sname-zh">页大小示例</span></span>
+      </a>
+      <a class="sidebar-link" href="page-29.html" data-num="29" data-title="Page Size (continued)">
+        <span class="snum">29</span>
+        <span class="sname">Page Size (continued)<span class="sname-zh">页大小（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-30.html" data-num="30" data-title="Segmentation">
+        <span class="snum">30</span>
+        <span class="sname">Segmentation<span class="sname-zh">分段</span></span>
+      </a>
+      <a class="sidebar-link" href="page-31.html" data-num="31" data-title="Segment Organization">
+        <span class="snum">31</span>
+        <span class="sname">Segment Organization<span class="sname-zh">段的组织</span></span>
+      </a>
+      <a class="sidebar-link" href="page-32.html" data-num="32" data-title="Address Translation">
+        <span class="snum">32</span>
+        <span class="sname">Address Translation<span class="sname-zh">地址转换</span></span>
+      </a>
+      <a class="sidebar-link active" href="page-33.html" data-num="33" data-title="Combined Paging and Segmentation">
+        <span class="snum">33</span>
+        <span class="sname">Combined Paging and Segmentation<span class="sname-zh">分页与分段结合</span></span>
+      </a>
+      <a class="sidebar-link" href="page-34.html" data-num="34" data-title="Combined Addressing">
+        <span class="snum">34</span>
+        <span class="sname">Combined Addressing<span class="sname-zh">组合寻址</span></span>
+      </a>
+      <a class="sidebar-link" href="page-35.html" data-num="35" data-title="Combined Paging and Segmentation: Address Translation">
+        <span class="snum">35</span>
+        <span class="sname">Combined Paging and Segmentation: Address Translation<span class="sname-zh">分页分段组合的地址转换</span></span>
+      </a>
+      <a class="sidebar-link" href="page-36.html" data-num="36" data-title="Protection and Sharing">
+        <span class="snum">36</span>
+        <span class="sname">Protection and Sharing<span class="sname-zh">保护与共享</span></span>
+      </a>
+      <a class="sidebar-link" href="page-37.html" data-num="37" data-title="OS Software for Memory Management">
+        <span class="snum">37</span>
+        <span class="sname">OS Software for Memory Management<span class="sname-zh">操作系统内存管理软件</span></span>
+      </a>
+      <a class="sidebar-link" href="page-38.html" data-num="38" data-title="Operating System Software">
+        <span class="snum">38</span>
+        <span class="sname">Operating System Software<span class="sname-zh">操作系统软件</span></span>
+      </a>
+      <a class="sidebar-link" href="page-39.html" data-num="39" data-title="Policies for Virtual Memory">
+        <span class="snum">39</span>
+        <span class="sname">Policies for Virtual Memory<span class="sname-zh">虚拟内存策略</span></span>
+      </a>
+      <a class="sidebar-link" href="page-40.html" data-num="40" data-title="Fetch Policy">
+        <span class="snum">40</span>
+        <span class="sname">Fetch Policy<span class="sname-zh">调入策略</span></span>
+      </a>
+      <a class="sidebar-link" href="page-41.html" data-num="41" data-title="Demand Paging">
+        <span class="snum">41</span>
+        <span class="sname">Demand Paging<span class="sname-zh">请求分页</span></span>
+      </a>
+      <a class="sidebar-link" href="page-42.html" data-num="42" data-title="Prepaging">
+        <span class="snum">42</span>
+        <span class="sname">Prepaging<span class="sname-zh">预调页</span></span>
+      </a>
+      <a class="sidebar-link" href="page-43.html" data-num="43" data-title="Placement Policy">
+        <span class="snum">43</span>
+        <span class="sname">Placement Policy<span class="sname-zh">放置策略</span></span>
+      </a>
+      <a class="sidebar-link" href="page-44.html" data-num="44" data-title="Replacement Policy">
+        <span class="snum">44</span>
+        <span class="sname">Replacement Policy<span class="sname-zh">置换策略</span></span>
+      </a>
+      <a class="sidebar-link" href="page-45.html" data-num="45" data-title="Frame Locking">
+        <span class="snum">45</span>
+        <span class="sname">Frame Locking<span class="sname-zh">页框锁定</span></span>
+      </a>
+      <a class="sidebar-link" href="page-46.html" data-num="46" data-title="Basic Algorithms">
+        <span class="snum">46</span>
+        <span class="sname">Basic Algorithms<span class="sname-zh">基本算法</span></span>
+      </a>
+      <a class="sidebar-link" href="page-47.html" data-num="47" data-title="Basic Replacement Algorithms Example">
+        <span class="snum">47</span>
+        <span class="sname">Basic Replacement Algorithms Example<span class="sname-zh">基本置换算法示例</span></span>
+      </a>
+      <a class="sidebar-link" href="page-48.html" data-num="48" data-title="Optimal Policy">
+        <span class="snum">48</span>
+        <span class="sname">Optimal Policy<span class="sname-zh">最佳置换策略</span></span>
+      </a>
+      <a class="sidebar-link" href="page-49.html" data-num="49" data-title="Least Recently Used (LRU)">
+        <span class="snum">49</span>
+        <span class="sname">Least Recently Used (LRU)<span class="sname-zh">最近最少使用（LRU）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-50.html" data-num="50" data-title="LRU Example">
+        <span class="snum">50</span>
+        <span class="sname">LRU Example<span class="sname-zh">LRU 示例</span></span>
+      </a>
+      <a class="sidebar-link" href="page-51.html" data-num="51" data-title="First-in-First-out (FIFO)">
+        <span class="snum">51</span>
+        <span class="sname">First-in-First-out (FIFO)<span class="sname-zh">先进先出（FIFO）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-52.html" data-num="52" data-title="FIFO Example">
+        <span class="snum">52</span>
+        <span class="sname">FIFO Example<span class="sname-zh">FIFO 示例</span></span>
+      </a>
+      <a class="sidebar-link" href="page-53.html" data-num="53" data-title="Clock Policy">
+        <span class="snum">53</span>
+        <span class="sname">Clock Policy<span class="sname-zh">时钟策略</span></span>
+      </a>
+      <a class="sidebar-link" href="page-54.html" data-num="54" data-title="Clock Policy (continued)">
+        <span class="snum">54</span>
+        <span class="sname">Clock Policy (continued)<span class="sname-zh">时钟策略（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-55.html" data-num="55" data-title="Clock Policy Example">
+        <span class="snum">55</span>
+        <span class="sname">Clock Policy Example<span class="sname-zh">时钟策略示例</span></span>
+      </a>
+      <a class="sidebar-link" href="page-56.html" data-num="56" data-title="Page Faults per 1000 References">
+        <span class="snum">56</span>
+        <span class="sname">Page Faults per 1000 References<span class="sname-zh">每千次访问的缺页次数</span></span>
+      </a>
+      <a class="sidebar-link" href="page-57.html" data-num="57" data-title="Page Buffering">
+        <span class="snum">57</span>
+        <span class="sname">Page Buffering<span class="sname-zh">页缓冲</span></span>
+      </a>
+      <a class="sidebar-link" href="page-58.html" data-num="58" data-title="Replacement Policy and Cache Size">
+        <span class="snum">58</span>
+        <span class="sname">Replacement Policy and Cache Size<span class="sname-zh">置换策略与高速缓存容量</span></span>
+      </a>
+      <a class="sidebar-link" href="page-59.html" data-num="59" data-title="Resident Set Management">
+        <span class="snum">59</span>
+        <span class="sname">Resident Set Management<span class="sname-zh">驻留集管理</span></span>
+      </a>
+      <a class="sidebar-link" href="page-60.html" data-num="60" data-title="Resident Set Size">
+        <span class="snum">60</span>
+        <span class="sname">Resident Set Size<span class="sname-zh">驻留集大小</span></span>
+      </a>
+      <a class="sidebar-link" href="page-61.html" data-num="61" data-title="Replacement Scope">
+        <span class="snum">61</span>
+        <span class="sname">Replacement Scope<span class="sname-zh">置换范围</span></span>
+      </a>
+      <a class="sidebar-link" href="page-62.html" data-num="62" data-title="Local vs Global Replacement">
+        <span class="snum">62</span>
+        <span class="sname">Local vs Global Replacement<span class="sname-zh">局部置换与全局置换</span></span>
+      </a>
+      <a class="sidebar-link" href="page-63.html" data-num="63" data-title="Fixed Allocation, Local Scope">
+        <span class="snum">63</span>
+        <span class="sname">Fixed Allocation, Local Scope<span class="sname-zh">固定分配、局部范围</span></span>
+      </a>
+      <a class="sidebar-link" href="page-64.html" data-num="64" data-title="Variable Allocation, Global Scope">
+        <span class="snum">64</span>
+        <span class="sname">Variable Allocation, Global Scope<span class="sname-zh">可变分配、全局范围</span></span>
+      </a>
+      <a class="sidebar-link" href="page-65.html" data-num="65" data-title="Variable Allocation, Local Scope">
+        <span class="snum">65</span>
+        <span class="sname">Variable Allocation, Local Scope<span class="sname-zh">可变分配、局部范围</span></span>
+      </a>
+      <a class="sidebar-link" href="page-66.html" data-num="66" data-title="Variable Allocation, Local Scope (continued)">
+        <span class="snum">66</span>
+        <span class="sname">Variable Allocation, Local Scope (continued)<span class="sname-zh">可变分配、局部范围（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="page-67.html" data-num="67" data-title="Figure 8.17 Working Set of Process as Defined by Window Size">
+        <span class="snum">67</span>
+        <span class="sname">Figure 8.17 Working Set of Process as Defined by Window Size<span class="sname-zh">图 8.17 由窗口大小定义的工作集</span></span>
+      </a>
+      <a class="sidebar-link" href="page-68.html" data-num="68" data-title="Working Set Size">
+        <span class="snum">68</span>
+        <span class="sname">Working Set Size<span class="sname-zh">工作集大小</span></span>
+      </a>
+      <a class="sidebar-link" href="page-69.html" data-num="69" data-title="Cleaning Policy">
+        <span class="snum">69</span>
+        <span class="sname">Cleaning Policy<span class="sname-zh">清除策略</span></span>
+      </a>
+      <a class="sidebar-link" href="page-70.html" data-num="70" data-title="Load Control">
+        <span class="snum">70</span>
+        <span class="sname">Load Control<span class="sname-zh">负载控制</span></span>
+      </a>
+      <a class="sidebar-link" href="page-71.html" data-num="71" data-title="Processor Utilization">
+        <span class="snum">71</span>
+        <span class="sname">Processor Utilization<span class="sname-zh">处理器利用率</span></span>
+      </a>
+      <a class="sidebar-link" href="page-72.html" data-num="72" data-title="Thrashing">
+        <span class="snum">72</span>
+        <span class="sname">Thrashing<span class="sname-zh">抖动</span></span>
+      </a>
+      <a class="sidebar-link" href="page-73.html" data-num="73" data-title="Process Suspension">
+        <span class="snum">73</span>
+        <span class="sname">Process Suspension<span class="sname-zh">进程挂起</span></span>
+      </a>
+      <a class="sidebar-link" href="page-74.html" data-num="74" data-title="UNIX Memory Management">
+        <span class="snum">74</span>
+        <span class="sname">UNIX Memory Management<span class="sname-zh">UNIX 内存管理</span></span>
+      </a>
+      <a class="sidebar-link" href="page-75.html" data-num="75" data-title="Paging System and Kernel Memory Allocator">
+        <span class="snum">75</span>
+        <span class="sname">Paging System and Kernel Memory Allocator<span class="sname-zh">分页系统与内核内存分配器</span></span>
+      </a>
+      <a class="sidebar-link" href="page-76.html" data-num="76" data-title="Page Replacement">
+        <span class="snum">76</span>
+        <span class="sname">Page Replacement<span class="sname-zh">页面置换</span></span>
+      </a>
+      <a class="sidebar-link" href="page-77.html" data-num="77" data-title="Kernel Memory Allocator">
+        <span class="snum">77</span>
+        <span class="sname">Kernel Memory Allocator<span class="sname-zh">内核内存分配器</span></span>
+      </a>
+      <a class="sidebar-link" href="page-78.html" data-num="78" data-title="Windows Memory Management">
+        <span class="snum">78</span>
+        <span class="sname">Windows Memory Management<span class="sname-zh">Windows 内存管理</span></span>
+      </a>
+      <a class="sidebar-link" href="page-79.html" data-num="79" data-title="Windows Virtual Address Map">
+        <span class="snum">79</span>
+        <span class="sname">Windows Virtual Address Map<span class="sname-zh">Windows 虚拟地址映射</span></span>
+      </a>
+      <a class="sidebar-link" href="page-80.html" data-num="80" data-title="Windows Paging">
+        <span class="snum">80</span>
+        <span class="sname">Windows Paging<span class="sname-zh">Windows 分页</span></span>
+      </a>
+      <a class="sidebar-link" href="page-81.html" data-num="81" data-title="Windows Resident Set Management">
+        <span class="snum">81</span>
+        <span class="sname">Windows Resident Set Management<span class="sname-zh">Windows 驻留集管理</span></span>
+      </a>
+      <a class="sidebar-link" href="page-82.html" data-num="82" data-title="Summary">
+        <span class="snum">82</span>
+        <span class="sname">Summary<span class="sname-zh">本章小结</span></span>
+      </a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <button class="btn btn-menu" type="button" data-sidebar-toggle aria-label="Toggle navigation">&#9776;</button>
+        <a class="btn btn-home" href="https://johnnylin707.github.io/CSIS2260-reviews/index.html">&#8962; Home Page</a>
+      </div>
+      <div class="topbar-center">
+        <div class="topbar-title">Chapter 8: Virtual Memory<span>&middot; Slide 33 of 82</span></div>
+      </div>
+      <div class="topbar-right">
+        <span class="pdf-tag">Ch08v2a.pdf</span>
+      </div>
+    </div>
+    <div class="progress-track"><div class="progress-bar" data-progress="40.2"></div></div>
+  </header>
+
+  <main class="page-wrap">
+    <header class="page-head">
+      <div class="page-meta"><span>Slide 33 / 82</span></div>
+      <h1 class="page-title reveal">Combined Paging and Segmentation</h1>
+      <p class="page-title-zh reveal">分页与分段结合</p>
+      <div class="source-badge reveal">Slide scan from &ldquo;Ch08v2a.pdf&rdquo; &mdash; Page 33</div>
+    </header>
+
+    <nav class="top-nav" aria-label="Top slide navigation">
+      <a class="btn btn-back" href="page-32.html">&#8592; Back</a>
+      <a class="btn btn-next" href="page-34.html">Next &#8594;</a>
+    </nav>
+
+    <figure class="slide-figure reveal">
+      <img class="slide-image" src="../../Ch08v2a-images/Ch08v2a-images-32.jpg" alt="Original slide from Ch08v2a.pdf &mdash; slide 33: Combined Paging and Segmentation" loading="lazy" decoding="async">
+    </figure>
+
+    <section class="panel original reveal">
+      <h2>Slide Notes &middot; 讲义笔记</h2>
+      <ul class="content-list">
+        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
+      </ul>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Possible Exam Questions</span>
+        <span class="count">(coming soon &middot; 待补充)</span>
+      </div>
+    </section>
+
+    <nav class="bottom-nav" aria-label=" slide navigation">
+      <a class="btn btn-back" href="page-32.html">&#8592; Back</a>
+      <a class="btn btn-next" href="page-34.html">Next &#8594;</a>
+    </nav>
+
+    <div class="kbd-hint">
+      <kbd>&#8592;</kbd> Back &nbsp; <kbd>&#8594;</kbd> Next &nbsp; <kbd>Esc</kbd> Home
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    Quiz 1 Review &middot; Chapter 8: Virtual Memory &middot; slide scans from &ldquo;Ch08v2a.pdf&rdquo;.
+  </footer>
+
+  <script src="../../javascript/main.js"></script>
+  <script src="../../javascript/animations.js"></script>
+  <script src="../../javascript/speech.js"></script>
+</body>
+</html>

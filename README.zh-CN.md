@@ -10,6 +10,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ## ✨ 本次更新
 
+- **新增框架单元 `pages/chapter7.html`（40 页）与 `pages/chapter8.html`（82 页）** —— 第 7 章《内存管理》与第 8 章《虚拟内存》，沿用第 1–4 章完全相同的框架与 CSS：侧边栏、关键词筛选、进度条、上页／下页按钮，以及每页一张真实课件扫描图。目前为框架页，讲义原文、中文翻译与考题将在取得课件文字后补充。
 - **新增单元 `pages/MidtermMockExam.html`** —— 把练习卷做成**交互判分模拟考**：68 道简答题、**241 个得分点各一个输入框**。某得分点只要你的答案**命中标准答案中的 1 个英文单词**即得 1 分。**点击「交卷评分」后才会判分** —— 页面自动跳转到顶部结果区，显示**卷面总分（241）、你的得分与得分率**，并且每题显示得分、准确率与每个得分点的**标准答案（英文 + 中文）**；交卷后输入框锁定，「重新作答」按钮可整卷重置。首页导航栏也加入了「Mock Exam」入口。
 - **新增单元 `pages/MidtermPracticeSheet.html`** —— 做成一份分两部分的**可打印练习卷**：**第 1 部分**是整份 `ReviewQuestions - Midterm.pdf` 的 60 道题（第 1–4 章）；**第 2 部分**是 Windows 实验的 8 道押题 —— 6 道"最可能考"加上 **Oracle VirtualBox** 与 **Type 1 / Type 2 虚拟机监控器**。**只显示题目、不含答案**，整体是一个等宽代码块；其后是同样格式的**答案钥**代码块 —— 每个得分点只用 **2–3 个词**精准作答，并在括号内附中文翻译，方便快速记忆拿分。每题下方有中文备注、**建议分值（1 个得分点 1 分）**以及**每个分值对应一条点线书写行**。整卷宽 78 列，正好放入 **US Letter 纸**（Word 中用 Courier New 10 pt），页面自带 `@page { size: Letter }` 打印样式与「Copy sheet」一键复制按钮；复制到 Word 后打印即可手写答题。卷首写明教授的考试规格：**60 分钟 · 12 道题 · 共计 45 分**，并提示可任选约 45 分的 12 道题做限时模拟。
 - **新增单元 `pages/WindowsLabsReview.html`（37 道预测题）** —— 英文为主、每句英文后附括号中文翻译的 Windows 实验期中预测题。教授提示"可能有一两道关于 lab1–Lab4.pdf 的题"，因此本单元把 `Lab1v2–Lab4v1.pdf` 与 `jinran1–jinran4.docx` 中的正确答案整理成考前可直接背诵的问答题：每个实验一张速查表、37 道点击展开题（答案 2–4 句，含完整操作路径）、"只考一两题时最可能考的 6 题"清单，以及 3 道跨实验对比题。
@@ -44,7 +45,12 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 | 14 | Windows 实验 1–4：考题预测 / Windows Labs 1–4: Predicted Exam Questions | `Lab1v2–Lab4v1.pdf` + `jinran1–4.docx` | — | 37 |
 | 15 | 期中考练习卷 / Midterm Practice Sheet | `ReviewQuestions - Midterm.pdf` + Windows 实验押题 | — | 68（60 道复习题 + 8 道押题，见下方说明） |
 | 16 | 期中模拟考试 / Midterm Mock Exam | `MidtermMockExam.html`（交互判分） | — | 68（同上 68 题，见下方说明） |
-| | **合计** | | **254** | **761** |
+| 17 | 填空题 · 指令周期练习 / Fill in the Blanks · Instruction Cycle Drill | `Ch01v2a.pdf` | — | — |
+| 18 | 第 7 章：内存管理 / Chapter 7: Memory Management | `Ch07v2a.pdf` | 40（全部） | — |
+| 19 | 第 8 章：虚拟内存 / Chapter 8: Virtual Memory | `Ch08v2a.pdf` | 82（全部） | — |
+| | **合计** | | **376** | **761** |
+
+单元 18、19 目前仅由 `Ch07v2a-images/` 与 `Ch08v2a-images/` 中的扫描图构成框架页，暂未计入考题总数；单元 17 是「练习模块」中介绍的填空题练习。
 
 单元 11 是命令速查表（29 个小节、235 个中英对照知识点），不属于幻灯片单元，因此不计入幻灯片数与考题总数。单元 15 的第 1 部分只是把单元 09、10、12、13 已计入的 60 道复习题重新排版成可打印练习卷，同样不再重复计入总数；第 2 部分转载单元 14 的 6 道押题，并另加 2 道虚拟机监控器题目。单元 16 则是单元 15 的 68 道题的交互判分版，同样不重复计入。
 
@@ -107,8 +113,8 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ## 功能特点
 
-- **一页一幻灯片** —— 五个单元共 254 个独立页面。
-- **课件原图** —— 每个页面顶部都有真实幻灯片的整宽扫描图（共 254 张）。纯展示：不可点击，且始终按屏幕宽度自适应缩放。
+- **一页一幻灯片** —— 七个单元共 376 个独立页面。
+- **课件原图** —— 每个页面顶部都有真实幻灯片的整宽扫描图（共 376 张）。纯展示：不可点击，且始终按屏幕宽度自适应缩放。
 - **顶部与底部都有 Back / Next** —— 翻页不必再滚到页面底部。
 - **自适应导航栏** —— 首页顶部的可折叠导航条。桌面端每一章以下拉菜单展开（幻灯片 + 复习题）；手机端整行收进汉堡按钮，每个分组变成可展开的手风琴，可直接跳转到想复习的章节。
 - **中英对照** —— 每一条原文后面紧跟中文翻译。
@@ -172,6 +178,12 @@ CSIS-2260review/
 │   ├── chapter4.html          # 单元 05 索引（全部 22 页）
 │   ├── chapter4/
 │   │   └── page-01 … page-22.html
+│   ├── chapter7.html          # 单元 18 索引（全部 40 页）
+│   ├── chapter7/
+│   │   └── page-01 … page-40.html
+│   ├── chapter8.html          # 单元 19 索引（全部 82 页）
+│   ├── chapter8/
+│   │   └── page-01 … page-82.html
 │   ├── Quiz1importantShortAnswer.html   # 单元 06 —— 4 道简答题，19 个输入框
 │   ├── Quiz1keyQuestions.html           # 单元 07 —— 25 道回忆题（84 分）
 │   ├── Quiz1Fall2026.html               # 单元 08 —— 2026 秋季真题，20 分
@@ -188,6 +200,8 @@ CSIS-2260review/
 ├── Ch02v2a-images/            # 单元 03 的幻灯片扫描图（75 张）
 ├── Ch03v2a-images/            # 单元 04 的幻灯片扫描图（58 张）
 ├── Ch04v2a-images/            # 单元 05 的幻灯片扫描图（22 张）
+├── Ch07v2a-images/            # 单元 18 的幻灯片扫描图（40 张）
+├── Ch08v2a-images/            # 单元 19 的幻灯片扫描图（82 张）
 ├── Quiz1diagram/              # 2026 秋季真题的指令周期模拟图
 ├── Intro to HW v2-images/     # 单元 01 的幻灯片扫描图（40 张）
 └── .gitignore                 # 忽略 .DS_Store 与临时 *.zip 文件
@@ -225,6 +239,7 @@ python3 -m http.server 8000
 ## 说明
 
 - 内容逐字摘录自课程课件（`Intro to HW v2.pdf`、`Ch01v2a.pdf`、`Ch02v2a.pdf`、`Ch03v2a.pdf`、`Ch04v2a.pdf`）与实验手册 `Introduction to UNIX Commands and Scripting.pdf`；这些 PDF 原文件**不在**本仓库中（`.gitignore` 忽略 `*.pdf`）。`Intro to HW v2-images/`、`Ch01v2a-images/`、`Ch02v2a-images/` 与 `Ch03v2a-images/` 下的图片是从这些 PDF 中导出的页面扫描图。
+- 第 7、8 章目前是**框架单元**，仅由 `Ch07v2a-images/` 与 `Ch08v2a-images/` 中的课件扫描图构成；讲义原文、逐行中文翻译与模拟考题将在取得课件文字后补充。
 - 中文翻译、模拟考题与标准答案仅为复习辅助材料，考试前请务必与官方课件和老师的要求核对。
 - 自动判分基于关键词匹配并刻意设得宽松，它是"帮助记忆"的工具而不是严格的阅卷标准：某个框打勾代表"你写到了这个要点"，不代表"这是唯一正确的写法"。
 

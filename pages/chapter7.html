@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Chapter 7: Memory Management &mdash; Quiz 1 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="topic-page has-sidebar" data-topic="chapter7">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Slide navigation">
+    <div class="sidebar-head">
+      <span class="sidebar-title">Slides</span>
+      <button class="sidebar-close" type="button" aria-label="Close navigation">&#10005;</button>
+    </div>
+    <div class="sidebar-search">
+      <input class="sidebar-filter" type="search" placeholder="Jump to slide&hellip;" aria-label="Filter slides">
+    </div>
+    <nav class="sidebar-list">
+      <a class="sidebar-link" href="chapter7/page-01.html" data-num="01" data-title="Chapter 7: Memory Management">
+        <span class="snum">01</span>
+        <span class="sname">Chapter 7: Memory Management<span class="sname-zh">第 7 章：内存管理</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-02.html" data-num="02" data-title="Table 7.1 Memory Management Terms">
+        <span class="snum">02</span>
+        <span class="sname">Table 7.1 Memory Management Terms<span class="sname-zh">表 7.1 内存管理术语</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-03.html" data-num="03" data-title="Memory Management Requirements">
+        <span class="snum">03</span>
+        <span class="sname">Memory Management Requirements<span class="sname-zh">内存管理需求</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-04.html" data-num="04" data-title="Relocation">
+        <span class="snum">04</span>
+        <span class="sname">Relocation<span class="sname-zh">重定位</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-05.html" data-num="05" data-title="Figure 7.1 Addressing Requirements for a Process">
+        <span class="snum">05</span>
+        <span class="sname">Figure 7.1 Addressing Requirements for a Process<span class="sname-zh">图 7.1 进程的寻址需求</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-06.html" data-num="06" data-title="Protection">
+        <span class="snum">06</span>
+        <span class="sname">Protection<span class="sname-zh">保护</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-07.html" data-num="07" data-title="Sharing">
+        <span class="snum">07</span>
+        <span class="sname">Sharing<span class="sname-zh">共享</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-08.html" data-num="08" data-title="Logical Organization">
+        <span class="snum">08</span>
+        <span class="sname">Logical Organization<span class="sname-zh">逻辑组织</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-09.html" data-num="09" data-title="Physical Organization">
+        <span class="snum">09</span>
+        <span class="sname">Physical Organization<span class="sname-zh">物理组织</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-10.html" data-num="10" data-title="Memory Partitioning">
+        <span class="snum">10</span>
+        <span class="sname">Memory Partitioning<span class="sname-zh">内存分区</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-11.html" data-num="11" data-title="Table 7.2 Memory Partitioning">
+        <span class="snum">11</span>
+        <span class="sname">Table 7.2 Memory Partitioning<span class="sname-zh">表 7.2 内存分区</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-12.html" data-num="12" data-title="Fixed Partitioning">
+        <span class="snum">12</span>
+        <span class="sname">Fixed Partitioning<span class="sname-zh">固定分区</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-13.html" data-num="13" data-title="Fixed Partitioning: Disadvantages">
+        <span class="snum">13</span>
+        <span class="sname">Fixed Partitioning: Disadvantages<span class="sname-zh">固定分区的缺点</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-14.html" data-num="14" data-title="Unequal Size Partitions">
+        <span class="snum">14</span>
+        <span class="sname">Unequal Size Partitions<span class="sname-zh">不等长分区</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-15.html" data-num="15" data-title="Figure 7.3 Memory Assignment for Fixed Partitioning">
+        <span class="snum">15</span>
+        <span class="sname">Figure 7.3 Memory Assignment for Fixed Partitioning<span class="sname-zh">图 7.3 固定分区的内存分配</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-16.html" data-num="16" data-title="Unequal Size Partitions: Disadvantages">
+        <span class="snum">16</span>
+        <span class="sname">Unequal Size Partitions: Disadvantages<span class="sname-zh">不等长分区的缺点</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-17.html" data-num="17" data-title="Dynamic Partitioning">
+        <span class="snum">17</span>
+        <span class="sname">Dynamic Partitioning<span class="sname-zh">动态分区</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-18.html" data-num="18" data-title="Figure 7.4 The Effect of Dynamic Partitioning">
+        <span class="snum">18</span>
+        <span class="sname">Figure 7.4 The Effect of Dynamic Partitioning<span class="sname-zh">图 7.4 动态分区的效果</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-19.html" data-num="19" data-title="Dynamic Partitioning (continued)">
+        <span class="snum">19</span>
+        <span class="sname">Dynamic Partitioning (continued)<span class="sname-zh">动态分区（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-20.html" data-num="20" data-title="Placement Algorithms">
+        <span class="snum">20</span>
+        <span class="sname">Placement Algorithms<span class="sname-zh">放置算法</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-21.html" data-num="21" data-title="Figure 7.5 Example Memory Configuration before and after Allocation of 16-Mbyte Block">
+        <span class="snum">21</span>
+        <span class="sname">Figure 7.5 Example Memory Configuration before and after Allocation of 16-Mbyte Block<span class="sname-zh">图 7.5 分配 16MB 块前后的内存配置示例</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-22.html" data-num="22" data-title="Relocation (continued)">
+        <span class="snum">22</span>
+        <span class="sname">Relocation (continued)<span class="sname-zh">重定位（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-23.html" data-num="23" data-title="Addresses">
+        <span class="snum">23</span>
+        <span class="sname">Addresses<span class="sname-zh">地址</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-24.html" data-num="24" data-title="Address Translation">
+        <span class="snum">24</span>
+        <span class="sname">Address Translation<span class="sname-zh">地址转换</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-25.html" data-num="25" data-title="Figure 7.8 Hardware Support for Relocation">
+        <span class="snum">25</span>
+        <span class="sname">Figure 7.8 Hardware Support for Relocation<span class="sname-zh">图 7.8 重定位的硬件支持</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-26.html" data-num="26" data-title="Paging">
+        <span class="snum">26</span>
+        <span class="sname">Paging<span class="sname-zh">分页</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-27.html" data-num="27" data-title="Assignment of Process to Free Frames">
+        <span class="snum">27</span>
+        <span class="sname">Assignment of Process to Free Frames<span class="sname-zh">把进程分配到空闲页框</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-28.html" data-num="28" data-title="Page Table">
+        <span class="snum">28</span>
+        <span class="sname">Page Table<span class="sname-zh">页表</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-29.html" data-num="29" data-title="Page Tables for Multiple Processes">
+        <span class="snum">29</span>
+        <span class="sname">Page Tables for Multiple Processes<span class="sname-zh">多进程的页表</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-30.html" data-num="30" data-title="Figure 7.11 Logical Addresses">
+        <span class="snum">30</span>
+        <span class="sname">Figure 7.11 Logical Addresses<span class="sname-zh">图 7.11 逻辑地址</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-31.html" data-num="31" data-title="Logical-to-Physical Address Translation - Paging">
+        <span class="snum">31</span>
+        <span class="sname">Logical-to-Physical Address Translation - Paging<span class="sname-zh">逻辑地址到物理地址的转换——分页</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-32.html" data-num="32" data-title="Segmentation">
+        <span class="snum">32</span>
+        <span class="sname">Segmentation<span class="sname-zh">分段</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-33.html" data-num="33" data-title="Segmentation (continued)">
+        <span class="snum">33</span>
+        <span class="sname">Segmentation (continued)<span class="sname-zh">分段（续）</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-34.html" data-num="34" data-title="Address Translation - Segmentation">
+        <span class="snum">34</span>
+        <span class="sname">Address Translation - Segmentation<span class="sname-zh">地址转换——分段</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-35.html" data-num="35" data-title="Segmentation Address Translation Example">
+        <span class="snum">35</span>
+        <span class="sname">Segmentation Address Translation Example<span class="sname-zh">分段地址转换示例</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-36.html" data-num="36" data-title="Security Issues">
+        <span class="snum">36</span>
+        <span class="sname">Security Issues<span class="sname-zh">安全问题</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-37.html" data-num="37" data-title="Buffer Overflow Attacks">
+        <span class="snum">37</span>
+        <span class="sname">Buffer Overflow Attacks<span class="sname-zh">缓冲区溢出攻击</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-38.html" data-num="38" data-title="Buffer Overflow Example">
+        <span class="snum">38</span>
+        <span class="sname">Buffer Overflow Example<span class="sname-zh">缓冲区溢出示例</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-39.html" data-num="39" data-title="Defending Against Buffer Overflows">
+        <span class="snum">39</span>
+        <span class="sname">Defending Against Buffer Overflows<span class="sname-zh">防御缓冲区溢出</span></span>
+      </a>
+      <a class="sidebar-link" href="chapter7/page-40.html" data-num="40" data-title="Summary">
+        <span class="snum">40</span>
+        <span class="sname">Summary<span class="sname-zh">本章小结</span></span>
+      </a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <button class="btn btn-menu" type="button" data-sidebar-toggle aria-label="Toggle navigation">&#9776;</button>
+        <a class="btn btn-home" href="https://johnnylin707.github.io/CSIS2260-reviews/index.html">&#8962; Home Page</a>
+      </div>
+      <div class="topbar-center">
+        <div class="topbar-title">Chapter 7: Memory Management<span>&middot; All 40 slides</span></div>
+      </div>
+      <div class="topbar-right">
+        <span class="pdf-tag">Ch07v2a.pdf</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-shell">
+    <section class="topic-hero">
+      <h1>Chapter 7: Memory Management</h1>
+      <p class="topic-deck-zh">第 7 章：内存管理</p>
+      <p class="sub">40 slides &middot; click any slide below to open its own review page with the
+        original slide scan and the chapter framework.</p>
+
+      <div class="topic-tools">
+        <input class="topic-filter" type="search" placeholder="Filter slides by keyword or number&hellip;" aria-label="Filter slides">
+        <span class="pill filter-count">40 / 40 slides</span>
+      </div>
+    </section>
+    <nav class="top-nav" aria-label="Top deck navigation">
+      <a class="btn btn-back" href="../index.html">&#8592; Back to Home</a>
+      <a class="btn btn-next" href="chapter8.html">Chapter 8: Virtual Memory &#8594;</a>
+    </nav>
+
+    <section class="topic-grid">
+      <a class="topic-card" href="chapter7/page-01.html"
+         data-num="01" data-title="Chapter 7: Memory Management">
+        <span class="topic-num">01</span>
+        <span class="topic-name">Chapter 7: Memory Management<span class="topic-zh">第 7 章：内存管理</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-02.html"
+         data-num="02" data-title="Table 7.1 Memory Management Terms">
+        <span class="topic-num">02</span>
+        <span class="topic-name">Table 7.1 Memory Management Terms<span class="topic-zh">表 7.1 内存管理术语</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-03.html"
+         data-num="03" data-title="Memory Management Requirements">
+        <span class="topic-num">03</span>
+        <span class="topic-name">Memory Management Requirements<span class="topic-zh">内存管理需求</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-04.html"
+         data-num="04" data-title="Relocation">
+        <span class="topic-num">04</span>
+        <span class="topic-name">Relocation<span class="topic-zh">重定位</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-05.html"
+         data-num="05" data-title="Figure 7.1 Addressing Requirements for a Process">
+        <span class="topic-num">05</span>
+        <span class="topic-name">Figure 7.1 Addressing Requirements for a Process<span class="topic-zh">图 7.1 进程的寻址需求</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-06.html"
+         data-num="06" data-title="Protection">
+        <span class="topic-num">06</span>
+        <span class="topic-name">Protection<span class="topic-zh">保护</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-07.html"
+         data-num="07" data-title="Sharing">
+        <span class="topic-num">07</span>
+        <span class="topic-name">Sharing<span class="topic-zh">共享</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-08.html"
+         data-num="08" data-title="Logical Organization">
+        <span class="topic-num">08</span>
+        <span class="topic-name">Logical Organization<span class="topic-zh">逻辑组织</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-09.html"
+         data-num="09" data-title="Physical Organization">
+        <span class="topic-num">09</span>
+        <span class="topic-name">Physical Organization<span class="topic-zh">物理组织</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-10.html"
+         data-num="10" data-title="Memory Partitioning">
+        <span class="topic-num">10</span>
+        <span class="topic-name">Memory Partitioning<span class="topic-zh">内存分区</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-11.html"
+         data-num="11" data-title="Table 7.2 Memory Partitioning">
+        <span class="topic-num">11</span>
+        <span class="topic-name">Table 7.2 Memory Partitioning<span class="topic-zh">表 7.2 内存分区</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-12.html"
+         data-num="12" data-title="Fixed Partitioning">
+        <span class="topic-num">12</span>
+        <span class="topic-name">Fixed Partitioning<span class="topic-zh">固定分区</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-13.html"
+         data-num="13" data-title="Fixed Partitioning: Disadvantages">
+        <span class="topic-num">13</span>
+        <span class="topic-name">Fixed Partitioning: Disadvantages<span class="topic-zh">固定分区的缺点</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-14.html"
+         data-num="14" data-title="Unequal Size Partitions">
+        <span class="topic-num">14</span>
+        <span class="topic-name">Unequal Size Partitions<span class="topic-zh">不等长分区</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-15.html"
+         data-num="15" data-title="Figure 7.3 Memory Assignment for Fixed Partitioning">
+        <span class="topic-num">15</span>
+        <span class="topic-name">Figure 7.3 Memory Assignment for Fixed Partitioning<span class="topic-zh">图 7.3 固定分区的内存分配</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-16.html"
+         data-num="16" data-title="Unequal Size Partitions: Disadvantages">
+        <span class="topic-num">16</span>
+        <span class="topic-name">Unequal Size Partitions: Disadvantages<span class="topic-zh">不等长分区的缺点</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-17.html"
+         data-num="17" data-title="Dynamic Partitioning">
+        <span class="topic-num">17</span>
+        <span class="topic-name">Dynamic Partitioning<span class="topic-zh">动态分区</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-18.html"
+         data-num="18" data-title="Figure 7.4 The Effect of Dynamic Partitioning">
+        <span class="topic-num">18</span>
+        <span class="topic-name">Figure 7.4 The Effect of Dynamic Partitioning<span class="topic-zh">图 7.4 动态分区的效果</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-19.html"
+         data-num="19" data-title="Dynamic Partitioning (continued)">
+        <span class="topic-num">19</span>
+        <span class="topic-name">Dynamic Partitioning (continued)<span class="topic-zh">动态分区（续）</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-20.html"
+         data-num="20" data-title="Placement Algorithms">
+        <span class="topic-num">20</span>
+        <span class="topic-name">Placement Algorithms<span class="topic-zh">放置算法</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-21.html"
+         data-num="21" data-title="Figure 7.5 Example Memory Configuration before and after Allocation of 16-Mbyte Block">
+        <span class="topic-num">21</span>
+        <span class="topic-name">Figure 7.5 Example Memory Configuration before and after Allocation of 16-Mbyte Block<span class="topic-zh">图 7.5 分配 16MB 块前后的内存配置示例</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-22.html"
+         data-num="22" data-title="Relocation (continued)">
+        <span class="topic-num">22</span>
+        <span class="topic-name">Relocation (continued)<span class="topic-zh">重定位（续）</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-23.html"
+         data-num="23" data-title="Addresses">
+        <span class="topic-num">23</span>
+        <span class="topic-name">Addresses<span class="topic-zh">地址</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-24.html"
+         data-num="24" data-title="Address Translation">
+        <span class="topic-num">24</span>
+        <span class="topic-name">Address Translation<span class="topic-zh">地址转换</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-25.html"
+         data-num="25" data-title="Figure 7.8 Hardware Support for Relocation">
+        <span class="topic-num">25</span>
+        <span class="topic-name">Figure 7.8 Hardware Support for Relocation<span class="topic-zh">图 7.8 重定位的硬件支持</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-26.html"
+         data-num="26" data-title="Paging">
+        <span class="topic-num">26</span>
+        <span class="topic-name">Paging<span class="topic-zh">分页</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-27.html"
+         data-num="27" data-title="Assignment of Process to Free Frames">
+        <span class="topic-num">27</span>
+        <span class="topic-name">Assignment of Process to Free Frames<span class="topic-zh">把进程分配到空闲页框</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-28.html"
+         data-num="28" data-title="Page Table">
+        <span class="topic-num">28</span>
+        <span class="topic-name">Page Table<span class="topic-zh">页表</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-29.html"
+         data-num="29" data-title="Page Tables for Multiple Processes">
+        <span class="topic-num">29</span>
+        <span class="topic-name">Page Tables for Multiple Processes<span class="topic-zh">多进程的页表</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-30.html"
+         data-num="30" data-title="Figure 7.11 Logical Addresses">
+        <span class="topic-num">30</span>
+        <span class="topic-name">Figure 7.11 Logical Addresses<span class="topic-zh">图 7.11 逻辑地址</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-31.html"
+         data-num="31" data-title="Logical-to-Physical Address Translation - Paging">
+        <span class="topic-num">31</span>
+        <span class="topic-name">Logical-to-Physical Address Translation - Paging<span class="topic-zh">逻辑地址到物理地址的转换——分页</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-32.html"
+         data-num="32" data-title="Segmentation">
+        <span class="topic-num">32</span>
+        <span class="topic-name">Segmentation<span class="topic-zh">分段</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-33.html"
+         data-num="33" data-title="Segmentation (continued)">
+        <span class="topic-num">33</span>
+        <span class="topic-name">Segmentation (continued)<span class="topic-zh">分段（续）</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-34.html"
+         data-num="34" data-title="Address Translation - Segmentation">
+        <span class="topic-num">34</span>
+        <span class="topic-name">Address Translation - Segmentation<span class="topic-zh">地址转换——分段</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-35.html"
+         data-num="35" data-title="Segmentation Address Translation Example">
+        <span class="topic-num">35</span>
+        <span class="topic-name">Segmentation Address Translation Example<span class="topic-zh">分段地址转换示例</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-36.html"
+         data-num="36" data-title="Security Issues">
+        <span class="topic-num">36</span>
+        <span class="topic-name">Security Issues<span class="topic-zh">安全问题</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-37.html"
+         data-num="37" data-title="Buffer Overflow Attacks">
+        <span class="topic-num">37</span>
+        <span class="topic-name">Buffer Overflow Attacks<span class="topic-zh">缓冲区溢出攻击</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-38.html"
+         data-num="38" data-title="Buffer Overflow Example">
+        <span class="topic-num">38</span>
+        <span class="topic-name">Buffer Overflow Example<span class="topic-zh">缓冲区溢出示例</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-39.html"
+         data-num="39" data-title="Defending Against Buffer Overflows">
+        <span class="topic-num">39</span>
+        <span class="topic-name">Defending Against Buffer Overflows<span class="topic-zh">防御缓冲区溢出</span></span>
+      </a>
+      <a class="topic-card" href="chapter7/page-40.html"
+         data-num="40" data-title="Summary">
+        <span class="topic-num">40</span>
+        <span class="topic-name">Summary<span class="topic-zh">本章小结</span></span>
+      </a>
+    </section>
+
+    <nav class="bottom-nav" aria-label="deck navigation">
+      <a class="btn btn-back" href="../index.html">&#8592; Back to Home</a>
+      <a class="btn btn-next" href="chapter8.html">Chapter 8: Virtual Memory &#8594;</a>
+    </nav>
+  </main>
+
+  <footer class="page-footer">
+    Quiz 1 Review &middot; Chapter 7: Memory Management &middot; source file: &ldquo;Ch07v2a.pdf&rdquo;
+  </footer>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/animations.js"></script>
+</body>
+</html>
