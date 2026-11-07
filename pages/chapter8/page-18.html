@@ -390,18 +390,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">An inverted page table has one entry per frame of main memory.</div>
+        <div class="bil-cell bil-zh">倒置的页面表每个主存页框有一个条目。</div>
+        <div class="bil-cell bil-en">Each entry records the process id and page number occupying that frame.</div>
+        <div class="bil-cell bil-zh">每个条目记录了占用该页框的进程ID和页码。</div>
+        <div class="bil-cell bil-en">This keeps the table size proportional to real memory, not virtual memory.</div>
+        <div class="bil-cell bil-zh">这使得表格大小与实际内存成正比，而不是与虚拟内存成正比。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What information is stored in an inverted page table entry?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>反向页面表条目中存储了哪些信息？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="inverted|table|entry" data-zh="主存|页|页表|页框" data-answer="An inverted page table has one entry per frame of main memory.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="entry|records|number" data-zh="页|页号|页框" data-answer="Each entry records the process id and page number occupying that frame.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="keeps|table|proportional" data-zh="虚拟内存" data-answer="This keeps the table size proportional to real memory, not virtual memory.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">An inverted page table has one entry per frame of main memory.</span><span class="mod-zh">倒置的页面表每个主存页框有一个条目。</span></li>
+          <li><span class="mod-en">Each entry records the process id and page number occupying that frame.</span><span class="mod-zh">每个条目记录了占用该页框的进程ID和页码。</span></li>
+          <li><span class="mod-en">This keeps the table size proportional to real memory, not virtual memory.</span><span class="mod-zh">这使得表格大小与实际内存成正比，而不是与虚拟内存成正比。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +464,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

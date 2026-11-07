@@ -390,18 +390,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Basic Algorithms Algorithms used for the selection of a page to replace</div>
+        <div class="bil-cell bil-zh">基本算法 用于选择要替换的页面的算法</div>
+        <div class="bil-cell bil-en">Least recently used (LRU)</div>
+        <div class="bil-cell bil-zh">最近使用最少（LRU）</div>
+        <div class="bil-cell bil-en">First-in-first-out (FIFO)</div>
+        <div class="bil-cell bil-zh">先入先出（FIFO）</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>Which basic page replacement algorithms are commonly compared?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>哪些基本页面替换算法通常被比较？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="basic|algorithms|selection" data-zh="页" data-answer="Basic Algorithms Algorithms used for the selection of a page to replace">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="least|recently" data-zh="最近最少使用（LRU）" data-answer="Least recently used (LRU)">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="first-in-first-out" data-zh="先进先出（FIFO）" data-answer="First-in-first-out (FIFO)">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Basic Algorithms Algorithms used for the selection of a page to replace</span><span class="mod-zh">基本算法 用于选择要替换的页面的算法</span></li>
+          <li><span class="mod-en">Least recently used (LRU)</span><span class="mod-zh">最近使用最少（LRU）</span></li>
+          <li><span class="mod-en">First-in-first-out (FIFO)</span><span class="mod-zh">先入先出（FIFO）</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +464,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

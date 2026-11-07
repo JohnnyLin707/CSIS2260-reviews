@@ -390,18 +390,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Processor utilization rises with the degree of multiprogramming.</div>
+        <div class="bil-cell bil-zh">处理器利用率随着多程序化程度的增加而上升。</div>
+        <div class="bil-cell bil-en">Beyond a peak, thrashing makes utilization collapse.</div>
+        <div class="bil-cell bil-zh">超过峰值后，搅动会导致利用率崩溃。</div>
+        <div class="bil-cell bil-en">Load control keeps the number of active processes near the peak.</div>
+        <div class="bil-cell bil-zh">负载控制使活跃进程的数量保持在峰值附近。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>How is processor utilization related to the degree of multiprogramming?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>处理器利用率与多程序化程度的关系如何？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="processor|utilization|rises" data-zh="处理器利用率|多道程序度" data-answer="Processor utilization rises with the degree of multiprogramming.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="beyond|thrashing|makes" data-zh="抖动" data-answer="Beyond a peak, thrashing makes utilization collapse.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="control|keeps|number" data-zh="负载控制|活动进程" data-answer="Load control keeps the number of active processes near the peak.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Processor utilization rises with the degree of multiprogramming.</span><span class="mod-zh">处理器利用率随着多程序化程度的增加而上升。</span></li>
+          <li><span class="mod-en">Beyond a peak, thrashing makes utilization collapse.</span><span class="mod-zh">超过峰值后，搅动会导致利用率崩溃。</span></li>
+          <li><span class="mod-en">Load control keeps the number of active processes near the peak.</span><span class="mod-zh">负载控制使活跃进程的数量保持在峰值附近。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +464,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

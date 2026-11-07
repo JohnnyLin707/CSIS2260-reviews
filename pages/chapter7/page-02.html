@@ -222,18 +222,63 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Frame: a fixed-length block of main memory.</div>
+        <div class="bil-cell bil-zh">页框：一个固定长度的主存块。</div>
+        <div class="bil-cell bil-en">Page: a fixed-length block of data that resides in secondary memory.</div>
+        <div class="bil-cell bil-zh">页面：位于辅助存储器中的固定长度的数据块。</div>
+        <div class="bil-cell bil-en">A page of data may temporarily be copied into a frame of main memory.</div>
+        <div class="bil-cell bil-zh">一页数据可能会暂时复制到主存的页框中。</div>
+        <div class="bil-cell bil-en">Segment: a variable-length block of data in secondary memory.</div>
+        <div class="bil-cell bil-zh">段：二级存储器中的可变长数据块。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>Define the terms frame, page and segment used in memory management.</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>定义内存管理中使用的页框、页面和段的术语。</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="frame|fixed-length|block" data-zh="主存|页框" data-answer="Frame: a fixed-length block of main memory.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="fixed-length|block|resides" data-zh="辅助存储器|页" data-answer="Page: a fixed-length block of data that resides in secondary memory.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="segment|variable-length|block" data-zh="辅助存储器|段" data-answer="Segment: a variable-length block of data in secondary memory.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Frame: a fixed-length block of main memory.</span><span class="mod-zh">页框：一个固定长度的主存块。</span></li>
+          <li><span class="mod-en">Page: a fixed-length block of data that resides in secondary memory.</span><span class="mod-zh">页面：位于辅助存储器中的固定长度的数据块。</span></li>
+          <li><span class="mod-en">Segment: a variable-length block of data in secondary memory.</span><span class="mod-zh">段：二级存储器中的可变长数据块。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -253,5 +298,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

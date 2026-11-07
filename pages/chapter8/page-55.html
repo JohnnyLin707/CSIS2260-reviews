@@ -390,18 +390,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">The example traces the clock hand over a set of frames.</div>
+        <div class="bil-cell bil-zh">该示例跟踪时钟指针在一组页框中移动。</div>
+        <div class="bil-cell bil-en">Use bits are cleared as the hand passes.</div>
+        <div class="bil-cell bil-zh">当手经过时，使用位被清除。</div>
+        <div class="bil-cell bil-en">The first frame with a zero use bit is replaced.</div>
+        <div class="bil-cell bil-zh">替换了第一个带有零使用位别的页框。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What does the clock policy example demonstrate?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>时钟策略示例展示了什么？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="example|traces|clock" data-zh="页框" data-answer="The example traces the clock hand over a set of frames.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="cleared|passes" data-zh="使用位" data-answer="Use bits are cleared as the hand passes.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="first|frame|replaced" data-zh="页框|使用位" data-answer="The first frame with a zero use bit is replaced.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">The example traces the clock hand over a set of frames.</span><span class="mod-zh">该示例跟踪时钟指针在一组页框中移动。</span></li>
+          <li><span class="mod-en">Use bits are cleared as the hand passes.</span><span class="mod-zh">当手经过时，使用位被清除。</span></li>
+          <li><span class="mod-en">The first frame with a zero use bit is replaced.</span><span class="mod-zh">替换了第一个带有零使用位别的页框。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +464,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

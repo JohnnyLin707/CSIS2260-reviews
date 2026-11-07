@@ -390,18 +390,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Thrashing occurs when the system spends more time swapping pages than executing.</div>
+        <div class="bil-cell bil-zh">当系统花费的交换页面时间比执行时间多时，就会发生抖动。</div>
+        <div class="bil-cell bil-en">It is caused by too many processes competing for too few frames.</div>
+        <div class="bil-cell bil-zh">这是由于太多进程争夺太少的页框造成的。</div>
+        <div class="bil-cell bil-en">The solution is to reduce the degree of multiprogramming.</div>
+        <div class="bil-cell bil-zh">解决方案是降低多程序化程度。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What is thrashing and what causes it?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>什么是搅动，是什么导致它的？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="thrashing|occurs|spends" data-zh="页|抖动" data-answer="Thrashing occurs when the system spends more time swapping pages than executing.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="caused|competing|frames" data-zh="页框" data-answer="It is caused by too many processes competing for too few frames.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="solution|reduce|degree" data-zh="多道程序度" data-answer="The solution is to reduce the degree of multiprogramming.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Thrashing occurs when the system spends more time swapping pages than executing.</span><span class="mod-zh">当系统花费的交换页面时间比执行时间多时，就会发生抖动。</span></li>
+          <li><span class="mod-en">It is caused by too many processes competing for too few frames.</span><span class="mod-zh">这是由于太多进程争夺太少的页框造成的。</span></li>
+          <li><span class="mod-en">The solution is to reduce the degree of multiprogramming.</span><span class="mod-zh">解决方案是降低多程序化程度。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +464,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

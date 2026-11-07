@@ -222,18 +222,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Dynamic partitioning creates holes of decreasing size as processes are loaded and removed.</div>
+        <div class="bil-cell bil-zh">动态分区在加载和移除进程时会创建越来越小的孔洞。</div>
+        <div class="bil-cell bil-en">External fragmentation accumulates over time.</div>
+        <div class="bil-cell bil-zh">外部碎片随着时间的推移而积累。</div>
+        <div class="bil-cell bil-en">Compaction shifts processes to make one large free block.</div>
+        <div class="bil-cell bil-zh">压缩将切换过程转移到一个大的空块。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What happens to main memory as dynamic partitioning proceeds?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>随着动态分区进行的进程，主存会发生什么变化？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="dynamic|partitioning|creates" data-zh="动态分区" data-answer="Dynamic partitioning creates holes of decreasing size as processes are loaded and removed.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="external|fragmentation|accumulates" data-zh="外部碎片" data-answer="External fragmentation accumulates over time.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="compaction|shifts|large" data-zh="紧凑" data-answer="Compaction shifts processes to make one large free block.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Dynamic partitioning creates holes of decreasing size as processes are loaded and removed.</span><span class="mod-zh">动态分区在加载和移除进程时会创建越来越小的孔洞。</span></li>
+          <li><span class="mod-en">External fragmentation accumulates over time.</span><span class="mod-zh">外部碎片随着时间的推移而积累。</span></li>
+          <li><span class="mod-en">Compaction shifts processes to make one large free block.</span><span class="mod-zh">压缩将切换过程转移到一个大的空块。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -253,5 +296,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

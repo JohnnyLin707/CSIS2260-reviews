@@ -390,18 +390,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Demand cleaning writes a modified page out only when it is selected for replacement.</div>
+        <div class="bil-cell bil-zh">只有在选择替换时，“需求清洁”才会写入修改后的页面。</div>
+        <div class="bil-cell bil-en">Precleaning writes modified pages out in batches before they are needed.</div>
+        <div class="bil-cell bil-zh">预清洁在需要之前会批量写入修改后的页面。</div>
+        <div class="bil-cell bil-en">Precleaning reduces the delay at replacement time.</div>
+        <div class="bil-cell bil-zh">预清洁可以减少更换时的延迟。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What is a cleaning policy and when are modified pages written out?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>什么是清理策略，什么时候会写出修改过的页面？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="demand|cleaning|writes" data-zh="页|请求清除" data-answer="Demand cleaning writes a modified page out only when it is selected for replacement.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="precleaning|writes|modified" data-zh="页|预清除" data-answer="Precleaning writes modified pages out in batches before they are needed.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="precleaning|reduces|delay" data-zh="预清除" data-answer="Precleaning reduces the delay at replacement time.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Demand cleaning writes a modified page out only when it is selected for replacement.</span><span class="mod-zh">只有在选择替换时，“需求清洁”才会写入修改后的页面。</span></li>
+          <li><span class="mod-en">Precleaning writes modified pages out in batches before they are needed.</span><span class="mod-zh">预清洁在需要之前会批量写入修改后的页面。</span></li>
+          <li><span class="mod-en">Precleaning reduces the delay at replacement time.</span><span class="mod-zh">预清洁可以减少更换时的延迟。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +464,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

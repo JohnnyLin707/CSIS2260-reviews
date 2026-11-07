@@ -390,18 +390,65 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Windows Virtual Address Map</div>
+        <div class="bil-cell bil-zh">Windows虚拟地址映射</div>
+        <div class="bil-cell bil-en">On 32 bit platforms each user process sees a separate 32 bit address space allowing 4 GB of virtual memory per process</div>
+        <div class="bil-cell bil-zh">在32位平台上，每个用户进程都看到一个单独的32位地址空间，允许每个进程使用4GB的虚拟内存</div>
+        <div class="bil-cell bil-en">By default half is reserved for the OS</div>
+        <div class="bil-cell bil-zh">默认情况下，一半保留给操作系统</div>
+        <div class="bil-cell bil-en">Large memory intensive applications run more effectively using 64-bit Windows</div>
+        <div class="bil-cell bil-zh">使用64位Windows运行大型内存密集型应用程序更有效率</div>
+        <div class="bil-cell bil-en">Most modern PCs use the AMD64 processor architecture which is capable of running as either a 32-bit or 64-bit system</div>
+        <div class="bil-cell bil-zh">大多数现代PC使用AMD64处理器架构，该架构可以作为32位或64位系统运行</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>How is the Windows virtual address map organized?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>Windows虚拟地址映射是如何组织的？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="windows|virtual|address" data-zh="虚拟地址" data-answer="Windows Virtual Address Map">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="default|reserved" data-zh="" data-answer="By default half is reserved for the OS">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="large|intensive|applications" data-zh="" data-answer="Large memory intensive applications run more effectively using 64-bit Windows">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Windows Virtual Address Map</span><span class="mod-zh">Windows虚拟地址映射</span></li>
+          <li><span class="mod-en">By default half is reserved for the OS</span><span class="mod-zh">默认情况下，一半保留给操作系统</span></li>
+          <li><span class="mod-en">Large memory intensive applications run more effectively using 64-bit Windows</span><span class="mod-zh">使用64位Windows运行大型内存密集型应用程序更有效率</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +468,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

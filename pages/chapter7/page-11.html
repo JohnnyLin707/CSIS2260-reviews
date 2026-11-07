@@ -222,18 +222,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Fixed partitioning, dynamic partitioning, simple paging and simple segmentation are the main techniques.</div>
+        <div class="bil-cell bil-zh">固定分区、动态分区、简单分页和简单分区是主要技术。</div>
+        <div class="bil-cell bil-en">Paging and segmentation use logical addresses and address translation.</div>
+        <div class="bil-cell bil-zh">分页和分区使用逻辑地址和地址翻译。</div>
+        <div class="bil-cell bil-en">Each technique differs in fragmentation and in the size of the address space.</div>
+        <div class="bil-cell bil-zh">每种技术在碎片化和地址空间大小上都不同。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>Which memory partitioning techniques are compared in Table 7.2?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>表7.2中比较了哪些内存分区技术？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="fixed|partitioning|dynamic" data-zh="分页|段|分段|固定分区" data-answer="Fixed partitioning, dynamic partitioning, simple paging and simple segmentation are the main techniques.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="paging|segmentation|logical" data-zh="逻辑地址|地址转换|分页|段" data-answer="Paging and segmentation use logical addresses and address translation.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="technique|differs|fragmentation" data-zh="地址空间" data-answer="Each technique differs in fragmentation and in the size of the address space.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Fixed partitioning, dynamic partitioning, simple paging and simple segmentation are the main techniques.</span><span class="mod-zh">固定分区、动态分区、简单分页和简单分区是主要技术。</span></li>
+          <li><span class="mod-en">Paging and segmentation use logical addresses and address translation.</span><span class="mod-zh">分页和分区使用逻辑地址和地址翻译。</span></li>
+          <li><span class="mod-en">Each technique differs in fragmentation and in the size of the address space.</span><span class="mod-zh">每种技术在碎片化和地址空间大小上都不同。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -253,5 +296,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

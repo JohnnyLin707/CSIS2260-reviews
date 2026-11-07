@@ -222,18 +222,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Main memory and secondary memory form a two-level memory hierarchy.</div>
+        <div class="bil-cell bil-zh">主存和次要内存形成了一个双级内存层次结构。</div>
+        <div class="bil-cell bil-en">The operating system moves data between the two levels.</div>
+        <div class="bil-cell bil-zh">操作系统在两个层之间移动数据。</div>
+        <div class="bil-cell bil-en">Available main memory must be shared among active processes.</div>
+        <div class="bil-cell bil-zh">可用的主存必须在活跃进程之间共享。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What is meant by the physical organization of memory?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>什么是记忆的物理组织？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="secondary|two-level|hierarchy" data-zh="主存|辅助存储器" data-answer="Main memory and secondary memory form a two-level memory hierarchy.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="operating|moves|between" data-zh="操作系统" data-answer="The operating system moves data between the two levels.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="available|shared|among" data-zh="主存|活动进程" data-answer="Available main memory must be shared among active processes.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Main memory and secondary memory form a two-level memory hierarchy.</span><span class="mod-zh">主存和次要内存形成了一个双级内存层次结构。</span></li>
+          <li><span class="mod-en">The operating system moves data between the two levels.</span><span class="mod-zh">操作系统在两个层之间移动数据。</span></li>
+          <li><span class="mod-en">Available main memory must be shared among active processes.</span><span class="mod-zh">可用的主存必须在活跃进程之间共享。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -253,5 +296,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

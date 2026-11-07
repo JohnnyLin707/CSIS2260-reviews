@@ -390,18 +390,65 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Load Control</div>
+        <div class="bil-cell bil-zh">负载控制</div>
+        <div class="bil-cell bil-en">Determines the number of processes that will be resident in maın memory</div>
+        <div class="bil-cell bil-zh">确定将驻留在主存中的进程数量</div>
+        <div class="bil-cell bil-en">Multiprogramming level</div>
+        <div class="bil-cell bil-zh">多程序编程级别</div>
+        <div class="bil-cell bil-en">Critical in effective memory management</div>
+        <div class="bil-cell bil-zh">在有效的内存管理中至关重要</div>
+        <div class="bil-cell bil-en">Too few processes, many occasions when all processes will be blocked and much time will be spent in swapping</div>
+        <div class="bil-cell bil-zh">进程太少，很多时候所有进程都会被阻塞，大量时间会花在交换上</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What is load control and why is it needed?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>什么是负载控制，为什么需要它？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="control" data-zh="负载控制" data-answer="Load Control">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="multiprogramming|level" data-zh="" data-answer="Multiprogramming level">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="critical|effective|management" data-zh="内存管理" data-answer="Critical in effective memory management">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Load Control</span><span class="mod-zh">负载控制</span></li>
+          <li><span class="mod-en">Multiprogramming level</span><span class="mod-zh">多程序编程级别</span></li>
+          <li><span class="mod-en">Critical in effective memory management</span><span class="mod-zh">在有效的内存管理中至关重要</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +468,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

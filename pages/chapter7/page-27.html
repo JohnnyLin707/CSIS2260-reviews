@@ -222,18 +222,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Free frames in main memory are kept in a list.</div>
+        <div class="bil-cell bil-zh">主存中的空页框被保存在一个列表中。</div>
+        <div class="bil-cell bil-en">The operating system assigns one frame to every page of the process.</div>
+        <div class="bil-cell bil-zh">操作系统为进程的每个页面分配一个页框。</div>
+        <div class="bil-cell bil-en">The page table records which frame holds each page.</div>
+        <div class="bil-cell bil-zh">页面表记录了哪个页框包含每个页面。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>How are free frames assigned to the pages of a process?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>如何将空闲页框分配给进程的页面？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="frames" data-zh="主存|页框" data-answer="Free frames in main memory are kept in a list.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="operating|assigns|frame" data-zh="页|页框|操作系统" data-answer="The operating system assigns one frame to every page of the process.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="table|records|frame" data-zh="页|页表|页框" data-answer="The page table records which frame holds each page.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Free frames in main memory are kept in a list.</span><span class="mod-zh">主存中的空页框被保存在一个列表中。</span></li>
+          <li><span class="mod-en">The operating system assigns one frame to every page of the process.</span><span class="mod-zh">操作系统为进程的每个页面分配一个页框。</span></li>
+          <li><span class="mod-en">The page table records which frame holds each page.</span><span class="mod-zh">页面表记录了哪个页框包含每个页面。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -253,5 +296,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

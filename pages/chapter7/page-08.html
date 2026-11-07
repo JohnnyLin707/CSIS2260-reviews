@@ -222,18 +222,65 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Logical Organization</div>
+        <div class="bil-cell bil-zh">逻辑组织</div>
+        <div class="bil-cell bil-en">Memory is organized as linear address space Programs are written in modules</div>
+        <div class="bil-cell bil-zh">内存被组织成线性地址空间，程序以模块的形式编写</div>
+        <div class="bil-cell bil-en">Modules can be written and compiled independently</div>
+        <div class="bil-cell bil-zh">模块可以独立编写和编译</div>
+        <div class="bil-cell bil-en">Different degrees of protection given to modules (read-only, execute-only)</div>
+        <div class="bil-cell bil-zh">对模块给予不同程度的保护（只读、只执行）</div>
+        <div class="bil-cell bil-en">Sharing on a module level corresponds to the user&#x27;s way of viewing the problem</div>
+        <div class="bil-cell bil-zh">在模块层面上共享对应于用户查看问题的方式</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What is meant by the logical organization of memory?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>什么是记忆的逻辑组织？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="logical|organization" data-zh="逻辑组织" data-answer="Logical Organization">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="modules|written|compiled" data-zh="" data-answer="Modules can be written and compiled independently">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="degrees|protection|given" data-zh="保护" data-answer="Different degrees of protection given to modules (read-only, execute-only)">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Logical Organization</span><span class="mod-zh">逻辑组织</span></li>
+          <li><span class="mod-en">Modules can be written and compiled independently</span><span class="mod-zh">模块可以独立编写和编译</span></li>
+          <li><span class="mod-en">Different degrees of protection given to modules (read-only, execute-only)</span><span class="mod-zh">对模块给予不同程度的保护（只读、只执行）</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -253,5 +300,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

@@ -390,18 +390,63 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Variable Allocation Local Scope</div>
+        <div class="bil-cell bil-zh">可变分配本地范围</div>
+        <div class="bil-cell bil-en">Decision to increase or decrease a resident set size is based on the assessment of the likely future demands of active processes Key elements</div>
+        <div class="bil-cell bil-zh">增加或减少驻留集大小决定的依据是对活跃过程未来可能需求的评估。关键要素</div>
+        <div class="bil-cell bil-en">Criteria used to determine resident set size</div>
+        <div class="bil-cell bil-zh">用于确定驻留集大小的标准</div>
+        <div class="bil-cell bil-en">The timing of changes</div>
+        <div class="bil-cell bil-zh">变化的时间表</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>How is the working set used with variable allocation and local scope?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>工作集如何与可变分配和局部范围一起使用？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="variable|allocation|local" data-zh="" data-answer="Variable Allocation Local Scope">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="criteria|determine|resident" data-zh="驻留集" data-answer="Criteria used to determine resident set size">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="timing|changes" data-zh="" data-answer="The timing of changes">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Variable Allocation Local Scope</span><span class="mod-zh">可变分配本地范围</span></li>
+          <li><span class="mod-en">Criteria used to determine resident set size</span><span class="mod-zh">用于确定驻留集大小的标准</span></li>
+          <li><span class="mod-en">The timing of changes</span><span class="mod-zh">变化的时间表</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +466,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

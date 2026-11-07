@@ -390,18 +390,65 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">Inverted Page Table</div>
+        <div class="bil-cell bil-zh">倒排页表</div>
+        <div class="bil-cell bil-en">Page number portion of a virtual address is mapped into a hash value</div>
+        <div class="bil-cell bil-zh">虚拟地址的页码部分映射到一个哈希值中</div>
+        <div class="bil-cell bil-en">Hash value points to inverted page table</div>
+        <div class="bil-cell bil-zh">哈希值指向倒置的页面表</div>
+        <div class="bil-cell bil-en">Fixed proportion of real memory is required for the tables regardless of the number of processes or virtual pages supported</div>
+        <div class="bil-cell bil-zh">无论支持多少进程或虚拟页面，表格都需要固定比例的实际内存</div>
+        <div class="bil-cell bil-en">Structure is called inverted because it indexes page table entries by frame number rather than by virtual page number</div>
+        <div class="bil-cell bil-zh">结构被称为倒置，因为它按页框编号而不是虚拟页号索引页面表条目</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>What is an inverted page table and why is it used?</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>什么是倒排页表，为什么要使用它？</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="inverted|table" data-zh="页|页表|倒排页表" data-answer="Inverted Page Table">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="number|portion|virtual" data-zh="虚拟地址|页|页号" data-answer="Page number portion of a virtual address is mapped into a hash value">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="fixed|proportion|required" data-zh="页" data-answer="Fixed proportion of real memory is required for the tables regardless of the number of processes or virtual pages supported">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">Inverted Page Table</span><span class="mod-zh">倒排页表</span></li>
+          <li><span class="mod-en">Page number portion of a virtual address is mapped into a hash value</span><span class="mod-zh">虚拟地址的页码部分映射到一个哈希值中</span></li>
+          <li><span class="mod-en">Fixed proportion of real memory is required for the tables regardless of the number of processes or virtual pages supported</span><span class="mod-zh">无论支持多少进程或虚拟页面，表格都需要固定比例的实际内存</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +468,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>

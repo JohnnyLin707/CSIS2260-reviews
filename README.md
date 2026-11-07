@@ -10,7 +10,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 
 ## ✨ Latest additions
 
-- **New framework decks — `pages/chapter7.html` (40 slides) and `pages/chapter8.html` (82 slides)** — Chapter 7 *Memory Management* and Chapter 8 *Virtual Memory*, built with exactly the same framework and CSS as Chapters 1–4: sidebar, keyword filter, progress bar, Back / Next and one page per slide showing the original slide scan. These two decks are framework-only for now: verbatim text, translations and exam questions will be added when the lecture notes are available.
+- **New framework decks — `pages/chapter7.html` (40 slides) and `pages/chapter8.html` (82 slides)** — Chapter 7 *Memory Management* and Chapter 8 *Virtual Memory*, built with exactly the same framework and CSS as Chapters 1–4: sidebar, keyword filter, progress bar, Back / Next and one page per slide showing the original slide scan. Every slide now shows its OCR-extracted verbatim English text on the left with a Chinese translation on the right, plus one exam-style short-answer question whose 2-3 boxes are graded against the slide's key points.
 - **New deck — `pages/MidtermMockExam.html`** — the practice sheet as an **interactive mock exam**: 68 short-answer questions with **241 input boxes**, one per scoring point. A point earns its mark as soon as your answer contains **ONE English word** from the standard answer. **Grading happens only on Submit** — the page then auto-scrolls to a result panel showing the paper total (**241**), your score and your **score rate in %**, and every question shows its marks, its **accuracy** and the **standard answer (English + 中文)** for each of its points. A Retake button resets the whole paper.
 - **New deck — `pages/MidtermPracticeSheet.html`** — a **printable practice sheet** in two parts: **Part 1** is the whole `ReviewQuestions - Midterm.pdf` (60 questions, Chapter 1–4); **Part 2** is the 8 high-yield Windows Labs picks — the six “bet on these” questions plus **Oracle VirtualBox** and **Type 1 vs. Type 2 hypervisor**. **Questions only, no answers**, shown in one monospace code block, followed by a matching **answer key** block in the same format where every point is answered in just **2–3 words** with the 中文 in parentheses (memorize → expand in the exam). Every question has a Chinese note underneath, a **suggested mark (1 mark per answer point)** and **one dotted handwriting line per mark**. Layout is 78 columns wide so it fits **US Letter** with Courier New 10 pt; a “Copy sheet” button puts it on the clipboard, then paste into Word, print and hand-write. The header carries the professor’s format: **60 minutes · 12 questions · 45 marks**, so you can pick any 12 questions worth ~45 marks and time yourself.
 - **New deck — `pages/WindowsLabsReview.html` (37 predicted questions)** — bilingual (English + 中文) midterm predictions for the Microsoft Windows labs. The professor hinted that “there may also be one or two questions focusing on the Microsoft Windows based lab1–Lab4.pdf”, so this deck turns `Lab1v2–Lab4v1.pdf` and the correct answers in `jinran1–jinran4.docx` into exam-ready questions: per-lab cheat sheets, 37 click-to-reveal questions with 2–4 sentence answers and the exact tool paths, a Top-6 shortlist for the “only one or two questions” scenario, and three cross-lab comparisons.
@@ -50,7 +50,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 | 19 | Chapter 8: Virtual Memory / 第 8 章：虚拟内存 | `Ch08v2a.pdf` | 82 (all) | — |
 | | **Total** | | **376** | **761** |
 
-Decks 18 and 19 are framework decks built from the slide scans in `Ch07v2a-images/` and `Ch08v2a-images/` only, so no exam questions are counted for them yet; deck 17 is the fill-in-the-blank drill described under *Practice drills*.
+Decks 18 and 19 add 122 short-answer drill questions (358 graded answer points); as practice drills they are not added to the 761 exam-question total. Deck 17 is the fill-in-the-blank drill described under *Practice drills*.
 
 Deck 11 is a command cheat sheet (29 sections, 235 bilingual knowledge points) rather than a slide deck, so it is not counted in the slide and exam-question totals. Deck 15 Part 1 is the same 60 review questions already counted in decks 09, 10, 12 and 13, re-formatted as a printable practice sheet, so it is not added to the totals either; Part 2 re-prints the 6 “bet on these” picks from deck 14 plus 2 more hypervisor questions. Deck 16 is the same 68 questions as deck 15 in an interactive graded format, so it is not added to the totals either.
 
@@ -161,7 +161,8 @@ CSIS-2260review/
 │   ├── animations.js          # Background orbs / grid / typing effects
 │   ├── speech.js              # Read-aloud via the Web Speech API
 │   ├── quiz.js                # Write-and-check engine: auto-marking, keyword matching
-│   └── home-quiz.js           # Instruction Cycle Drill (10 questions, 12 boxes)
+│   ├── home-quiz.js           # Instruction Cycle Drill (10 questions, 12 boxes)
+│   └── slide-drill.js         # Chapter 7/8 short-answer point grading
 ├── pages/
 │   ├── intro-hw.html          # Deck 01 index (all 40 slides)
 │   ├── intro-hw/
@@ -239,7 +240,7 @@ Push the repository, then go to **Settings → Pages → Build and deployment �
 ## Notes
 
 - Content is excerpted verbatim from the course lecture slides (`Intro to HW v2.pdf`, `Ch01v2a.pdf`, `Ch02v2a.pdf`, `Ch03v2a.pdf`, `Ch04v2a.pdf`) and the lab handout `Introduction to UNIX Commands and Scripting.pdf`; the PDFs themselves are **not** included in this repository (`.gitignore` ignores `*.pdf`). The images under `Intro to HW v2-images/`, `Ch01v2a-images/`, `Ch02v2a-images/` and `Ch03v2a-images/` are page scans extracted from those PDFs.
-- Chapters 7 and 8 are **framework decks** built only from the slide scans in `Ch07v2a-images/` and `Ch08v2a-images/`; verbatim slide text, Chinese translations and exam-style questions will be added when the lecture notes are available.
+- Chapters 7 and 8 were built from the scans in `Ch07v2a-images/` and `Ch08v2a-images/`: the text was OCR-extracted from each image, shown verbatim in English on the left with a Chinese translation on the right, and each page carries a short-answer question graded on key points by `javascript/slide-drill.js`.
 - Translations, exam questions and model answers are study aids generated for review purposes — always cross-check against the official slides and your instructor's guidance before the quiz.
 - The answer checking is keyword based and deliberately forgiving, so it is a memorisation aid, not a strict grader: a box marked ✓ still means "you reproduced the point", not "this is the only correct wording".
 

@@ -390,18 +390,61 @@
     </figure>
 
     <section class="panel original reveal">
-      <h2>Slide Notes &middot; 讲义笔记</h2>
-      <ul class="content-list">
-        <li>The full lecture slide is shown above. Verbatim slide text, line-by-line Chinese translation and exam-style questions for this chapter are being prepared.<span class="item-zh">上方为完整的课件幻灯片扫描图；本页的讲义原文、逐行中文翻译与考题正在整理中。</span></li>
-      </ul>
+      <h2>Original Content (verbatim) &middot; 讲义原文</h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; ORIGINAL TEXT / 英文原文</div>
+        <div class="bil-cell bil-head">中文 &middot; CHINESE TRANSLATION</div>
+        <div class="bil-cell bil-en">The CPU checks the TLB for the page table entry.</div>
+        <div class="bil-cell bil-zh">CPU检查TLB中页表条目。</div>
+        <div class="bil-cell bil-en">On a miss the page table is accessed and the TLB is updated.</div>
+        <div class="bil-cell bil-zh">在错过时，访问页表并更新TLB。</div>
+        <div class="bil-cell bil-en">If the page is absent, a page fault handling routine loads it.</div>
+        <div class="bil-cell bil-zh">如果页面不存在，页面故障处理程序会加载它。</div>
+      </div>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
-        <span>Possible Exam Questions</span>
-        <span class="count">(coming soon &middot; 待补充)</span>
+        <span>Possible Exam Questions &middot; 必考问答题</span>
+        <span class="count">(3 answer points &middot; graded on key points)</span>
       </div>
+      <article class="exam-card reveal">
+        <div class="bil-grid exam-q">
+          <div class="bil-cell bil-en"><span class="bil-tag">Q &middot; ENGLISH</span>Describe the sequence of steps when a page fault occurs with a TLB.</div>
+          <div class="bil-cell bil-zh"><span class="bil-tag">Q &middot; 中文</span>描述TLB发生缺页时的步骤顺序。</div>
+        </div>
+        <div class="exam-fields">
+          <div class="exam-field" data-keys="checks|table|entry" data-zh="页|页表|页表项|转换检测缓冲区（TLB）" data-answer="The CPU checks the TLB for the page table entry.">
+            <span class="exam-label">Point 1 / 要点 1</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 1">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="table|accessed|updated" data-zh="页|页表|转换检测缓冲区（TLB）" data-answer="On a miss the page table is accessed and the TLB is updated.">
+            <span class="exam-label">Point 2 / 要点 2</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 2">
+            <span class="exam-mark"></span>
+          </div>
+          <div class="exam-field" data-keys="absent|fault|handling" data-zh="页|缺页" data-answer="If the page is absent, a page fault handling routine loads it.">
+            <span class="exam-label">Point 3 / 要点 3</span>
+            <input class="exam-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type the key point&hellip; / 输入要点关键词" aria-label="Answer point 3">
+            <span class="exam-mark"></span>
+          </div>
+        </div>
+        <div class="exam-actions">
+          <button class="exam-btn exam-btn-primary" type="button" data-exam-check>&#9654; Check answers / 检查答案</button>
+          <button class="exam-btn" type="button" data-exam-show>Show answers / 显示答案</button>
+          <button class="exam-btn" type="button" data-exam-reset>Reset / 重置</button>
+          <span class="exam-score" role="status" aria-live="polite"></span>
+        </div>
+        <div class="exam-model" hidden><b>Model answers / 参考答案</b>
+          <ol>
+          <li><span class="mod-en">The CPU checks the TLB for the page table entry.</span><span class="mod-zh">CPU检查TLB中页表条目。</span></li>
+          <li><span class="mod-en">On a miss the page table is accessed and the TLB is updated.</span><span class="mod-zh">在错过时，访问页表并更新TLB。</span></li>
+          <li><span class="mod-en">If the page is absent, a page fault handling routine loads it.</span><span class="mod-zh">如果页面不存在，页面故障处理程序会加载它。</span></li>
+          </ol>
+        </div>
+      </article>
     </section>
 
     <nav class="bottom-nav" aria-label=" slide navigation">
@@ -421,5 +464,6 @@
   <script src="../../javascript/main.js"></script>
   <script src="../../javascript/animations.js"></script>
   <script src="../../javascript/speech.js"></script>
+  <script src="../../javascript/slide-drill.js"></script>
 </body>
 </html>
