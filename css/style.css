@@ -1753,3 +1753,43 @@ body.qa-static .qa-answer {
   .bil-cell.bil-zh::before { content: "中文 / CHINESE"; }
   .exam-score { margin-left: 0; width: 100%; text-align: right; }
 }
+
+/* ---------------------------------------------------------------------
+   Possible Exam Questions on the Chapter 7 / 8 pages uses exactly the
+   same typography as the Chapter 1-4 question cards and self-check drill:
+   1.2rem reading text, the site font, and the same weights / colours.
+   --------------------------------------------------------------------- */
+.qa-section .exam-card {
+  border-color: var(--stroke-soft);
+  background: linear-gradient(150deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+}
+.qa-section .exam-card .exam-q .bil-cell.bil-en {
+  font-family: var(--font); font-size: 1.2rem; font-weight: 640;
+  line-height: 1.5; letter-spacing: normal; color: var(--text);
+}
+.qa-section .exam-card .exam-q .bil-cell.bil-zh {
+  font-family: var(--font); font-size: 1.2rem; font-weight: 500;
+  line-height: 1.62; letter-spacing: 0.2px; color: #9fdecb;
+}
+.qa-section .exam-card .exam-q .bil-tag {
+  font-family: var(--mono); font-size: 0.76rem; font-weight: 800;
+}
+.qa-section .exam-card .exam-label { font-size: 0.72rem; }
+.qa-section .exam-card .exam-input {
+  font-family: var(--font); font-size: 1.2rem; line-height: 1.55; color: var(--text);
+}
+.qa-section .exam-card .exam-btn { font-weight: 700; }
+.qa-section .exam-card .exam-score { font-size: 0.8rem; }
+.qa-section .exam-card .exam-model {
+  font-size: 1.2rem; line-height: 1.7; color: #dbe7e0;
+}
+.qa-section .exam-card .exam-model li {
+  font-size: 1.2rem; line-height: 1.7; color: #cfe6dc;
+}
+.qa-section .exam-card .exam-model .mod-en {
+  font-size: 1.2rem; font-weight: 550; line-height: 1.8;
+  letter-spacing: 0.12px; color: #f7e7c3;
+}
+.qa-section .exam-card .exam-model .mod-zh {
+  font-size: 1.2rem; font-weight: 400; line-height: 1.8; color: #b6e6d6;
+}
