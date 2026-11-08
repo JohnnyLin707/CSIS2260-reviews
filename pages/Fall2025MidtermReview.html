@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Fall 2025 OS Midterm Exam &middot; Model Answers | CSIS2260 Review</title>
+  <meta name="description" content="Model answers for the Fall 2025 Operating Systems midterm exam (Q1-Q6), quoted from the course lecture slide review pages with source links.">
+  <link rel="stylesheet" href="../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="home-page">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+    <div class="site-shell site-nav-inner">
+      <a class="site-nav-brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">OS</span>
+        <span class="brand-text">CSIS2260<small>Review Hub</small></span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home<span class="dd-zh">首页</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="Chapter3Review.html">Ch 3 Review<span class="dd-zh">第 3 章复习</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="Chapter4Review.html">Ch 4 Review<span class="dd-zh">第 4 章复习</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="UnixCommands.html">UNIX Commands<span class="dd-zh">命令速查</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="LinuxLabsPractice.html">Linux Drill<span class="dd-zh">命令实战</span></a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="site-shell">
+    <section class="hero">
+      <span class="hero-badge"><span class="dot"></span> &middot; Exam Review</span>
+      <h1>Fall 2025 OS Midterm Exam &middot; Model Answers</h1>
+      <p class="hero-zh">2025 秋季操作系统期中考试 &middot; 参考答案</p>
+      <p class="lead">
+        Six questions, 46 marks. Every answer below is quoted or derived from the lecture-slide
+        review pages in this site &mdash; each question carries links back to the exact slide or
+        review deck it came from. English on the left, Chinese translation on the right.
+      </p>
+      <p class="lead" style="margin-top:.55rem;color:var(--text-faint);font-size:.9rem">
+        共 6 题 / 46 分。答案依据本项目的课件复习页整理，每题都附有原教材页面链接；英文在左、中文翻译在右。Q6 扫描件题干与答案均有错漏，已按课程讲义重新整理。
+      </p>
+    </section>
+  </header>
+
+  <main class="site-shell">
+
+    <!-- ============================ Q1 ============================ -->
+    <section class="mid-card reveal" id="q1">
+      <h2>Q1 &middot; Process control block <span class="mid-marks">4 marks / 4 分</span></h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; QUESTION</div>
+        <div class="bil-cell bil-head">中文 &middot; 题目</div>
+        <div class="bil-cell bil-en">The Process Control Block is a key tool that enables the OS to support multiple processes and to provide support for multiprocessors. List FOUR elements that are in the process control block?</div>
+        <div class="bil-cell bil-zh">进程控制块（PCB）是操作系统支持多进程、并支持多处理器的重要工具。请列出进程控制块中的四个要素。</div>
+      </div>
+      <h3>Answer &middot; 参考答案（每点 1 分）</h3>
+      <ul class="content-list">
+        <li><strong>Identifier</strong>: a unique process identifier (PID) assigned to the process when it is created.<span class="item-zh">标识符：进程创建时分配的唯一进程标识符（PID）。</span></li>
+        <li><strong>State</strong>: the current state of the process (New, Ready, Running, Blocked, suspended, Exit).<span class="item-zh">状态：进程当前所处的状态（新建、就绪、运行、阻塞、挂起、退出）。</span></li>
+        <li><strong>Priority</strong>: the scheduling priority used by the dispatcher.<span class="item-zh">优先级：分派程序使用的调度优先级。</span></li>
+        <li><strong>Program counter</strong>: the address of the next instruction to be executed for this process.<span class="item-zh">程序计数器：该进程下一条待执行指令的地址。</span></li>
+      </ul>
+      <p class="mid-note">Other acceptable elements (any four earn full marks): memory pointers, context data, I/O status information and accounting information. The PCB is created and managed by the OS and holds the process elements.<br>其它同样可得分的要素：存储器指针、上下文数据、I/O 状态信息、记账信息。任写四个即可满分。</p>
+      <span class="mid-src">教材依据 / Source: <a href="chapter3/page-06.html">Ch03v2a p.6 &mdash; Process Elements</a> &middot; <a href="Chapter3Review.html">Chapter 3 Review Q43</a> &middot; <a href="chapter3/page-33.html">p.33 Process Control Structures</a></span>
+    </section>
+
+    <!-- ============================ Q2 ============================ -->
+    <section class="mid-card reveal" id="q2">
+      <h2>Q2 &middot; Why two execution modes? <span class="mid-marks">4 marks / 4 分</span></h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; QUESTION</div>
+        <div class="bil-cell bil-head">中文 &middot; 题目</div>
+        <div class="bil-cell bil-en">Why are two modes (user and kernel) needed?</div>
+        <div class="bil-cell bil-zh">为什么需要两种执行模式（用户态与内核态）？</div>
+      </div>
+      <h3>Answer &middot; 参考答案（每点 1 分）</h3>
+      <ul class="content-list">
+        <li><strong>Protect the OS and other processes</strong>: in user mode a program cannot execute privileged instructions (direct I/O, altering memory-management registers, halt), so a user job cannot damage the monitor, the kernel or another job.<span class="item-zh">保护操作系统与其它进程：用户态下程序不能执行特权指令（直接 I/O、修改存储器管理寄存器、停机指令），因此用户作业无法破坏监控程序、内核或其它作业。</span></li>
+        <li><strong>Memory protection</strong>: only kernel mode may access protected OS memory areas, OS tables and PCBs; user mode is restricted to its own address space.<span class="item-zh">存储器保护：只有内核态能访问受保护的操作系统内存区、系统表与 PCB；用户态只能访问自己的地址空间。</span></li>
+        <li><strong>Controlled entry into the OS</strong>: an interrupt, a trap/exception or a system call (supervisor call) switches the processor into kernel mode so that OS services run with full privilege, and then switches back to user mode.<span class="item-zh">受控进入操作系统：中断、异常（陷阱）或系统调用会让处理器切换到内核态，使操作系统服务以完整特权运行，之后再返回用户态。</span></li>
+        <li><strong>Safe sharing of the processor</strong>: the mode bit plus timers and interrupts let the OS regain control, stop one job from monopolising the CPU, and safely schedule many processes (and on multiprocessors, many CPUs).<span class="item-zh">安全地共享处理器：模式位配合定时器与中断，使操作系统能收回控制权、防止某个作业独占 CPU，并安全地调度多个进程（在多处理器上调度多个 CPU）。</span></li>
+      </ul>
+      <p class="mid-note">User mode = less privileged, user programs run here. Kernel (system/control) mode = more privileged, the OS kernel runs here and may execute privileged instructions and access protected memory.<br>用户态特权较低，用户程序在此运行；内核态（系统态／控制态）特权较高，操作系统内核在此运行，可执行特权指令并访问受保护内存。</p>
+      <span class="mid-src">教材依据 / Source: <a href="Chapter2Review.html">Chapter 2 Review Q23 &amp; Q24</a> &middot; <a href="chapter2/page-60.html">Ch02v2a p.60</a> &middot; <a href="Chapter3Review.html">Chapter 3 Review Q50</a> &middot; <a href="chapter3/page-45.html">Ch03v2a p.45</a></span>
+    </section>
+
+    <!-- ============================ Q3 ============================ -->
+    <section class="mid-card reveal" id="q3">
+      <h2>Q3 &middot; Resources shared by threads <span class="mid-marks">14 marks / 14 分</span></h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; QUESTION</div>
+        <div class="bil-cell bil-head">中文 &middot; 题目</div>
+        <div class="bil-cell bil-en">What resources are typically shared by all threads of a process?</div>
+        <div class="bil-cell bil-zh">一个进程中的所有线程通常共享哪些资源？</div>
+      </div>
+      <h3>Answer &middot; 参考答案（每项 1 分，共 14 分）</h3>
+      <ul class="content-list">
+        <li><strong>The virtual address space</strong> that holds the process image.<span class="item-zh">容纳进程映像的虚拟地址空间。</span></li>
+        <li><strong>The user address space</strong> (one per process, shared by every thread).<span class="item-zh">用户地址空间（每个进程一个，由所有线程共享）。</span></li>
+        <li><strong>The process control block (PCB)</strong> &mdash; in the multithreaded model there is only one PCB per process.<span class="item-zh">进程控制块（PCB）—— 多线程模型中每个进程只有一个 PCB。</span></li>
+        <li><strong>The user program / executable code</strong> (text) of the process.<span class="item-zh">进程的用户程序／可执行代码（代码段）。</span></li>
+        <li><strong>User data and global / static variables</strong> in the process image.<span class="item-zh">进程映像中的用户数据与全局／静态变量。</span></li>
+        <li><strong>The heap / dynamically allocated memory</strong> inside that address space.<span class="item-zh">该地址空间中的堆／动态分配内存。</span></li>
+        <li><strong>Memory pointers and memory-management tables</strong> (page/segment tables) for the process.<span class="item-zh">进程的存储器指针与存储器管理表（页表／段表）。</span></li>
+        <li><strong>Protected access to processors</strong> &mdash; the process is the unit of resource allocation and protection.<span class="item-zh">对处理器的受保护访问 —— 进程是资源分配与保护的单位。</span></li>
+        <li><strong>Protected access to files</strong> &mdash; open files and file descriptors / file tables.<span class="item-zh">对文件的受保护访问 —— 已打开的文件、文件描述符与文件表。</span></li>
+        <li><strong>Protected access to I/O resources</strong> (devices and channels) and the I/O status information.<span class="item-zh">对 I/O 资源（设备与通道）的受保护访问，以及 I/O 状态信息。</span></li>
+        <li><strong>Protected access to other processes</strong> &mdash; interprocess communication resources such as shared memory, pipes, message queues and semaphores.<span class="item-zh">对其它进程的受保护访问 —— 共享内存、管道、消息队列、信号量等进程间通信资源。</span></li>
+        <li><strong>The process identifier and credentials</strong> (PID, parent PID, user / group IDs).<span class="item-zh">进程标识符与凭证（PID、父进程 PID、用户／组标识）。</span></li>
+        <li><strong>Process-level state and priority</strong> (scheduling information held at process level).<span class="item-zh">进程级的状态与优先级（进程层的调度信息）。</span></li>
+        <li><strong>Accounting information and resource ownership / utilisation</strong> recorded by the OS.<span class="item-zh">操作系统记录的记账信息，以及资源拥有与使用情况。</span></li>
+      </ul>
+      <p class="mid-note"><strong>Important contrast</strong>: each thread has its OWN program counter, execution state, saved thread context, execution stack, per-thread static storage for local variables, user stack, kernel stack and thread control block (TCB) &mdash; these are NOT shared. All threads of a process share the memory and resources of that process.<br><strong>易错点</strong>：每个线程各自拥有程序计数器、执行状态、保存的线程上下文、执行栈、局部变量静态存储、用户栈、内核栈与线程控制块（TCB），这些<strong>不共享</strong>；共享的是进程的内存与资源。</p>
+      <span class="mid-src">教材依据 / Source: <a href="chapter4/page-06.html">Ch04v2a p.6 &mdash; Process</a> &middot; <a href="chapter4/page-07.html">p.7 &mdash; One or More Threads in a Process</a> &middot; <a href="chapter4/page-08.html">p.8 &mdash; Figure 4.2</a> &middot; <a href="Chapter4Review.html">Chapter 4 Review Q57</a> &middot; <a href="chapter3/page-06.html">Ch03v2a p.6</a> &middot; <a href="chapter3/page-34.html">p.34 &mdash; Table 3.4</a></span>
+    </section>
+
+    <!-- ============================ Q4 ============================ -->
+    <section class="mid-card reveal" id="q4">
+      <h2>Q4 &middot; ULT and KLT <span class="mid-marks">4 marks / 4 分</span></h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; QUESTION</div>
+        <div class="bil-cell bil-head">中文 &middot; 题目</div>
+        <div class="bil-cell bil-en">Define and explain ULT and KLT.</div>
+        <div class="bil-cell bil-zh">定义并说明 ULT（用户级线程）与 KLT（内核级线程）。</div>
+      </div>
+      <h3>ULT &middot; User-Level Thread 用户级线程（2 分）</h3>
+      <ul class="content-list">
+        <li><strong>Definition</strong>: all thread management is done by the application; a threads library creates, destroys and schedules threads, the kernel is not aware that threads exist and schedules the process as a single unit.<span class="item-zh">定义：所有线程管理工作都由应用程序完成，线程库负责创建、销毁与调度；内核不知道线程的存在，只以进程为单位进行调度。</span></li>
+        <li><strong>Advantages</strong>: thread switching does not need kernel-mode privileges; scheduling can be application-specific; ULTs can run on any OS.<span class="item-zh">优点：线程切换不需要内核态特权；调度方式可按应用定制；ULT 可运行于任何操作系统。</span></li>
+        <li><strong>Disadvantages</strong>: when one ULT makes a blocking system call, all threads of the process are blocked; a pure ULT strategy cannot exploit multiprocessing because the kernel assigns one process to only one processor at a time.<span class="item-zh">缺点：某个 ULT 执行阻塞式系统调用时，进程内所有线程都会被阻塞；纯 ULT 无法利用多处理器，因为内核一次只把进程分配给一个处理器。</span></li>
+      </ul>
+      <h3>KLT &middot; Kernel-Level Thread 内核级线程（2 分）</h3>
+      <ul class="content-list">
+        <li><strong>Definition</strong>: thread management is done by the kernel; there is no thread-management code at application level, only an API to the kernel thread facility (Windows is an example).<span class="item-zh">定义：线程管理由内核完成，应用层没有线程管理代码，只有调用内核线程机制的 API（Windows 即为例子）。</span></li>
+        <li><strong>Advantages</strong>: the kernel can schedule multiple threads of the same process on multiple processors at the same time; if one thread blocks, the kernel can schedule another thread of the same process; kernel routines themselves can be multithreaded.<span class="item-zh">优点：内核可把同一进程的多个线程同时调度到多个处理器；某个线程阻塞时，内核可调度同进程的另一线程；内核例程本身也可多线程化。</span></li>
+        <li><strong>Trade-off</strong>: every thread switch goes through the kernel, so it costs a mode switch (slower than a pure user-level switch).<span class="item-zh">代价：每次线程切换都要经过内核，需要模式切换，比纯用户级切换慢。</span></li>
+      </ul>
+      <span class="mid-src">教材依据 / Source: <a href="chapter4/page-17.html">Ch04v2a p.17 &mdash; ULTs</a> &middot; <a href="chapter4/page-18.html">p.18 &mdash; Advantages of ULTs</a> &middot; <a href="chapter4/page-19.html">p.19 &mdash; Disadvantages of ULTs</a> &middot; <a href="chapter4/page-20.html">p.20 &mdash; KLTs</a> &middot; <a href="chapter4/page-21.html">p.21 &mdash; Advantages of KLTs</a> &middot; <a href="Chapter4Review.html">Chapter 4 Review</a></span>
+    </section>
+
+    <!-- ============================ Q5 ============================ -->
+    <section class="mid-card reveal" id="q5">
+      <h2>Q5 &middot; Seven-state process transition diagram <span class="mid-marks">7 + 3 = 10 marks / 10 分</span></h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; QUESTION</div>
+        <div class="bil-cell bil-head">中文 &middot; 题目</div>
+        <div class="bil-cell bil-en">Draw the state transition diagram for the SEVEN different states of a process (7 marks) &mdash; use a CIRCLE for each of the seven states. Use ARROWS to describe the transition from each state to another (3 marks).</div>
+        <div class="bil-cell bil-zh">画出进程七种状态的状态转换图（7 分）—— 每种状态用一个圆圈表示；用箭头描述各状态之间的转换（3 分）。</div>
+      </div>
+
+      <h3>Part 1 &middot; Seven states (one circle each) 七个状态</h3>
+      <figure class="mid-figure">
+        <svg class="mid-svg" viewBox="0 0 960 600" role="img" aria-label="Seven-state process transition diagram with circles and labelled arrows">
+          <defs>
+            <marker id="arTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#5eead4"></path>
+            </marker>
+            <marker id="arViolet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#a78bfa"></path>
+            </marker>
+          </defs>
+
+          <!-- normal transitions -->
+          <g fill="none" stroke="#5eead4" stroke-width="2.2">
+            <path marker-end="url(#arTeal)" d="M 138 140 L 268 180"></path>
+            <path marker-end="url(#arTeal)" d="M 373 180 L 477 180"></path>
+            <path marker-end="url(#arTeal)" d="M 477 212 L 373 212"></path>
+            <path marker-end="url(#arTeal)" d="M 593 180 L 702 180"></path>
+            <path marker-end="url(#arTeal)" d="M 735 225 C 660 272 410 272 340 225"></path>
+            <path marker-end="url(#arTeal)" d="M 535 253 L 535 282"></path>
+          </g>
+          <!-- suspend / activate transitions -->
+          <g fill="none" stroke="#a78bfa" stroke-width="2.2">
+            <path marker-end="url(#arViolet)" d="M 330 253 L 330 402"></path>
+            <path marker-end="url(#arViolet)" d="M 285 402 L 285 253"></path>
+            <path marker-end="url(#arViolet)" d="M 775 253 L 775 402"></path>
+            <path marker-end="url(#arViolet)" d="M 730 402 L 730 253"></path>
+            <path marker-end="url(#arViolet)" d="M 692 470 L 383 470"></path>
+          </g>
+          <!-- alternative admit / suspend path -->
+          <g fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="6 5">
+            <path marker-end="url(#arViolet)" d="M 100 155 C 100 300 185 400 247 435"></path>
+          </g>
+
+          <!-- arrow labels -->
+          <g fill="#9fb4d8" font-size="13" font-family="var(--mono)" text-anchor="middle">
+            <text x="188" y="137">Admit</text>
+            <text x="425" y="168">Dispatch</text>
+            <text x="425" y="234">Timeout</text>
+            <text x="647" y="168">Event Wait</text>
+            <text x="452" y="256">Event Occurs</text>
+            <text x="603" y="272">Release</text>
+            <text x="352" y="330" fill="#c4b5fd">Suspend</text>
+            <text x="236" y="330" fill="#c4b5fd">Activate</text>
+            <text x="800" y="330" fill="#c4b5fd">Suspend</text>
+            <text x="672" y="330" fill="#c4b5fd">Activate</text>
+            <text x="535" y="455" fill="#c4b5fd">Event Occurs</text>
+            <text x="132" y="300" fill="#c4b5fd">Admit / Suspend</text>
+          </g>
+
+          <!-- state circles -->
+          <g fill="rgba(96,165,250,0.14)" stroke="#60a5fa" stroke-width="2.5">
+            <circle cx="100" cy="105" r="50"></circle>
+            <circle cx="315" cy="195" r="58"></circle>
+            <circle cx="535" cy="195" r="58"></circle>
+            <circle cx="760" cy="195" r="58"></circle>
+            <circle cx="535" cy="330" r="48"></circle>
+          </g>
+          <g fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="2.5">
+            <circle cx="315" cy="470" r="68"></circle>
+            <circle cx="760" cy="470" r="68"></circle>
+          </g>
+
+          <!-- state labels -->
+          <g fill="#e9eefc" font-size="17" font-weight="700" text-anchor="middle" font-family="var(--font)">
+            <text x="100" y="111">New</text>
+            <text x="315" y="201">Ready</text>
+            <text x="535" y="201">Running</text>
+            <text x="760" y="201">Blocked</text>
+            <text x="535" y="337">Exit</text>
+            <text x="315" y="463">Ready/</text>
+            <text x="315" y="485">Suspend</text>
+            <text x="760" y="463">Blocked/</text>
+            <text x="760" y="485">Suspend</text>
+          </g>
+
+          <!-- legend -->
+          <g font-size="13" font-family="var(--font)" fill="#a6b3d4">
+            <line x1="60" y1="572" x2="96" y2="572" stroke="#5eead4" stroke-width="2.2" marker-end="url(#arTeal)"></line>
+            <text x="106" y="577">normal transition / 常规转换</text>
+            <line x1="370" y1="572" x2="406" y2="572" stroke="#a78bfa" stroke-width="2.2" marker-end="url(#arViolet)"></line>
+            <text x="416" y="577">suspend &amp; activate / 挂起与激活</text>
+          </g>
+        </svg>
+      </figure>
+
+      <h3>Part 1 &middot; What each circle means 各状态含义</h3>
+      <ul class="content-list">
+        <li><strong>New</strong>: the process has just been created and has not yet been admitted to the set of executable processes.<span class="item-zh">新建：进程刚被创建，尚未被接纳进可执行进程集合。</span></li>
+        <li><strong>Ready</strong>: the process is in main memory and is waiting for a chance to run.<span class="item-zh">就绪：进程已在主存中，等待被调度执行。</span></li>
+        <li><strong>Running</strong>: its instructions are being executed by the processor.<span class="item-zh">运行：其指令正被处理器执行。</span></li>
+        <li><strong>Blocked</strong>: it cannot execute until an event occurs (for example an I/O completion).<span class="item-zh">阻塞：必须等到某事件发生（例如 I/O 完成）才能执行。</span></li>
+        <li><strong>Ready/Suspend</strong>: a ready process has been swapped out to disk; it can run as soon as it is loaded back into main memory.<span class="item-zh">就绪／挂起：就绪进程被换出到磁盘；调回主存后即可运行。</span></li>
+        <li><strong>Blocked/Suspend</strong>: a blocked process has been swapped out to disk and is still waiting for its event.<span class="item-zh">阻塞／挂起：被阻塞的进程被换出到磁盘，且仍在等待事件。</span></li>
+        <li><strong>Exit</strong>: the process has halted or aborted and has been released by the OS.<span class="item-zh">退出：进程已停止或被中止，并被操作系统释放。</span></li>
+      </ul>
+
+      <h3>Part 2 &middot; Labelled arrows (3 marks) 转换箭头</h3>
+      <ul class="content-list">
+        <li><strong>Admit</strong>: New &rarr; Ready (or New &rarr; Ready/Suspend when main memory is full).<span class="item-zh">接纳：新建 &rarr; 就绪（主存不足时新建 &rarr; 就绪／挂起）。</span></li>
+        <li><strong>Dispatch</strong>: Ready &rarr; Running; <strong>Timeout</strong>: Running &rarr; Ready when the time slice ends.<span class="item-zh">分派：就绪 &rarr; 运行；超时：时间片用完，运行 &rarr; 就绪。</span></li>
+        <li><strong>Event Wait</strong>: Running &rarr; Blocked; <strong>Event Occurs</strong>: Blocked &rarr; Ready.<span class="item-zh">事件等待：运行 &rarr; 阻塞；事件发生：阻塞 &rarr; 就绪。</span></li>
+        <li><strong>Release</strong>: Running &rarr; Exit (also possible from Ready, Blocked and the suspended states).<span class="item-zh">释放：运行 &rarr; 退出（就绪、阻塞及挂起态也可被终止）。</span></li>
+        <li><strong>Suspend</strong>: Ready &rarr; Ready/Suspend, Blocked &rarr; Blocked/Suspend, Running &rarr; Ready/Suspend.<span class="item-zh">挂起：就绪 &rarr; 就绪／挂起，阻塞 &rarr; 阻塞／挂起，运行 &rarr; 就绪／挂起。</span></li>
+        <li><strong>Activate</strong>: Ready/Suspend &rarr; Ready, Blocked/Suspend &rarr; Blocked; <strong>Event Occurs</strong>: Blocked/Suspend &rarr; Ready/Suspend.<span class="item-zh">激活：就绪／挂起 &rarr; 就绪，阻塞／挂起 &rarr; 阻塞；事件发生：阻塞／挂起 &rarr; 就绪／挂起。</span></li>
+      </ul>
+      <span class="mid-src">教材依据 / Source: <a href="Chapter3Review.html">Chapter 3 Review Q47</a> &middot; <a href="chapter3/page-22.html">Ch03v2a p.22 &mdash; Seven-state model</a> &middot; <a href="chapter3/page-23.html">p.23 &mdash; State transitions</a></span>
+    </section>
+
+    <!-- ============================ Q6 ============================ -->
+    <section class="mid-card reveal" id="q6">
+      <h2>Q6 &middot; Linux commands <span class="mid-marks">10 marks / 10 分</span></h2>
+      <div class="bil-grid">
+        <div class="bil-cell bil-head">EN &middot; QUESTION (reconstructed)</div>
+        <div class="bil-cell bil-head">中文 &middot; 题目（重新整理）</div>
+        <div class="bil-cell bil-en">Assume the file <code class="cmd">ex2</code> contains three records: Mary, Jack, Alice. Write the command for each of the tasks below.</div>
+        <div class="bil-cell bil-zh">假设文件 <code class="cmd">ex2</code> 中有三条记录：Mary、Jack、Alice。写出完成下列每个任务的命令。</div>
+      </div>
+
+      <p class="mid-note"><strong>Note on the scan</strong>: the scanned question numbers and the handwritten/OCR answers are garbled (for example <code class="cmd">95/ex2</code>, <code class="cmd">tail-2</code>, <code class="cmd">maker Windows 11</code>, <code class="cmd">help tall</code>). They are reorganised below into clean, executable tasks with the correct commands from the course handout and Lab 8. Nine command tasks are legible; the setup of <code class="cmd">ex2</code> is given as task 0 so the ten marks are accounted for.<br><strong>扫描件说明</strong>：原题号与扫描出的答案有错漏，已按课程讲义与 Lab 8 重新整理成可执行的任务并给出正确命令；可辨认出 9 个命令任务，另把题干的 <code class="cmd">ex2</code> 准备过程列为第 0 题，合计 10 分。</p>
+
+      <h3>Correct tasks and commands &middot; 整理后的题目与正确答案</h3>
+      <ul class="content-list">
+        <li><strong>0. Create ex2 with the three records</strong> (setup): <code class="cmd">cat &gt; ex2</code> then type Mary / Jack / Alice, one per line, and press <code class="cmd">Ctrl+D</code>.<span class="item-zh">准备：建立含三条记录的 ex2 —— <code class="cmd">cat &gt; ex2</code>，逐行输入 Mary / Jack / Alice，最后按 Ctrl+D 结束。</span></li>
+        <li><strong>a. Display the file ex2</strong>: <code class="cmd">cat ex2</code><span class="item-zh">显示 ex2 的全部内容：<code class="cmd">cat ex2</code>（也可用 <code class="cmd">more ex2</code>、<code class="cmd">less ex2</code>）。</span></li>
+        <li><strong>b. Display the first 2 lines of ex2</strong>: <code class="cmd">head -n 2 ex2</code> (equivalently <code class="cmd">head -2 ex2</code>).<span class="item-zh">显示 ex2 的前 2 行：<code class="cmd">head -n 2 ex2</code>（等价于 <code class="cmd">head -2 ex2</code>）。</span></li>
+        <li><strong>c. Display the last 2 lines of ex2</strong>: <code class="cmd">tail -n 2 ex2</code> (equivalently <code class="cmd">tail -2 ex2</code>).<span class="item-zh">显示 ex2 的最后 2 行：<code class="cmd">tail -n 2 ex2</code>（等价于 <code class="cmd">tail -2 ex2</code>）。</span></li>
+        <li><strong>d. Search ex2 for the word Jack</strong>: <code class="cmd">grep Jack ex2</code><span class="item-zh">在 ex2 中搜索单词 Jack：<code class="cmd">grep Jack ex2</code>。</span></li>
+        <li><strong>e. Append one more record to ex2</strong> (the digit string in the scan is illegible, so a neutral example <code class="cmd">David</code> is used): <code class="cmd">cat &gt;&gt; ex2</code>, type <code class="cmd">David</code>, then <code class="cmd">Ctrl+D</code> (one-line alternative: <code class="cmd">echo David &gt;&gt; ex2</code>).<span class="item-zh">向 ex2 追加一条记录（扫描件中的数字串无法辨认，这里用中性示例 David）：<code class="cmd">cat &gt;&gt; ex2</code> 后输入 David 并按 Ctrl+D；单行写法为 <code class="cmd">echo David &gt;&gt; ex2</code>。</span></li>
+        <li><strong>f. Using a pipe, count how many files in your home directory start with the characters "ex"</strong>: <code class="cmd">ls | grep '^ex' | wc -l</code> (the Lab 8 form is <code class="cmd">ls -l | grep '^ex' | wc -l</code>).<span class="item-zh">用管道统计主目录中以 ex 开头的文件数：<code class="cmd">ls | grep '^ex' | wc -l</code>（Lab 8 写法为 <code class="cmd">ls -l | grep '^ex' | wc -l</code>）。</span></li>
+        <li><strong>g. Create a directory called "Windows 11"</strong>: <code class="cmd">mkdir "Windows 11"</code> (if the name has no space: <code class="cmd">mkdir windows11</code>).<span class="item-zh">建立名为 Windows 11 的目录：<code class="cmd">mkdir "Windows 11"</code>；若名称不含空格则 <code class="cmd">mkdir windows11</code>。</span></li>
+        <li><strong>h. Create a subdirectory called "games" inside it</strong>: <code class="cmd">mkdir "Windows 11/games"</code> (or <code class="cmd">cd "Windows 11"</code> then <code class="cmd">mkdir games</code>).<span class="item-zh">在其中建立子目录 games：<code class="cmd">mkdir "Windows 11/games"</code>；也可先 <code class="cmd">cd "Windows 11"</code> 再 <code class="cmd">mkdir games</code>。</span></li>
+        <li><strong>i. Get help on the command tail</strong>: <code class="cmd">man tail</code> (short description: <code class="cmd">whatis tail</code>; find related commands: <code class="cmd">apropos tail</code>).<span class="item-zh">查看 tail 命令的帮助：<code class="cmd">man tail</code>；一行简介用 <code class="cmd">whatis tail</code>，查找相关命令用 <code class="cmd">apropos tail</code>。</span></li>
+      </ul>
+
+      <h3>What was wrong in the scan &middot; 扫描答案勘误</h3>
+      <ul class="content-list">
+        <li><code class="cmd">95/ex2</code> &rarr; <code class="cmd">cat ex2</code><span class="item-zh">OCR 把 cat 识别成 95，且命令顺序颠倒。</span></li>
+        <li><code class="cmd">hey! ex2 head I</code> &rarr; <code class="cmd">head -n 2 ex2</code><span class="item-zh">命令名与参数顺序全错；正确写法是 head 后跟 -n 2 和文件名。</span></li>
+        <li><code class="cmd">taps! 142 tail-2</code> &rarr; <code class="cmd">tail -n 2 ex2</code><span class="item-zh">同样缺少文件名与空格；<code class="cmd">tail -2 ex2</code> 亦可。</span></li>
+        <li><code class="cmd">display_Jack</code> &rarr; <code class="cmd">grep Jack ex2</code><span class="item-zh">搜索文件内容应使用 grep，且必须给出文件名。</span></li>
+        <li><code class="cmd">up Csis 2260-ex2</code> &rarr; <code class="cmd">cat &gt;&gt; ex2</code> + record + <code class="cmd">Ctrl+D</code><span class="item-zh">追加用 &gt;&gt; 重定向，而不是把课程编号写进命令。</span></li>
+        <li><code class="cmd">pipe ex</code> &rarr; <code class="cmd">ls | grep '^ex' | wc -l</code><span class="item-zh">管道需要完整的三段命令：列出、过滤、计数。</span></li>
+        <li><code class="cmd">maker Windows 11</code> &rarr; <code class="cmd">mkdir "Windows 11"</code><span class="item-zh">命令是 mkdir；含空格的目录名必须加引号，否则会创建两个目录。</span></li>
+        <li><code class="cmd">cd 7 mkr games</code> &rarr; <code class="cmd">mkdir "Windows 11/games"</code><span class="item-zh">cd 只切换目录，创建子目录要用 mkdir 并给出正确路径。</span></li>
+        <li><code class="cmd">help tall</code> &rarr; <code class="cmd">man tail</code><span class="item-zh">课程讲义使用 man / whatis / apropos 获取帮助，"tall" 是 tail 的误识。</span></li>
+      </ul>
+      <span class="mid-src">教材依据 / Source: <a href="UnixCommands.html">UNIX Commands &amp; Scripting</a>（0.0 Getting Help, 1.2 mkdir, 2.4 cat / head / tail, 2.6 grep, 4.4 Pipes） &middot; <a href="LinuxLabsPractice.html#lab8">Lab 8 Review Exercise</a> &middot; <a href="chapter8/page-26.html">Ch08v2a p.26</a></span>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Page navigation">
+      <a class="btn btn-back" href="../index.html">&#8592; Back to home</a>
+      <a class="btn btn-next" href="LinuxLabsPractice.html">Linux command drill &#8594;</a>
+    </nav>
+  </main>
+
+  <footer class="page-footer">
+    CSIS2260 &middot; Fall 2025 OS Midterm Exam &middot; model answers quoted from the course lecture-slide review pages.
+  </footer>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/site-nav.js"></script>
+  <script src="../javascript/animations.js"></script>
+</body>
+</html>

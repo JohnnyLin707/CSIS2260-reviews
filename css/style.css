@@ -1793,3 +1793,52 @@ body.qa-static .qa-answer {
 .qa-section .exam-card .exam-model .mod-zh {
   font-size: 1.2rem; font-weight: 400; line-height: 1.8; color: #b6e6d6;
 }
+
+/* =====================================================================
+   Fall 2025 OS Midterm Exam — model-answer review page
+   ===================================================================== */
+.mid-card {
+  margin: 1.6rem 0; padding: 1.35rem 1.5rem;
+  border-radius: var(--radius); border: 1px solid var(--stroke);
+  background: linear-gradient(150deg, var(--glass-strong), var(--glass));
+  box-shadow: 0 26px 60px -44px rgba(0, 0, 0, 0.9);
+  scroll-margin-top: 86px;
+}
+.mid-card > h2 {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem;
+  margin: 0 0 0.9rem; font-size: 1.35rem; font-weight: 780; letter-spacing: -0.3px;
+}
+.mid-card h3 {
+  margin: 1.2rem 0 0.5rem; font-size: 1.1rem; font-weight: 750;
+  color: var(--accent-1);
+}
+.mid-marks {
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 800;
+  padding: 0.2rem 0.6rem; border-radius: 999px;
+  background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.3);
+  color: var(--accent-4);
+}
+.mid-note {
+  margin: 0.9rem 0 0; padding: 0.7rem 0.9rem; border-radius: 10px;
+  border-left: 3px solid rgba(251,191,36,0.6);
+  background: rgba(251,191,36,0.07); color: #f0e2bd;
+  font-size: 0.92rem; line-height: 1.75;
+}
+.mid-src {
+  display: block; margin-top: 1rem; padding-top: 0.8rem;
+  border-top: 1px solid var(--stroke-soft);
+  font-size: 0.82rem; line-height: 1.7; color: var(--text-faint);
+}
+.mid-src a { color: var(--accent-1); font-weight: 650; text-decoration: none; }
+.mid-src a:hover { text-decoration: underline; }
+.mid-figure {
+  margin: 1.1rem 0; padding: 0.8rem; border-radius: var(--radius-sm);
+  border: 1px solid var(--stroke-soft); background: rgba(6,10,22,0.5);
+}
+.mid-svg { display: block; width: 100%; height: auto; }
+
+@media (max-width: 640px) {
+  .mid-card { padding: 1.1rem 1rem; }
+  .mid-card > h2 { font-size: 1.2rem; }
+  .mid-figure { padding: 0.4rem; }
+}
