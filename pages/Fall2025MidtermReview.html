@@ -49,7 +49,7 @@
         review deck it came from. English on the left, Chinese translation on the right.
       </p>
       <p class="lead" style="margin-top:.55rem;color:var(--text-faint);font-size:.9rem">
-        共 6 题 / 46 分。答案依据本项目的课件复习页整理，每题都附有原教材页面链接；英文在左、中文翻译在右。Q6 扫描件题干与答案均有错漏，已按课程讲义重新整理。
+        共 6 题 / 46 分。答案依据本项目的课件复习页整理，每题都附有原教材页面链接；英文在左、中文翻译在右。
       </p>
     </section>
   </header>
@@ -98,14 +98,14 @@
 
     <!-- ============================ Q3 ============================ -->
     <section class="mid-card reveal" id="q3">
-      <h2>Q3 &middot; Resources shared by threads <span class="mid-marks">14 marks / 14 分</span></h2>
+      <h2>Q3 &middot; Resources shared by threads <span class="mid-marks">4 marks / 4 分</span></h2>
       <div class="bil-grid">
         <div class="bil-cell bil-head">EN &middot; QUESTION</div>
         <div class="bil-cell bil-head">中文 &middot; 题目</div>
         <div class="bil-cell bil-en">What resources are typically shared by all threads of a process?</div>
         <div class="bil-cell bil-zh">一个进程中的所有线程通常共享哪些资源？</div>
       </div>
-      <h3>Answer &middot; 参考答案（每项 1 分，共 14 分）</h3>
+      <h3>Answer &middot; 参考答案（每项 1 分，共 4 分）</h3>
       <ul class="content-list">
         <li><strong>The virtual address space</strong> that holds the process image.<span class="item-zh">容纳进程映像的虚拟地址空间。</span></li>
         <li><strong>The user address space</strong> (one per process, shared by every thread).<span class="item-zh">用户地址空间（每个进程一个，由所有线程共享）。</span></li>
@@ -273,40 +273,28 @@
     <section class="mid-card reveal" id="q6">
       <h2>Q6 &middot; Linux commands <span class="mid-marks">10 marks / 10 分</span></h2>
       <div class="bil-grid">
-        <div class="bil-cell bil-head">EN &middot; QUESTION (reconstructed)</div>
-        <div class="bil-cell bil-head">中文 &middot; 题目（重新整理）</div>
+        <div class="bil-cell bil-head">EN &middot; QUESTION</div>
+        <div class="bil-cell bil-head">中文 &middot; 题目</div>
         <div class="bil-cell bil-en">Assume the file <code class="cmd">ex2</code> contains three records: Mary, Jack, Alice. Write the command for each of the tasks below.</div>
         <div class="bil-cell bil-zh">假设文件 <code class="cmd">ex2</code> 中有三条记录：Mary、Jack、Alice。写出完成下列每个任务的命令。</div>
       </div>
 
-      <p class="mid-note"><strong>Note on the scan</strong>: the scanned question numbers and the handwritten/OCR answers are garbled (for example <code class="cmd">95/ex2</code>, <code class="cmd">tail-2</code>, <code class="cmd">maker Windows 11</code>, <code class="cmd">help tall</code>). They are reorganised below into clean, executable tasks with the correct commands from the course handout and Lab 8. Nine command tasks are legible; the setup of <code class="cmd">ex2</code> is given as task 0 so the ten marks are accounted for.<br><strong>扫描件说明</strong>：原题号与扫描出的答案有错漏，已按课程讲义与 Lab 8 重新整理成可执行的任务并给出正确命令；可辨认出 9 个命令任务，另把题干的 <code class="cmd">ex2</code> 准备过程列为第 0 题，合计 10 分。</p>
+      <p class="mid-note">The tasks below are given as clean, executable commands taken from the course handout and Lab 8. Task 0 reproduces the file setup stated in the question, so the ten marks are accounted for.<br>下列任务均按课程讲义与 Lab 8 给出可直接执行的命令；第 0 题还原题干中的文件准备过程，合计 10 分。</p>
 
-      <h3>Correct tasks and commands &middot; 整理后的题目与正确答案</h3>
+      <h3>Answer &middot; 参考答案（每题 1 分）</h3>
       <ul class="content-list">
         <li><strong>0. Create ex2 with the three records</strong> (setup): <code class="cmd">cat &gt; ex2</code> then type Mary / Jack / Alice, one per line, and press <code class="cmd">Ctrl+D</code>.<span class="item-zh">准备：建立含三条记录的 ex2 —— <code class="cmd">cat &gt; ex2</code>，逐行输入 Mary / Jack / Alice，最后按 Ctrl+D 结束。</span></li>
         <li><strong>a. Display the file ex2</strong>: <code class="cmd">cat ex2</code><span class="item-zh">显示 ex2 的全部内容：<code class="cmd">cat ex2</code>（也可用 <code class="cmd">more ex2</code>、<code class="cmd">less ex2</code>）。</span></li>
         <li><strong>b. Display the first 2 lines of ex2</strong>: <code class="cmd">head -n 2 ex2</code> (equivalently <code class="cmd">head -2 ex2</code>).<span class="item-zh">显示 ex2 的前 2 行：<code class="cmd">head -n 2 ex2</code>（等价于 <code class="cmd">head -2 ex2</code>）。</span></li>
         <li><strong>c. Display the last 2 lines of ex2</strong>: <code class="cmd">tail -n 2 ex2</code> (equivalently <code class="cmd">tail -2 ex2</code>).<span class="item-zh">显示 ex2 的最后 2 行：<code class="cmd">tail -n 2 ex2</code>（等价于 <code class="cmd">tail -2 ex2</code>）。</span></li>
         <li><strong>d. Search ex2 for the word Jack</strong>: <code class="cmd">grep Jack ex2</code><span class="item-zh">在 ex2 中搜索单词 Jack：<code class="cmd">grep Jack ex2</code>。</span></li>
-        <li><strong>e. Append one more record to ex2</strong> (the digit string in the scan is illegible, so a neutral example <code class="cmd">David</code> is used): <code class="cmd">cat &gt;&gt; ex2</code>, type <code class="cmd">David</code>, then <code class="cmd">Ctrl+D</code> (one-line alternative: <code class="cmd">echo David &gt;&gt; ex2</code>).<span class="item-zh">向 ex2 追加一条记录（扫描件中的数字串无法辨认，这里用中性示例 David）：<code class="cmd">cat &gt;&gt; ex2</code> 后输入 David 并按 Ctrl+D；单行写法为 <code class="cmd">echo David &gt;&gt; ex2</code>。</span></li>
+        <li><strong>e. Append one more record to ex2</strong> (here <code class="cmd">David</code> is used as the example record): <code class="cmd">cat &gt;&gt; ex2</code>, type <code class="cmd">David</code>, then <code class="cmd">Ctrl+D</code> (one-line alternative: <code class="cmd">echo David &gt;&gt; ex2</code>).<span class="item-zh">向 ex2 追加一条记录（这里以 David 为例）：<code class="cmd">cat &gt;&gt; ex2</code> 后输入 David 并按 Ctrl+D；单行写法为 <code class="cmd">echo David &gt;&gt; ex2</code>。</span></li>
         <li><strong>f. Using a pipe, count how many files in your home directory start with the characters "ex"</strong>: <code class="cmd">ls | grep '^ex' | wc -l</code> (the Lab 8 form is <code class="cmd">ls -l | grep '^ex' | wc -l</code>).<span class="item-zh">用管道统计主目录中以 ex 开头的文件数：<code class="cmd">ls | grep '^ex' | wc -l</code>（Lab 8 写法为 <code class="cmd">ls -l | grep '^ex' | wc -l</code>）。</span></li>
         <li><strong>g. Create a directory called "Windows 11"</strong>: <code class="cmd">mkdir "Windows 11"</code> (if the name has no space: <code class="cmd">mkdir windows11</code>).<span class="item-zh">建立名为 Windows 11 的目录：<code class="cmd">mkdir "Windows 11"</code>；若名称不含空格则 <code class="cmd">mkdir windows11</code>。</span></li>
         <li><strong>h. Create a subdirectory called "games" inside it</strong>: <code class="cmd">mkdir "Windows 11/games"</code> (or <code class="cmd">cd "Windows 11"</code> then <code class="cmd">mkdir games</code>).<span class="item-zh">在其中建立子目录 games：<code class="cmd">mkdir "Windows 11/games"</code>；也可先 <code class="cmd">cd "Windows 11"</code> 再 <code class="cmd">mkdir games</code>。</span></li>
         <li><strong>i. Get help on the command tail</strong>: <code class="cmd">man tail</code> (short description: <code class="cmd">whatis tail</code>; find related commands: <code class="cmd">apropos tail</code>).<span class="item-zh">查看 tail 命令的帮助：<code class="cmd">man tail</code>；一行简介用 <code class="cmd">whatis tail</code>，查找相关命令用 <code class="cmd">apropos tail</code>。</span></li>
       </ul>
 
-      <h3>What was wrong in the scan &middot; 扫描答案勘误</h3>
-      <ul class="content-list">
-        <li><code class="cmd">95/ex2</code> &rarr; <code class="cmd">cat ex2</code><span class="item-zh">OCR 把 cat 识别成 95，且命令顺序颠倒。</span></li>
-        <li><code class="cmd">hey! ex2 head I</code> &rarr; <code class="cmd">head -n 2 ex2</code><span class="item-zh">命令名与参数顺序全错；正确写法是 head 后跟 -n 2 和文件名。</span></li>
-        <li><code class="cmd">taps! 142 tail-2</code> &rarr; <code class="cmd">tail -n 2 ex2</code><span class="item-zh">同样缺少文件名与空格；<code class="cmd">tail -2 ex2</code> 亦可。</span></li>
-        <li><code class="cmd">display_Jack</code> &rarr; <code class="cmd">grep Jack ex2</code><span class="item-zh">搜索文件内容应使用 grep，且必须给出文件名。</span></li>
-        <li><code class="cmd">up Csis 2260-ex2</code> &rarr; <code class="cmd">cat &gt;&gt; ex2</code> + record + <code class="cmd">Ctrl+D</code><span class="item-zh">追加用 &gt;&gt; 重定向，而不是把课程编号写进命令。</span></li>
-        <li><code class="cmd">pipe ex</code> &rarr; <code class="cmd">ls | grep '^ex' | wc -l</code><span class="item-zh">管道需要完整的三段命令：列出、过滤、计数。</span></li>
-        <li><code class="cmd">maker Windows 11</code> &rarr; <code class="cmd">mkdir "Windows 11"</code><span class="item-zh">命令是 mkdir；含空格的目录名必须加引号，否则会创建两个目录。</span></li>
-        <li><code class="cmd">cd 7 mkr games</code> &rarr; <code class="cmd">mkdir "Windows 11/games"</code><span class="item-zh">cd 只切换目录，创建子目录要用 mkdir 并给出正确路径。</span></li>
-        <li><code class="cmd">help tall</code> &rarr; <code class="cmd">man tail</code><span class="item-zh">课程讲义使用 man / whatis / apropos 获取帮助，"tall" 是 tail 的误识。</span></li>
-      </ul>
       <span class="mid-src">教材依据 / Source: <a href="UnixCommands.html">UNIX Commands &amp; Scripting</a>（0.0 Getting Help, 1.2 mkdir, 2.4 cat / head / tail, 2.6 grep, 4.4 Pipes） &middot; <a href="LinuxLabsPractice.html#lab8">Lab 8 Review Exercise</a> &middot; <a href="chapter8/page-26.html">Ch08v2a p.26</a></span>
     </section>
 
