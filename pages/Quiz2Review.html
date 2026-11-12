@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Quiz 2 &middot; Threads, Memory &amp; Virtual Memory | CSIS2260 Review</title>
+  <meta name="description" content="Quiz 2 essay practice for Chapter 4 (pp.16-22), Chapter 7 and Chapter 8: one big answer box per question, keyword-based marking.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="q2-body">
+
+  <div class="q2-topbar">
+    <a class="q2-close" href="../index.html" aria-label="Back to home" title="Back to home">&#10005;</a>
+    <span class="q2-title">Quiz 2</span>
+  </div>
+
+  <div class="q2-gradestrip">
+    <div class="q2-gradestrip-inner">
+      <div class="q2-grade-left">
+        <div class="q2-grade-label">Final Grade <span class="q2-pill" id="q2Final">0 / 0</span></div>
+        <div class="q2-grade-sub">Keyword-based marking &middot; 关键词判分</div>
+      </div>
+      <div class="q2-grade-right">
+        <span class="q2-attempt" id="q2Attempt">ATTEMPT 1 (NOT SUBMITTED)</span>
+        <span class="q2-pill" id="q2TotalPill">0 / 0</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="q2-wrap">
+    <div class="q2-banner">
+      Scope: <strong>Ch04v2a.pdf pp.16&ndash;22</strong> (types of threads, ULT / KLT, summary),
+      <strong>Ch07v2a.pdf</strong> (all 40 slides) and <strong>Ch08v2a.pdf</strong> (all 82 slides).
+      Write your answer in one box per question. Each scoring point is awarded as soon as your
+      answer contains <strong>one or two key words</strong> from that point &mdash; English or 中文.
+      <br>考试范围：第 4 章 16–22 页、第 7 章与第 8 章全部内容。每题一个大输入框；每个要点只要答出
+      <strong>1–2 个关键词</strong>即可得分（英文或中文均可）。
+    </div>
+
+    <details class="q2-overall" id="q2Overall">
+      <summary>Overall Feedback &middot; 总体反馈</summary>
+      <div class="q2-overall-body" id="q2OverallBody">Submit the quiz to see your overall score and feedback.</div>
+    </details>
+
+    <div id="q2Mount"></div>
+
+    <div class="q2-submitbar">
+      <button class="q2-btn q2-btn-primary" id="q2Submit" type="button">Submit quiz / 交卷评分</button>
+      <button class="q2-btn" id="q2Reveal" type="button">Show model answers / 显示参考答案</button>
+      <button class="q2-btn" id="q2Reset" type="button">Reset / 重置</button>
+      <span class="q2-total" id="q2Total" role="status" aria-live="polite"></span>
+    </div>
+
+    <nav class="q2-bottom" aria-label="Page navigation">
+      <a href="../index.html">&#8592; Back to home</a>
+      <a href="Fall2025MidtermReview.html">Fall 2025 midterm answers &#8594;</a>
+    </nav>
+  </main>
+
+  <script>
+  /* =====================================================================
+     Quiz 2 — essay questions with keyword-based marking.
+     Each point: [English key words (1-2), Chinese key words, model EN, model ZH]
+     A point scores when the answer contains ANY ONE of its key words.
+     ===================================================================== */
+  (function () {
+    "use strict";
+
+    var QUIZ = [
+      {
+        q: "Name the THREE thread approaches illustrated in Figure 4.5 and briefly explain where thread management is done in each.",
+        zh: "写出图 4.5 中的三种线程方式，并简要说明每种方式的线程管理在哪里完成。",
+        src: "Ch04v2a.pdf &middot; p.16 Types of Threads; p.17 ULTs; p.20 KLTs",
+        links: [["p.16", "chapter4/page-16.html"], ["p.17", "chapter4/page-17.html"], ["p.20", "chapter4/page-20.html"]],
+        pts: [
+          ["user-level|ULT", "用户级线程|用户级", "Pure user-level (ULT): all thread management is done by the application through a threads library.", "纯用户级线程（ULT）：所有线程管理由应用程序通过线程库完成。"],
+          ["kernel-level|KLT", "内核级线程|内核级", "Pure kernel-level (KLT): thread management is done by the kernel.", "纯内核级线程（KLT）：线程管理由内核完成。"],
+          ["combined|hybrid", "组合方式|混合", "Combined approach: user-level threads are mapped onto kernel-level threads.", "组合方式：把用户级线程映射到内核级线程上。"]
+        ]
+      },
+      {
+        q: "Explain how a User-Level Thread (ULT) is managed, and give THREE advantages of ULTs.",
+        zh: "说明用户级线程（ULT）是如何管理的，并给出 ULT 的三个优点。",
+        src: "Ch04v2a.pdf &middot; p.17 User-Level Threads; p.18 Advantages of ULTs",
+        links: [["p.17", "chapter4/page-17.html"], ["p.18", "chapter4/page-18.html"]],
+        pts: [
+          ["threads library|application", "线程库|应用程序", "A threads library creates, destroys and schedules the threads; the kernel is not aware that threads exist.", "线程库负责创建、销毁与调度线程，内核并不知道线程的存在。"],
+          ["process as a unit|kernel is not aware", "以进程为单位|内核不知道", "The kernel schedules the process as a single unit.", "内核只以进程为单位进行调度。"],
+          ["kernel mode|privileges", "内核态|特权", "Thread switching does not require kernel mode privileges, so it is fast.", "线程切换不需要内核态特权，因此很快。"],
+          ["application specific|any OS", "按应用定制|任何操作系统", "Scheduling can be application specific, and ULTs can run on any operating system.", "调度可以按应用定制，ULT 可以运行在任何操作系统上。"]
+        ]
+      },
+      {
+        q: "Give THREE disadvantages of a pure ULT strategy.",
+        zh: "写出纯 ULT 策略的三个缺点。",
+        src: "Ch04v2a.pdf &middot; p.19 Disadvantages of ULTs",
+        links: [["p.19", "chapter4/page-19.html"]],
+        pts: [
+          ["system call|blocking", "系统调用|阻塞", "Many system calls are blocking: when one ULT executes a system call, all threads of that process are blocked.", "许多系统调用是阻塞的：一个 ULT 执行系统调用时，进程内所有线程都被阻塞。"],
+          ["multiprocessing|multiple processors", "多处理器|多处理", "A pure ULT strategy cannot take advantage of multiprocessing.", "纯 ULT 策略无法利用多处理器。"],
+          ["one processor|one thread at a time", "一个处理器|一个线程", "The kernel assigns one process to only one processor at a time, so only one thread of the process can execute at a time.", "内核一次只把一个进程分配给一个处理器，因此同一时刻该进程只有一个线程能执行。"]
+        ]
+      },
+      {
+        q: "Explain how a Kernel-Level Thread (KLT) is managed and give THREE advantages of KLTs.",
+        zh: "说明内核级线程（KLT）是如何管理的，并给出 KLT 的三个优点。",
+        src: "Ch04v2a.pdf &middot; p.20 Kernel-Level Threads; p.21 Advantages of KLTs",
+        links: [["p.20", "chapter4/page-20.html"], ["p.21", "chapter4/page-21.html"]],
+        pts: [
+          ["thread management|kernel", "线程管理|内核", "All thread management is done by the kernel; Windows is an example of this approach.", "所有线程管理都由内核完成，Windows 就是这种方式的例子。"],
+          ["API|application level", "应用程序接口|应用层", "There is no thread management code at application level, only an API to the kernel thread facility.", "应用层没有线程管理代码，只有到内核线程机制的 API。"],
+          ["multiple processors|simultaneously", "多个处理器|同时", "The kernel can simultaneously schedule multiple threads of the same process on multiple processors.", "内核可以把同一进程的多个线程同时调度到多个处理器上。"],
+          ["another thread|kernel routines", "另一个线程|内核例程", "If one thread blocks, the kernel can schedule another thread of the same process; kernel routines themselves can be multithreaded.", "某线程阻塞时，内核可调度同进程的另一线程；内核例程本身也可多线程化。"]
+        ]
+      },
+      {
+        q: "List the main topics covered in the Chapter 4 summary.",
+        zh: "列出第 4 章小结中涵盖的主要内容。",
+        src: "Ch04v2a.pdf &middot; p.22 Summary",
+        links: [["p.22", "chapter4/page-22.html"]],
+        pts: [
+          ["processes and threads|process", "进程与线程|进程", "Processes and threads: the process is the unit of resource ownership, the thread is the unit of dispatching.", "进程与线程：进程是资源拥有的单位，线程是调度的单位。"],
+          ["multithreading", "多线程", "Multithreading: multiple concurrent paths of execution within a single process.", "多线程：一个进程内存在多条并发执行路径。"],
+          ["thread functionality|functionality", "线程功能|功能", "Thread functionality: thread states and the spawn, block, unblock and finish operations.", "线程功能：线程状态以及 spawn、block、unblock、finish 操作。"],
+          ["user level|kernel level", "用户级|内核级", "Types of threads: user-level and kernel-level threads (ULT vs KLT).", "线程类型：用户级线程与内核级线程（ULT 与 KLT）。"]
+        ]
+      },
+      {
+        q: "Define the three memory management terms: frame, page and segment.",
+        zh: "定义三个内存管理术语：页框（frame）、页（page）和段（segment）。",
+        src: "Ch07v2a.pdf &middot; p.2 Table 7.1 Memory Management Terms",
+        links: [["p.2", "chapter7/page-02.html"]],
+        pts: [
+          ["fixed-length block of main memory|frame", "主存|页框", "Frame: a fixed-length block of main memory.", "页框：主存中固定长度的块。"],
+          ["secondary memory|page of data", "辅助存储器|页", "Page: a fixed-length block of data that resides in secondary memory; a page may be copied into a frame.", "页：位于辅助存储器中固定长度的数据块；一页数据可临时复制到页框中。"],
+          ["variable-length|segment", "可变长度|段", "Segment: a variable-length block of data in secondary memory; an entire segment may be copied into an available region.", "段：辅助存储器中可变长度的数据块；整段可临时复制到可用区域。"]
+        ]
+      },
+      {
+        q: "List the FIVE requirements that memory management is intended to satisfy, and briefly say what each one means.",
+        zh: "列出内存管理要满足的五项要求，并简要说明每一项的含义。",
+        src: "Ch07v2a.pdf &middot; p.3 Requirements; p.4 Relocation; p.6 Protection; p.7 Sharing; p.8 Logical Organization; p.9 Physical Organization",
+        links: [["p.3", "chapter7/page-03.html"], ["p.6", "chapter7/page-06.html"], ["p.9", "chapter7/page-09.html"]],
+        pts: [
+          ["relocation", "重定位", "Relocation: a swapped-out process may be placed in a different memory region, so the OS must translate memory references at run time.", "重定位：进程换回主存时可能位于不同区域，操作系统必须在运行时转换内存引用。"],
+          ["protection", "保护", "Protection: memory references generated by a process must be checked at run time; processes need permission to read or write locations.", "保护：进程产生的内存引用必须在运行时检查，进程需要获得读写权限。"],
+          ["sharing", "共享", "Sharing: mechanisms that support relocation also allow controlled sharing of main memory, for example shared code.", "共享：支持重定位的机制也允许受控地共享主存，例如共享代码。"],
+          ["logical organization", "逻辑组织", "Logical organization: programs are written in modules, so memory is viewed as a collection of logically related segments.", "逻辑组织：程序按模块编写，因此内存被看作若干逻辑相关的段的集合。"],
+          ["physical organization", "物理组织", "Physical organization: memory is a two-level hierarchy of main memory and secondary memory, and the OS moves data between them.", "物理组织：主存与辅助存储器构成两级层次结构，操作系统负责在两级之间移动数据。"]
+        ]
+      },
+      {
+        q: "Compare fixed and dynamic partitioning, and name the placement algorithms used with dynamic partitioning.",
+        zh: "比较固定分区与动态分区，并写出动态分区使用的放置算法。",
+        src: "Ch07v2a.pdf &middot; p.12 Fixed Partitioning; p.17 Dynamic Partitioning; p.20 Placement Algorithms",
+        links: [["p.12", "chapter7/page-12.html"], ["p.17", "chapter7/page-17.html"], ["p.20", "chapter7/page-20.html"]],
+        pts: [
+          ["fixed partitioning|equal-size", "固定分区|等长", "Fixed partitioning: main memory is divided into a fixed number of equal or unequal size partitions, which causes internal fragmentation.", "固定分区：主存被划分为固定数量的等长或不等长分区，会产生内部碎片。"],
+          ["dynamic partitioning|external fragmentation", "动态分区|外部碎片", "Dynamic partitioning: partitions are created as processes arrive; over time it produces external fragmentation and needs compaction.", "动态分区：按进程需要动态建立分区，随时间产生外部碎片，需要紧凑处理。"],
+          ["first-fit|best-fit", "首次适配|最佳适配", "First-fit chooses the first block that is large enough; best-fit chooses the smallest block that is large enough.", "首次适配选择第一个足够大的块；最佳适配选择最小的足够大的块。"],
+          ["next-fit|placement algorithm", "邻近适配|放置算法", "Next-fit starts searching from the last allocation point; all three are placement algorithms.", "邻近适配从上次分配位置开始搜索；三者都是放置算法。"]
+        ]
+      },
+      {
+        q: "Explain paging: frames and pages, the page table, and how a logical address becomes a physical address.",
+        zh: "说明分页：页框与页、页表，以及逻辑地址如何转换成物理地址。",
+        src: "Ch07v2a.pdf &middot; p.26 Paging; p.28 Page Table; p.31 Logical-to-Physical Address Translation",
+        links: [["p.26", "chapter7/page-26.html"], ["p.28", "chapter7/page-28.html"], ["p.31", "chapter7/page-31.html"]],
+        pts: [
+          ["frames|pages", "页框|页", "Main memory is divided into fixed-size frames and a process into pages of the same size.", "主存被划分为固定大小的页框，进程被划分为同样大小的页。"],
+          ["page table", "页表", "A page table per process records which frame holds each page of the process.", "每个进程有一张页表，记录该进程的每一页放在哪个页框中。"],
+          ["page number|offset", "页号|偏移量", "A logical address under paging is a page number plus an offset.", "分页方式下，逻辑地址由页号与偏移量组成。"],
+          ["frame number|physical address", "页框号|物理地址", "The page number indexes the page table to obtain a frame number; the frame number combined with the unchanged offset gives the physical address.", "页号查页表得到页框号，页框号与不变的偏移量组合成物理地址。"]
+        ]
+      },
+      {
+        q: "Explain segmentation and its advantage over paging, then describe a buffer overflow attack and its defences.",
+        zh: "说明分段及其相对分页的优点，再描述缓冲区溢出攻击与防御方法。",
+        src: "Ch07v2a.pdf &middot; p.32 Segmentation; p.33 continued; p.37 Buffer Overflow Attacks; p.39 Defending Against Buffer Overflows",
+        links: [["p.32", "chapter7/page-32.html"], ["p.37", "chapter7/page-37.html"], ["p.39", "chapter7/page-39.html"]],
+        pts: [
+          ["segment table|variable-length", "段表|可变长度", "Segmentation uses variable-length segments; a segment table entry holds the base address and length of the segment.", "分段使用可变长度的段；段表项保存段的基址与长度。"],
+          ["internal fragmentation|dynamic partitioning", "内部碎片|动态分区", "Segmentation is similar to dynamic partitioning and eliminates internal fragmentation.", "分段类似动态分区，消除了内部碎片。"],
+          ["return address|buffer overflow", "返回地址|缓冲区溢出", "A buffer overflow writes past the end of a local array and can overwrite the function return address, redirecting execution to injected code.", "缓冲区溢出会越过局部数组末尾写入，可能覆盖函数返回地址，把执行转向注入的代码。"],
+          ["compile-time|run-time", "编译时|运行时", "Defences are compile-time defences (stack canaries, safe libraries) and run-time defences (address space layout randomisation, non-executable stack).", "防御分为编译时防御（栈保护、安全库）与运行时防御（地址空间随机化、不可执行栈）。"]
+        ]
+      },
+      {
+        q: "State the two characteristics fundamental to virtual memory, and explain thrashing and the principle of locality.",
+        zh: "写出虚拟内存的两个基本特征，并解释抖动与局部性原理。",
+        src: "Ch08v2a.pdf &middot; p.2 Hardware and Control Structures; p.9 Thrashing; p.10 Principle of Locality",
+        links: [["p.2", "chapter8/page-02.html"], ["p.9", "chapter8/page-09.html"], ["p.10", "chapter8/page-10.html"]],
+        pts: [
+          ["logical addresses|dynamically translated", "逻辑地址|动态转换", "All memory references are logical addresses that are dynamically translated into physical addresses at run time.", "所有内存引用都是逻辑地址，在运行时动态转换成物理地址。"],
+          ["swapped|different regions", "换入换出|不同区域", "A process can be swapped in and out of main memory so that it occupies different regions at different times.", "进程可被换入换出主存，因此在不同时刻可能占用不同内存区域。"],
+          ["thrashing|swapping", "抖动|交换", "Thrashing: the system spends more time swapping pages in and out than executing instructions.", "抖动：系统花在页面换入换出上的时间多于执行指令的时间。"],
+          ["locality|clustered", "局部性|成簇", "The principle of locality: memory references of a process tend to cluster, so only a small set of pages is needed at any time.", "局部性原理：进程的内存访问倾向成簇出现，因此任一时刻只需要少量页面。"]
+        ]
+      },
+      {
+        q: "Explain four paging mechanisms used in virtual memory: page table entries, the inverted page table, the TLB and associative mapping.",
+        zh: "说明虚拟内存中的四种分页机制：页表项、倒排页表、TLB 与相联映射。",
+        src: "Ch08v2a.pdf &middot; p.13 Memory Management Formats; p.17 Inverted Page Table; p.20 TLB; p.23 Associative Mapping",
+        links: [["p.13", "chapter8/page-13.html"], ["p.17", "chapter8/page-17.html"], ["p.20", "chapter8/page-20.html"], ["p.23", "chapter8/page-23.html"]],
+        pts: [
+          ["page table entry|control bits", "页表项|控制位", "A page table entry contains the frame number plus control bits such as present, modified and protection bits.", "页表项包含页框号以及存在位、修改位、保护位等控制位。"],
+          ["inverted page table|process identifier", "倒排页表|进程标识", "An inverted page table has one entry per frame of real memory, holding the process identifier and page number occupying that frame.", "倒排页表按主存页框建表，每项记录占用该页框的进程标识与页号。"],
+          ["translation lookaside buffer|TLB", "转换检测缓冲区|快表", "A translation lookaside buffer (TLB) is a small fast cache of recently used page table entries.", "转换检测缓冲区（TLB）是保存最近使用页表项的小型高速缓存。"],
+          ["associative mapping|simultaneously", "相联映射|同时", "Associative mapping lets the processor interrogate a number of TLB entries simultaneously in parallel.", "相联映射让处理器同时并行查询多个 TLB 表项。"]
+        ]
+      },
+      {
+        q: "What factors affect the choice of page size, and how are paging and segmentation combined?",
+        zh: "哪些因素影响页大小的选择？分页与分段如何结合？",
+        src: "Ch08v2a.pdf &middot; p.26 Page Size; p.27 Page Fault Rate; p.34 Combined Addressing; p.36 Protection and Sharing",
+        links: [["p.26", "chapter8/page-26.html"], ["p.34", "chapter8/page-34.html"], ["p.36", "chapter8/page-36.html"]],
+        pts: [
+          ["internal fragmentation|page table size", "内部碎片|页表大小", "Smaller pages reduce internal fragmentation but need larger page tables.", "较小的页能减少内部碎片，但需要更大的页表。"],
+          ["page fault rate|page size", "缺页率|页大小", "A larger page size lowers the page fault rate at first, but beyond the optimum locality is lost and faults rise again.", "页增大初期会降低缺页率，但超过最优点后局部性减弱，缺页率反而上升。"],
+          ["segment number|page number", "段号|页号", "A combined address is divided into a segment number, a page number and an offset; the segment table points to a page table for that segment.", "组合地址分为段号、页号与偏移量；段表指向该段的页表。"],
+          ["protection|sharing", "保护|共享", "Protection and sharing are enforced through the page table and segment table entries.", "保护与共享通过页表项与段表项实现。"]
+        ]
+      },
+      {
+        q: "Name and briefly explain the virtual memory policies and the basic page replacement algorithms.",
+        zh: "写出并简要说明虚拟内存的各项策略与基本页面置换算法。",
+        src: "Ch08v2a.pdf &middot; p.40 Fetch Policy; p.43 Placement Policy; p.44 Replacement Policy; p.48 Optimal; p.49 LRU; p.51 FIFO; p.53 Clock Policy",
+        links: [["p.40", "chapter8/page-40.html"], ["p.44", "chapter8/page-44.html"], ["p.48", "chapter8/page-48.html"], ["p.53", "chapter8/page-53.html"]],
+        pts: [
+          ["demand paging|prepaging", "请求分页|预调页", "Fetch policy decides when a page is loaded: demand paging loads it on first reference, prepaging loads pages in advance.", "调入策略决定何时取页：请求分页在首次引用时调入，预调页提前调入。"],
+          ["placement policy", "放置策略", "Placement policy decides where the incoming page is placed in main memory.", "放置策略决定调入的页放在主存的什么位置。"],
+          ["replacement policy|frame locking", "置换策略|页框锁定", "Replacement policy decides which page is removed; locked frames holding kernel or critical pages are excluded.", "置换策略决定换出哪一页；锁定的页框（内核或关键页）不参与置换。"],
+          ["optimal policy|optimal", "最佳置换|最佳策略", "The optimal policy replaces the page whose next reference is farthest in the future; it is a benchmark only.", "最佳策略置换下次引用最远的页，只能作为衡量基准。"],
+          ["LRU|FIFO", "最近最少使用|先进先出", "LRU replaces the least recently used page; FIFO replaces the page that has been in memory longest.", "LRU 置换最近最少使用的页；FIFO 置换在内存中停留最久的页。"],
+          ["clock policy|page buffering", "时钟策略|页缓冲", "The clock policy approximates LRU with a use bit; page buffering keeps a pool of free frames ready.", "时钟策略用使用位近似 LRU；页缓冲维护一个空闲页框池。"]
+        ]
+      },
+      {
+        q: "Explain resident set management, the working set, cleaning policy and load control, and name the OS examples covered in Chapter 8.",
+        zh: "说明驻留集管理、工作集、清除策略与负载控制，并写出第 8 章涉及的操作系统实例。",
+        src: "Ch08v2a.pdf &middot; p.59 Resident Set Management; p.67 Working Set; p.69 Cleaning Policy; p.70 Load Control; p.74 UNIX; p.78 Windows",
+        links: [["p.59", "chapter8/page-59.html"], ["p.67", "chapter8/page-67.html"], ["p.74", "chapter8/page-74.html"], ["p.78", "chapter8/page-78.html"]],
+        pts: [
+          ["resident set|allocation", "驻留集|分配", "Resident set management decides how many frames a process gets; allocation may be fixed or variable, with local or global replacement scope.", "驻留集管理决定进程获得多少页框；分配可固定或可变，置换范围可局部或全局。"],
+          ["working set|window", "工作集|窗口", "The working set is the set of pages referenced in the last window of references; its size changes as the window grows.", "工作集是最近一个引用窗口内访问过的页面集合；窗口变大时工作集也随之增大。"],
+          ["cleaning policy|precleaning", "清除策略|预清除", "Cleaning policy decides when modified pages are written back: demand cleaning writes at replacement time, precleaning writes in batches.", "清除策略决定何时回写已修改页：请求清除在置换时写回，预清除成批提前写回。"],
+          ["load control|thrashing", "负载控制|抖动", "Load control limits the degree of multiprogramming; when thrashing is detected the OS suspends processes.", "负载控制限制多道程序度；检测到抖动时操作系统会挂起进程。"],
+          ["UNIX|Windows", "UNIX|Windows", "UNIX uses a paging system plus a kernel memory allocator; Windows uses a virtual address map, paging and resident set management.", "UNIX 使用分页系统与内核内存分配器；Windows 使用虚拟地址映射、分页和驻留集管理。"]
+        ]
+      }
+    ];
+
+    /* ------------------------------------------------------------ helpers */
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+    function norm(s) {
+      return String(s == null ? "" : s)
+        .toLowerCase()
+        .replace(/[\u2018\u2019\u02bc`\u00b4]/g, "'")
+        .replace(/[\u201c\u201d]/g, '"')
+        .replace(/[^a-z0-9\u3400-\u9fff\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+    function keysOf(point) {
+      return (point[0] + "|" + point[1]).split("|").map(norm).filter(Boolean);
+    }
+
+    var TOTAL = QUIZ.reduce(function (n, q) { return n + q.pts.length; }, 0);
+    var mount = document.getElementById("q2Mount");
+    var html = [];
+
+    QUIZ.forEach(function (q, qi) {
+      var n = qi + 1, m = q.pts.length;
+      var srcLinks = q.links.map(function (l) {
+        return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + '</a>';
+      }).join(" &middot; ");
+      html.push('<section class="q2-card" data-q="' + qi + '">');
+      html.push('  <div class="q2-head">');
+      html.push('    <span class="q2-num">' + n + '</span>');
+      html.push('    <span class="q2-type">ESSAY</span>');
+      html.push('    <span class="q2-badge ungraded" data-badge>NOT GRADED</span>');
+      html.push('    <span class="q2-markpill" data-pill>0 / ' + m + '</span>');
+      html.push('  </div>');
+      html.push('  <p class="q2-q">' + esc(q.q) + ' <span class="q2-qzh">&middot; ' + esc(q.zh) + '</span></p>');
+      html.push('  <p class="q2-src">Source &middot; ' + q.src + (srcLinks ? ' &nbsp;[' + srcLinks + ']' : '') + '</p>');
+      html.push('  <div class="q2-answer-label">Answer</div>');
+      html.push('  <textarea class="q2-textarea" data-answer rows="6" placeholder="Type your answer here&hellip; / 在此输入答案" aria-label="Answer for question ' + n + '"></textarea>');
+      html.push('  <div class="q2-feedback" data-feedback hidden>');
+      html.push('    <div class="q2-fb-head">Feedback &middot; 反馈</div>');
+      html.push('    <ul class="q2-pointlist" data-points></ul>');
+      html.push('  </div>');
+      html.push('</section>');
+    });
+    mount.innerHTML = html.join("");
+
+    var cards = Array.prototype.slice.call(mount.querySelectorAll(".q2-card"));
+    var finalEl = document.getElementById("q2Final");
+    var totalPill = document.getElementById("q2TotalPill");
+    var totalEl = document.getElementById("q2Total");
+    var attemptEl = document.getElementById("q2Attempt");
+    var overallBody = document.getElementById("q2OverallBody");
+
+    function setInitialTotals() {
+      finalEl.textContent = "0 / " + TOTAL;
+      totalPill.textContent = "0 / " + TOTAL;
+    }
+    setInitialTotals();
+
+    function gradeCard(card, showFeedback) {
+      var qi = +card.getAttribute("data-q");
+      var q = QUIZ[qi];
+      var value = norm(card.querySelector("[data-answer]").value);
+      var results = q.pts.map(function (p) {
+        return value ? keysOf(p).some(function (k) { return value.indexOf(k) !== -1; }) : false;
+      });
+      var score = results.filter(Boolean).length;
+      var badge = card.querySelector("[data-badge]");
+      var pill = card.querySelector("[data-pill]");
+      pill.textContent = score + " / " + q.pts.length;
+      if (!value) {
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+      } else if (score === q.pts.length) {
+        badge.className = "q2-badge correct";
+        badge.textContent = "CORRECT";
+      } else if (score === 0) {
+        badge.className = "q2-badge incorrect";
+        badge.textContent = "INCORRECT";
+      } else {
+        badge.className = "q2-badge partial";
+        badge.textContent = "PARTIALLY CORRECT";
+      }
+      var fb = card.querySelector("[data-feedback]");
+      if (showFeedback) {
+        var list = card.querySelector("[data-points]");
+        list.innerHTML = q.pts.map(function (p, i) {
+          return '<li><span class="q2-tick ' + (results[i] ? "ok" : "no") + '">' +
+            (results[i] ? "&#10003;" : "&#10007;") + '</span><span><strong>Point ' + (i + 1) +
+            ':</strong> ' + esc(p[2]) + '<span class="q2-model-zh">' + esc(p[3]) + '</span></span></li>';
+        }).join("");
+        fb.hidden = false;
+      }
+      return score;
+    }
+
+    function submit(showFeedback) {
+      var total = 0;
+      cards.forEach(function (c) { total += gradeCard(c, showFeedback); });
+      finalEl.textContent = total + " / " + TOTAL;
+      totalPill.textContent = total + " / " + TOTAL;
+      totalEl.textContent = total + " / " + TOTAL + " marks";
+      attemptEl.textContent = "ATTEMPT 1 (SUBMITTED)";
+      var pct = Math.round(total / TOTAL * 100);
+      overallBody.innerHTML = '<strong>' + total + ' / ' + TOTAL + ' marks (' + pct + '%).</strong> ' +
+        'Each point is awarded when the answer contains one or two of its key words. ' +
+        'Review the feedback under each question for the model answers.<br>' +
+        '每个得分点只需答出 1–2 个关键词即可得分；请查看每题下方的反馈与参考答案。';
+      return total;
+    }
+
+    document.getElementById("q2Submit").addEventListener("click", function () { submit(true); });
+    document.getElementById("q2Reveal").addEventListener("click", function () {
+      cards.forEach(function (card) {
+        var qi = +card.getAttribute("data-q");
+        card.querySelector("[data-answer]").value = QUIZ[qi].pts.map(function (p) { return p[2]; }).join(" ");
+      });
+      submit(true);
+    });
+    document.getElementById("q2Reset").addEventListener("click", function () {
+      cards.forEach(function (card) {
+        card.querySelector("[data-answer]").value = "";
+        var badge = card.querySelector("[data-badge]");
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+        card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
+        card.querySelector("[data-feedback]").hidden = true;
+      });
+      setInitialTotals();
+      totalEl.textContent = "";
+      attemptEl.textContent = "ATTEMPT 1 (NOT SUBMITTED)";
+      overallBody.textContent = "Submit the quiz to see your overall score and feedback.";
+    });
+    cards.forEach(function (card) {
+      var ta = card.querySelector("[data-answer]");
+      ta.addEventListener("input", function () {
+        var badge = card.querySelector("[data-badge]");
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+        card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
+        card.querySelector("[data-feedback]").hidden = true;
+      });
+      ta.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); submit(true); }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

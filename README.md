@@ -10,6 +10,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 
 ## ✨ Latest additions
 
+- **New page — `pages/Quiz2Review.html`** — a Blackboard-style Quiz 2 with 15 essay questions (61 marks) covering Chapter 4 pp.16-22, all of Chapter 7 and all of Chapter 8. One large answer box per question; a scoring point is awarded as soon as the answer contains one or two English or 中文 key words. Instant per-question badges, scores and bilingual model-answer feedback.
 - **New page — `pages/Fall2025MidtermReview.html`** — model answers for all six questions (46 marks) of the Fall 2025 OS Midterm: PCB elements, user vs kernel mode, the 14 resources shared by all threads, ULT vs KLT, a seven-state process transition diagram drawn as circles and labelled arrows, and the Linux command list. Every answer is bilingual and links back to the exact lecture-slide or review page it came from.
 - **New framework decks — `pages/chapter7.html` (40 slides) and `pages/chapter8.html` (82 slides)** — Chapter 7 *Memory Management* and Chapter 8 *Virtual Memory*, built with exactly the same framework and CSS as Chapters 1–4: sidebar, keyword filter, progress bar, Back / Next and one page per slide showing the original slide scan. Every slide now shows its OCR-extracted verbatim English text on the left with a Chinese translation on the right, plus one exam-style short-answer question whose 2-3 boxes are graded against the slide's key points.
 - **New deck — `pages/MidtermMockExam.html`** — the practice sheet as an **interactive mock exam**: 68 short-answer questions with **241 input boxes**, one per scoring point. A point earns its mark as soon as your answer contains **ONE English word** from the standard answer. **Grading happens only on Submit** — the page then auto-scrolls to a result panel showing the paper total (**241**), your score and your **score rate in %**, and every question shows its marks, its **accuracy** and the **standard answer (English + 中文)** for each of its points. A Retake button resets the whole paper.
@@ -198,7 +199,8 @@ CSIS-2260review/
 │   ├── MidtermPracticeSheet.html        # Deck 15 — printable practice sheet (60 questions, 225 marks)
 │   ├── MidtermMockExam.html             # Deck 16 — interactive mock exam (68 questions, 241 marks)
 │   ├── InstructionCycleDrill.html       # Standalone 10-question instruction-cycle drill
-│   └── Fall2025MidtermReview.html       # Fall 2025 midterm exam model answers (Q1-Q6)
+│   ├── Fall2025MidtermReview.html       # Fall 2025 midterm exam model answers (Q1-Q6)
+│   └── Quiz2Review.html                 # Quiz 2 essay practice with keyword grading
 ├── Ch01v2a-images/            # Slide scans for deck 02 (59 images)
 ├── Ch02v2a-images/            # Slide scans for deck 03 (75 images)
 ├── Ch03v2a-images/            # Slide scans for deck 04 (58 images)

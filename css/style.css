@@ -1842,3 +1842,127 @@ body.qa-static .qa-answer {
   .mid-card > h2 { font-size: 1.2rem; }
   .mid-figure { padding: 0.4rem; }
 }
+
+/* =====================================================================
+   Quiz 2 — light, Blackboard-style essay quiz with keyword marking.
+   Scoped to body.q2-body so no other page changes appearance.
+   ===================================================================== */
+body.q2-body {
+  background: #f4f5f7;
+  color: #1f2937;
+  line-height: 1.55;
+}
+.q2-topbar {
+  position: sticky; top: 0; z-index: 50;
+  height: 48px; display: flex; align-items: center; justify-content: center;
+  background: #2b2b2f; color: #fff;
+  font-size: 0.98rem; font-weight: 700; letter-spacing: 0.2px;
+}
+.q2-close {
+  position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  color: #fff; font-size: 1.15rem; text-decoration: none; line-height: 1;
+  padding: 0.3rem 0.45rem; border-radius: 6px;
+}
+.q2-close:hover { background: rgba(255,255,255,0.14); color: #fff; }
+.q2-gradestrip { background: #fff; border-bottom: 1px solid #e3e5e9; }
+.q2-gradestrip-inner {
+  max-width: 1080px; margin: 0 auto; padding: 0.85rem 1.4rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.q2-grade-label { display: flex; align-items: center; gap: 0.6rem; font-size: 1.02rem; font-weight: 700; }
+.q2-grade-sub { margin-top: 0.2rem; font-size: 0.78rem; color: #8a919c; }
+.q2-grade-right { display: flex; align-items: center; gap: 0.8rem; }
+.q2-attempt { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px; color: #7c8492; text-transform: uppercase; }
+.q2-pill {
+  display: inline-block; background: #1f2937; color: #fff;
+  border-radius: 999px; padding: 0.24rem 0.72rem;
+  font-family: var(--mono); font-size: 0.8rem; font-weight: 800;
+}
+.q2-wrap { max-width: 1080px; margin: 0 auto; padding: 1.2rem 1.4rem 4rem; }
+.q2-banner {
+  padding: 0.7rem 1rem; border-radius: 6px;
+  background: #e7f5fd; border: 1px solid #bfe4f6; color: #2a5a70;
+  font-size: 0.86rem; line-height: 1.75;
+}
+.q2-overall { margin: 1rem 0; background: #fff; border: 1px solid #e3e5e9; border-radius: 8px; }
+.q2-overall summary { cursor: pointer; padding: 0.8rem 1rem; font-weight: 700; font-size: 0.9rem; }
+.q2-overall-body { padding: 0 1rem 1rem; font-size: 0.88rem; color: #4b5563; line-height: 1.7; }
+
+.q2-card {
+  background: #fff; border: 1px solid #e2e4e8; border-radius: 8px;
+  padding: 1.1rem 1.3rem 1.3rem; margin-bottom: 1rem;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+}
+.q2-head { display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap; }
+.q2-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1.5px solid #a78bfa; color: #7c3aed;
+  display: grid; place-items: center; font-size: 0.85rem; font-weight: 800; flex: 0 0 auto;
+}
+.q2-type { font-size: 0.68rem; font-weight: 800; letter-spacing: 1.2px; color: #6b7280; }
+.q2-badge {
+  font-size: 0.65rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase;
+  padding: 0.2rem 0.55rem; border-radius: 999px;
+}
+.q2-badge.ungraded { background: #f1f2f4; color: #6b7280; }
+.q2-badge.correct { background: #dcfce7; color: #166534; }
+.q2-badge.partial { background: #ffedd5; color: #c2410c; }
+.q2-badge.incorrect { background: #fee2e2; color: #b91c1c; }
+.q2-markpill {
+  margin-left: auto; background: #1f2937; color: #fff; border-radius: 999px;
+  padding: 0.22rem 0.7rem; font-family: var(--mono); font-size: 0.78rem; font-weight: 800;
+}
+.q2-q { margin: 0.9rem 0 0.25rem; font-size: 1rem; line-height: 1.62; color: #1f2937; }
+.q2-qzh { display: inline; font-size: 0.9rem; color: #8a919c; font-weight: 500; }
+.q2-src { margin: 0 0 0.9rem; font-size: 0.79rem; color: #a2a9b4; line-height: 1.6; font-weight: 400; }
+.q2-src a { color: #a2a9b4; text-decoration: underline; text-underline-offset: 2px; }
+.q2-src a:hover { color: #64748b; }
+.q2-answer-label {
+  margin: 0.9rem 0 0.45rem; padding-top: 0.9rem;
+  border-top: 1px solid #e6e8ec; font-weight: 700; font-size: 0.9rem; color: #1f2937;
+}
+.q2-textarea {
+  display: block; width: 100%; min-height: 148px; resize: vertical;
+  padding: 0.75rem 0.85rem; border: 1px solid #d8dbe0; border-radius: 6px;
+  background: #fff; color: #1f2937;
+  font-family: var(--font); font-size: 0.95rem; line-height: 1.65;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.q2-textarea::placeholder { color: #a2a9b4; }
+.q2-textarea:focus { outline: none; border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,0.18); }
+.q2-feedback { margin-top: 0.9rem; padding: 0.8rem 1rem; border-radius: 6px; background: #f5f6f8; }
+.q2-feedback[hidden] { display: none; }
+.q2-fb-head { font-size: 0.78rem; font-weight: 800; color: #4b5563; letter-spacing: 0.3px; }
+.q2-pointlist { list-style: none; margin: 0.55rem 0 0; padding: 0; }
+.q2-pointlist li { display: flex; gap: 0.55rem; margin-bottom: 0.45rem; font-size: 0.87rem; line-height: 1.6; }
+.q2-pointlist li:last-child { margin-bottom: 0; }
+.q2-tick { flex: 0 0 auto; font-weight: 800; }
+.q2-tick.ok { color: #15803d; }
+.q2-tick.no { color: #b91c1c; }
+.q2-model-zh { display: block; color: #6b7280; }
+
+.q2-submitbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+  margin-top: 1.4rem; padding: 1rem 0 0; border-top: 1px solid #e3e5e9;
+}
+.q2-btn {
+  font-family: var(--font); font-size: 0.88rem; font-weight: 700;
+  padding: 0.6rem 1.15rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid #cfd3d9; background: #fff; color: #374151;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.q2-btn:hover { background: #f3f4f6; transform: translateY(-1px); }
+.q2-btn-primary { background: #1f2937; border-color: #1f2937; color: #fff; }
+.q2-btn-primary:hover { background: #111827; color: #fff; box-shadow: 0 4px 12px rgba(17,24,39,0.2); }
+.q2-total { margin-left: auto; font-family: var(--mono); font-size: 0.9rem; font-weight: 800; color: #374151; }
+.q2-bottom { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; font-size: 0.88rem; }
+.q2-bottom a { color: #2563eb; text-decoration: none; }
+.q2-bottom a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .q2-wrap { padding: 1rem 0.9rem 3rem; }
+  .q2-card { padding: 1rem 0.95rem 1.1rem; }
+  .q2-grade-right { gap: 0.5rem; }
+  .q2-attempt { display: none; }
+  .q2-total { margin-left: 0; width: 100%; text-align: right; }
+}
