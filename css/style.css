@@ -1985,32 +1985,52 @@ body.q2-body {
 /* =====================================================================
    SLIDE BOARD — chapter4 / chapter7 / chapter8 slide pages.
    The scan stays in the left half, the verbatim explanation in the right
-   half. Question / answer sections below the board keep their original
-   full-width layout and typography.
+   half. Both boards are fully fluid: they grow and shrink with the browser
+   window. Question / answer sections keep their original 900px width.
    ===================================================================== */
+
+/* The generic .page-wrap is capped at 900px. Lift that cap only on these
+   slide pages so the two boards can follow the window width. All other
+   blocks (title, nav, Q&A, footer) stay at their original reading width. */
+body[data-topic="chapter4"] .page-wrap,
+body[data-topic="chapter7"] .page-wrap,
+body[data-topic="chapter8"] .page-wrap {
+  max-width: none;
+  padding-left: clamp(1rem, 2.5vw, 2.75rem);
+  padding-right: clamp(1rem, 2.5vw, 2.75rem);
+}
+body[data-topic="chapter4"] .page-wrap > *:not(.slide-board),
+body[data-topic="chapter7"] .page-wrap > *:not(.slide-board),
+body[data-topic="chapter8"] .page-wrap > *:not(.slide-board) {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .slide-board {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1rem;
+  gap: clamp(0.6rem, 1.2vw, 1.6rem);
   align-items: start;
   margin: 1.4rem 0 1.9rem;
+  width: 100%;
 }
 .slide-board-img,
 .slide-board-text { min-width: 0; }
 .slide-board-img {
-  padding: 0.5rem;
+  padding: clamp(0.35rem, 0.75vw, 0.9rem);
   border-radius: var(--radius);
   border: 1px solid var(--stroke);
   background: rgba(6, 10, 22, 0.42);
 }
 .slide-board-text {
-  padding: 0.5rem;
+  padding: clamp(0.35rem, 0.75vw, 0.9rem);
   border-radius: var(--radius);
   border: 1px solid var(--stroke-soft);
   background: rgba(6, 10, 22, 0.2);
 }
 .slide-board-img .slide-figure { margin: 0; box-shadow: none; }
-.slide-board-text .panel { margin: 0; padding: 1.05rem 1.1rem; }
+.slide-board-text .panel { margin: 0; padding: clamp(0.85rem, 1.35vw, 1.7rem); }
 .slide-board-text .panel h2 { margin-bottom: 0.8rem; }
 
 /* Chapter 7 / 8 bilingual text: narrow column -> EN/ZH paired rows. */
@@ -2024,12 +2044,6 @@ body.q2-body {
   background: rgba(94, 234, 212, 0.05);
 }
 .slide-board-text .bil-grid > .bil-cell:last-child { border-bottom: 0; }
-
-/* Tablet: keep the two panels, tighten the spacing. */
-@media (max-width: 1100px) and (min-width: 901px) {
-  .slide-board { gap: 0.8rem; }
-  .slide-board-text .panel { padding: 0.9rem; }
-}
 
 /* Phone / small tablet: stack the boards, image first. */
 @media (max-width: 900px) {
