@@ -1912,6 +1912,21 @@ body.q2-body {
   margin-left: auto; background: #1f2937; color: #fff; border-radius: 999px;
   padding: 0.22rem 0.7rem; font-family: var(--mono); font-size: 0.78rem; font-weight: 800;
 }
+.q2-grade-btn {
+  margin-left: auto; font-family: var(--font); font-size: 0.72rem; font-weight: 800;
+  padding: 0.28rem 0.75rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid #c9ced7; background: #fff; color: #374151;
+  letter-spacing: 0.2px; white-space: nowrap;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease),
+              border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.q2-grade-btn:hover {
+  background: #1f2937; border-color: #1f2937; color: #fff;
+  box-shadow: 0 3px 10px rgba(31,41,55,0.2);
+}
+.q2-grade-btn:active { transform: translateY(1px); }
+.q2-grade-btn:focus-visible { outline: 2px solid #60a5fa; outline-offset: 2px; }
+.q2-grade-btn + .q2-markpill { margin-left: 0; }
 .q2-q { margin: 0.9rem 0 0.25rem; font-size: 1rem; line-height: 1.62; color: #1f2937; }
 .q2-qzh { display: inline; font-size: 0.9rem; color: #8a919c; font-weight: 500; }
 .q2-src { margin: 0 0 0.9rem; font-size: 0.79rem; color: #a2a9b4; line-height: 1.6; font-weight: 400; }

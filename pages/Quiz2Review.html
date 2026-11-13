@@ -284,6 +284,7 @@
       html.push('    <span class="q2-num">' + n + '</span>');
       html.push('    <span class="q2-type">ESSAY</span>');
       html.push('    <span class="q2-badge ungraded" data-badge>NOT GRADED</span>');
+      html.push('    <button class="q2-grade-btn" type="button" data-grade aria-label="Grade question ' + n + '">Grade / 评分</button>');
       html.push('    <span class="q2-markpill" data-pill>0 / ' + m + '</span>');
       html.push('  </div>');
       html.push('  <p class="q2-q">' + esc(q.q) + ' <span class="q2-qzh">&middot; ' + esc(q.zh) + '</span></p>');
@@ -305,11 +306,31 @@
     var attemptEl = document.getElementById("q2Attempt");
     var overallBody = document.getElementById("q2OverallBody");
 
-    function setInitialTotals() {
-      finalEl.textContent = "0 / " + TOTAL;
-      totalPill.textContent = "0 / " + TOTAL;
+    /* One score per card, so a single question can be graded on its own. */
+    function syncTotals(submitted) {
+      var total = 0, graded = 0;
+      cards.forEach(function (c) {
+        total += +(c.getAttribute("data-score") || 0);
+        if (c.getAttribute("data-graded") === "1") graded++;
+      });
+      var label = total + " / " + TOTAL;
+      finalEl.textContent = label;
+      totalPill.textContent = label;
+      totalEl.textContent = graded ? label + " marks" : "";
+      attemptEl.textContent = submitted ? "ATTEMPT 1 (SUBMITTED)"
+        : (graded ? "ATTEMPT 1 (PARTIALLY GRADED)" : "ATTEMPT 1 (NOT SUBMITTED)");
+      if (submitted || graded) {
+        var pct = Math.round(total / TOTAL * 100);
+        overallBody.innerHTML = '<strong>' + label + ' marks (' + pct + '%).</strong> ' +
+          (submitted
+            ? 'Each point is awarded when the answer contains one or two of its key words. Review the feedback under each question for the model answers.<br>每个得分点只需答出 1–2 个关键词即可得分；请查看每题下方的反馈与参考答案。'
+            : 'Graded ' + graded + ' of ' + QUIZ.length + ' questions so far. Use the button beside any question to grade it, or Submit quiz to grade all of them.<br>已评分 ' + graded + ' / ' + QUIZ.length + ' 题；可点每题旁的评分按钮，或交卷评分全部题目。');
+      } else {
+        overallBody.textContent = "Submit the quiz to see your overall score and feedback.";
+      }
+      return total;
     }
-    setInitialTotals();
+    syncTotals(false);
 
     function gradeCard(card, showFeedback) {
       var qi = +card.getAttribute("data-q");
@@ -349,18 +370,19 @@
     }
 
     function submit(showFeedback) {
-      var total = 0;
-      cards.forEach(function (c) { total += gradeCard(c, showFeedback); });
-      finalEl.textContent = total + " / " + TOTAL;
-      totalPill.textContent = total + " / " + TOTAL;
-      totalEl.textContent = total + " / " + TOTAL + " marks";
-      attemptEl.textContent = "ATTEMPT 1 (SUBMITTED)";
-      var pct = Math.round(total / TOTAL * 100);
-      overallBody.innerHTML = '<strong>' + total + ' / ' + TOTAL + ' marks (' + pct + '%).</strong> ' +
-        'Each point is awarded when the answer contains one or two of its key words. ' +
-        'Review the feedback under each question for the model answers.<br>' +
-        '每个得分点只需答出 1–2 个关键词即可得分；请查看每题下方的反馈与参考答案。';
-      return total;
+      cards.forEach(function (c) {
+        var score = gradeCard(c, showFeedback);
+        c.setAttribute("data-score", score);
+        c.setAttribute("data-graded", "1");
+      });
+      return syncTotals(true);
+    }
+
+    function gradeOne(card) {
+      var score = gradeCard(card, true);
+      card.setAttribute("data-score", score);
+      card.setAttribute("data-graded", "1");
+      syncTotals(false);
     }
 
     document.getElementById("q2Submit").addEventListener("click", function () { submit(true); });
@@ -379,20 +401,23 @@
         badge.textContent = "NOT GRADED";
         card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
         card.querySelector("[data-feedback]").hidden = true;
+        card.setAttribute("data-score", "0");
+        card.setAttribute("data-graded", "0");
       });
-      setInitialTotals();
-      totalEl.textContent = "";
-      attemptEl.textContent = "ATTEMPT 1 (NOT SUBMITTED)";
-      overallBody.textContent = "Submit the quiz to see your overall score and feedback.";
+      syncTotals(false);
     });
     cards.forEach(function (card) {
+      card.querySelector("[data-grade]").addEventListener("click", function () { gradeOne(card); });
       var ta = card.querySelector("[data-answer]");
       ta.addEventListener("input", function () {
+        card.setAttribute("data-score", "0");
+        card.setAttribute("data-graded", "0");
         var badge = card.querySelector("[data-badge]");
         badge.className = "q2-badge ungraded";
         badge.textContent = "NOT GRADED";
         card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
         card.querySelector("[data-feedback]").hidden = true;
+        syncTotals(false);
       });
       ta.addEventListener("keydown", function (e) {
         if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); submit(true); }
