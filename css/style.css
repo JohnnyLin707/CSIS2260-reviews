@@ -1981,3 +1981,63 @@ body.q2-body {
   .q2-attempt { display: none; }
   .q2-total { margin-left: 0; width: 100%; text-align: right; }
 }
+
+/* =====================================================================
+   SLIDE BOARD — chapter4 / chapter7 / chapter8 slide pages.
+   The scan stays in the left half, the verbatim explanation in the right
+   half. Question / answer sections below the board keep their original
+   full-width layout and typography.
+   ===================================================================== */
+.slide-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin: 1.4rem 0 1.9rem;
+}
+.slide-board-img,
+.slide-board-text { min-width: 0; }
+.slide-board-img {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--stroke);
+  background: rgba(6, 10, 22, 0.42);
+}
+.slide-board-text {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--stroke-soft);
+  background: rgba(6, 10, 22, 0.2);
+}
+.slide-board-img .slide-figure { margin: 0; box-shadow: none; }
+.slide-board-text .panel { margin: 0; padding: 1.05rem 1.1rem; }
+.slide-board-text .panel h2 { margin-bottom: 0.8rem; }
+
+/* Chapter 7 / 8 bilingual text: narrow column -> EN/ZH paired rows. */
+.slide-board-text .bil-grid { grid-template-columns: minmax(0, 1fr); margin-top: 0.6rem; }
+.slide-board-text .bil-head { display: none; }
+.slide-board-text .bil-cell:nth-child(odd) { border-right: 0; }
+.slide-board-text .bil-cell { padding: 0.42rem 0.6rem; }
+.slide-board-text .bil-cell.bil-en { border-bottom: 0; padding-bottom: 0.08rem; font-weight: 600; }
+.slide-board-text .bil-cell.bil-zh {
+  padding-top: 0.08rem; border-bottom: 1px solid var(--stroke-soft);
+  background: rgba(94, 234, 212, 0.05);
+}
+.slide-board-text .bil-grid > .bil-cell:last-child { border-bottom: 0; }
+
+/* Tablet: keep the two panels, tighten the spacing. */
+@media (max-width: 1100px) and (min-width: 901px) {
+  .slide-board { gap: 0.8rem; }
+  .slide-board-text .panel { padding: 0.9rem; }
+}
+
+/* Phone / small tablet: stack the boards, image first. */
+@media (max-width: 900px) {
+  .slide-board { grid-template-columns: minmax(0, 1fr); gap: 0.85rem; }
+}
+@media (max-width: 640px) {
+  .slide-board { margin: 1rem 0 1.4rem; }
+  .slide-board-img { padding: 0.35rem; }
+  .slide-board-text { padding: 0.35rem; }
+  .slide-board-text .panel { padding: 0.9rem; }
+}
