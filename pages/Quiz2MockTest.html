@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
   <title>Quiz 2 &middot; Mock Test | CSIS2260 Review</title>
-  <meta name="description" content="Quiz 2 essay practice for Chapter 4 (pp.16-22), Chapter 7 and Chapter 8: one big answer box per question, keyword-based marking.">
+  <meta name="description" content="Quiz 2 mock test for the new scope: Chapter 7 (all 40 slides) and Chapter 8 slides 1-29, with one big answer box per question and keyword-based marking.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="q2-body">
@@ -30,11 +30,11 @@
 
   <main class="q2-wrap">
     <div class="q2-banner">
-      Scope: <strong>Ch04v2a.pdf pp.16&ndash;22</strong> (types of threads, ULT / KLT, summary),
-      <strong>Ch07v2a.pdf</strong> (all 40 slides) and <strong>Ch08v2a.pdf</strong> (all 82 slides).
+      Scope: <strong>Ch07v2a.pdf</strong> (all 40 slides) and
+      <strong>Ch08v2a.pdf pp.1&ndash;29</strong> (hardware and control structures, paging, segmentation, page size).
       Write your answer in one box per question. Each scoring point is awarded as soon as your
       answer contains <strong>one or two key words</strong> from that point &mdash; English or 中文.
-      <br>考试范围：第 4 章 16–22 页、第 7 章与第 8 章全部内容。每题一个大输入框；每个要点只要答出
+      <br>考试范围：第 7 章全部内容、第 8 章 1–29 页。每题一个大输入框；每个要点只要答出
       <strong>1–2 个关键词</strong>即可得分（英文或中文均可）。
     </div>
 
@@ -69,64 +69,6 @@
     "use strict";
 
     var QUIZ = [
-      {
-        q: "Name the THREE thread approaches illustrated in Figure 4.5 and briefly explain where thread management is done in each.",
-        zh: "写出图 4.5 中的三种线程方式，并简要说明每种方式的线程管理在哪里完成。",
-        src: "Ch04v2a.pdf &middot; p.16 Types of Threads; p.17 ULTs; p.20 KLTs",
-        links: [["p.16", "chapter4/page-16.html"], ["p.17", "chapter4/page-17.html"], ["p.20", "chapter4/page-20.html"]],
-        pts: [
-          ["user-level|ULT", "用户级线程|用户级", "Pure user-level (ULT): all thread management is done by the application through a threads library.", "纯用户级线程（ULT）：所有线程管理由应用程序通过线程库完成。"],
-          ["kernel-level|KLT", "内核级线程|内核级", "Pure kernel-level (KLT): thread management is done by the kernel.", "纯内核级线程（KLT）：线程管理由内核完成。"],
-          ["combined|hybrid", "组合方式|混合", "Combined approach: user-level threads are mapped onto kernel-level threads.", "组合方式：把用户级线程映射到内核级线程上。"]
-        ]
-      },
-      {
-        q: "Explain how a User-Level Thread (ULT) is managed, and give THREE advantages of ULTs.",
-        zh: "说明用户级线程（ULT）是如何管理的，并给出 ULT 的三个优点。",
-        src: "Ch04v2a.pdf &middot; p.17 User-Level Threads; p.18 Advantages of ULTs",
-        links: [["p.17", "chapter4/page-17.html"], ["p.18", "chapter4/page-18.html"]],
-        pts: [
-          ["threads library|application", "线程库|应用程序", "A threads library creates, destroys and schedules the threads; the kernel is not aware that threads exist.", "线程库负责创建、销毁与调度线程，内核并不知道线程的存在。"],
-          ["process as a unit|kernel is not aware", "以进程为单位|内核不知道", "The kernel schedules the process as a single unit.", "内核只以进程为单位进行调度。"],
-          ["kernel mode|privileges", "内核态|特权", "Thread switching does not require kernel mode privileges, so it is fast.", "线程切换不需要内核态特权，因此很快。"],
-          ["application specific|any OS", "按应用定制|任何操作系统", "Scheduling can be application specific, and ULTs can run on any operating system.", "调度可以按应用定制，ULT 可以运行在任何操作系统上。"]
-        ]
-      },
-      {
-        q: "Give THREE disadvantages of a pure ULT strategy.",
-        zh: "写出纯 ULT 策略的三个缺点。",
-        src: "Ch04v2a.pdf &middot; p.19 Disadvantages of ULTs",
-        links: [["p.19", "chapter4/page-19.html"]],
-        pts: [
-          ["system call|blocking", "系统调用|阻塞", "Many system calls are blocking: when one ULT executes a system call, all threads of that process are blocked.", "许多系统调用是阻塞的：一个 ULT 执行系统调用时，进程内所有线程都被阻塞。"],
-          ["multiprocessing|multiple processors", "多处理器|多处理", "A pure ULT strategy cannot take advantage of multiprocessing.", "纯 ULT 策略无法利用多处理器。"],
-          ["one processor|one thread at a time", "一个处理器|一个线程", "The kernel assigns one process to only one processor at a time, so only one thread of the process can execute at a time.", "内核一次只把一个进程分配给一个处理器，因此同一时刻该进程只有一个线程能执行。"]
-        ]
-      },
-      {
-        q: "Explain how a Kernel-Level Thread (KLT) is managed and give THREE advantages of KLTs.",
-        zh: "说明内核级线程（KLT）是如何管理的，并给出 KLT 的三个优点。",
-        src: "Ch04v2a.pdf &middot; p.20 Kernel-Level Threads; p.21 Advantages of KLTs",
-        links: [["p.20", "chapter4/page-20.html"], ["p.21", "chapter4/page-21.html"]],
-        pts: [
-          ["thread management|kernel", "线程管理|内核", "All thread management is done by the kernel; Windows is an example of this approach.", "所有线程管理都由内核完成，Windows 就是这种方式的例子。"],
-          ["API|application level", "应用程序接口|应用层", "There is no thread management code at application level, only an API to the kernel thread facility.", "应用层没有线程管理代码，只有到内核线程机制的 API。"],
-          ["multiple processors|simultaneously", "多个处理器|同时", "The kernel can simultaneously schedule multiple threads of the same process on multiple processors.", "内核可以把同一进程的多个线程同时调度到多个处理器上。"],
-          ["another thread|kernel routines", "另一个线程|内核例程", "If one thread blocks, the kernel can schedule another thread of the same process; kernel routines themselves can be multithreaded.", "某线程阻塞时，内核可调度同进程的另一线程；内核例程本身也可多线程化。"]
-        ]
-      },
-      {
-        q: "List the main topics covered in the Chapter 4 summary.",
-        zh: "列出第 4 章小结中涵盖的主要内容。",
-        src: "Ch04v2a.pdf &middot; p.22 Summary",
-        links: [["p.22", "chapter4/page-22.html"]],
-        pts: [
-          ["processes and threads|process", "进程与线程|进程", "Processes and threads: the process is the unit of resource ownership, the thread is the unit of dispatching.", "进程与线程：进程是资源拥有的单位，线程是调度的单位。"],
-          ["multithreading", "多线程", "Multithreading: multiple concurrent paths of execution within a single process.", "多线程：一个进程内存在多条并发执行路径。"],
-          ["thread functionality|functionality", "线程功能|功能", "Thread functionality: thread states and the spawn, block, unblock and finish operations.", "线程功能：线程状态以及 spawn、block、unblock、finish 操作。"],
-          ["user level|kernel level", "用户级|内核级", "Types of threads: user-level and kernel-level threads (ULT vs KLT).", "线程类型：用户级线程与内核级线程（ULT 与 KLT）。"]
-        ]
-      },
       {
         q: "Define the three memory management terms: frame, page and segment.",
         zh: "定义三个内存管理术语：页框（frame）、页（page）和段（segment）。",
@@ -212,45 +154,65 @@
         ]
       },
       {
-        q: "What factors affect the choice of page size, and how are paging and segmentation combined?",
-        zh: "哪些因素影响页大小的选择？分页与分段如何结合？",
-        src: "Ch08v2a.pdf &middot; p.26 Page Size; p.27 Page Fault Rate; p.34 Combined Addressing; p.36 Protection and Sharing",
-        links: [["p.26", "chapter8/page-26.html"], ["p.34", "chapter8/page-34.html"], ["p.36", "chapter8/page-36.html"]],
+        q: "Define the virtual memory terms in Table 8.1, and explain how real memory and virtual memory differ.",
+        zh: "定义表 8.1 中的虚拟内存术语，并说明实存与虚存的区别。",
+        src: "Ch08v2a.pdf &middot; p.3 Table 8.1 Terminology; p.7 Real and Virtual Memory",
+        links: [["p.3", "chapter8/page-03.html"], ["p.7", "chapter8/page-07.html"]],
+        pts: [
+          ["virtual memory|virtual address", "虚拟内存|虚拟地址", "Virtual memory and virtual address: secondary memory addressed as though it were part of main memory; the address assigned to a location in virtual memory.", "虚拟内存／虚拟地址：把辅存当作主存的一部分来编址；虚拟内存中某位置的地址。"],
+          ["virtual address space|address space", "虚拟地址空间|地址空间", "Virtual address space: the virtual storage assigned to a process; address space: the range of memory addresses available to a process.", "虚拟地址空间：分配给进程的虚拟存储；地址空间：进程可用的内存地址范围。"],
+          ["real address", "物理地址", "Real address: the address of a storage location in main memory.", "物理地址：主存中某个存储位置的地址。"],
+          ["larger than real memory|address space seen", "大于实存|进程所见地址空间", "Real memory is the physical main memory; virtual memory is the address space seen by the process, and a process may be larger than all of real memory.", "实存是物理主存；虚存是进程所见的地址空间，进程可以比实存大。"]
+        ]
+      },
+      {
+        q: "Explain what happens when a process executes with only part of it in main memory, and what this implies for multiprogramming.",
+        zh: "说明进程只有部分内容在主存中时的执行过程，及其对多道程序的影响。",
+        src: "Ch08v2a.pdf &middot; p.4 Execution of a Process; p.5 continued; p.6 Implications",
+        links: [["p.4", "chapter8/page-04.html"], ["p.5", "chapter8/page-05.html"], ["p.6", "chapter8/page-06.html"]],
+        pts: [
+          ["resident set|portion of process", "驻留集|部分", "The OS brings a few pieces of the program into main memory; the resident set is the portion of the process that is in main memory.", "操作系统只把程序的几块装入主存；驻留集就是进程在主存中的部分。"],
+          ["disk I/O read request|another process", "磁盘读请求|另一进程", "The piece containing the referenced logical address is brought in: the OS issues a disk I/O read request and dispatches another process while the I/O takes place.", "装入包含被引用逻辑地址的块：操作系统发出磁盘读请求，并在 IO 期间调度另一个进程运行。"],
+          ["more processes|processor utilization", "更多进程|处理器利用率", "More processes can be resident in main memory at the same time, so processor utilization improves because at least one process is more likely to be ready.", "主存可同时驻留更多进程，至少有一个进程就绪的概率提高，处理器利用率随之提升。"]
+        ]
+      },
+      {
+        q: "How large is the virtual address space, and what happens when a page fault occurs?",
+        zh: "虚拟地址空间有多大？发生缺页时会怎样？",
+        src: "Ch08v2a.pdf &middot; p.15 Virtual Address Space; p.16 Paging Mechanism",
+        links: [["p.15", "chapter8/page-15.html"], ["p.16", "chapter8/page-16.html"]],
+        pts: [
+          ["4-Gbyte|32-bit", "4GB|32 位", "A 32-bit address gives a 4-Gbyte virtual address space.", "32 位地址给出 4GB 的虚拟地址空间。"],
+          ["only part|mapped into main memory", "只有部分|映射", "Only part of that space is mapped into main memory at any time; the rest resides in secondary memory.", "任一时刻只有部分空间映射进主存，其余在辅存中。"],
+          ["loads the required page|disk", "装入所需页|磁盘", "On a page fault the OS loads the required page from disk.", "缺页时操作系统从磁盘装入所需的页。"],
+          ["restarted|instruction", "重新执行|指令", "The instruction that caused the fault is then restarted.", "随后重新执行引发缺页的那条指令。"]
+        ]
+      },
+      {
+        q: "Describe the inverted page table entry and search, and the sequence of steps when a TLB miss occurs.",
+        zh: "描述倒排页表的表项与查找方式，以及 TLB 未命中时的处理步骤。",
+        src: "Ch08v2a.pdf &middot; p.18 IPT Entry; p.19 IPT Search; p.22 TLB Sequence",
+        links: [["p.18", "chapter8/page-18.html"], ["p.19", "chapter8/page-19.html"], ["p.22", "chapter8/page-22.html"]],
+        pts: [
+          ["process id|page number", "进程标识|页号", "Each inverted page table entry records the process id and page number occupying that frame.", "每个倒排页表项记录占用该页框的进程标识与页号。"],
+          ["hash|chain pointer", "哈希|链指针", "The table is searched by hashing the process identifier and page number; entries hold control bits and a chain pointer.", "通过哈希进程标识与页号查找；表项含控制位与链指针。"],
+          ["TLB updated|miss", "更新 TLB|未命中", "On a TLB miss the page table is accessed and the TLB is updated.", "TLB 未命中时访问页表并更新 TLB。"],
+          ["page fault|absent", "缺页处理|装入", "If the page is absent, a page fault handling routine loads it.", "若页不在主存，由缺页处理程序装入。"]
+        ]
+      },
+      {
+        q: "What factors affect the choice of page size, and how does the page fault rate vary with page size?",
+        zh: "哪些因素影响页大小的选择？缺页率如何随页大小变化？",
+        src: "Ch08v2a.pdf &middot; p.26 Page Size; p.27 Page Fault Rate; p.29 Page Size Trade-offs",
+        links: [["p.26", "chapter8/page-26.html"], ["p.27", "chapter8/page-27.html"], ["p.29", "chapter8/page-29.html"]],
         pts: [
           ["internal fragmentation|page table size", "内部碎片|页表大小", "Smaller pages reduce internal fragmentation but need larger page tables.", "较小的页能减少内部碎片，但需要更大的页表。"],
           ["page fault rate|page size", "缺页率|页大小", "A larger page size lowers the page fault rate at first, but beyond the optimum locality is lost and faults rise again.", "页增大初期会降低缺页率，但超过最优点后局部性减弱，缺页率反而上升。"],
-          ["segment number|page number", "段号|页号", "A combined address is divided into a segment number, a page number and an offset; the segment table points to a page table for that segment.", "组合地址分为段号、页号与偏移量；段表指向该段的页表。"],
-          ["protection|sharing", "保护|共享", "Protection and sharing are enforced through the page table and segment table entries.", "保护与共享通过页表项与段表项实现。"]
+          ["optimum|process locality", "最优页大小|局部性", "The optimum page size depends on the process locality.", "最优页大小取决于进程局部性。"],
         ]
       },
-      {
-        q: "Name and briefly explain the virtual memory policies and the basic page replacement algorithms.",
-        zh: "写出并简要说明虚拟内存的各项策略与基本页面置换算法。",
-        src: "Ch08v2a.pdf &middot; p.40 Fetch Policy; p.43 Placement Policy; p.44 Replacement Policy; p.48 Optimal; p.49 LRU; p.51 FIFO; p.53 Clock Policy",
-        links: [["p.40", "chapter8/page-40.html"], ["p.44", "chapter8/page-44.html"], ["p.48", "chapter8/page-48.html"], ["p.53", "chapter8/page-53.html"]],
-        pts: [
-          ["demand paging|prepaging", "请求分页|预调页", "Fetch policy decides when a page is loaded: demand paging loads it on first reference, prepaging loads pages in advance.", "调入策略决定何时取页：请求分页在首次引用时调入，预调页提前调入。"],
-          ["placement policy", "放置策略", "Placement policy decides where the incoming page is placed in main memory.", "放置策略决定调入的页放在主存的什么位置。"],
-          ["replacement policy|frame locking", "置换策略|页框锁定", "Replacement policy decides which page is removed; locked frames holding kernel or critical pages are excluded.", "置换策略决定换出哪一页；锁定的页框（内核或关键页）不参与置换。"],
-          ["optimal policy|optimal", "最佳置换|最佳策略", "The optimal policy replaces the page whose next reference is farthest in the future; it is a benchmark only.", "最佳策略置换下次引用最远的页，只能作为衡量基准。"],
-          ["LRU|FIFO", "最近最少使用|先进先出", "LRU replaces the least recently used page; FIFO replaces the page that has been in memory longest.", "LRU 置换最近最少使用的页；FIFO 置换在内存中停留最久的页。"],
-          ["clock policy|page buffering", "时钟策略|页缓冲", "The clock policy approximates LRU with a use bit; page buffering keeps a pool of free frames ready.", "时钟策略用使用位近似 LRU；页缓冲维护一个空闲页框池。"]
-        ]
-      },
-      {
-        q: "Explain resident set management, the working set, cleaning policy and load control, and name the OS examples covered in Chapter 8.",
-        zh: "说明驻留集管理、工作集、清除策略与负载控制，并写出第 8 章涉及的操作系统实例。",
-        src: "Ch08v2a.pdf &middot; p.59 Resident Set Management; p.67 Working Set; p.69 Cleaning Policy; p.70 Load Control; p.74 UNIX; p.78 Windows",
-        links: [["p.59", "chapter8/page-59.html"], ["p.67", "chapter8/page-67.html"], ["p.74", "chapter8/page-74.html"], ["p.78", "chapter8/page-78.html"]],
-        pts: [
-          ["resident set|allocation", "驻留集|分配", "Resident set management decides how many frames a process gets; allocation may be fixed or variable, with local or global replacement scope.", "驻留集管理决定进程获得多少页框；分配可固定或可变，置换范围可局部或全局。"],
-          ["working set|window", "工作集|窗口", "The working set is the set of pages referenced in the last window of references; its size changes as the window grows.", "工作集是最近一个引用窗口内访问过的页面集合；窗口变大时工作集也随之增大。"],
-          ["cleaning policy|precleaning", "清除策略|预清除", "Cleaning policy decides when modified pages are written back: demand cleaning writes at replacement time, precleaning writes in batches.", "清除策略决定何时回写已修改页：请求清除在置换时写回，预清除成批提前写回。"],
-          ["load control|thrashing", "负载控制|抖动", "Load control limits the degree of multiprogramming; when thrashing is detected the OS suspends processes.", "负载控制限制多道程序度；检测到抖动时操作系统会挂起进程。"],
-          ["UNIX|Windows", "UNIX|Windows", "UNIX uses a paging system plus a kernel memory allocator; Windows uses a virtual address map, paging and resident set management.", "UNIX 使用分页系统与内核内存分配器；Windows 使用虚拟地址映射、分页和驻留集管理。"]
-        ]
-      }
     ];
+
 
     /* ------------------------------------------------------------ helpers */
     function esc(s) {
@@ -390,7 +352,7 @@
     document.getElementById("q2Reveal").addEventListener("click", function () {
       cards.forEach(function (card) {
         var qi = +card.getAttribute("data-q");
-        card.querySelector("[data-answer]").value = QUIZ[qi].pts.map(function (p) { return p[2]; }).join(" ");
+        card.querySelector("[data-answer]").value = QUIZ[qi].pts.map(function (p) { return p[2] + ' ' + (p[3] || ''); }).join('\n');
       });
       submit(true);
     });
