@@ -1,0 +1,4224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Quiz 2 &middot; All Questions | CSIS2260 Review</title>
+  <meta name="description" content="Quiz 2 all-questions exam: every short-answer question from Chapter 4 pp.16-22 and all 122 slides of Chapters 7 and 8, with keyword-based marking.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="q2-body">
+
+  <div class="q2-topbar">
+    <a class="q2-close" href="../index.html" aria-label="Back to home" title="Back to home">&#10005;</a>
+    <span class="q2-title">Quiz 2 &middot; All Questions</span>
+  </div>
+
+  <div class="q2-gradestrip">
+    <div class="q2-gradestrip-inner">
+      <div class="q2-grade-left">
+        <div class="q2-grade-label">Final Grade <span class="q2-pill" id="q2Final">0 / 0</span></div>
+        <div class="q2-grade-sub">Keyword-based marking &middot; 关键词判分</div>
+      </div>
+      <div class="q2-grade-right">
+        <span class="q2-attempt" id="q2Attempt">ATTEMPT 1 (NOT SUBMITTED)</span>
+        <span class="q2-pill" id="q2TotalPill">0 / 0</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="q2-wrap">
+    <div class="q2-banner">
+      <strong>All Questions</strong> &mdash; every short-answer question from the course materials: <strong>Ch04v2a.pdf pp.16&ndash;22</strong> (11 questions), <strong>Ch07v2a.pdf</strong> (all 40 slides) and <strong>Ch08v2a.pdf</strong> (all 82 slides). Each question has one large answer box and its own <strong>Grade / 评分</strong> button. A scoring point is awarded as soon as your answer contains <strong>one or two key words</strong> (English or 中文); the line under each question names the source chapter and page.
+      <br><strong>全部题目</strong>：汇总第 4 章 16–22 页、第 7 章全部 40 页、第 8 章全部 82 页的所有简答题，共 133 题。每题一个大输入框与独立评分按钮；每个要点只需答出 <strong>1–2 个关键词</strong>即可得分，题目下方浅色小字标注教材章节页码。
+    </div>
+
+    <details class="q2-overall" id="q2Overall">
+      <summary>Overall Feedback &middot; 总体反馈</summary>
+      <div class="q2-overall-body" id="q2OverallBody">Submit the quiz to see your overall score and feedback.</div>
+    </details>
+
+    <div id="q2Mount"></div>
+
+    <div class="q2-submitbar">
+      <button class="q2-btn q2-btn-primary" id="q2Submit" type="button">Submit quiz / 交卷评分</button>
+      <button class="q2-btn" id="q2Reveal" type="button">Show model answers / 显示参考答案</button>
+      <button class="q2-btn" id="q2Reset" type="button">Reset / 重置</button>
+      <span class="q2-total" id="q2Total" role="status" aria-live="polite"></span>
+    </div>
+
+    <nav class="q2-bottom" aria-label="Page navigation">
+      <a href="../index.html">&#8592; Back to home</a>
+      <a href="Quiz2MockTest.html">Quiz 2 mock test &rarr;</a>
+      <a href="Fall2025MidtermReview.html">Fall 2025 midterm answers &#8594;</a>
+    </nav>
+  </main>
+
+  <script>
+  /* =====================================================================
+     Quiz 2 — essay questions with keyword-based marking.
+     Each point: [English key words (1-2), Chinese key words, model EN, model ZH]
+     A point scores when the answer contains ANY ONE of its key words.
+     ===================================================================== */
+  (function () {
+    "use strict";
+
+    var QUIZ = [
+  {
+    "q": "What are the two types of threads?",
+    "zh": "线程有哪两种类型？",
+    "src": "Ch04v2a.pdf &middot; p.16 &middot; Types of Threads",
+    "links": [
+      [
+        "p.16",
+        "chapter4/page-16.html"
+      ]
+    ],
+    "pts": [
+      [
+        "user-level|ULT",
+        "用户级线程|用户级",
+        "User-level threads (ULT).",
+        "用户级线程（ULT）。"
+      ],
+      [
+        "kernel-level|KLT",
+        "内核级线程|内核级",
+        "Kernel-level threads (KLT).",
+        "内核级线程（KLT）。"
+      ]
+    ]
+  },
+  {
+    "q": "Who manages user-level threads?",
+    "zh": "谁来管理用户级线程？",
+    "src": "Ch04v2a.pdf &middot; p.17 &middot; User-Level Threads (ULTs)",
+    "links": [
+      [
+        "p.17",
+        "chapter4/page-17.html"
+      ]
+    ],
+    "pts": [
+      [
+        "threads library|application",
+        "线程库|应用程序",
+        "The application, through a threads library; the kernel is not aware that threads exist.",
+        "由应用程序通过线程库管理；内核并不知道线程的存在。"
+      ]
+    ]
+  },
+  {
+    "q": "How does the kernel schedule a process that uses ULTs?",
+    "zh": "使用 ULT 的进程，内核如何调度？",
+    "src": "Ch04v2a.pdf &middot; p.17 &middot; User-Level Threads (ULTs)",
+    "links": [
+      [
+        "p.17",
+        "chapter4/page-17.html"
+      ]
+    ],
+    "pts": [
+      [
+        "single unit|process as a unit",
+        "以进程为单位|整体",
+        "It schedules the process as a single unit.",
+        "内核把它当成一个整体（以进程为单位）来调度。"
+      ]
+    ]
+  },
+  {
+    "q": "Give two advantages of user-level threads.",
+    "zh": "举出用户级线程的两个优点。",
+    "src": "Ch04v2a.pdf &middot; p.18 &middot; Advantages of ULTs",
+    "links": [
+      [
+        "p.18",
+        "chapter4/page-18.html"
+      ]
+    ],
+    "pts": [
+      [
+        "kernel mode|privileges",
+        "内核态|特权",
+        "Switching does not need kernel mode privileges.",
+        "线程切换不需要内核态特权。"
+      ],
+      [
+        "application specific|any OS",
+        "按应用定制|任何操作系统",
+        "Scheduling can be application specific and ULTs can run on any OS.",
+        "调度可按应用定制，ULT 可运行于任何操作系统。"
+      ]
+    ]
+  },
+  {
+    "q": "Why does a blocking system call hurt a process that uses ULTs?",
+    "zh": "为什么阻塞式系统调用会影响使用 ULT 的进程？",
+    "src": "Ch04v2a.pdf &middot; p.19 &middot; Disadvantages of ULTs",
+    "links": [
+      [
+        "p.19",
+        "chapter4/page-19.html"
+      ]
+    ],
+    "pts": [
+      [
+        "blocking|system call",
+        "阻塞|系统调用",
+        "When one thread makes a blocking system call, all threads of that process are blocked.",
+        "一个线程执行阻塞式系统调用时，进程内所有线程都被阻塞。"
+      ],
+      [
+        "kernel only sees|process",
+        "内核只看|进程",
+        "The kernel only sees the process, not the individual threads.",
+        "内核只看到进程，看不到单个线程。"
+      ]
+    ]
+  },
+  {
+    "q": "Can a pure ULT application use several processors?",
+    "zh": "纯 ULT 应用能利用多个处理器吗？",
+    "src": "Ch04v2a.pdf &middot; p.19 &middot; Disadvantages of ULTs",
+    "links": [
+      [
+        "p.19",
+        "chapter4/page-19.html"
+      ]
+    ],
+    "pts": [
+      [
+        "one processor|multiprocessing",
+        "一个处理器|不能",
+        "No: the kernel assigns one process to only one processor at a time.",
+        "不能：内核一次只把进程分配给一个处理器。"
+      ],
+      [
+        "one thread|at a time",
+        "一个线程|同一时刻",
+        "Only one thread of the process can execute at a time.",
+        "同一时刻该进程只有一个线程能执行。"
+      ]
+    ]
+  },
+  {
+    "q": "Who manages kernel-level threads?",
+    "zh": "谁来管理内核级线程？",
+    "src": "Ch04v2a.pdf &middot; p.20 &middot; Kernel-Level Threads (KLTs)",
+    "links": [
+      [
+        "p.20",
+        "chapter4/page-20.html"
+      ]
+    ],
+    "pts": [
+      [
+        "kernel|API",
+        "内核|接口",
+        "The kernel; the application only has an API to the kernel thread facility.",
+        "由内核管理；应用程序只有到内核线程机制的 API。"
+      ]
+    ]
+  },
+  {
+    "q": "Which operating system is an example of KLTs?",
+    "zh": "哪个操作系统是 KLT 的例子？",
+    "src": "Ch04v2a.pdf &middot; p.20 &middot; Kernel-Level Threads (KLTs)",
+    "links": [
+      [
+        "p.20",
+        "chapter4/page-20.html"
+      ]
+    ],
+    "pts": [
+      [
+        "Windows",
+        "Windows",
+        "Windows.",
+        "Windows。"
+      ]
+    ]
+  },
+  {
+    "q": "Give two advantages of kernel-level threads.",
+    "zh": "举出内核级线程的两个优点。",
+    "src": "Ch04v2a.pdf &middot; p.21 &middot; Advantages of KLTs",
+    "links": [
+      [
+        "p.21",
+        "chapter4/page-21.html"
+      ]
+    ],
+    "pts": [
+      [
+        "multiple processors|simultaneously",
+        "多个处理器|同时",
+        "Multiple threads of one process can run on multiple processors at the same time.",
+        "同一进程的多个线程可同时运行在多个处理器上。"
+      ],
+      [
+        "another thread|kernel routines",
+        "另一个线程|内核例程",
+        "Another thread can run when one is blocked, and kernel routines can be multithreaded.",
+        "某线程阻塞时可运行另一线程；内核例程也可多线程化。"
+      ]
+    ]
+  },
+  {
+    "q": "What is the last slide of Chapter 4 about?",
+    "zh": "第 4 章的最后一页是什么内容？",
+    "src": "Ch04v2a.pdf &middot; p.22 &middot; Summary",
+    "links": [
+      [
+        "p.22",
+        "chapter4/page-22.html"
+      ]
+    ],
+    "pts": [
+      [
+        "summary|multithreading",
+        "小结|多线程",
+        "The chapter summary: processes and threads, multithreading, thread functionality and types of threads.",
+        "本章小结：进程与线程、多线程、线程功能与线程类型。"
+      ]
+    ]
+  },
+  {
+    "q": "Which two thread types does Chapter 4 compare?",
+    "zh": "第 4 章比较了哪两种线程类型？",
+    "src": "Ch04v2a.pdf &middot; p.22 &middot; Summary",
+    "links": [
+      [
+        "p.22",
+        "chapter4/page-22.html"
+      ]
+    ],
+    "pts": [
+      [
+        "user-level|ULT",
+        "用户级线程|用户级",
+        "User-level threads (ULT).",
+        "用户级线程（ULT）。"
+      ],
+      [
+        "kernel-level|KLT",
+        "内核级线程|内核级",
+        "Kernel-level threads (KLT).",
+        "内核级线程（KLT）。"
+      ]
+    ]
+  },
+  {
+    "q": "What is the main subject of Chapter 7?",
+    "zh": "第7章的主要主题是什么？",
+    "src": "Ch07v2a.pdf &middot; p.1 &middot; Chapter 7: Memory Management",
+    "links": [
+      [
+        "p.1",
+        "chapter7/page-01.html"
+      ]
+    ],
+    "pts": [
+      [
+        "operating|internals|design",
+        "操作系统",
+        "Operating Systems: Internals and Design Principles, Ninth Edition, William Stallings.",
+        "操作系统：内部和设计原则，第九版，William Stallings。"
+      ],
+      [
+        "chapter|management",
+        "内存管理",
+        "Chapter 7: Memory Management.",
+        "第7章：内存管理。"
+      ]
+    ]
+  },
+  {
+    "q": "Define the terms frame, page and segment used in memory management.",
+    "zh": "定义内存管理中使用的页框、页面和段的术语。",
+    "src": "Ch07v2a.pdf &middot; p.2 &middot; Table 7.1 Memory Management Terms",
+    "links": [
+      [
+        "p.2",
+        "chapter7/page-02.html"
+      ]
+    ],
+    "pts": [
+      [
+        "frame|fixed-length|block",
+        "主存|页框",
+        "Frame: a fixed-length block of main memory.",
+        "页框：一个固定长度的主存块。"
+      ],
+      [
+        "fixed-length|block|resides",
+        "辅助存储器|页",
+        "Page: a fixed-length block of data that resides in secondary memory.",
+        "页面：位于辅助存储器中的固定长度的数据块。"
+      ],
+      [
+        "segment|variable-length|block",
+        "辅助存储器|段",
+        "Segment: a variable-length block of data in secondary memory.",
+        "段：二级存储器中的可变长数据块。"
+      ]
+    ]
+  },
+  {
+    "q": "List the requirements that memory management is intended to satisfy.",
+    "zh": "列出内存管理旨在满足的要求。",
+    "src": "Ch07v2a.pdf &middot; p.3 &middot; Memory Management Requirements",
+    "links": [
+      [
+        "p.3",
+        "chapter7/page-03.html"
+      ]
+    ],
+    "pts": [
+      [
+        "relocation",
+        "重定位",
+        "Relocation",
+        "重定位"
+      ],
+      [
+        "protection",
+        "保护",
+        "Protection",
+        "保护"
+      ],
+      [
+        "logical|organization",
+        "逻辑组织",
+        "Logical organization",
+        "逻辑组织"
+      ]
+    ]
+  },
+  {
+    "q": "Why is relocation necessary when a process is swapped back into main memory?",
+    "zh": "当进程被重新交换到主存时，为什么需要进行重定位？",
+    "src": "Ch07v2a.pdf &middot; p.4 &middot; Relocation",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ]
+    ],
+    "pts": [
+      [
+        "relocation",
+        "重定位",
+        "Relocation",
+        "重定位"
+      ],
+      [
+        "specifying|placed|region",
+        "",
+        "Specifying that a process must be placed in the same memory region when it is swapped back in would be limiting",
+        "指定进程在重新交换回内存时必须放在同一内存区域中，这将是限制性的"
+      ],
+      [
+        "relocate",
+        "",
+        "May need to relocate the process to a different area of memory",
+        "可能需要将进程重定位到内存的其他区域"
+      ]
+    ]
+  },
+  {
+    "q": "What addressing requirements does a process have during its lifetime?",
+    "zh": "一个进程在其生命周期中有什么访问要求？",
+    "src": "Ch07v2a.pdf &middot; p.5 &middot; Figure 7.1 Addressing Requirements for a Process",
+    "links": [
+      [
+        "p.5",
+        "chapter7/page-05.html"
+      ]
+    ],
+    "pts": [
+      [
+        "control|block|holds",
+        "进程控制块",
+        "A process control block holds the process control information.",
+        "过程控制块存储过程控制信息。"
+      ],
+      [
+        "program|entry|point",
+        "",
+        "The program has an entry point and a branch instruction.",
+        "该程序有一个入口点和一个分支指令。"
+      ],
+      [
+        "references|relative|addresses",
+        "相对地址",
+        "Memory references are relative addresses that must be translated at run time.",
+        "内存引用是必须在运行时翻译的相对地址。"
+      ]
+    ]
+  },
+  {
+    "q": "Why must memory references generated by a process be checked at run time?",
+    "zh": "为什么进程生成的内存引用必须在运行时进行检查？",
+    "src": "Ch07v2a.pdf &middot; p.6 &middot; Protection",
+    "links": [
+      [
+        "p.6",
+        "chapter7/page-06.html"
+      ]
+    ],
+    "pts": [
+      [
+        "protection",
+        "保护",
+        "Protection",
+        "保护"
+      ],
+      [
+        "location|program|unpredictable",
+        "主存",
+        "Location of a program in main memory is unpredictable",
+        "程序在主存中的位置是不可预测的"
+      ],
+      [
+        "mechanisms|support|relocation",
+        "重定位|保护",
+        "Mechanisms that support relocation also support protection",
+        "支持重定位的机制也支持保护"
+      ]
+    ]
+  },
+  {
+    "q": "Why is controlled sharing of main memory desirable?",
+    "zh": "为什么对主存的控制共享是可取的？",
+    "src": "Ch07v2a.pdf &middot; p.7 &middot; Sharing",
+    "links": [
+      [
+        "p.7",
+        "chapter7/page-07.html"
+      ]
+    ],
+    "pts": [
+      [
+        "advantageous|allow|access",
+        "",
+        "Advantageous to allow each process access to the same copy of the program rather than have their own separate copy",
+        "有利的是允许每个进程访问相同的程序副本，而不是拥有自己的单独副本"
+      ],
+      [
+        "management|allow|controlled",
+        "内存管理|保护",
+        "Memory management must allow controlled access to shared areas of memory without compromising protection",
+        "内存管理必须允许对共享内存区域进行受控访问，而不影响保护"
+      ],
+      [
+        "mechanisms|support|relocation",
+        "重定位|共享",
+        "Mechanisms used to support relocation support sharing capabilities",
+        "用于支持重定位支持共享功能的机制"
+      ]
+    ]
+  },
+  {
+    "q": "What is meant by the logical organization of memory?",
+    "zh": "什么是记忆的逻辑组织？",
+    "src": "Ch07v2a.pdf &middot; p.8 &middot; Logical Organization",
+    "links": [
+      [
+        "p.8",
+        "chapter7/page-08.html"
+      ]
+    ],
+    "pts": [
+      [
+        "logical|organization",
+        "逻辑组织",
+        "Logical Organization",
+        "逻辑组织"
+      ],
+      [
+        "modules|written|compiled",
+        "",
+        "Modules can be written and compiled independently",
+        "模块可以独立编写和编译"
+      ],
+      [
+        "degrees|protection|given",
+        "保护",
+        "Different degrees of protection given to modules (read-only, execute-only)",
+        "对模块给予不同程度的保护（只读、只执行）"
+      ]
+    ]
+  },
+  {
+    "q": "What is meant by the physical organization of memory?",
+    "zh": "什么是记忆的物理组织？",
+    "src": "Ch07v2a.pdf &middot; p.9 &middot; Physical Organization",
+    "links": [
+      [
+        "p.9",
+        "chapter7/page-09.html"
+      ]
+    ],
+    "pts": [
+      [
+        "secondary|two-level|hierarchy",
+        "主存|辅助存储器",
+        "Main memory and secondary memory form a two-level memory hierarchy.",
+        "主存和次要内存形成了一个双级内存层次结构。"
+      ],
+      [
+        "operating|moves|between",
+        "操作系统",
+        "The operating system moves data between the two levels.",
+        "操作系统在两个层之间移动数据。"
+      ],
+      [
+        "available|shared|among",
+        "主存|活动进程",
+        "Available main memory must be shared among active processes.",
+        "可用的主存必须在活跃进程之间共享。"
+      ]
+    ]
+  },
+  {
+    "q": "What is memory partitioning and why is it used?",
+    "zh": "什么是内存分区，为什么要使用它？",
+    "src": "Ch07v2a.pdf &middot; p.10 &middot; Memory Partitioning",
+    "links": [
+      [
+        "p.10",
+        "chapter7/page-10.html"
+      ]
+    ],
+    "pts": [
+      [
+        "partitioning",
+        "内存分区",
+        "Memory Partitioning",
+        "内存分区"
+      ],
+      [
+        "involves|virtual",
+        "虚拟内存",
+        "Involves virtual memory",
+        "涉及虚拟内存"
+      ],
+      [
+        "partitioning",
+        "",
+        "Partitioning",
+        "分割"
+      ]
+    ]
+  },
+  {
+    "q": "Which memory partitioning techniques are compared in Table 7.2?",
+    "zh": "表7.2中比较了哪些内存分区技术？",
+    "src": "Ch07v2a.pdf &middot; p.11 &middot; Table 7.2 Memory Partitioning",
+    "links": [
+      [
+        "p.11",
+        "chapter7/page-11.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fixed|partitioning|dynamic",
+        "分页|段|分段|固定分区",
+        "Fixed partitioning, dynamic partitioning, simple paging and simple segmentation are the main techniques.",
+        "固定分区、动态分区、简单分页和简单分区是主要技术。"
+      ],
+      [
+        "paging|segmentation|logical",
+        "逻辑地址|地址转换|分页|段",
+        "Paging and segmentation use logical addresses and address translation.",
+        "分页和分区使用逻辑地址和地址翻译。"
+      ],
+      [
+        "technique|differs|fragmentation",
+        "地址空间",
+        "Each technique differs in fragmentation and in the size of the address space.",
+        "每种技术在碎片化和地址空间大小上都不同。"
+      ]
+    ]
+  },
+  {
+    "q": "How are processes assigned to memory under fixed partitioning?",
+    "zh": "在固定分区下，进程是如何分配到内存的？",
+    "src": "Ch07v2a.pdf &middot; p.12 &middot; Fixed Partitioning",
+    "links": [
+      [
+        "p.12",
+        "chapter7/page-12.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fixed|partitioning|operating",
+        "固定分区|操作系统",
+        "Fixed Partitioning Operating System",
+        "固定的分区操作系统"
+      ],
+      [
+        "equal-size|partitions",
+        "",
+        "Equal-size partitions",
+        "大小相等的分区"
+      ],
+      [
+        "operating",
+        "操作系统",
+        "The operating system can swap",
+        "操作系统可以交换"
+      ]
+    ]
+  },
+  {
+    "q": "What are the disadvantages of fixed-size partitions?",
+    "zh": "固定大小分区有什么缺点？",
+    "src": "Ch07v2a.pdf &middot; p.13 &middot; Fixed Partitioning: Disadvantages",
+    "links": [
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ]
+    ],
+    "pts": [
+      [
+        "disadvantages",
+        "",
+        "Disadvantages",
+        "缺点"
+      ],
+      [
+        "program|partition",
+        "",
+        "A program may be too big to fit in a partition",
+        "一个程序可能太大，无法放入分区中"
+      ],
+      [
+        "utilization|inefficient",
+        "主存",
+        "Main memory utilization is inefficient",
+        "主存利用率不高效"
+      ]
+    ]
+  },
+  {
+    "q": "How do unequal-size partitions improve on equal-size fixed partitions?",
+    "zh": "大小不等的分区如何优于大小相等的固定分区？",
+    "src": "Ch07v2a.pdf &middot; p.14 &middot; Unequal Size Partitions",
+    "links": [
+      [
+        "p.14",
+        "chapter7/page-14.html"
+      ]
+    ],
+    "pts": [
+      [
+        "unequal|partitions",
+        "",
+        "Unequal Size Partitions",
+        "大小不等的分区"
+      ],
+      [
+        "programs",
+        "",
+        "programs up to 16M can be",
+        "高达16M的程序可以是"
+      ],
+      [
+        "accommodated|without|overlays",
+        "",
+        "6M accommodated without overlays",
+        "6M不带叠加物容纳"
+      ]
+    ]
+  },
+  {
+    "q": "What two process-queue strategies can be used with fixed partitioning?",
+    "zh": "在固定分区的情况下，可以使用哪些两种进程队列策略？",
+    "src": "Ch07v2a.pdf &middot; p.15 &middot; Figure 7.3 Memory Assignment for Fixed Partitioning",
+    "links": [
+      [
+        "p.15",
+        "chapter7/page-15.html"
+      ]
+    ],
+    "pts": [
+      [
+        "operating",
+        "操作系统",
+        "Operating Operating System System New New Processes Processes",
+        "操作操作系统系统新新进程进程"
+      ],
+      [
+        "queue|partition|single",
+        "固定分区",
+        "→ (a) One process queue per partition (b) Single queue Figure 7.3 Memory Assignment for Fixed Partitioning",
+        "→（a）每个分区有一个进程队列（b）单个队列图7.3固定分区内存分配"
+      ]
+    ]
+  },
+  {
+    "q": "What disadvantages remain with unequal-size partitions?",
+    "zh": "大小不等的分区还存在哪些缺点？",
+    "src": "Ch07v2a.pdf &middot; p.16 &middot; Unequal Size Partitions: Disadvantages",
+    "links": [
+      [
+        "p.16",
+        "chapter7/page-16.html"
+      ]
+    ],
+    "pts": [
+      [
+        "disadvantages",
+        "",
+        "Disadvantages",
+        "缺点"
+      ],
+      [
+        "number|partitions|specified",
+        "活动进程",
+        "The number of partitions specified at system generation time limits the number of active processes in the system",
+        "系统生成时指定的分割槽数量限制了系统中活跃进程的数量"
+      ],
+      [
+        "small|utilize|partition",
+        "",
+        "Small jobs will not utilize partition space efficiently",
+        "小型任务不会有效地利用分区空间"
+      ]
+    ]
+  },
+  {
+    "q": "How does dynamic partitioning differ from fixed partitioning?",
+    "zh": "动态分区与固定分区有什么不同？",
+    "src": "Ch07v2a.pdf &middot; p.17 &middot; Dynamic Partitioning",
+    "links": [
+      [
+        "p.17",
+        "chapter7/page-17.html"
+      ]
+    ],
+    "pts": [
+      [
+        "dynamic|partitioning",
+        "动态分区",
+        "Dynamic Partitioning",
+        "动态分区"
+      ],
+      [
+        "partitions|variable|length",
+        "",
+        "Partitions are of variable length and number",
+        "分区长度和数量是可变的"
+      ],
+      [
+        "allocated|exactly|requires",
+        "",
+        "Process is allocated exactly as much memory as it requires",
+        "进程的内存分配量完全根据其所需的内存量来确定"
+      ]
+    ]
+  },
+  {
+    "q": "What happens to main memory as dynamic partitioning proceeds?",
+    "zh": "随着动态分区进行的进程，主存会发生什么变化？",
+    "src": "Ch07v2a.pdf &middot; p.18 &middot; Figure 7.4 The Effect of Dynamic Partitioning",
+    "links": [
+      [
+        "p.18",
+        "chapter7/page-18.html"
+      ]
+    ],
+    "pts": [
+      [
+        "dynamic|partitioning|creates",
+        "动态分区",
+        "Dynamic partitioning creates holes of decreasing size as processes are loaded and removed.",
+        "动态分区在加载和移除进程时会创建越来越小的孔洞。"
+      ],
+      [
+        "external|fragmentation|accumulates",
+        "外部碎片",
+        "External fragmentation accumulates over time.",
+        "外部碎片随着时间的推移而积累。"
+      ],
+      [
+        "compaction|shifts|large",
+        "紧凑",
+        "Compaction shifts processes to make one large free block.",
+        "压缩将切换过程转移到一个大的空块。"
+      ]
+    ]
+  },
+  {
+    "q": "What is external fragmentation and how does compaction help?",
+    "zh": "什么是外部碎片，压缩是如何帮助的？",
+    "src": "Ch07v2a.pdf &middot; p.19 &middot; Dynamic Partitioning (continued)",
+    "links": [
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "pts": [
+      [
+        "dynamic|partitioning|external",
+        "动态分区|外部碎片",
+        "Dynamic Partitioning External Fragmentation",
+        "动态分区外部碎片"
+      ],
+      [
+        "becomes|fragmented",
+        "",
+        "Memory becomes more and more fragmented",
+        "记忆变得越来越碎片化"
+      ],
+      [
+        "utilization|declines|compaction",
+        "紧凑",
+        "Memory utilization declines Compaction",
+        "内存利用率下降，压缩"
+      ]
+    ]
+  },
+  {
+    "q": "Name the placement algorithms used with dynamic partitioning.",
+    "zh": "命名使用动态分区时使用的放置算法。",
+    "src": "Ch07v2a.pdf &middot; p.20 &middot; Placement Algorithms",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ]
+    ],
+    "pts": [
+      [
+        "first-fit|chooses|first",
+        "首次适配",
+        "First-fit chooses the first block that is large enough.",
+        "首次适配选择第一个足够大的块。"
+      ],
+      [
+        "best-fit|chooses|smallest",
+        "最佳适配",
+        "Best-fit chooses the smallest block that is large enough.",
+        "最佳匹配选择足够大的最小块。"
+      ],
+      [
+        "next-fit|starts|searching",
+        "邻近适配",
+        "Next-fit starts searching from the last allocation point.",
+        "邻近适配的开始从最后一个分配点开始搜索。"
+      ]
+    ]
+  },
+  {
+    "q": "How do first-fit, best-fit and next-fit choose a free block?",
+    "zh": "首次适配、最佳适配和邻近适配如何选择一个空闲块？",
+    "src": "Ch07v2a.pdf &middot; p.21 &middot; Figure 7.5 Example Memory Configuration before and after Allocation of 16-Mbyte Block",
+    "links": [
+      [
+        "p.21",
+        "chapter7/page-21.html"
+      ]
+    ],
+    "pts": [
+      [
+        "first|places|mbyte",
+        "",
+        "First Fit places the 16-Mbyte block in the first hole that is large enough.",
+        "First Fit将16兆字节的块放置在第一个足够大的孔中。"
+      ],
+      [
+        "smallest|large|enough",
+        "",
+        "Best Fit uses the smallest hole that is large enough.",
+        "最佳贴合使用足够大的最小孔。"
+      ],
+      [
+        "starts|searching|location",
+        "",
+        "Next Fit starts searching from the location of the last allocation.",
+        "Next Fit 从上次分配的位置开始搜索。"
+      ]
+    ]
+  },
+  {
+    "q": "What hardware support is needed to relocate a process at run time?",
+    "zh": "在运行时重新定位进程需要哪些硬件支持？",
+    "src": "Ch07v2a.pdf &middot; p.22 &middot; Relocation (continued)",
+    "links": [
+      [
+        "p.22",
+        "chapter7/page-22.html"
+      ]
+    ],
+    "pts": [
+      [
+        "relocation",
+        "重定位",
+        "Relocation",
+        "重定位"
+      ],
+      [
+        "fixed|partition|scheme",
+        "",
+        "When the fixed partition scheme (one process queue per partition) is used, we can expect a process will always be assigned to the same partition",
+        "当使用固定分区方案（每个分区一个进程队列）时，我们可以预期一个进程将始终被分配到同一分区"
+      ],
+      [
+        "simple|relocating|loader",
+        "",
+        "In that case, a simple relocating loader can be used",
+        "在这种情况下，可以使用简单的移位装载机"
+      ]
+    ]
+  },
+  {
+    "q": "What kinds of addresses appear in a program and in main memory?",
+    "zh": "程序和主存中会出现哪些类型的地址？",
+    "src": "Ch07v2a.pdf &middot; p.23 &middot; Addresses",
+    "links": [
+      [
+        "p.23",
+        "chapter7/page-23.html"
+      ]
+    ],
+    "pts": [
+      [
+        "addresses|logical",
+        "",
+        "Addresses Logical",
+        "逻辑地址"
+      ],
+      [
+        "reference|location|independent",
+        "",
+        "Reference to a memory location independent of the current assignment of data to memory",
+        "引用与当前将数据分配到内存的分配无关的内存位置"
+      ],
+      [
+        "translate|physical|address",
+        "物理地址",
+        "Need to translate into physical address before memory access can be achieved Relative",
+        "在实现内存访问之前，需要将其翻译成物理地址。"
+      ]
+    ]
+  },
+  {
+    "q": "What is address translation and when is it performed?",
+    "zh": "什么是地址翻译，什么时候执行？",
+    "src": "Ch07v2a.pdf &middot; p.24 &middot; Address Translation",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ]
+    ],
+    "pts": [
+      [
+        "address|translation",
+        "地址转换",
+        "Address Translation",
+        "地址转换"
+      ],
+      [
+        "programs|employ|relative",
+        "相对地址",
+        "For programs that employ relative addresses",
+        "对于使用相对地址的程序"
+      ],
+      [
+        "relative|address|encountered",
+        "相对地址",
+        "When a relative address is encountered",
+        "当遇到相对地址时"
+      ]
+    ]
+  },
+  {
+    "q": "Which processor registers support relocation in hardware?",
+    "zh": "哪些处理器注册表支持硬件中的移位？",
+    "src": "Ch07v2a.pdf &middot; p.25 &middot; Figure 7.8 Hardware Support for Relocation",
+    "links": [
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "pts": [
+      [
+        "relative|address|control",
+        "相对地址|进程控制块|基址寄存器|界限寄存器",
+        "Relative address Process Control Block Base Register - → Adder Program Absolute address Bounds Register J Comparator",
+        "相对地址 进程控制块基址寄存器 - → 加法器程序 绝对地址 范围寄存器 J 比较器"
+      ],
+      [
+        "interrupt|operating|stack",
+        "重定位|主存|操作系统",
+        "→ Data Interrupt to operating system Stack Process image in main memory 25 Figure 7.8 Hardware Support for Relocation",
+        "→数据中断到主存中的操作系统堆栈进程映像25图7.8重定位的硬件支持"
+      ]
+    ]
+  },
+  {
+    "q": "How does paging divide main memory and a process?",
+    "zh": "分页如何将主存和进程分开？",
+    "src": "Ch07v2a.pdf &middot; p.26 &middot; Paging",
+    "links": [
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ]
+    ],
+    "pts": [
+      [
+        "partition|equal|fixed-size",
+        "",
+        "Partition memory into equal fixed-size chunks that are relatively small",
+        "将内存划分为大小相等的固定大小块，这些块相对较小"
+      ],
+      [
+        "divided|small|fixed-size",
+        "页|页框",
+        "Process is also divided into small fixed-size chunks of the same size Frames Pages",
+        "进程还分为大小相同的固定大小块，即页框页"
+      ],
+      [
+        "chunks|available",
+        "",
+        "Chunks of a • Available process chunks of memory",
+        "块的•可用的进程块内存"
+      ]
+    ]
+  },
+  {
+    "q": "How are free frames assigned to the pages of a process?",
+    "zh": "如何将空闲页框分配给进程的页面？",
+    "src": "Ch07v2a.pdf &middot; p.27 &middot; Assignment of Process to Free Frames",
+    "links": [
+      [
+        "p.27",
+        "chapter7/page-27.html"
+      ]
+    ],
+    "pts": [
+      [
+        "frames",
+        "主存|页框",
+        "Free frames in main memory are kept in a list.",
+        "主存中的空页框被保存在一个列表中。"
+      ],
+      [
+        "operating|assigns|frame",
+        "页|页框|操作系统",
+        "The operating system assigns one frame to every page of the process.",
+        "操作系统为进程的每个页面分配一个页框。"
+      ],
+      [
+        "table|records|frame",
+        "页|页表|页框",
+        "The page table records which frame holds each page.",
+        "页面表记录了哪个页框包含每个页面。"
+      ]
+    ]
+  },
+  {
+    "q": "What information is kept in a page table?",
+    "zh": "页面表中存储哪些信息？",
+    "src": "Ch07v2a.pdf &middot; p.28 &middot; Page Table",
+    "links": [
+      [
+        "p.28",
+        "chapter7/page-28.html"
+      ]
+    ],
+    "pts": [
+      [
+        "maintained|operating",
+        "操作系统",
+        "Maintained by operating system for each process",
+        "由每个进程的操作系统维护"
+      ],
+      [
+        "contains|frame|location",
+        "页|页框",
+        "Contains the frame location for each page in the process",
+        "包含进程中每个页面的页框位置"
+      ],
+      [
+        "processor|produce|physical",
+        "物理地址",
+        "Used by processor to produce a physical address",
+        "由处理器用于生成物理地址"
+      ]
+    ]
+  },
+  {
+    "q": "Why must each process have its own page table?",
+    "zh": "为什么每个进程必须有自己的页表？",
+    "src": "Ch07v2a.pdf &middot; p.29 &middot; Page Tables for Multiple Processes",
+    "links": [
+      [
+        "p.29",
+        "chapter7/page-29.html"
+      ]
+    ],
+    "pts": [
+      [
+        "table",
+        "页|页表",
+        "Each process has its own page table.",
+        "每个进程都有自己的页表。"
+      ],
+      [
+        "table|entry|contains",
+        "页|页表|页表项|页框",
+        "A page table entry contains the frame number for that page.",
+        "页面表条目包含该页面的页框号。"
+      ],
+      [
+        "tables|point|shared",
+        "页|页表|页框",
+        "Page tables for different processes can point to shared frames.",
+        "不同进程的页表可以指向共享页框。"
+      ]
+    ]
+  },
+  {
+    "q": "What are logical addresses under partitioning, paging and segmentation?",
+    "zh": "在分区、分页和分段下，逻辑地址是什么？",
+    "src": "Ch07v2a.pdf &middot; p.30 &middot; Figure 7.11 Logical Addresses",
+    "links": [
+      [
+        "p.30",
+        "chapter7/page-30.html"
+      ]
+    ],
+    "pts": [
+      [
+        "relative|address|single",
+        "相对地址",
+        "A relative address is a single value with respect to the start of the program.",
+        "相对地址是与程序开始位置相关的单个值。"
+      ],
+      [
+        "logical|address|under",
+        "逻辑地址|页|页号|分页",
+        "A logical address under paging is a page number plus an offset.",
+        "分页下的逻辑地址是页码加上偏移量。"
+      ],
+      [
+        "logical|address|under",
+        "逻辑地址|段|分段|段号",
+        "A logical address under segmentation is a segment number plus an offset.",
+        "分段下的逻辑地址是段号加上偏移量。"
+      ]
+    ]
+  },
+  {
+    "q": "How is a logical address translated into a physical address under paging?",
+    "zh": "在分页下，逻辑地址如何翻译成物理地址？",
+    "src": "Ch07v2a.pdf &middot; p.31 &middot; Logical-to-Physical Address Translation - Paging",
+    "links": [
+      [
+        "p.31",
+        "chapter7/page-31.html"
+      ]
+    ],
+    "pts": [
+      [
+        "number|indexes|table",
+        "页|页表|页号|页框",
+        "The page number indexes the page table to obtain a frame number.",
+        "页码索引页表以获得页框号。"
+      ],
+      [
+        "frame|number|combined",
+        "页框|偏移量",
+        "The frame number is combined with the unchanged offset.",
+        "页框号与不变的偏移量相结合。"
+      ],
+      [
+        "result|physical|address",
+        "主存|物理地址",
+        "The result is the physical address in main memory.",
+        "结果是主存中的物理地址。"
+      ]
+    ]
+  },
+  {
+    "q": "How does segmentation differ from paging?",
+    "zh": "分区与分页有什么不同？",
+    "src": "Ch07v2a.pdf &middot; p.32 &middot; Segmentation",
+    "links": [
+      [
+        "p.32",
+        "chapter7/page-32.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segmentation",
+        "段|分段",
+        "Segmentation",
+        "分段"
+      ],
+      [
+        "length",
+        "",
+        "May vary in length",
+        "长度可能有所不同"
+      ],
+      [
+        "maximum|length",
+        "",
+        "There is a maximum length",
+        "有一个最大长度"
+      ]
+    ]
+  },
+  {
+    "q": "What are the advantages of segmentation?",
+    "zh": "细分有什么优势？",
+    "src": "Ch07v2a.pdf &middot; p.33 &middot; Segmentation (continued)",
+    "links": [
+      [
+        "p.33",
+        "chapter7/page-33.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segmentation",
+        "段|分段",
+        "Segmentation",
+        "分段"
+      ],
+      [
+        "usually|visible|programmer",
+        "",
+        "Usually visible to programmer",
+        "通常对程序员可见"
+      ],
+      [
+        "provided|convenience|organizing",
+        "",
+        "Provided as a convenience for organizing programs and data",
+        "提供以方便组织程序和数据"
+      ]
+    ]
+  },
+  {
+    "q": "How is a logical address translated under segmentation?",
+    "zh": "在分段下，逻辑地址是如何翻译的？",
+    "src": "Ch07v2a.pdf &middot; p.34 &middot; Address Translation - Segmentation",
+    "links": [
+      [
+        "p.34",
+        "chapter7/page-34.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segment|number|indexes",
+        "段|段表|段号",
+        "The segment number indexes the segment table.",
+        "段号索引段表。"
+      ],
+      [
+        "segment|table|entry",
+        "段|段表",
+        "The segment table entry gives the base address and length of the segment.",
+        "段表条目提供了段的基本地址和长度。"
+      ],
+      [
+        "offset|added|checked",
+        "偏移量",
+        "The offset is added to the base and checked against the length.",
+        "偏移量添加到基座上，并与长度进行检查。"
+      ]
+    ]
+  },
+  {
+    "q": "How are the segment number and offset encoded in the example?",
+    "zh": "示例中段号和偏移量是如何编码的？",
+    "src": "Ch07v2a.pdf &middot; p.35 &middot; Segmentation Address Translation Example",
+    "links": [
+      [
+        "p.35",
+        "chapter7/page-35.html"
+      ]
+    ],
+    "pts": [
+      [
+        "logical|addresses|contain",
+        "逻辑地址|段|段号|偏移量",
+        "Logical addresses contain a segment number field and an offset field.",
+        "逻辑地址包含一个段号字段和一个偏移量字段。"
+      ],
+      [
+        "segment|table|translates",
+        "段|段表|段号",
+        "The segment table translates the segment number into a base address.",
+        "段表将段号转换为基址。"
+      ],
+      [
+        "offset|physical|address",
+        "物理地址|偏移量",
+        "The sum of base and offset is the physical address.",
+        "基址和偏移量的和就是物理地址。"
+      ]
+    ]
+  },
+  {
+    "q": "What security issues are related to memory management?",
+    "zh": "哪些安全问题与内存管理有关？",
+    "src": "Ch07v2a.pdf &middot; p.36 &middot; Security Issues",
+    "links": [
+      [
+        "p.36",
+        "chapter7/page-36.html"
+      ]
+    ],
+    "pts": [
+      [
+        "security|issues|arise",
+        "",
+        "Security issues arise when a program can write outside its own memory area.",
+        "当程序能够在自己的内存区域之外写入数据时，就会出现安全问题。"
+      ],
+      [
+        "buffer|overflow|common",
+        "缓冲区溢出",
+        "Buffer overflow is the most common memory-related attack.",
+        "缓冲区溢位是最常见的内存相关攻击。"
+      ],
+      [
+        "operating|compiler|provide",
+        "操作系统",
+        "The operating system and compiler both provide defences.",
+        "操作系统和编译器都提供防御措施。"
+      ]
+    ]
+  },
+  {
+    "q": "What is a buffer overflow attack?",
+    "zh": "什么是缓冲区溢位攻击？",
+    "src": "Ch07v2a.pdf &middot; p.37 &middot; Buffer Overflow Attacks",
+    "links": [
+      [
+        "p.37",
+        "chapter7/page-37.html"
+      ]
+    ],
+    "pts": [
+      [
+        "buffer|overflow|attacks",
+        "缓冲区溢出",
+        "Buffer Overflow Attacks",
+        "缓冲区溢位攻击"
+      ],
+      [
+        "security|threat|related",
+        "内存管理",
+        "Security threat related to memory management",
+        "与内存管理相关的安全威胁"
+      ],
+      [
+        "known|buffer|overrun",
+        "",
+        "Also known as a buffer overrun",
+        "也被称为缓冲区溢位"
+      ]
+    ]
+  },
+  {
+    "q": "How can a buffer overflow overwrite a function return address?",
+    "zh": "缓冲区溢位如何可以覆盖函数返回地址？",
+    "src": "Ch07v2a.pdf &middot; p.38 &middot; Buffer Overflow Example",
+    "links": [
+      [
+        "p.38",
+        "chapter7/page-38.html"
+      ]
+    ],
+    "pts": [
+      [
+        "buffer|overflow|writes",
+        "缓冲区溢出",
+        "A buffer overflow writes past the end of a local array.",
+        "缓冲区溢位将数据写入到局部数组的末尾。"
+      ],
+      [
+        "overwritten|contain|function",
+        "",
+        "The overwritten area can contain the function return address.",
+        "被覆盖的区域可以包含函数返回地址。"
+      ],
+      [
+        "attacker|redirects|execution",
+        "",
+        "The attacker redirects execution to injected code.",
+        "攻击者将执行重定向到注入的代码。"
+      ]
+    ]
+  },
+  {
+    "q": "What are the two main categories of defences against buffer overflows?",
+    "zh": "防止缓冲区溢位的主要防御类别有哪些？",
+    "src": "Ch07v2a.pdf &middot; p.39 &middot; Defending Against Buffer Overflows",
+    "links": [
+      [
+        "p.39",
+        "chapter7/page-39.html"
+      ]
+    ],
+    "pts": [
+      [
+        "defending|against|buffer",
+        "缓冲区溢出",
+        "Defending Against Buffer Overflows",
+        "防御缓冲区溢位"
+      ],
+      [
+        "prevention",
+        "",
+        "Prevention",
+        "防止"
+      ],
+      [
+        "detecting|aborting",
+        "",
+        "Detecting and aborting",
+        "检测和终止"
+      ]
+    ]
+  },
+  {
+    "q": "Summarise the memory management mechanisms covered in Chapter 7.",
+    "zh": "总结第7章中涵盖的内存管理机制。",
+    "src": "Ch07v2a.pdf &middot; p.40 &middot; Summary",
+    "links": [
+      [
+        "p.40",
+        "chapter7/page-40.html"
+      ]
+    ],
+    "pts": [
+      [
+        "management",
+        "内存管理",
+        "Memory management",
+        "内存管理"
+      ],
+      [
+        "relocation",
+        "重定位",
+        "Relocation",
+        "重定位"
+      ],
+      [
+        "protection|partitioning",
+        "保护",
+        "Protection partitioning",
+        "保护分区"
+      ]
+    ]
+  },
+  {
+    "q": "What is the main subject of Chapter 8?",
+    "zh": "第8章的主要主题是什么？",
+    "src": "Ch08v2a.pdf &middot; p.1 &middot; Chapter 8: Virtual Memory",
+    "links": [
+      [
+        "p.1",
+        "chapter8/page-01.html"
+      ]
+    ],
+    "pts": [
+      [
+        "operating|internals|design",
+        "操作系统",
+        "Operating Systems: Internals and Design Principles, Ninth Edition, William Stallings.",
+        "操作系统：内部和设计原则，第九版，William Stallings。"
+      ],
+      [
+        "chapter|virtual",
+        "虚拟内存",
+        "Chapter 8: Virtual Memory.",
+        "第8章：虚拟内存。"
+      ]
+    ]
+  },
+  {
+    "q": "Which two characteristics are fundamental to virtual memory management?",
+    "zh": "哪两个特征是虚拟内存管理的基本特征？",
+    "src": "Ch08v2a.pdf &middot; p.2 &middot; Hardware and Control Structures",
+    "links": [
+      [
+        "p.2",
+        "chapter8/page-02.html"
+      ]
+    ],
+    "pts": [
+      [
+        "characteristics|fundamental|management",
+        "内存管理",
+        "Two characteristics are fundamental to memory management.",
+        "两个特征对内存管理至关重要。"
+      ],
+      [
+        "references|logical|addresses",
+        "物理地址|逻辑地址",
+        "All memory references are logical addresses translated dynamically into physical addresses at run time.",
+        "所有内存引用都是在运行时动态翻译为物理地址的逻辑地址。"
+      ],
+      [
+        "occupy|regions|times",
+        "主存",
+        "A process may occupy different regions of main memory at different times.",
+        "一个进程可能在不同时间占据主存的不同区域。"
+      ]
+    ]
+  },
+  {
+    "q": "Define virtual memory, virtual address, virtual address space, address space and real address.",
+    "zh": "定义虚拟内存、虚拟地址、虚拟地址空间、地址空间和真实地址。",
+    "src": "Ch08v2a.pdf &middot; p.3 &middot; Table 8.1 Virtual Memory Terminology",
+    "links": [
+      [
+        "p.3",
+        "chapter8/page-03.html"
+      ]
+    ],
+    "pts": [
+      [
+        "virtual|address|space",
+        "虚拟地址|虚拟地址空间|地址空间",
+        "Virtual address space: the virtual storage assigned to a process.",
+        "虚拟地址空间：分配给进程的虚拟存储。"
+      ],
+      [
+        "address|space|range",
+        "地址空间",
+        "Address space: the range of memory addresses available to a process.",
+        "地址空间：进程可用的内存地址范围。"
+      ],
+      [
+        "address|storage|location",
+        "主存|物理地址",
+        "Real address: the address of a storage location in main memory.",
+        "真实地址：主存中存储位置的地址。"
+      ]
+    ]
+  },
+  {
+    "q": "What happens when a process begins execution under virtual memory?",
+    "zh": "当进程在虚拟内存下开始执行时会发生什么？",
+    "src": "Ch08v2a.pdf &middot; p.4 &middot; Execution of a Process",
+    "links": [
+      [
+        "p.4",
+        "chapter8/page-04.html"
+      ]
+    ],
+    "pts": [
+      [
+        "execution",
+        "",
+        "Execution of a Process",
+        "执行进程"
+      ],
+      [
+        "resident",
+        "驻留集",
+        "Resident set",
+        "驻留集"
+      ],
+      [
+        "portion",
+        "主存",
+        "Portion of process that is in main memory",
+        "在主存中的进程部分"
+      ]
+    ]
+  },
+  {
+    "q": "How does the operating system bring only part of a process into main memory?",
+    "zh": "操作系统是如何将进程的一部分只带入主存的？",
+    "src": "Ch08v2a.pdf &middot; p.5 &middot; Execution of a Process (continued)",
+    "links": [
+      [
+        "p.5",
+        "chapter8/page-05.html"
+      ]
+    ],
+    "pts": [
+      [
+        "execution",
+        "",
+        "Execution of a Process",
+        "执行进程"
+      ],
+      [
+        "operating|issues|request",
+        "操作系统|磁盘",
+        "Operating system issues a disk I/O Read request",
+        "操作系统发出磁盘 I/O 读取请求"
+      ],
+      [
+        "another|dispatched|while",
+        "磁盘",
+        "Another process is dispatched to run while the disk I/O takes place",
+        "另一个进程在磁盘I/O发生时被派发来运行"
+      ]
+    ]
+  },
+  {
+    "q": "What are the implications of virtual memory for process size and multiprogramming?",
+    "zh": "虚拟内存对进程大小和多程序编程有什么影响？",
+    "src": "Ch08v2a.pdf &middot; p.6 &middot; Implications",
+    "links": [
+      [
+        "p.6",
+        "chapter8/page-06.html"
+      ]
+    ],
+    "pts": [
+      [
+        "program|needs|execute",
+        "主存",
+        "Only part of a program needs to be in main memory for it to execute.",
+        "只有程序的一部分需要在主存中才能执行。"
+      ],
+      [
+        "therefore|resident",
+        "主存",
+        "More processes can therefore be resident in main memory at the same time.",
+        "因此，可以同时将更多进程驻留在主存中。"
+      ],
+      [
+        "processor|utilization|improves",
+        "处理器利用率",
+        "Processor utilization improves because at least one process is more likely to be ready.",
+        "处理器利用率有所提高，因为至少有一个进程更有可能准备就绪。"
+      ]
+    ]
+  },
+  {
+    "q": "How do real memory and virtual memory differ?",
+    "zh": "实际内存和虚拟内存有什么区别？",
+    "src": "Ch08v2a.pdf &middot; p.7 &middot; Real and Virtual Memory",
+    "links": [
+      [
+        "p.7",
+        "chapter8/page-07.html"
+      ]
+    ],
+    "pts": [
+      [
+        "physical|installed",
+        "主存",
+        "Real memory is the physical main memory installed in the system.",
+        "实际内存是安装在系统中的物理主存。"
+      ],
+      [
+        "virtual|address|space",
+        "虚拟内存|地址空间",
+        "Virtual memory is the address space seen by a process.",
+        "虚拟内存是进程看到的地址空间。"
+      ],
+      [
+        "larger",
+        "",
+        "A process may be larger than all of real memory.",
+        "一个进程可能比所有实际内存都大。"
+      ]
+    ]
+  },
+  {
+    "q": "Compare the characteristics of simple paging and simple segmentation.",
+    "zh": "比较简单分页和简单分段的特点。",
+    "src": "Ch08v2a.pdf &middot; p.8 &middot; Table 8.2 Characteristics of Paging and Segmentation",
+    "links": [
+      [
+        "p.8",
+        "chapter8/page-08.html"
+      ]
+    ],
+    "pts": [
+      [
+        "paging|fixed-size|pages",
+        "页|页表|分页",
+        "Paging uses fixed-size pages and a page table per process.",
+        "分页使用固定大小的页面，每个进程都使用一个页面表。"
+      ],
+      [
+        "segmentation|variable-size|segments",
+        "段|分段|段表",
+        "Segmentation uses variable-size segments and a segment table.",
+        "分区使用可变大小的段和段表。"
+      ],
+      [
+        "support|protection|sharing",
+        "保护|共享|保护与共享",
+        "Both support protection and sharing but differ in fragmentation.",
+        "两者都支持保护和共享，但在碎片化方面有所不同。"
+      ]
+    ]
+  },
+  {
+    "q": "What is thrashing and what causes it?",
+    "zh": "什么是搅动，是什么导致它的？",
+    "src": "Ch08v2a.pdf &middot; p.9 &middot; Thrashing",
+    "links": [
+      [
+        "p.9",
+        "chapter8/page-09.html"
+      ]
+    ],
+    "pts": [
+      [
+        "thrashing|occurs|spends",
+        "页|抖动",
+        "Thrashing occurs when the system spends more time swapping pages than executing.",
+        "当系统花费的交换页面时间比执行时间多时，就会发生抖动。"
+      ],
+      [
+        "caused|competing|frames",
+        "页框",
+        "It is caused by too many processes competing for too few frames.",
+        "这是由于太多进程争夺太少的页框造成的。"
+      ],
+      [
+        "solution|reduce|degree",
+        "多道程序度",
+        "The solution is to reduce the degree of multiprogramming.",
+        "解决方案是降低多程序化程度。"
+      ]
+    ]
+  },
+  {
+    "q": "State the principle of locality.",
+    "zh": "陈述局部性原则。",
+    "src": "Ch08v2a.pdf &middot; p.10 &middot; Principle of Locality",
+    "links": [
+      [
+        "p.10",
+        "chapter8/page-10.html"
+      ]
+    ],
+    "pts": [
+      [
+        "principle|locality",
+        "局部性原理",
+        "Principle of Locality",
+        "局部性原理"
+      ],
+      [
+        "program|references|within",
+        "",
+        "Program and data references within a process tend to cluster",
+        "程序和数据在程序中的参考往往会聚集在一起"
+      ],
+      [
+        "avoids|thrashing",
+        "抖动",
+        "Avoids thrashing",
+        "避免剧烈摇晃"
+      ]
+    ]
+  },
+  {
+    "q": "What hardware support is required for virtual memory?",
+    "zh": "虚拟内存需要哪些硬件支持？",
+    "src": "Ch08v2a.pdf &middot; p.11 &middot; Support Needed for Virtual Memory",
+    "links": [
+      [
+        "p.11",
+        "chapter8/page-11.html"
+      ]
+    ],
+    "pts": [
+      [
+        "support|needed|virtual",
+        "虚拟内存",
+        "Support Needed for Virtual Memory For virtual memory to be practical and effective",
+        "需要对虚拟内存的支持，只有这样虚拟内存才能实用和有效"
+      ],
+      [
+        "hardware|support|paging",
+        "分页|段|分段",
+        "Hardware must support paging and segmentation",
+        "硬件必须支持分页和分区"
+      ],
+      [
+        "operating|include|software",
+        "主存|辅助存储器|页|段",
+        "Operating system must include software for managing the movement of pages and/or segments between secondary memory and main memory",
+        "操作系统必须包括用于管理页面和/或段在辅助存储器和主存之间的移动的软件"
+      ]
+    ]
+  },
+  {
+    "q": "How does paging support virtual memory?",
+    "zh": "分页如何支持虚拟内存？",
+    "src": "Ch08v2a.pdf &middot; p.12 &middot; Paging",
+    "links": [
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ]
+    ],
+    "pts": [
+      [
+        "virtual|usually|associated",
+        "虚拟内存|分页",
+        "The term virtual memory is usually associated with systems that employ paging",
+        "虚拟内存一词通常与使用分页的系统有关"
+      ],
+      [
+        "table",
+        "页|页表",
+        "Each process has its own page table",
+        "每个进程都有自己的页表"
+      ],
+      [
+        "table|needed|virtual",
+        "虚拟内存|页|页表|分页",
+        "A page table is also needed for a virtual memory scheme based on paging",
+        "基于分页的虚拟内存方案也需要页表"
+      ]
+    ]
+  },
+  {
+    "q": "What memory management formats are used for address translation?",
+    "zh": "用于地址翻译的内存管理格式是什么？",
+    "src": "Ch08v2a.pdf &middot; p.13 &middot; Memory Management Formats",
+    "links": [
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ]
+    ],
+    "pts": [
+      [
+        "virtual|addresses|divided",
+        "虚拟地址|页|页号|偏移量",
+        "Virtual addresses are divided into a page number and an offset.",
+        "虚拟地址分为页号和偏移量。"
+      ],
+      [
+        "table|entries|contain",
+        "页|页表|页框",
+        "Page table entries contain the frame number and control bits.",
+        "页表条目包含页框号和控制位。"
+      ],
+      [
+        "formats|inverted|tables",
+        "页|页表|转换检测缓冲区（TLB）|倒排页表",
+        "The same formats are used for inverted page tables and TLBs.",
+        "倒置页面表和TLB使用相同的格式。"
+      ]
+    ]
+  },
+  {
+    "q": "How is a virtual address translated in a paging system?",
+    "zh": "在分页系统中，虚拟地址是如何翻译的？",
+    "src": "Ch08v2a.pdf &middot; p.14 &middot; Paging Address Translation",
+    "links": [
+      [
+        "p.14",
+        "chapter8/page-14.html"
+      ]
+    ],
+    "pts": [
+      [
+        "number|selects|table",
+        "页|页表|页表项|页号",
+        "The page number selects a page table entry.",
+        "页码选择一个页表条目。"
+      ],
+      [
+        "frame|number|entry",
+        "页|页号|页框",
+        "The frame number from that entry replaces the page number.",
+        "该条目中的页框编号取代了页码。"
+      ],
+      [
+        "offset|appended|unchanged",
+        "物理地址|偏移量",
+        "The offset is appended unchanged to form the real address.",
+        "偏移量被无变化地附加到后面，形成实际地址。"
+      ]
+    ]
+  },
+  {
+    "q": "How large can a virtual address space be compared with real memory?",
+    "zh": "与实际内存相比，虚拟地址空间可以有多大？",
+    "src": "Ch08v2a.pdf &middot; p.15 &middot; Virtual Address Space",
+    "links": [
+      [
+        "p.15",
+        "chapter8/page-15.html"
+      ]
+    ],
+    "pts": [
+      [
+        "address|gives|gbyte",
+        "虚拟地址|虚拟地址空间|地址空间",
+        "A 32-bit address gives a 4-Gbyte virtual address space.",
+        "32位地址提供4千兆字节的虚拟地址空间。"
+      ],
+      [
+        "space|mapped",
+        "主存",
+        "Only part of that space is mapped into main memory at any time.",
+        "只有部分空间在任何时候都会映射到主存中。"
+      ],
+      [
+        "resides|secondary",
+        "辅助存储器",
+        "The rest resides in secondary memory.",
+        "其余部分存储在辅助存储器中。"
+      ]
+    ]
+  },
+  {
+    "q": "Describe the paging mechanism used to load pages on demand.",
+    "zh": "描述用于按需加载页面的分页机制。",
+    "src": "Ch08v2a.pdf &middot; p.16 &middot; Paging Mechanism",
+    "links": [
+      [
+        "p.16",
+        "chapter8/page-16.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fault|occurs|referenced",
+        "主存|页|缺页",
+        "A page fault occurs when the referenced page is not in main memory.",
+        "当引用到的页面不在主存中时，就会发生缺页。"
+      ],
+      [
+        "operating|loads|required",
+        "页|操作系统|磁盘",
+        "The operating system loads the required page from disk.",
+        "操作系统从磁盘加载所需的页面。"
+      ],
+      [
+        "instruction|caused|fault",
+        "",
+        "The instruction that caused the fault is then restarted.",
+        "然后重新启动导致故障的指令。"
+      ]
+    ]
+  },
+  {
+    "q": "What is an inverted page table and why is it used?",
+    "zh": "什么是倒排页表，为什么要使用它？",
+    "src": "Ch08v2a.pdf &middot; p.17 &middot; Inverted Page Table",
+    "links": [
+      [
+        "p.17",
+        "chapter8/page-17.html"
+      ]
+    ],
+    "pts": [
+      [
+        "inverted|table",
+        "页|页表|倒排页表",
+        "Inverted Page Table",
+        "倒排页表"
+      ],
+      [
+        "number|portion|virtual",
+        "虚拟地址|页|页号",
+        "Page number portion of a virtual address is mapped into a hash value",
+        "虚拟地址的页码部分映射到一个哈希值中"
+      ],
+      [
+        "fixed|proportion|required",
+        "页",
+        "Fixed proportion of real memory is required for the tables regardless of the number of processes or virtual pages supported",
+        "无论支持多少进程或虚拟页面，表格都需要固定比例的实际内存"
+      ]
+    ]
+  },
+  {
+    "q": "What information is stored in an inverted page table entry?",
+    "zh": "反向页面表条目中存储了哪些信息？",
+    "src": "Ch08v2a.pdf &middot; p.18 &middot; Inverted Page Table Structure",
+    "links": [
+      [
+        "p.18",
+        "chapter8/page-18.html"
+      ]
+    ],
+    "pts": [
+      [
+        "inverted|table|entry",
+        "主存|页|页表|页框",
+        "An inverted page table has one entry per frame of main memory.",
+        "倒置的页面表每个主存页框有一个条目。"
+      ],
+      [
+        "entry|records|number",
+        "页|页号|页框",
+        "Each entry records the process id and page number occupying that frame.",
+        "每个条目记录了占用该页框的进程ID和页码。"
+      ],
+      [
+        "keeps|table|proportional",
+        "虚拟内存",
+        "This keeps the table size proportional to real memory, not virtual memory.",
+        "这使得表格大小与实际内存成正比，而不是与虚拟内存成正比。"
+      ]
+    ]
+  },
+  {
+    "q": "How is an inverted page table searched?",
+    "zh": "如何搜索倒排页表？",
+    "src": "Ch08v2a.pdf &middot; p.19 &middot; Inverted Page Table (continued)",
+    "links": [
+      [
+        "p.19",
+        "chapter8/page-19.html"
+      ]
+    ],
+    "pts": [
+      [
+        "inverted|table|entry",
+        "页|页表|页框|倒排页表",
+        "An inverted page table has one entry for each frame of real memory.",
+        "倒置的页面表每个实际内存页框都有一个条目。"
+      ],
+      [
+        "entry|holds|identifier",
+        "页|页号",
+        "Each entry holds the process identifier, page number, control bits and a chain pointer.",
+        "每个条目都包含进程标识符、页码、控制位和链索引。"
+      ],
+      [
+        "table|searched|hashing",
+        "页|页号",
+        "The table is searched by hashing the process identifier and the page number.",
+        "通过对过程标识符和页码进行哈希来搜索表格。"
+      ]
+    ]
+  },
+  {
+    "q": "What is a translation lookaside buffer (TLB)?",
+    "zh": "什么是转换检测缓冲区（TLB）？",
+    "src": "Ch08v2a.pdf &middot; p.20 &middot; Translation Lookaside Buffer (TLB)",
+    "links": [
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ]
+    ],
+    "pts": [
+      [
+        "translation|lookaside|buffer",
+        "页|页表|转换检测缓冲区（TLB）|高速缓存",
+        "A translation lookaside buffer is a small fast cache of recently used page table entries.",
+        "转换检测缓冲区（TLB）是一个最近使用的页表条目的小型快速缓存。"
+      ],
+      [
+        "virtual|reference|first",
+        "虚拟内存|高速缓存",
+        "Every virtual memory reference first checks this cache.",
+        "每次虚拟内存引用都会先检查这个缓存。"
+      ],
+      [
+        "avoids|extra|main-memory",
+        "页|页表",
+        "A hit avoids the extra main-memory access to the page table.",
+        "命中避免了对页表的额外主存访问。"
+      ]
+    ]
+  },
+  {
+    "q": "How is the TLB used during address translation?",
+    "zh": "在地址翻译过程中，TLB是如何使用的？",
+    "src": "Ch08v2a.pdf &middot; p.21 &middot; Figure 8.6 Use of a Translation Lookaside Buffer",
+    "links": [
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "pts": [
+      [
+        "virtual|address|split",
+        "虚拟地址|页|页号|偏移量",
+        "The virtual address is split into a page number and an offset.",
+        "虚拟地址被分成页码和偏移量。"
+      ],
+      [
+        "checked|first|supplies",
+        "页框|转换检测缓冲区（TLB）",
+        "The TLB is checked first; a hit supplies the frame number directly.",
+        "首先检查TLB；命中直接提供页框号。"
+      ],
+      [
+        "accesses|table|cause",
+        "页|页表|转换检测缓冲区（TLB）|缺页",
+        "A TLB miss accesses the page table and may cause a page fault.",
+        "TLB失误访问了页表，可能会导致页错。"
+      ]
+    ]
+  },
+  {
+    "q": "Describe the sequence of steps when a page fault occurs with a TLB.",
+    "zh": "描述TLB发生缺页时的步骤顺序。",
+    "src": "Ch08v2a.pdf &middot; p.22 &middot; Figure 8.7 Operation of Paging and Translation Lookaside Buffer (TLB)",
+    "links": [
+      [
+        "p.22",
+        "chapter8/page-22.html"
+      ]
+    ],
+    "pts": [
+      [
+        "checks|table|entry",
+        "页|页表|页表项|转换检测缓冲区（TLB）",
+        "The CPU checks the TLB for the page table entry.",
+        "CPU检查TLB中页表条目。"
+      ],
+      [
+        "table|accessed|updated",
+        "页|页表|转换检测缓冲区（TLB）",
+        "On a miss the page table is accessed and the TLB is updated.",
+        "在错过时，访问页表并更新TLB。"
+      ],
+      [
+        "absent|fault|handling",
+        "页|缺页",
+        "If the page is absent, a page fault handling routine loads it.",
+        "如果页面不存在，页面故障处理程序会加载它。"
+      ]
+    ]
+  },
+  {
+    "q": "What is associative mapping in the context of a TLB?",
+    "zh": "在TLB的背景下，关联映射是什么？",
+    "src": "Ch08v2a.pdf &middot; p.23 &middot; Associative Mapping",
+    "links": [
+      [
+        "p.23",
+        "chapter8/page-23.html"
+      ]
+    ],
+    "pts": [
+      [
+        "associative|mapping|processor",
+        "转换检测缓冲区（TLB）|相联映射",
+        "Associative mapping lets the processor interrogate many TLB entries simultaneously.",
+        "关联映射允许处理器同时查询许多TLB条目。"
+      ],
+      [
+        "entry|holds|number",
+        "页|页号|页框",
+        "Each entry holds a page number and its corresponding frame number.",
+        "每个条目都包含页码及其相应的页框号。"
+      ],
+      [
+        "number|compared|entries",
+        "页|页号",
+        "The page number is compared with all entries in parallel.",
+        "页码与所有条目并行比较。"
+      ]
+    ]
+  },
+  {
+    "q": "Compare direct lookup and associative lookup of page table entries.",
+    "zh": "比较页面表条目的直接查找和关联查找。",
+    "src": "Ch08v2a.pdf &middot; p.24 &middot; Figure 8.8 Direct Versus Associative Lookup for Page Table Entries",
+    "links": [
+      [
+        "p.24",
+        "chapter8/page-24.html"
+      ]
+    ],
+    "pts": [
+      [
+        "direct|mapping|number",
+        "页|页表|页号",
+        "Direct mapping uses the page number as an index into the page table.",
+        "直接映射使用页码作为页表的索引。"
+      ],
+      [
+        "associative|mapping|searches",
+        "转换检测缓冲区（TLB）|相联映射",
+        "Associative mapping searches all TLB entries in parallel.",
+        "关联映射并行搜索所有TLB条目。"
+      ],
+      [
+        "associative|lookup|faster",
+        "",
+        "Associative lookup is faster but requires special hardware.",
+        "关联查找更快，但需要特殊的硬件。"
+      ]
+    ]
+  },
+  {
+    "q": "How do the TLB and the cache interact during a memory access?",
+    "zh": "在内存访问过程中，TLB和缓存如何相互作用？",
+    "src": "Ch08v2a.pdf &middot; p.25 &middot; Figure 8.9 Translation Lookaside Buffer and Cache Operation",
+    "links": [
+      [
+        "p.25",
+        "chapter8/page-25.html"
+      ]
+    ],
+    "pts": [
+      [
+        "operation|virtual|address",
+        "虚拟地址|页|偏移量|转换检测缓冲区（TLB）",
+        "TLB Operation Virtual Address Page # Offset",
+        "TLB操作虚拟地址页面#偏移量"
+      ],
+      [
+        "tlb|tlb",
+        "转换检测缓冲区（TLB）",
+        "TLB TLB miss",
+        "TLB TLB失误"
+      ],
+      [
+        "cache|operation|address",
+        "主存|物理地址|页|页表",
+        "TLB hit Cache Operation Real Address Tag Remainder Hit Value Cache Miss Main Memory Page Table Value 25 Figure 8.9 Translation Lookaside Buffer and Cache Operation",
+        "TLB命中缓存操作真实地址标签余数命中值缓存未命中主存页表值25图8.9翻译旁路缓冲器和缓存操作"
+      ]
+    ]
+  },
+  {
+    "q": "What factors influence the choice of page size?",
+    "zh": "哪些因素会影响页大小的选择？",
+    "src": "Ch08v2a.pdf &middot; p.26 &middot; Page Size",
+    "links": [
+      [
+        "p.26",
+        "chapter8/page-26.html"
+      ]
+    ],
+    "pts": [
+      [
+        "affects|internal|fragmentation",
+        "页|页表|内部碎片|页大小",
+        "Page size affects internal fragmentation and the size of the page table.",
+        "页大小会影响内部碎片和页面表的大小。"
+      ],
+      [
+        "smaller|pages|reduce",
+        "页|页表|内部碎片",
+        "Smaller pages reduce internal fragmentation but need larger page tables.",
+        "较小的页面可以减少内部碎片，但需要更大的页面表。"
+      ],
+      [
+        "larger|pages|reduce",
+        "页|缺页",
+        "Larger pages reduce page faults at first, then increase them as locality is lost.",
+        "较大的页面最初会减少缺页，然后随着局部性丧失而增加。"
+      ]
+    ]
+  },
+  {
+    "q": "How does page size affect the page fault rate?",
+    "zh": "页大小如何影响页面故障率？",
+    "src": "Ch08v2a.pdf &middot; p.27 &middot; Page Fault Rate",
+    "links": [
+      [
+        "p.27",
+        "chapter8/page-27.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fault",
+        "页|缺页|缺页率",
+        "Page Fault Rate Page Fault Rate",
+        "页面故障率 页面故障率"
+      ],
+      [
+        "number|frames|allocated",
+        "页|页框|分页|工作集",
+        "W N (a) Page Size (b) Number of Page Frames Allocated P= size of entire process W = working set size N= total number of pages in process 27 Figure 8.10 Typical Paging Behavior of a…",
+        "W N（a）页大小（b）分配的页面页框数P=整个进程的大小W=工作集大小N=进程中的总页数27图8.10一个的典型分页行为......"
+      ]
+    ]
+  },
+  {
+    "q": "What page sizes are used by real computer systems?",
+    "zh": "实际计算机系统使用哪些页大小？",
+    "src": "Ch08v2a.pdf &middot; p.28 &middot; Page Size Examples",
+    "links": [
+      [
+        "p.28",
+        "chapter8/page-28.html"
+      ]
+    ],
+    "pts": [
+      [
+        "computers|sizes|bytes",
+        "页|页大小",
+        "Different computers use page sizes from 512 bytes to 16 Kbytes.",
+        "不同的计算机使用从512字节到16千字节的页大小。"
+      ],
+      [
+        "larger|pages|reduce",
+        "页|页表",
+        "Larger pages reduce the number of page table entries.",
+        "更大的页面会减少页面表条目的数量。"
+      ],
+      [
+        "smaller|pages|reduce",
+        "页|内部碎片",
+        "Smaller pages reduce internal fragmentation.",
+        "较小的页面可以减少内部碎片。"
+      ]
+    ]
+  },
+  {
+    "q": "What trade-offs arise when the page size is very small or very large?",
+    "zh": "当页大小非常小或非常大时，会产生哪些权衡？",
+    "src": "Ch08v2a.pdf &middot; p.29 &middot; Page Size (continued)",
+    "links": [
+      [
+        "p.29",
+        "chapter8/page-29.html"
+      ]
+    ],
+    "pts": [
+      [
+        "small|lowers|internal",
+        "页|页表|内部碎片|页大小",
+        "A small page size lowers internal fragmentation but increases page table size.",
+        "较小的页大小会降低内部碎片，但会增加页面表的大小。"
+      ],
+      [
+        "large|raises|fault",
+        "页|缺页|缺页率|页大小",
+        "A large page size raises the page fault rate at first, then lowers it.",
+        "大页大小最初会提高页错率，然后降低。"
+      ],
+      [
+        "optimum|depends|locality",
+        "",
+        "The optimum depends on the process locality.",
+        "最佳值取决于过程局部性。"
+      ]
+    ]
+  },
+  {
+    "q": "How does segmentation support virtual memory?",
+    "zh": "分割如何支持虚拟内存？",
+    "src": "Ch08v2a.pdf &middot; p.30 &middot; Segmentation",
+    "links": [
+      [
+        "p.30",
+        "chapter8/page-30.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segmentation",
+        "段|分段",
+        "Segmentation",
+        "分段"
+      ],
+      [
+        "simplifies|handling|growing",
+        "",
+        "Simplifies handling of growing data structures",
+        "简化了处理不断增长的数据结构"
+      ],
+      [
+        "lends|itself|sharing",
+        "共享",
+        "Lends itself to sharing data among processes",
+        "适合在进程之间共享数据"
+      ]
+    ]
+  },
+  {
+    "q": "How is a segment table organized?",
+    "zh": "段表是如何组织的？",
+    "src": "Ch08v2a.pdf &middot; p.31 &middot; Segment Organization",
+    "links": [
+      [
+        "p.31",
+        "chapter8/page-31.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segment|organization",
+        "段",
+        "Segment Organization",
+        "部门组织"
+      ],
+      [
+        "needed|determine|segment",
+        "主存|段",
+        "A bit is needed to determine if the segment is already in main memory",
+        "需要一点时间来确定该段是否已经在主存中"
+      ],
+      [
+        "another|needed|determine",
+        "主存|段",
+        "Another bit is needed to determine if the segment has been modified since it was loaded in main memory",
+        "还需要另一位位来确定该段是否在加载到主存后被修改过"
+      ]
+    ]
+  },
+  {
+    "q": "How is a logical address translated under segmentation?",
+    "zh": "在分段下，逻辑地址是如何翻译的？",
+    "src": "Ch08v2a.pdf &middot; p.32 &middot; Address Translation",
+    "links": [
+      [
+        "p.32",
+        "chapter8/page-32.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segment|number|selects",
+        "段|段表|段号",
+        "The segment number selects a segment table entry.",
+        "段号选择一个段表条目。"
+      ],
+      [
+        "address|added|offset",
+        "偏移量",
+        "The base address is added to the offset.",
+        "基本地址添加到偏移量中。"
+      ],
+      [
+        "length|field|checks",
+        "段",
+        "The length field checks that the address is within the segment.",
+        "长度字段检查地址是否在段内。"
+      ]
+    ]
+  },
+  {
+    "q": "Why combine paging and segmentation?",
+    "zh": "为什么要结合分页和细分？",
+    "src": "Ch08v2a.pdf &middot; p.33 &middot; Combined Paging and Segmentation",
+    "links": [
+      [
+        "p.33",
+        "chapter8/page-33.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segmentation|gives|programmer",
+        "段|分段",
+        "Segmentation gives the programmer a logical view of memory.",
+        "分割为程序员提供了对内存的逻辑视图。"
+      ],
+      [
+        "paging|gives|fixed-size",
+        "分页",
+        "Paging gives fixed-size blocks and simplifies allocation.",
+        "分页提供固定大小的块，并简化了分配。"
+      ],
+      [
+        "combining|gives|protection",
+        "保护",
+        "Combining both gives protection plus efficient memory use.",
+        "两者结合可以提供保护和高效的内存使用。"
+      ]
+    ]
+  },
+  {
+    "q": "How is a combined address divided into fields?",
+    "zh": "复合地址是如何划分的？",
+    "src": "Ch08v2a.pdf &middot; p.34 &middot; Combined Addressing",
+    "links": [
+      [
+        "p.34",
+        "chapter8/page-34.html"
+      ]
+    ],
+    "pts": [
+      [
+        "combined|address|segment",
+        "页|页号|段|段号",
+        "A combined address has a segment number, a page number and an offset.",
+        "组合地址具有分段号、页码和偏移量。"
+      ],
+      [
+        "segment|number|points",
+        "页|页表|段|段号",
+        "The segment number points to a page table for that segment.",
+        "段号指向该段的页表。"
+      ],
+      [
+        "number|selects|frame",
+        "页|页号|页框",
+        "The page number then selects the frame.",
+        "然后页面编号选择页框。"
+      ]
+    ]
+  },
+  {
+    "q": "How is a combined segmentation-and-paging address translated?",
+    "zh": "组合分段和分页地址是如何翻译的？",
+    "src": "Ch08v2a.pdf &middot; p.35 &middot; Combined Paging and Segmentation: Address Translation",
+    "links": [
+      [
+        "p.35",
+        "chapter8/page-35.html"
+      ]
+    ],
+    "pts": [
+      [
+        "segment|table|entry",
+        "页|页表|段|段表",
+        "The segment table entry points to the page table of the segment.",
+        "段表的条目指向段的页表。"
+      ],
+      [
+        "number|indexes|table",
+        "页|页表|页号|页框",
+        "The page number indexes that page table to obtain a frame number.",
+        "页码索引该页表以获取页框号。"
+      ],
+      [
+        "offset|completes|physical",
+        "物理地址|偏移量",
+        "The offset completes the physical address.",
+        "偏移量完成物理地址。"
+      ]
+    ]
+  },
+  {
+    "q": "How are protection and sharing implemented in a virtual memory system?",
+    "zh": "在虚拟内存系统中，保护和共享是如何实现的？",
+    "src": "Ch08v2a.pdf &middot; p.36 &middot; Protection and Sharing",
+    "links": [
+      [
+        "p.36",
+        "chapter8/page-36.html"
+      ]
+    ],
+    "pts": [
+      [
+        "protection|sharing",
+        "保护|共享|保护与共享",
+        "Protection and Sharing",
+        "保护与共享"
+      ],
+      [
+        "segmentation|lends|itself",
+        "保护|共享|段|分段",
+        "Segmentation lends itself to the implementation of protection and sharing policies",
+        "细分有助于实施保护和共享政策"
+      ],
+      [
+        "sharing|achieved|segments",
+        "共享|段",
+        "Sharing can be achieved by segments referencing multiple processes",
+        "可以通过引用多个过程的段落来实现共享"
+      ]
+    ]
+  },
+  {
+    "q": "What memory management tasks does operating system software perform?",
+    "zh": "操作系统软件执行哪些内存管理任务？",
+    "src": "Ch08v2a.pdf &middot; p.37 &middot; OS Software for Memory Management",
+    "links": [
+      [
+        "p.37",
+        "chapter8/page-37.html"
+      ]
+    ],
+    "pts": [
+      [
+        "operating|software|decides",
+        "主存|操作系统",
+        "Operating system software decides how much of a process to bring into main memory.",
+        "操作系统软件决定将多少进程带入主存。"
+      ],
+      [
+        "manages|resident|fetch",
+        "驻留集",
+        "It manages the resident set, fetch, placement and replacement policies.",
+        "它管理住址集、获取、放置和替换策略。"
+      ],
+      [
+        "protection|sharing|enforced",
+        "保护|共享|页|页表",
+        "Protection and sharing are enforced through the page table entries.",
+        "保护和共享通过页表条目来执行。"
+      ]
+    ]
+  },
+  {
+    "q": "Which operating system policies are needed for virtual memory?",
+    "zh": "虚拟内存需要哪些操作系统策略？",
+    "src": "Ch08v2a.pdf &middot; p.38 &middot; Operating System Software",
+    "links": [
+      [
+        "p.38",
+        "chapter8/page-38.html"
+      ]
+    ],
+    "pts": [
+      [
+        "whether|virtual|techniques",
+        "虚拟内存",
+        "Whether or not to use virtual memory techniques",
+        "是否使用虚拟内存技术"
+      ],
+      [
+        "paging|segmentation",
+        "分页|段|分段",
+        "The use of paging or segmentation or both",
+        "使用分页或细分或两者兼而有之"
+      ],
+      [
+        "algorithms|employed|various",
+        "内存管理",
+        "The algorithms employed for various aspects of memory management",
+        "用于内存管理各个方面的算法"
+      ]
+    ]
+  },
+  {
+    "q": "What is the key performance issue in virtual memory policy design?",
+    "zh": "虚拟内存策略设计中的关键性能问题是什么？",
+    "src": "Ch08v2a.pdf &middot; p.39 &middot; Policies for Virtual Memory",
+    "links": [
+      [
+        "p.39",
+        "chapter8/page-39.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fetch|policy|decides",
+        "页|调入策略",
+        "Fetch policy decides when a page should be loaded.",
+        "获取策略决定何时加载页面。"
+      ],
+      [
+        "placement|policy|decides",
+        "页|放置策略",
+        "Placement policy decides where the page is placed.",
+        "放置策略决定了页面放置的位置。"
+      ],
+      [
+        "replacement|policy|decides",
+        "页|放置策略|置换策略",
+        "Replacement policy decides which page is removed.",
+        "替换策略决定要删除哪个页面。"
+      ]
+    ]
+  },
+  {
+    "q": "What is a fetch policy and what are its two options?",
+    "zh": "什么是fetch策略，它的两种选项是什么？",
+    "src": "Ch08v2a.pdf &middot; p.40 &middot; Fetch Policy",
+    "links": [
+      [
+        "p.40",
+        "chapter8/page-40.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fetch|policy",
+        "调入策略",
+        "Fetch Policy",
+        "调入策略"
+      ],
+      [
+        "determines|brought|types",
+        "页|分页|预调页",
+        "Determines when a page should be Two main brought into types: memory Demand Prepaging Paging",
+        "确定何时应该将页面分为两种主要类型：内存需求预分页分页"
+      ]
+    ]
+  },
+  {
+    "q": "What is demand paging?",
+    "zh": "什么是需求分页？",
+    "src": "Ch08v2a.pdf &middot; p.41 &middot; Demand Paging",
+    "links": [
+      [
+        "p.41",
+        "chapter8/page-41.html"
+      ]
+    ],
+    "pts": [
+      [
+        "demand|paging|loads",
+        "页|分页|请求分页",
+        "Demand paging loads a page only when it is first referenced.",
+        "需求分页只在首次引用时加载页面。"
+      ],
+      [
+        "first|reference|always",
+        "页|缺页",
+        "The first reference to a page always causes a page fault.",
+        "第一个引用页面总是会导致页面故障。"
+      ],
+      [
+        "locality|reference|keeps",
+        "",
+        "Locality of reference keeps the fault rate low afterwards.",
+        "参考位置之后会保持低故障率。"
+      ]
+    ]
+  },
+  {
+    "q": "What is prepaging and when is it useful?",
+    "zh": "什么是预先分页，什么时候有用？",
+    "src": "Ch08v2a.pdf &middot; p.42 &middot; Prepaging",
+    "links": [
+      [
+        "p.42",
+        "chapter8/page-42.html"
+      ]
+    ],
+    "pts": [
+      [
+        "prepaging",
+        "分页|预调页",
+        "Prepaging",
+        "预调页"
+      ],
+      [
+        "pages|demanded|fault",
+        "页|缺页",
+        "Pages other than the one demanded by a page fault are brought",
+        "除了缺页要求的页面外，还会加载其他页面"
+      ],
+      [
+        "ineffective|extra|pages",
+        "页",
+        "Ineffective if extra pages are not referenced",
+        "如果未引用额外的页面，则无效"
+      ]
+    ]
+  },
+  {
+    "q": "What does the placement policy decide?",
+    "zh": "安置政策决定了什么？",
+    "src": "Ch08v2a.pdf &middot; p.43 &middot; Placement Policy",
+    "links": [
+      [
+        "p.43",
+        "chapter8/page-43.html"
+      ]
+    ],
+    "pts": [
+      [
+        "placement|policy",
+        "放置策略",
+        "Placement Policy",
+        "放置策略"
+      ],
+      [
+        "determines|piece|reside",
+        "",
+        "Determines where in real memory a process piece is to reside",
+        "确定进程片段将位于实际内存的哪个位置"
+      ],
+      [
+        "important|design|issue",
+        "段|分段",
+        "Important design issue in a segmentation system",
+        "细分系统中的重要设计问题"
+      ]
+    ]
+  },
+  {
+    "q": "What does the replacement policy decide?",
+    "zh": "更换政策决定了什么？",
+    "src": "Ch08v2a.pdf &middot; p.44 &middot; Replacement Policy",
+    "links": [
+      [
+        "p.44",
+        "chapter8/page-44.html"
+      ]
+    ],
+    "pts": [
+      [
+        "replacement|policy",
+        "放置策略|置换策略",
+        "Replacement Policy",
+        "置换策略"
+      ],
+      [
+        "deals|selection|replaced",
+        "主存|页",
+        "Deals with the selection of a page in main memory to be replaced when a new page must be brought in",
+        "处理在必须引入新页面时要替换的主存中的页面选择"
+      ],
+      [
+        "objective|removed|least",
+        "页",
+        "Objective is that the page that is removed be the page least likely to be referenced in the near future",
+        "目标是删除的页面是最不可能在不久的将来被引用到的页面。"
+      ]
+    ]
+  },
+  {
+    "q": "Why are some frames locked and excluded from replacement?",
+    "zh": "为什么有些机壳被锁定，无法更换？",
+    "src": "Ch08v2a.pdf &middot; p.45 &middot; Frame Locking",
+    "links": [
+      [
+        "p.45",
+        "chapter8/page-45.html"
+      ]
+    ],
+    "pts": [
+      [
+        "frame|locking",
+        "页框|页框锁定",
+        "Frame Locking",
+        "页框锁定"
+      ],
+      [
+        "buffers|time-critical|areas",
+        "主存|页框",
+        "I/O buffers and time-critical areas may be locked into main memory frames",
+        "I/O缓冲区和时间敏感区域可能被锁定在主存页框中"
+      ],
+      [
+        "locking|achieved|associating",
+        "页框",
+        "Locking is achieved by associating a lock bit with each frame",
+        "锁定是通过将锁位与每个页框关联起来来实现的"
+      ]
+    ]
+  },
+  {
+    "q": "Which basic page replacement algorithms are commonly compared?",
+    "zh": "哪些基本页面替换算法通常被比较？",
+    "src": "Ch08v2a.pdf &middot; p.46 &middot; Basic Algorithms",
+    "links": [
+      [
+        "p.46",
+        "chapter8/page-46.html"
+      ]
+    ],
+    "pts": [
+      [
+        "basic|algorithms|selection",
+        "页",
+        "Basic Algorithms Algorithms used for the selection of a page to replace",
+        "基本算法 用于选择要替换的页面的算法"
+      ],
+      [
+        "least|recently",
+        "最近最少使用（LRU）",
+        "Least recently used (LRU)",
+        "最近使用最少（LRU）"
+      ],
+      [
+        "first-in-first-out",
+        "先进先出（FIFO）",
+        "First-in-first-out (FIFO)",
+        "先入先出（FIFO）"
+      ]
+    ]
+  },
+  {
+    "q": "How do the basic algorithms behave on the example page reference string?",
+    "zh": "基本算法在示例页面参考字符串上是如何运行的？",
+    "src": "Ch08v2a.pdf &middot; p.47 &middot; Basic Replacement Algorithms Example",
+    "links": [
+      [
+        "p.47",
+        "chapter8/page-47.html"
+      ]
+    ],
+    "pts": [
+      [
+        "example|compares|optimal",
+        "最近最少使用（LRU）|先进先出（FIFO）",
+        "The example compares optimal, LRU, FIFO and clock policies.",
+        "该示例比较了最佳、LRU、FIFO和时钟策略。"
+      ],
+      [
+        "policy|reference|string",
+        "页",
+        "Each policy is run on the same page reference string.",
+        "每个策略都运行在同一页参考字符串上。"
+      ],
+      [
+        "number|faults|counted",
+        "页|缺页",
+        "The number of page faults is counted for each policy.",
+        "每个策略都计算页表错误的数量。"
+      ]
+    ]
+  },
+  {
+    "q": "What is the optimal replacement policy?",
+    "zh": "什么是最佳更换政策？",
+    "src": "Ch08v2a.pdf &middot; p.48 &middot; Optimal Policy",
+    "links": [
+      [
+        "p.48",
+        "chapter8/page-48.html"
+      ]
+    ],
+    "pts": [
+      [
+        "optimal|policy|replaces",
+        "页|最佳置换策略",
+        "The optimal policy replaces the page whose next reference is farthest in the future.",
+        "最佳策略替换下一个引用最远的页面。"
+      ],
+      [
+        "produces|fewest|possible",
+        "页|缺页",
+        "It produces the fewest possible page faults.",
+        "它产生尽可能少的页错。"
+      ],
+      [
+        "cannot|implemented|serves",
+        "",
+        "It cannot be implemented but serves as a benchmark.",
+        "它不能实施，但作为一个基准。"
+      ]
+    ]
+  },
+  {
+    "q": "How does the least recently used (LRU) policy work?",
+    "zh": "最不最近使用（LRU）策略是如何工作的？",
+    "src": "Ch08v2a.pdf &middot; p.49 &middot; Least Recently Used (LRU)",
+    "links": [
+      [
+        "p.49",
+        "chapter8/page-49.html"
+      ]
+    ],
+    "pts": [
+      [
+        "least|recently",
+        "最近最少使用（LRU）",
+        "Least Recently Used (LRU)",
+        "最近使用最少（LRU）"
+      ],
+      [
+        "difficult|implement",
+        "",
+        "Difficult to implement",
+        "难以实施"
+      ],
+      [
+        "approach|reference",
+        "页",
+        "One approach is to tag each page with the time of last reference",
+        "一种方法是将每个页面标记上上次参考的时间"
+      ]
+    ]
+  },
+  {
+    "q": "What result does the LRU example show?",
+    "zh": "LRU示例显示了什么结果？",
+    "src": "Ch08v2a.pdf &middot; p.50 &middot; LRU Example",
+    "links": [
+      [
+        "p.50",
+        "chapter8/page-50.html"
+      ]
+    ],
+    "pts": [
+      [
+        "replaces|longest",
+        "页|最近最少使用（LRU）",
+        "LRU replaces the page that has not been used for the longest time.",
+        "LRU会替换使用时间最长的未使用的页面。"
+      ],
+      [
+        "example|shows|tracking",
+        "最近最少使用（LRU）",
+        "The example shows LRU tracking recent references.",
+        "这个例子展示了LRU跟踪最近的引用。"
+      ],
+      [
+        "performs|close|optimal",
+        "最佳置换策略|最近最少使用（LRU）",
+        "LRU performs close to the optimal policy.",
+        "LRU的性能接近于最佳策略。"
+      ]
+    ]
+  },
+  {
+    "q": "How does the first-in-first-out (FIFO) policy work?",
+    "zh": "先入先出（FIFO）策略是如何工作的？",
+    "src": "Ch08v2a.pdf &middot; p.51 &middot; First-in-First-out (FIFO)",
+    "links": [
+      [
+        "p.51",
+        "chapter8/page-51.html"
+      ]
+    ],
+    "pts": [
+      [
+        "first-in-first-out",
+        "先进先出（FIFO）",
+        "First-in-First-out (FIFO)",
+        "先入先出（FIFO）"
+      ],
+      [
+        "pages|removed|round-robin",
+        "页",
+        "Pages are removed in round-robin style",
+        "以轮流方式删除页面"
+      ],
+      [
+        "simple|replacement|policy",
+        "放置策略|置换策略",
+        "Simple replacement policy to implement",
+        "要实施的简单更换政策"
+      ]
+    ]
+  },
+  {
+    "q": "What result does the FIFO example show?",
+    "zh": "FIFO示例显示了什么结果？",
+    "src": "Ch08v2a.pdf &middot; p.52 &middot; FIFO Example",
+    "links": [
+      [
+        "p.52",
+        "chapter8/page-52.html"
+      ]
+    ],
+    "pts": [
+      [
+        "replaces|longest",
+        "页|先进先出（FIFO）",
+        "FIFO replaces the page that has been in memory the longest.",
+        "FIFO会替换内存中存留时间最长的页面。"
+      ],
+      [
+        "example|shows|replacement",
+        "先进先出（FIFO）",
+        "The example shows a FIFO replacement sequence.",
+        "该示例显示了一个FIFO替换序列。"
+      ],
+      [
+        "suffer|belady's|anomaly",
+        "先进先出（FIFO）",
+        "FIFO can suffer from Belady's anomaly.",
+        "FIFO可能会受到Belady的异常的影响。"
+      ]
+    ]
+  },
+  {
+    "q": "How does the clock policy approximate LRU?",
+    "zh": "时钟策略如何近似LRU？",
+    "src": "Ch08v2a.pdf &middot; p.53 &middot; Clock Policy",
+    "links": [
+      [
+        "p.53",
+        "chapter8/page-53.html"
+      ]
+    ],
+    "pts": [
+      [
+        "clock|policy",
+        "时钟策略",
+        "Clock Policy",
+        "时钟策略"
+      ],
+      [
+        "referred",
+        "使用位",
+        "Referred to as the use bit",
+        "被称为使用位"
+      ],
+      [
+        "frames|considered|circular",
+        "页框",
+        "The set of frames is considered to be a circular buffer",
+        "一组页框被认为是圆形缓冲区"
+      ]
+    ]
+  },
+  {
+    "q": "How is the use bit handled in the clock policy?",
+    "zh": "时钟策略中如何处理使用位？",
+    "src": "Ch08v2a.pdf &middot; p.54 &middot; Clock Policy (continued)",
+    "links": [
+      [
+        "p.54",
+        "chapter8/page-54.html"
+      ]
+    ],
+    "pts": [
+      [
+        "frame|referenced",
+        "页|页框|使用位",
+        "Each frame has a use bit that is set when the page is referenced.",
+        "每个页框都有一个使用位，当引用页面时会设置。"
+      ],
+      [
+        "clock|sweeps|circular",
+        "页框",
+        "The clock hand sweeps the circular list of frames.",
+        "时钟指针扫过圆形的页框列表。"
+      ],
+      [
+        "frame|cleared|selected",
+        "页框|使用位",
+        "A frame with a cleared use bit is selected for replacement.",
+        "选择一个带有清除使用位别的页框进行更换。"
+      ]
+    ]
+  },
+  {
+    "q": "What does the clock policy example demonstrate?",
+    "zh": "时钟策略示例展示了什么？",
+    "src": "Ch08v2a.pdf &middot; p.55 &middot; Clock Policy Example",
+    "links": [
+      [
+        "p.55",
+        "chapter8/page-55.html"
+      ]
+    ],
+    "pts": [
+      [
+        "example|traces|clock",
+        "页框",
+        "The example traces the clock hand over a set of frames.",
+        "该示例跟踪时钟指针在一组页框中移动。"
+      ],
+      [
+        "cleared|passes",
+        "使用位",
+        "Use bits are cleared as the hand passes.",
+        "当手经过时，使用位被清除。"
+      ],
+      [
+        "first|frame|replaced",
+        "页框|使用位",
+        "The first frame with a zero use bit is replaced.",
+        "替换了第一个带有零使用位别的页框。"
+      ]
+    ]
+  },
+  {
+    "q": "How is page-fault performance measured?",
+    "zh": "如何衡量页 fault 性能？",
+    "src": "Ch08v2a.pdf &middot; p.56 &middot; Page Faults per 1000 References",
+    "links": [
+      [
+        "p.56",
+        "chapter8/page-56.html"
+      ]
+    ],
+    "pts": [
+      [
+        "clock",
+        "最近最少使用（LRU）|先进先出（FIFO）",
+        "FIFO 30 CLOCK 25 LRU",
+        "FIFO 30 时钟 25 LRU"
+      ],
+      [
+        "faults|references|number",
+        "页|页框|放置算法|缺页",
+        "OPT Page Faults per 1000 References 5 Number of Frames Allocated Figure 8.16 Comparison of Fixed-Allocation, Local Page Replacement Algorithms",
+        "OPT每1000个引用页面的错误率5分配的页框数图8.16固定分配、本地页面替换算法比较"
+      ]
+    ]
+  },
+  {
+    "q": "What is page buffering?",
+    "zh": "什么是页面缓冲？",
+    "src": "Ch08v2a.pdf &middot; p.57 &middot; Page Buffering",
+    "links": [
+      [
+        "p.57",
+        "chapter8/page-57.html"
+      ]
+    ],
+    "pts": [
+      [
+        "replaced|clean|simply",
+        "页",
+        "A replaced clean page can simply be overwritten.",
+        "一个替换干净的页面可以直接覆盖。"
+      ],
+      [
+        "modified|first|written",
+        "页|磁盘",
+        "A modified page must first be written back to disk.",
+        "修改后的页面必须先写回磁盘。"
+      ],
+      [
+        "buffering|keeps|frames",
+        "页|页框|页缓冲",
+        "Page buffering keeps a pool of free frames ready.",
+        "页面缓冲会保持一个空闲页框池的准备状态。"
+      ]
+    ]
+  },
+  {
+    "q": "How does replacement policy interact with cache size?",
+    "zh": "替换策略如何与缓存大小相互作用？",
+    "src": "Ch08v2a.pdf &middot; p.58 &middot; Replacement Policy and Cache Size",
+    "links": [
+      [
+        "p.58",
+        "chapter8/page-58.html"
+      ]
+    ],
+    "pts": [
+      [
+        "replacement|policy|cache",
+        "放置策略|置换策略|高速缓存容量|高速缓存",
+        "Replacement Policy and Cache Size",
+        "更换政策和缓存大小"
+      ],
+      [
+        "large|caches|replacement",
+        "页|高速缓存",
+        "With large caches, replacement of pages can have a performance impact",
+        "如果缓存容量大，替换页面可能会影响性能。"
+      ],
+      [
+        "operating|place|pages",
+        "页|页框|操作系统",
+        "Most operating systems place pages by selecting an arbitrary page frame from the page buffer",
+        "大多数操作系统通过从页面缓冲区中选择任意页面页框来放置页面"
+      ]
+    ]
+  },
+  {
+    "q": "What is resident set management?",
+    "zh": "什么是驻留集管理？",
+    "src": "Ch08v2a.pdf &middot; p.59 &middot; Resident Set Management",
+    "links": [
+      [
+        "p.59",
+        "chapter8/page-59.html"
+      ]
+    ],
+    "pts": [
+      [
+        "resident|management",
+        "驻留集",
+        "Resident Set Management",
+        "驻留集管理"
+      ],
+      [
+        "decide|pages|bring",
+        "页",
+        "The OS must decide how many pages to bring into maın memory",
+        "操作系统必须决定要将多少页带入主存"
+      ],
+      [
+        "small|number|pages",
+        "页|缺页",
+        "Small number of pages loaded increases page faults",
+        "加载的页面数量少会增加缺页"
+      ]
+    ]
+  },
+  {
+    "q": "What factors determine the resident set size?",
+    "zh": "哪些因素决定了驻留集的大小？",
+    "src": "Ch08v2a.pdf &middot; p.60 &middot; Resident Set Size",
+    "links": [
+      [
+        "p.60",
+        "chapter8/page-60.html"
+      ]
+    ],
+    "pts": [
+      [
+        "resident|number|pages",
+        "主存|页|驻留集",
+        "Resident set size is the number of pages of a process held in main memory.",
+        "驻留集大小是存储在主存中的进程的页数。"
+      ],
+      [
+        "small|resident|causes",
+        "页|缺页|缺页率|驻留集",
+        "Too small a resident set causes a high page fault rate.",
+        "居住集太小会导致较高的页 fault 率。"
+      ],
+      [
+        "large|resident|reduces",
+        "驻留集|多道程序度",
+        "Too large a resident set reduces the degree of multiprogramming.",
+        "驻留集太大会降低多程序化程度。"
+      ]
+    ]
+  },
+  {
+    "q": "What is replacement scope?",
+    "zh": "什么是更换范围？",
+    "src": "Ch08v2a.pdf &middot; p.61 &middot; Replacement Scope",
+    "links": [
+      [
+        "p.61",
+        "chapter8/page-61.html"
+      ]
+    ],
+    "pts": [
+      [
+        "replacement|scope",
+        "",
+        "Replacement Scope",
+        "更换范围"
+      ],
+      [
+        "scope|replacement|strategy",
+        "",
+        "The scope of a replacement strategy can be categorized as global or local",
+        "更换策略的范围可以分为全球范围或本地范围"
+      ],
+      [
+        "considers|unlocked|pages",
+        "主存|页",
+        "Considers all unlocked pages in main memory",
+        "考虑主存中的所有已解锁页面"
+      ]
+    ]
+  },
+  {
+    "q": "Compare local and global replacement scope.",
+    "zh": "比较本地和全球更换范围。",
+    "src": "Ch08v2a.pdf &middot; p.62 &middot; Local vs Global Replacement",
+    "links": [
+      [
+        "p.62",
+        "chapter8/page-62.html"
+      ]
+    ],
+    "pts": [
+      [
+        "local|replacement|selects",
+        "页框",
+        "Local replacement selects a frame only from the process that faulted.",
+        "本地更换仅从出现故障的进程中选择一个页框。"
+      ],
+      [
+        "global|replacement|frame",
+        "页框",
+        "Global replacement may take a frame from any process.",
+        "全球替换可能需要从任何进程中提取一个页框。"
+      ],
+      [
+        "local|scope|isolates",
+        "",
+        "Local scope isolates processes from each other.",
+        "局部范围将进程彼此隔离。"
+      ]
+    ]
+  },
+  {
+    "q": "What happens with fixed allocation and local replacement scope?",
+    "zh": "固定分配和本地更换范围会发生什么？",
+    "src": "Ch08v2a.pdf &middot; p.63 &middot; Fixed Allocation, Local Scope",
+    "links": [
+      [
+        "p.63",
+        "chapter8/page-63.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fixed|allocation|local",
+        "",
+        "Fixed Allocation, Local Scope",
+        "固定分配，本地范围"
+      ],
+      [
+        "increased|processor|large",
+        "",
+        "Increased processor idle time large, there will be",
+        "处理器空闲时间增加很大，将会出现"
+      ],
+      [
+        "increased|spent|programs",
+        "主存",
+        "Increased time spent in too few programs in main memory swapping",
+        "在主存交换中花费在太少程序上的时间增加"
+      ]
+    ]
+  },
+  {
+    "q": "What happens with variable allocation and global replacement scope?",
+    "zh": "变量分配和全球替换范围会发生什么？",
+    "src": "Ch08v2a.pdf &middot; p.64 &middot; Variable Allocation, Global Scope",
+    "links": [
+      [
+        "p.64",
+        "chapter8/page-64.html"
+      ]
+    ],
+    "pts": [
+      [
+        "variable|allocation|global",
+        "",
+        "Variable Allocation Global Scope",
+        "可变分配全球范围"
+      ],
+      [
+        "easiest|implement",
+        "",
+        "Easiest to implement",
+        "最容易实施"
+      ],
+      [
+        "maintains|frames",
+        "页框",
+        "OS maintains a list of free frames",
+        "操作系统维护一个空闲页框列表"
+      ]
+    ]
+  },
+  {
+    "q": "What happens with variable allocation and local replacement scope?",
+    "zh": "变量分配和本地替换范围会发生什么？",
+    "src": "Ch08v2a.pdf &middot; p.65 &middot; Variable Allocation, Local Scope",
+    "links": [
+      [
+        "p.65",
+        "chapter8/page-65.html"
+      ]
+    ],
+    "pts": [
+      [
+        "variable|allocation|local",
+        "",
+        "Variable Allocation Local Scope",
+        "可变分配本地范围"
+      ],
+      [
+        "loaded|allocate|certain",
+        "主存|页|页框|驻留集",
+        "When a new process is loaded into main memory, allocate to it a certain number of page frames as its resident set",
+        "当一个新进程加载到主存时，将其分配一定数量的页页框作为其驻留集"
+      ],
+      [
+        "reevaluate|allocation|provided",
+        "",
+        "Reevaluate the allocation provided to the process and increase or decrease it to improve overall performance",
+        "重新评估为进程提供的分配，并增加或减少分配以提高整体性能"
+      ]
+    ]
+  },
+  {
+    "q": "How is the working set used with variable allocation and local scope?",
+    "zh": "工作集如何与可变分配和局部范围一起使用？",
+    "src": "Ch08v2a.pdf &middot; p.66 &middot; Variable Allocation, Local Scope (continued)",
+    "links": [
+      [
+        "p.66",
+        "chapter8/page-66.html"
+      ]
+    ],
+    "pts": [
+      [
+        "variable|allocation|local",
+        "",
+        "Variable Allocation Local Scope",
+        "可变分配本地范围"
+      ],
+      [
+        "criteria|determine|resident",
+        "驻留集",
+        "Criteria used to determine resident set size",
+        "用于确定驻留集大小的标准"
+      ],
+      [
+        "timing|changes",
+        "",
+        "The timing of changes",
+        "变化的时间表"
+      ]
+    ]
+  },
+  {
+    "q": "How is the working set of a process defined by the window size?",
+    "zh": "进程的工作集是如何根据窗口大小定义的？",
+    "src": "Ch08v2a.pdf &middot; p.67 &middot; Figure 8.17 Working Set of Process as Defined by Window Size",
+    "links": [
+      [
+        "p.67",
+        "chapter8/page-67.html"
+      ]
+    ],
+    "pts": [
+      [
+        "working|pages|referenced",
+        "页|工作集",
+        "The working set is the set of pages referenced in the last window of references.",
+        "工作集是引用最后一个引用窗口中引用的一组页面。"
+      ],
+      [
+        "larger|window|produces",
+        "工作集",
+        "A larger window size produces a larger working set.",
+        "更大的窗口大小会产生更大的工作集。"
+      ],
+      [
+        "figure|shows|working",
+        "工作集",
+        "The figure shows the working set for window sizes two to five.",
+        "该图显示了窗口大小为2到5的操作集。"
+      ]
+    ]
+  },
+  {
+    "q": "What makes the working set size change over time?",
+    "zh": "是什么让工作集大小随着时间的推移而变化？",
+    "src": "Ch08v2a.pdf &middot; p.68 &middot; Working Set Size",
+    "links": [
+      [
+        "p.68",
+        "chapter8/page-68.html"
+      ]
+    ],
+    "pts": [
+      [
+        "working",
+        "工作集",
+        "Working Set Size",
+        "工作集大小"
+      ],
+      [
+        "transient|transien|stable",
+        "工作集",
+        "~ Transient Transient Transient Time Transien Stable Stable Stable Stable 68 Figure 8.18 Typical Graph of Working Set Size [MAEK87]",
+        "~ 瞬态 瞬态 瞬态 时间 瞬态 稳定 稳定 稳定 稳定 68 图8.18 工作集大小典型图[MAEK87]"
+      ]
+    ]
+  },
+  {
+    "q": "What is a cleaning policy and when are modified pages written out?",
+    "zh": "什么是清理策略，什么时候会写出修改过的页面？",
+    "src": "Ch08v2a.pdf &middot; p.69 &middot; Cleaning Policy",
+    "links": [
+      [
+        "p.69",
+        "chapter8/page-69.html"
+      ]
+    ],
+    "pts": [
+      [
+        "demand|cleaning|writes",
+        "页|请求清除",
+        "Demand cleaning writes a modified page out only when it is selected for replacement.",
+        "只有在选择替换时，“需求清洁”才会写入修改后的页面。"
+      ],
+      [
+        "precleaning|writes|modified",
+        "页|预清除",
+        "Precleaning writes modified pages out in batches before they are needed.",
+        "预清洁在需要之前会批量写入修改后的页面。"
+      ],
+      [
+        "precleaning|reduces|delay",
+        "预清除",
+        "Precleaning reduces the delay at replacement time.",
+        "预清洁可以减少更换时的延迟。"
+      ]
+    ]
+  },
+  {
+    "q": "What is load control and why is it needed?",
+    "zh": "什么是负载控制，为什么需要它？",
+    "src": "Ch08v2a.pdf &middot; p.70 &middot; Load Control",
+    "links": [
+      [
+        "p.70",
+        "chapter8/page-70.html"
+      ]
+    ],
+    "pts": [
+      [
+        "control",
+        "负载控制",
+        "Load Control",
+        "负载控制"
+      ],
+      [
+        "multiprogramming|level",
+        "",
+        "Multiprogramming level",
+        "多程序编程级别"
+      ],
+      [
+        "critical|effective|management",
+        "内存管理",
+        "Critical in effective memory management",
+        "在有效的内存管理中至关重要"
+      ]
+    ]
+  },
+  {
+    "q": "How is processor utilization related to the degree of multiprogramming?",
+    "zh": "处理器利用率与多程序化程度的关系如何？",
+    "src": "Ch08v2a.pdf &middot; p.71 &middot; Processor Utilization",
+    "links": [
+      [
+        "p.71",
+        "chapter8/page-71.html"
+      ]
+    ],
+    "pts": [
+      [
+        "processor|utilization|rises",
+        "处理器利用率|多道程序度",
+        "Processor utilization rises with the degree of multiprogramming.",
+        "处理器利用率随着多程序化程度的增加而上升。"
+      ],
+      [
+        "beyond|thrashing|makes",
+        "抖动",
+        "Beyond a peak, thrashing makes utilization collapse.",
+        "超过峰值后，搅动会导致利用率崩溃。"
+      ],
+      [
+        "control|keeps|number",
+        "负载控制|活动进程",
+        "Load control keeps the number of active processes near the peak.",
+        "负载控制使活跃进程的数量保持在峰值附近。"
+      ]
+    ]
+  },
+  {
+    "q": "How does the system detect and recover from thrashing?",
+    "zh": "系统如何检测和从抖动中恢复？",
+    "src": "Ch08v2a.pdf &middot; p.72 &middot; Thrashing",
+    "links": [
+      [
+        "p.72",
+        "chapter8/page-72.html"
+      ]
+    ],
+    "pts": [
+      [
+        "thrashing",
+        "抖动",
+        "Thrashing",
+        "抖动"
+      ],
+      [
+        "multiprogramming|level|increases",
+        "",
+        "As the multiprogramming level increases from a small value",
+        "随着多程序化级别从一个小值增加"
+      ],
+      [
+        "point|reached|average",
+        "驻留集",
+        "A point will be reached at which the average resident set is inadequate",
+        "将达到一个点，即平均驻留集不足以满足需求"
+      ]
+    ]
+  },
+  {
+    "q": "Which processes should be suspended when thrashing occurs?",
+    "zh": "当出现乱码时，应该暂停哪些进程？",
+    "src": "Ch08v2a.pdf &middot; p.73 &middot; Process Suspension",
+    "links": [
+      [
+        "p.73",
+        "chapter8/page-73.html"
+      ]
+    ],
+    "pts": [
+      [
+        "suspension",
+        "进程挂起",
+        "Process Suspension",
+        "进程挂起"
+      ],
+      [
+        "faulting",
+        "",
+        "Faulting process",
+        "故障过程"
+      ],
+      [
+        "activated",
+        "",
+        "Last process activated",
+        "最后激活的进程"
+      ]
+    ]
+  },
+  {
+    "q": "What are the two main parts of UNIX memory management?",
+    "zh": "UNIX内存管理的主要两部分是什么？",
+    "src": "Ch08v2a.pdf &middot; p.74 &middot; UNIX Memory Management",
+    "links": [
+      [
+        "p.74",
+        "chapter8/page-74.html"
+      ]
+    ],
+    "pts": [
+      [
+        "early|variable|partitioning",
+        "虚拟内存",
+        "Early UNIX: variable partitioning with no virtual memory scheme",
+        "早期UNIX：没有虚拟内存方案的可变分区"
+      ],
+      [
+        "paging",
+        "分页",
+        "Paging system",
+        "呼叫系统"
+      ],
+      [
+        "kernel|allocator",
+        "内核内存分配器",
+        "Kernel memory allocator",
+        "内核内存分配器"
+      ]
+    ]
+  },
+  {
+    "q": "How does the UNIX paging system relate to the kernel memory allocator?",
+    "zh": "UNIX分页系统与内核内存分配器有什么关系？",
+    "src": "Ch08v2a.pdf &middot; p.75 &middot; Paging System and Kernel Memory Allocator",
+    "links": [
+      [
+        "p.75",
+        "chapter8/page-75.html"
+      ]
+    ],
+    "pts": [
+      [
+        "page-based|virtual",
+        "虚拟内存|页",
+        "UNIX uses a page-based virtual memory system.",
+        "UNIX使用基于页面的虚拟内存系统。"
+      ],
+      [
+        "kernel|allocator|supplies",
+        "内核内存分配器",
+        "The kernel memory allocator supplies small blocks to kernel subsystems.",
+        "内核内存分配器向内核子系统提供小块。"
+      ],
+      [
+        "share|physical|frames",
+        "页框",
+        "Both share the same pool of physical frames.",
+        "两者都共享相同的物理页框池。"
+      ]
+    ]
+  },
+  {
+    "q": "How does UNIX page replacement work?",
+    "zh": "UNIX页面替换是如何工作的？",
+    "src": "Ch08v2a.pdf &middot; p.76 &middot; Page Replacement",
+    "links": [
+      [
+        "p.76",
+        "chapter8/page-76.html"
+      ]
+    ],
+    "pts": [
+      [
+        "replacement",
+        "页|页面置换",
+        "Page Replacement",
+        "页面置换"
+      ],
+      [
+        "available|frames|linked",
+        "页|页框",
+        "All available frames are linked together in a list of free frames available for bringing in pages",
+        "所有可用的页框都链接在一起，形成一个用于调入页面的空闲页框列表"
+      ],
+      [
+        "number|available|frames",
+        "页框",
+        "When the number of available frames drops below a certain threshold, the kernel will steal a number of frames to compensate",
+        "当可用页框数下降到一定阈值以下时，内核将偷取一些页框来补偿"
+      ]
+    ]
+  },
+  {
+    "q": "What is the kernel memory allocator and why is it needed?",
+    "zh": "什么是内核内存分配器，为什么需要它？",
+    "src": "Ch08v2a.pdf &middot; p.77 &middot; Kernel Memory Allocator",
+    "links": [
+      [
+        "p.77",
+        "chapter8/page-77.html"
+      ]
+    ],
+    "pts": [
+      [
+        "kernel|allocator",
+        "内核内存分配器",
+        "Kernel Memory Allocator",
+        "内核内存分配器"
+      ],
+      [
+        "blocks|significantly|smaller",
+        "页|分页",
+        "Most of these blocks are significantly smaller than typical pages (therefore paging would be inefficient)",
+        "这些块中的大多数都比典型的页面要小得多（因此分页效率会很低）"
+      ],
+      [
+        "allocations|operations|possible",
+        "",
+        "Allocations and free operations must be made as fast as possible",
+        "分配和空闲操作必须尽快进行"
+      ]
+    ]
+  },
+  {
+    "q": "What are the main features of Windows memory management?",
+    "zh": "Windows内存管理的主要特点是什么？",
+    "src": "Ch08v2a.pdf &middot; p.78 &middot; Windows Memory Management",
+    "links": [
+      [
+        "p.78",
+        "chapter8/page-78.html"
+      ]
+    ],
+    "pts": [
+      [
+        "windows|management",
+        "内存管理",
+        "Windows Memory Management",
+        "Windows内存管理"
+      ],
+      [
+        "designed|operate|variety",
+        "",
+        "Designed to operate over a variety of platforms",
+        "旨在在各种平台上运行"
+      ],
+      [
+        "sizes|ranging|kbytes",
+        "页|页大小",
+        "Uses page sizes ranging from 4 Kbytes to 64 Kbytes",
+        "使用从4 K字节到64 K字节的页大小"
+      ]
+    ]
+  },
+  {
+    "q": "How is the Windows virtual address map organized?",
+    "zh": "Windows虚拟地址映射是如何组织的？",
+    "src": "Ch08v2a.pdf &middot; p.79 &middot; Windows Virtual Address Map",
+    "links": [
+      [
+        "p.79",
+        "chapter8/page-79.html"
+      ]
+    ],
+    "pts": [
+      [
+        "windows|virtual|address",
+        "虚拟地址",
+        "Windows Virtual Address Map",
+        "Windows虚拟地址映射"
+      ],
+      [
+        "default|reserved",
+        "",
+        "By default half is reserved for the OS",
+        "默认情况下，一半保留给操作系统"
+      ],
+      [
+        "large|intensive|applications",
+        "",
+        "Large memory intensive applications run more effectively using 64-bit Windows",
+        "使用64位Windows运行大型内存密集型应用程序更有效率"
+      ]
+    ]
+  },
+  {
+    "q": "How does Windows paging work?",
+    "zh": "Windows分页是如何工作的？",
+    "src": "Ch08v2a.pdf &middot; p.80 &middot; Windows Paging",
+    "links": [
+      [
+        "p.80",
+        "chapter8/page-80.html"
+      ]
+    ],
+    "pts": [
+      [
+        "windows|paging",
+        "分页",
+        "Windows Paging",
+        "Windows分页"
+      ],
+      [
+        "creation|entire|space",
+        "",
+        "On creation, a process can make use of the entire user space of almost 2 GB",
+        "在创建时，一个进程可以利用近2GB的整个用户空间"
+      ],
+      [
+        "regions|three|states",
+        "",
+        "Regions may be in one of three states: Available Reserved • Committed",
+        "区域可能处于三种状态之一：可用保留 • 已承诺"
+      ]
+    ]
+  },
+  {
+    "q": "How does Windows manage the resident set of a process?",
+    "zh": "Windows如何管理进程的驻留集？",
+    "src": "Ch08v2a.pdf &middot; p.81 &middot; Windows Resident Set Management",
+    "links": [
+      [
+        "p.81",
+        "chapter8/page-81.html"
+      ]
+    ],
+    "pts": [
+      [
+        "resident|management",
+        "驻留集",
+        "Resident Set Management System",
+        "驻留集管理系统"
+      ],
+      [
+        "windows|variable|allocation",
+        "",
+        "Windows uses variable allocation, local scope",
+        "Windows使用可变分配，本地范围"
+      ],
+      [
+        "activated|assigned|structure",
+        "工作集",
+        "When activated, a process is assigned a data structure to manage its working set",
+        "激活时，会为一个进程分配一个数据结构来管理其工作集"
+      ]
+    ]
+  },
+  {
+    "q": "Summarise the virtual memory mechanisms covered in Chapter 8.",
+    "zh": "总结第8章中涵盖的虚拟内存机制。",
+    "src": "Ch08v2a.pdf &middot; p.82 &middot; Summary",
+    "links": [
+      [
+        "p.82",
+        "chapter8/page-82.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fetch|policy",
+        "调入策略",
+        "Fetch policy",
+        "调入策略"
+      ],
+      [
+        "paging|resident|management",
+        "分页|驻留集",
+        "Paging • Resident set management",
+        "呼叫分机 • 驻留集管理"
+      ],
+      [
+        "segmentation",
+        "段|分段",
+        "Segmentation",
+        "分段"
+      ]
+    ]
+  }
+];
+
+    /* ------------------------------------------------------------ helpers */
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+    function norm(s) {
+      return String(s == null ? "" : s)
+        .toLowerCase()
+        .replace(/[\u2018\u2019\u02bc`\u00b4]/g, "'")
+        .replace(/[\u201c\u201d]/g, '"')
+        .replace(/[^a-z0-9\u3400-\u9fff\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+    function keysOf(point) {
+      return (point[0] + "|" + point[1]).split("|").map(norm).filter(Boolean);
+    }
+
+    var TOTAL = QUIZ.reduce(function (n, q) { return n + q.pts.length; }, 0);
+    var mount = document.getElementById("q2Mount");
+    var html = [];
+
+    QUIZ.forEach(function (q, qi) {
+      var n = qi + 1, m = q.pts.length;
+      var srcLinks = q.links.map(function (l) {
+        return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + '</a>';
+      }).join(" &middot; ");
+      html.push('<section class="q2-card" data-q="' + qi + '">');
+      html.push('  <div class="q2-head">');
+      html.push('    <span class="q2-num">' + n + '</span>');
+      html.push('    <span class="q2-type">ESSAY</span>');
+      html.push('    <span class="q2-badge ungraded" data-badge>NOT GRADED</span>');
+      html.push('    <button class="q2-grade-btn" type="button" data-grade aria-label="Grade question ' + n + '">Grade / 评分</button>');
+      html.push('    <span class="q2-markpill" data-pill>0 / ' + m + '</span>');
+      html.push('  </div>');
+      html.push('  <p class="q2-q">' + esc(q.q) + ' <span class="q2-qzh">&middot; ' + esc(q.zh) + '</span></p>');
+      html.push('  <p class="q2-src">Source &middot; ' + q.src + (srcLinks ? ' &nbsp;[' + srcLinks + ']' : '') + '</p>');
+      html.push('  <div class="q2-answer-label">Answer</div>');
+      html.push('  <textarea class="q2-textarea" data-answer rows="6" placeholder="Type your answer here&hellip; / 在此输入答案" aria-label="Answer for question ' + n + '"></textarea>');
+      html.push('  <div class="q2-feedback" data-feedback hidden>');
+      html.push('    <div class="q2-fb-head">Feedback &middot; 反馈</div>');
+      html.push('    <ul class="q2-pointlist" data-points></ul>');
+      html.push('  </div>');
+      html.push('</section>');
+    });
+    mount.innerHTML = html.join("");
+
+    var cards = Array.prototype.slice.call(mount.querySelectorAll(".q2-card"));
+    var finalEl = document.getElementById("q2Final");
+    var totalPill = document.getElementById("q2TotalPill");
+    var totalEl = document.getElementById("q2Total");
+    var attemptEl = document.getElementById("q2Attempt");
+    var overallBody = document.getElementById("q2OverallBody");
+
+    /* One score per card, so a single question can be graded on its own. */
+    function syncTotals(submitted) {
+      var total = 0, graded = 0;
+      cards.forEach(function (c) {
+        total += +(c.getAttribute("data-score") || 0);
+        if (c.getAttribute("data-graded") === "1") graded++;
+      });
+      var label = total + " / " + TOTAL;
+      finalEl.textContent = label;
+      totalPill.textContent = label;
+      totalEl.textContent = graded ? label + " marks" : "";
+      attemptEl.textContent = submitted ? "ATTEMPT 1 (SUBMITTED)"
+        : (graded ? "ATTEMPT 1 (PARTIALLY GRADED)" : "ATTEMPT 1 (NOT SUBMITTED)");
+      if (submitted || graded) {
+        var pct = Math.round(total / TOTAL * 100);
+        overallBody.innerHTML = '<strong>' + label + ' marks (' + pct + '%).</strong> ' +
+          (submitted
+            ? 'Each point is awarded when the answer contains one or two of its key words. Review the feedback under each question for the model answers.<br>每个得分点只需答出 1–2 个关键词即可得分；请查看每题下方的反馈与参考答案。'
+            : 'Graded ' + graded + ' of ' + QUIZ.length + ' questions so far. Use the button beside any question to grade it, or Submit quiz to grade all of them.<br>已评分 ' + graded + ' / ' + QUIZ.length + ' 题；可点每题旁的评分按钮，或交卷评分全部题目。');
+      } else {
+        overallBody.textContent = "Submit the quiz to see your overall score and feedback.";
+      }
+      return total;
+    }
+    syncTotals(false);
+
+    function gradeCard(card, showFeedback) {
+      var qi = +card.getAttribute("data-q");
+      var q = QUIZ[qi];
+      var value = norm(card.querySelector("[data-answer]").value);
+      var results = q.pts.map(function (p) {
+        return value ? keysOf(p).some(function (k) { return value.indexOf(k) !== -1; }) : false;
+      });
+      var score = results.filter(Boolean).length;
+      var badge = card.querySelector("[data-badge]");
+      var pill = card.querySelector("[data-pill]");
+      pill.textContent = score + " / " + q.pts.length;
+      if (!value) {
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+      } else if (score === q.pts.length) {
+        badge.className = "q2-badge correct";
+        badge.textContent = "CORRECT";
+      } else if (score === 0) {
+        badge.className = "q2-badge incorrect";
+        badge.textContent = "INCORRECT";
+      } else {
+        badge.className = "q2-badge partial";
+        badge.textContent = "PARTIALLY CORRECT";
+      }
+      var fb = card.querySelector("[data-feedback]");
+      if (showFeedback) {
+        var list = card.querySelector("[data-points]");
+        list.innerHTML = q.pts.map(function (p, i) {
+          return '<li><span class="q2-tick ' + (results[i] ? "ok" : "no") + '">' +
+            (results[i] ? "&#10003;" : "&#10007;") + '</span><span><strong>Point ' + (i + 1) +
+            ':</strong> ' + esc(p[2]) + '<span class="q2-model-zh">' + esc(p[3]) + '</span></span></li>';
+        }).join("");
+        fb.hidden = false;
+      }
+      return score;
+    }
+
+    function submit(showFeedback) {
+      cards.forEach(function (c) {
+        var score = gradeCard(c, showFeedback);
+        c.setAttribute("data-score", score);
+        c.setAttribute("data-graded", "1");
+      });
+      return syncTotals(true);
+    }
+
+    function gradeOne(card) {
+      var score = gradeCard(card, true);
+      card.setAttribute("data-score", score);
+      card.setAttribute("data-graded", "1");
+      syncTotals(false);
+    }
+
+    document.getElementById("q2Submit").addEventListener("click", function () { submit(true); });
+    document.getElementById("q2Reveal").addEventListener("click", function () {
+      cards.forEach(function (card) {
+        var qi = +card.getAttribute("data-q");
+        card.querySelector("[data-answer]").value = QUIZ[qi].pts.map(function (p) { return p[2]; }).join(" ");
+      });
+      submit(true);
+    });
+    document.getElementById("q2Reset").addEventListener("click", function () {
+      cards.forEach(function (card) {
+        card.querySelector("[data-answer]").value = "";
+        var badge = card.querySelector("[data-badge]");
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+        card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
+        card.querySelector("[data-feedback]").hidden = true;
+        card.setAttribute("data-score", "0");
+        card.setAttribute("data-graded", "0");
+      });
+      syncTotals(false);
+    });
+    cards.forEach(function (card) {
+      card.querySelector("[data-grade]").addEventListener("click", function () { gradeOne(card); });
+      var ta = card.querySelector("[data-answer]");
+      ta.addEventListener("input", function () {
+        card.setAttribute("data-score", "0");
+        card.setAttribute("data-graded", "0");
+        var badge = card.querySelector("[data-badge]");
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+        card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
+        card.querySelector("[data-feedback]").hidden = true;
+        syncTotals(false);
+      });
+      ta.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); submit(true); }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
