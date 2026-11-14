@@ -161,6 +161,7 @@ CSIS-2260review/
 ├── css/
 │   └── style.css              # All styling (dark theme, answer highlighting, drills)
 ├── javascript/
+│   ├── site-nav.js            # ONE shared navbar for every page (injected from #siteNavMount)
 │   ├── main.js                # Reveals, Q&A accordion, filtering, sidebar, shortcuts
 │   ├── animations.js          # Background orbs / grid / typing effects
 │   ├── speech.js              # Read-aloud via the Web Speech API
@@ -249,6 +250,7 @@ Push the repository, then go to **Settings → Pages → Build and deployment �
 ## Notes
 
 - Content is excerpted verbatim from the course lecture slides (`Intro to HW v2.pdf`, `Ch01v2a.pdf`, `Ch02v2a.pdf`, `Ch03v2a.pdf`, `Ch04v2a.pdf`) and the lab handout `Introduction to UNIX Commands and Scripting.pdf`; the PDFs themselves are **not** included in this repository (`.gitignore` ignores `*.pdf`). The images under `Intro to HW v2-images/`, `Ch01v2a-images/`, `Ch02v2a-images/` and `Ch03v2a-images/` are page scans extracted from those PDFs.
+- The top navigation bar is a single shared component: `javascript/site-nav.js` injects the exact `index.html` navbar into every HTML page via `<div id="siteNavMount"></div>`, deriving the relative link prefix from its own `src`. Each page keeps its own sticky topbar / sidebar / progress bar, stacked below the shared navbar. To change the menu, edit `site-nav.js` only.
 - Chapters 7 and 8 were built from the scans in `Ch07v2a-images/` and `Ch08v2a-images/`: the text was OCR-extracted from each image, shown verbatim in English on the left with a Chinese translation on the right, and each page carries a short-answer question graded on key points by `javascript/slide-drill.js`.
 - Translations, exam questions and model answers are study aids generated for review purposes — always cross-check against the official slides and your instructor's guidance before the quiz.
 - The answer checking is keyword based and deliberately forgiving, so it is a memorisation aid, not a strict grader: a box marked ✓ still means "you reproduced the point", not "this is the only correct wording".

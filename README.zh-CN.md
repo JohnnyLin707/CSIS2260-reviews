@@ -161,6 +161,7 @@ CSIS-2260review/
 ├── css/
 │   └── style.css              # 全部样式（深色主题、答案高亮、练习模块）
 ├── javascript/
+│   ├── site-nav.js            # 全站唯一共享导航栏（由 #siteNavMount 注入）
 │   ├── main.js                # 渐显、问答折叠、筛选、侧边栏、快捷键
 │   ├── animations.js          # 背景光球 / 网格 / 打字机效果
 │   ├── speech.js              # 朗读功能（Web Speech API）
@@ -249,6 +250,7 @@ python3 -m http.server 8000
 ## 说明
 
 - 内容逐字摘录自课程课件（`Intro to HW v2.pdf`、`Ch01v2a.pdf`、`Ch02v2a.pdf`、`Ch03v2a.pdf`、`Ch04v2a.pdf`）与实验手册 `Introduction to UNIX Commands and Scripting.pdf`；这些 PDF 原文件**不在**本仓库中（`.gitignore` 忽略 `*.pdf`）。`Intro to HW v2-images/`、`Ch01v2a-images/`、`Ch02v2a-images/` 与 `Ch03v2a-images/` 下的图片是从这些 PDF 中导出的页面扫描图。
+- 顶部导航栏已抽成全站唯一组件：`javascript/site-nav.js` 把与 `index.html` 完全一致的导航栏通过 `<div id="siteNavMount"></div>` 注入每一页，并根据脚本自身路径自动换算相对链接前缀；各页原有的 topbar、侧边栏与进度条保留并叠放在共享导航下方。修改菜单只需改 `site-nav.js` 一个文件。
 - 第 7、8 章的文字由 `Ch07v2a-images/` 与 `Ch08v2a-images/` 的扫描图 OCR 提取，左栏为英文原文、右栏为中文翻译；每页附一道按要点判分的简答题，由 `javascript/slide-drill.js` 实现。
 - 中文翻译、模拟考题与标准答案仅为复习辅助材料，考试前请务必与官方课件和老师的要求核对。
 - 自动判分基于关键词匹配并刻意设得宽松，它是"帮助记忆"的工具而不是严格的阅卷标准：某个框打勾代表"你写到了这个要点"，不代表"这是唯一正确的写法"。

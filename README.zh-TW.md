@@ -161,6 +161,7 @@ CSIS-2260review/
 ├── css/
 │   └── style.css              # 全部樣式（深色主題、答案強調、練習模組）
 ├── javascript/
+│   ├── site-nav.js            # 全站唯一共享導覽列（由 #siteNavMount 注入）
 │   ├── main.js                # 淡入、問答折疊、篩選、側邊欄、快捷鍵
 │   ├── animations.js          # 背景光球 / 網格 / 打字機效果
 │   ├── speech.js              # 朗讀功能（Web Speech API）
@@ -249,6 +250,7 @@ python3 -m http.server 8000
 ## 說明
 
 - 內容逐字摘錄自課程投影片（`Intro to HW v2.pdf`、`Ch01v2a.pdf`、`Ch02v2a.pdf`、`Ch03v2a.pdf`、`Ch04v2a.pdf`）與實驗手冊 `Introduction to UNIX Commands and Scripting.pdf`；這些 PDF 原始檔案**不在**本儲存庫中（`.gitignore` 忽略 `*.pdf`）。`Intro to HW v2-images/`、`Ch01v2a-images/`、`Ch02v2a-images/` 與 `Ch03v2a-images/` 下的圖片是從這些 PDF 匯出的頁面掃描圖。
+- 頂部導覽列已抽成全站唯一元件：`javascript/site-nav.js` 把與 `index.html` 完全一致的導覽列透過 `<div id="siteNavMount"></div>` 注入每一頁，並依腳本自身路徑自動換算相對連結前綴；各頁原有的 topbar、側邊欄與進度條保留並疊放在共享導覽列下方。修改選單只需改 `site-nav.js` 一個檔案。
 - 第 7、8 章的文字由 `Ch07v2a-images/` 與 `Ch08v2a-images/` 的掃描圖 OCR 擷取，左欄為英文原文、右欄為中文翻譯；每頁附一道按要點評分的簡答題，由 `javascript/slide-drill.js` 實作。
 - 中文翻譯、模擬考題與標準答案僅為複習輔助教材，考試前請務必與官方投影片及授課教師的要求核對。
 - 自動批改以關鍵字比對為基礎並刻意設得寬鬆，它是「幫助記憶」的工具而非嚴格的閱卷標準：某個框打勾代表「你寫到了這個要點」，不代表「這是唯一正確的寫法」。

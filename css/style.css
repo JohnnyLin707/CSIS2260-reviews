@@ -2121,3 +2121,47 @@ body[data-topic="chapter8"] .page-wrap > *:not(.slide-board) {
 /* Quiz 2 feedback: bold minimal scoring answer, verbose model answer muted in parentheses. */
 .q2-short { font-weight: 800; color: #0b6b4f; }
 .q2-verbose { color: #6b7280; font-weight: 400; font-size: 0.92em; }
+
+/* =====================================================================
+   SHARED SITE NAV — javascript/site-nav.js injects the exact index.html
+   navigation bar into every page. Page-specific sticky bars sit directly
+   underneath it, so the nav stays identical and always visible.
+   ===================================================================== */
+:root { --site-nav-h: 66px; }
+/* the mount is transparent to layout, so the sticky nav behaves exactly as
+   it does on index.html (a direct child of <body>) */
+#siteNavMount { display: contents; }
+
+body.has-site-nav .topbar,
+body.has-site-nav .q2-topbar { top: var(--site-nav-h, 66px); }
+body.has-site-nav .sidebar {
+  top: calc(var(--site-nav-h, 66px) + var(--topbar-h, 74px));
+}
+
+/* pages with a left sidebar indent <body>; let the shared nav span full width. */
+body.has-sidebar .site-nav {
+  margin-left: calc(-1 * var(--sidebar-w));
+  width: calc(100% + var(--sidebar-w));
+}
+@media (max-width: 1100px) {
+  body.has-sidebar .site-nav { margin-left: 0; width: auto; }
+  /* the sidebar turns into a full-height drawer again */
+  body.has-site-nav .sidebar { top: 0; }
+}
+
+/* Shared nav must fit narrow phones on every page: the brand, neon button
+   and hamburger button together can exceed a 390px row. */
+@media (max-width: 640px) {
+  .site-nav-inner { gap: 0.4rem; padding-left: 0.65rem; padding-right: 0.65rem; }
+  .site-nav-brand { gap: 0.4rem; }
+  .brand-mark { width: 30px; height: 30px; font-size: 0.68rem; }
+  .brand-text { font-size: 0.82rem; }
+  .brand-text small { display: none; }
+  .nav-neon { margin-left: 0; padding: 0.34rem 0.5rem; font-size: 0.75rem; }
+  .nav-neon small { display: none; }
+  .nav-toggle { padding: 0.4rem 0.52rem; font-size: 0.8rem; }
+  .nav-toggle-bars { gap: 2px; }
+}
+@media (max-width: 380px) {
+  .nav-toggle-text { display: none; }
+}
