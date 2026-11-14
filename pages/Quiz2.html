@@ -88,19 +88,25 @@
         "relocation",
         "重定位",
         "1. RELOCATION — a swapped-out process may come back to a different memory region, so addresses are translated at run time.",
-        "1. 重定位——换出的进程可能回到不同内存区域，地址需在运行时转换。"
+        "1. 重定位——换出的进程可能回到不同内存区域，地址需在运行时转换。",
+        "Relocation: different region",
+        "重定位：换回不同区域"
       ],
       [
         "protection",
         "保护",
         "2. PROTECTION — every memory reference is checked at run time; a process needs permission to read or write a location.",
-        "2. 保护——运行时检查每次内存引用，读写需要权限。"
+        "2. 保护——运行时检查每次内存引用，读写需要权限。",
+        "Protection: run-time checks",
+        "保护：运行时检查"
       ],
       [
         "sharing",
         "共享",
         "3. SHARING — controlled access to shared memory (e.g. shared program code) without breaking protection. Also valid: logical organisation (modules) and physical organisation (main + secondary memory).",
-        "3. 共享——在不破坏保护的前提下受控共享内存（如共享代码）。逻辑组织（模块）与物理组织（主存+辅存）也得分。"
+        "3. 共享——在不破坏保护的前提下受控共享内存（如共享代码）。逻辑组织（模块）与物理组织（主存+辅存）也得分。",
+        "Sharing: controlled shared memory",
+        "共享：受控共享内存"
       ]
     ]
   },
@@ -123,19 +129,25 @@
         "swapped",
         "换入换出",
         "Processes are swapped IN and OUT of main memory to keep the processor busy.",
-        "进程会在主存与磁盘之间换入换出，以保持处理器忙碌。"
+        "进程会在主存与磁盘之间换入换出，以保持处理器忙碌。",
+        "Swap processes in/out",
+        "进程换入换出"
       ],
       [
         "different|memory region",
         "不同区域",
         "A swapped-out process usually returns to a DIFFERENT memory region, not the same one.",
-        "换出的进程通常回到不同的内存区域，而不是原来的位置。"
+        "换出的进程通常回到不同的内存区域，而不是原来的位置。",
+        "Return to different region",
+        "换回不同内存区域"
       ],
       [
         "translated",
         "运行时转换",
         "Therefore logical references must be TRANSLATED into physical addresses at run time (by hardware).",
-        "因此逻辑引用必须在运行时由硬件转换成物理地址。"
+        "因此逻辑引用必须在运行时由硬件转换成物理地址。",
+        "Translate at run time",
+        "运行时转换地址"
       ]
     ]
   },
@@ -158,25 +170,33 @@
         "fixed|partitions",
         "固定|分区",
         "HOW: main memory is split into a FIXED number of partitions, equal or unequal in size.",
-        "做法：主存被划分为固定数量的分区，等长或不等长。"
+        "做法：主存被划分为固定数量的分区，等长或不等长。",
+        "Fixed number of partitions",
+        "固定数量分区"
       ],
       [
         "one process",
         "一个进程",
         "One process at a time is loaded into each available partition.",
-        "一个分区一次只装入一个进程。"
+        "一个分区一次只装入一个进程。",
+        "One process per partition",
+        "一分区一进程"
       ],
       [
         "internal fragmentation",
         "内部碎片",
         "LIMIT 1: wasted space INSIDE the assigned partition = INTERNAL fragmentation (small jobs waste space).",
-        "缺点 1：分区内部的浪费 = 内部碎片（小作业浪费空间）。"
+        "缺点 1：分区内部的浪费 = 内部碎片（小作业浪费空间）。",
+        "Internal fragmentation waste",
+        "内部碎片浪费"
       ],
       [
         "overlays",
         "覆盖技术",
         "LIMIT 2: a program larger than the largest partition cannot run unless the programmer uses overlays.",
-        "缺点 2：程序超过最大分区时无法运行，除非用覆盖技术。"
+        "缺点 2：程序超过最大分区时无法运行，除非用覆盖技术。",
+        "Big programs need overlays",
+        "大程序需覆盖技术"
       ]
     ]
   },
@@ -199,25 +219,33 @@
         "variable length",
         "可变长度",
         "HOW: partitions are created dynamically, of VARIABLE length and number, as processes arrive.",
-        "做法：分区按进程到达动态创建，长度与数量都可变。"
+        "做法：分区按进程到达动态创建，长度与数量都可变。",
+        "Variable-length dynamic partitions",
+        "动态可变长分区"
       ],
       [
         "exactly",
         "恰好分配",
         "Each process is allocated EXACTLY as much memory as it requires.",
-        "按进程实际需要恰好分配。"
+        "按进程实际需要恰好分配。",
+        "Allocate exactly as needed",
+        "按需恰好分配"
       ],
       [
         "external fragmentation",
         "外部碎片",
         "LIMIT: holes appear BETWEEN partitions over time = EXTERNAL fragmentation, so utilisation declines.",
-        "缺点：分区之间随时间出现空洞 = 外部碎片，利用率下降。"
+        "缺点：分区之间随时间出现空洞 = 外部碎片，利用率下降。",
+        "External fragmentation holes",
+        "外部碎片空洞"
       ],
       [
         "compaction",
         "紧凑处理",
         "REMEDY: COMPACTION shifts processes to merge holes into one big free block; it costs time and needs dynamic relocation.",
-        "补救：紧凑处理移动进程把空洞并成大空闲块；耗时且需要动态重定位。"
+        "补救：紧凑处理移动进程把空洞并成大空闲块；耗时且需要动态重定位。",
+        "Compaction merges holes",
+        "紧凑合并空洞"
       ]
     ]
   },
@@ -240,19 +268,25 @@
         "internal",
         "内部碎片",
         "INTERNAL = wasted space INSIDE an allocated block (the block is larger than the data).",
-        "内部碎片 = 已分配块内部的浪费（块比数据大）。"
+        "内部碎片 = 已分配块内部的浪费（块比数据大）。",
+        "Internal: waste inside block",
+        "内部：块内浪费"
       ],
       [
         "external",
         "外部碎片",
         "EXTERNAL = many small free holes OUTSIDE / between allocated blocks; total free memory is enough but no hole is big enough.",
-        "外部碎片 = 分配块之间的小空洞；总空闲够但没有单个足够大的空洞。"
+        "外部碎片 = 分配块之间的小空洞；总空闲够但没有单个足够大的空洞。",
+        "External: holes between blocks",
+        "外部：块间空洞"
       ],
       [
         "fixed",
         "固定分区",
         "FIXED partitioning (and paging) suffers INTERNAL; DYNAMIC partitioning (and segmentation) suffers EXTERNAL.",
-        "固定分区（和分页）产生内部碎片；动态分区（和分段）产生外部碎片。"
+        "固定分区（和分页）产生内部碎片；动态分区（和分段）产生外部碎片。",
+        "Fixed internal; dynamic external",
+        "固定内部；动态外部"
       ]
     ]
   },
@@ -275,19 +309,25 @@
         "first-fit",
         "首次适配",
         "FIRST-FIT: scan from the beginning, take the FIRST hole that is big enough. Fast and simple.",
-        "首次适配：从头扫描，取第一个足够大的空洞；最快最简单。"
+        "首次适配：从头扫描，取第一个足够大的空洞；最快最简单。",
+        "First-fit: first big hole",
+        "首次适配：第一个空洞"
       ],
       [
         "best-fit",
         "最佳适配",
         "BEST-FIT: take the SMALLEST hole that is big enough, leaving the smallest leftover (but creates tiny holes).",
-        "最佳适配：取最小的足够大的空洞，剩余最小（但会产生小碎片）。"
+        "最佳适配：取最小的足够大的空洞，剩余最小（但会产生小碎片）。",
+        "Best-fit: smallest big hole",
+        "最佳适配：最小够用空洞"
       ],
       [
         "next-fit",
         "邻近适配",
         "NEXT-FIT: start searching from where the LAST allocation was made, not from the beginning.",
-        "邻近适配：从上次分配的位置开始搜索，而不是从头开始。"
+        "邻近适配：从上次分配的位置开始搜索，而不是从头开始。",
+        "Next-fit: from last allocation",
+        "邻近适配：从上次处开始"
       ]
     ]
   },
@@ -310,19 +350,25 @@
         "logical address",
         "逻辑地址",
         "LOGICAL address: a reference INDEPENDENT of where the data currently sits in memory.",
-        "逻辑地址：与数据当前所在位置无关的引用。"
+        "逻辑地址：与数据当前所在位置无关的引用。",
+        "Logical: independent of placement",
+        "逻辑地址：与位置无关"
       ],
       [
         "relative",
         "相对地址",
         "RELATIVE address: a special logical address expressed as a location RELATIVE to the start of the program.",
-        "相对地址：以程序起始位置为基准的逻辑地址。"
+        "相对地址：以程序起始位置为基准的逻辑地址。",
+        "Relative: from program start",
+        "相对地址：从程序起点"
       ],
       [
         "physical",
         "物理地址",
         "ABSOLUTE / PHYSICAL address: the real main-memory location; translation happens BEFORE the access.",
-        "绝对/物理地址：主存中的真实位置；访问前必须先转换。"
+        "绝对/物理地址：主存中的真实位置；访问前必须先转换。",
+        "Physical: real memory location",
+        "物理地址：主存真实位置"
       ]
     ]
   },
@@ -345,13 +391,17 @@
         "base register",
         "基址寄存器",
         "BASE register holds the STARTING address of the process; it is ADDED to every relative address (relocation).",
-        "基址寄存器保存进程起始地址；每个相对地址都加上它（实现重定位）。"
+        "基址寄存器保存进程起始地址；每个相对地址都加上它（实现重定位）。",
+        "Base: add start address",
+        "基址寄存器：加起始地址"
       ],
       [
         "bounds register",
         "界限寄存器",
         "BOUNDS register holds the END address / length; an address beyond it raises an interrupt (protection).",
-        "界限寄存器保存结束地址/长度；越界即触发中断（实现保护）。"
+        "界限寄存器保存结束地址/长度；越界即触发中断（实现保护）。",
+        "Bounds: checks upper limit",
+        "界限寄存器：查越界"
       ]
     ]
   },
@@ -378,31 +428,41 @@
         "frames",
         "页框",
         "IDEA: split main memory into fixed-size FRAMES and the process into PAGES of the same size — no external fragmentation.",
-        "核心：主存分成固定大小页框，进程分成同样大小的页——没有外部碎片。"
+        "核心：主存分成固定大小页框，进程分成同样大小的页——没有外部碎片。",
+        "Frames and pages fixed-size",
+        "页框与页等长"
       ],
       [
         "page table",
         "页表",
         "A PAGE TABLE per process records which frame holds each page.",
-        "每个进程一张页表，记录每一页放在哪个页框。"
+        "每个进程一张页表，记录每一页放在哪个页框。",
+        "Page table maps pages",
+        "页表映射每一页"
       ],
       [
         "page number",
         "页号",
         "A logical address = PAGE NUMBER + OFFSET.",
-        "逻辑地址 = 页号 + 偏移量。"
+        "逻辑地址 = 页号 + 偏移量。",
+        "Page number plus offset",
+        "页号加偏移量"
       ],
       [
         "frame number",
         "页框号",
         "TRANSLATION: the page number indexes the page table to obtain a FRAME NUMBER.",
-        "转换：用页号查页表得到页框号。"
+        "转换：用页号查页表得到页框号。",
+        "Table lookup gives frame",
+        "查表得页框号"
       ],
       [
         "physical address",
         "物理地址",
         "Frame number + UNCHANGED offset = PHYSICAL address (hardware does this at run time).",
-        "页框号 + 不变的偏移量 = 物理地址（由硬件在运行时完成）。"
+        "页框号 + 不变的偏移量 = 物理地址（由硬件在运行时完成）。",
+        "Frame plus offset: physical",
+        "页框加偏移=物理地址"
       ]
     ]
   },
@@ -425,25 +485,33 @@
         "variable-length",
         "可变长度",
         "IDEA: split the program into VARIABLE-length SEGMENTS that match its logical modules (code, data, stack).",
-        "核心：把程序划分为与逻辑模块对应的可变长度的段（代码、数据、栈）。"
+        "核心：把程序划分为与逻辑模块对应的可变长度的段（代码、数据、栈）。",
+        "Variable-length logical segments",
+        "可变长逻辑段"
       ],
       [
         "segment table",
         "段表",
         "A SEGMENT TABLE stores the BASE address and LENGTH of each segment.",
-        "段表保存每一段的基址与长度。"
+        "段表保存每一段的基址与长度。",
+        "Segment table: base, length",
+        "段表：基址与长度"
       ],
       [
         "segment number",
         "段号",
         "A logical address = SEGMENT NUMBER + OFFSET.",
-        "逻辑地址 = 段号 + 偏移量。"
+        "逻辑地址 = 段号 + 偏移量。",
+        "Segment number plus offset",
+        "段号加偏移量"
       ],
       [
         "base",
         "基址",
         "TRANSLATION: segment number → table → BASE + offset, checked against the LENGTH for protection.",
-        "转换：段号查段表 → 基址 + 偏移量，并用长度检查实现保护。"
+        "转换：段号查段表 → 基址 + 偏移量，并用长度检查实现保护。",
+        "Base plus offset, checked",
+        "基址加偏移，查长度"
       ]
     ]
   },
@@ -466,19 +534,25 @@
         "buffer|overrun",
         "缓冲区溢出|越界写入",
         "ATTACK: a process writes data PAST the end of a fixed-size buffer (also called buffer overrun).",
-        "攻击：程序向固定大小缓冲区末尾之外写入数据（又称缓冲区溢出、越界写入）。"
+        "攻击：程序向固定大小缓冲区末尾之外写入数据（又称缓冲区溢出、越界写入）。",
+        "Write past buffer end",
+        "越过缓冲区末尾写入"
       ],
       [
         "return address",
         "返回地址",
         "It can overwrite the function RETURN ADDRESS and redirect execution to injected code.",
-        "可覆盖函数返回地址，把执行转向注入的代码。"
+        "可覆盖函数返回地址，把执行转向注入的代码。",
+        "Overwrite the return address",
+        "覆盖函数返回地址"
       ],
       [
         "compile-time",
         "编译时",
         "DEFENCES: compile-time (stack canaries, safe libraries) AND run-time (ASLR, non-executable stack); plus prevention, detection and aborting.",
-        "防御：编译时（栈保护、安全库）与运行时（地址随机化、不可执行栈）；以及预防、检测与中止。"
+        "防御：编译时（栈保护、安全库）与运行时（地址随机化、不可执行栈）；以及预防、检测与中止。",
+        "Compile-time and run-time defences",
+        "编译时与运行时防御"
       ]
     ]
   },
@@ -501,19 +575,25 @@
         "all pages",
         "全部页面",
         "SIMPLE paging: ALL pages of the process must be in main memory before it can run.",
-        "简单分页：进程的全部页在运行前都必须在主存中。"
+        "简单分页：进程的全部页在运行前都必须在主存中。",
+        "Simple: all pages resident",
+        "简单分页：全部驻留"
       ],
       [
         "resident set",
         "驻留集",
         "VIRTUAL memory paging: only a FEW pieces (the RESIDENT SET) are loaded; the rest stays in secondary memory.",
-        "虚拟内存分页：只装入少数块（驻留集），其余留在辅存。"
+        "虚拟内存分页：只装入少数块（驻留集），其余留在辅存。",
+        "Virtual: only resident set",
+        "虚拟分页：仅驻留集"
       ],
       [
         "demand",
         "按需调入",
         "Pages are brought in ON DEMAND at a page fault, so a process may be LARGER than real memory.",
-        "页在缺页时按需调入，进程可以比实存大。"
+        "页在缺页时按需调入，进程可以比实存大。",
+        "Pages loaded on demand",
+        "页按需调入"
       ]
     ]
   },
@@ -536,19 +616,25 @@
         "page fault",
         "缺页",
         "1. The hardware detects a PAGE FAULT; the faulting process is blocked (another process is dispatched).",
-        "1. 硬件检测到缺页；引发缺页的进程被阻塞（调度另一进程）。"
+        "1. 硬件检测到缺页；引发缺页的进程被阻塞（调度另一进程）。",
+        "Page fault, process blocked",
+        "缺页，进程阻塞"
       ],
       [
         "disk",
         "磁盘",
         "2. The OS issues a DISK read and loads the required page into a free frame (replacement if none is free).",
-        "2. 操作系统发出磁盘读请求，把所需页装入空闲页框（无空闲时置换）。"
+        "2. 操作系统发出磁盘读请求，把所需页装入空闲页框（无空闲时置换）。",
+        "Disk read loads page",
+        "磁盘读入所需页"
       ],
       [
         "restarted",
         "重新执行",
         "3. The page table / TLB is updated and the instruction that caused the fault is RESTARTED.",
-        "3. 更新页表/TLB，并重新执行引发缺页的指令。"
+        "3. 更新页表/TLB，并重新执行引发缺页的指令。",
+        "Restart the faulting instruction",
+        "重新执行缺页指令"
       ]
     ]
   },
@@ -571,19 +657,25 @@
         "thrashing",
         "抖动",
         "THRASHING: the system spends more time swapping pages in and out than executing instructions.",
-        "抖动：系统花在页面换入换出上的时间多于执行指令。"
+        "抖动：系统花在页面换入换出上的时间多于执行指令。",
+        "Thrashing: swapping dominates",
+        "抖动：换页多于执行"
       ],
       [
         "locality",
         "局部性",
         "LOCALITY: memory references tend to CLUSTER, so only a few pages are needed over a short period.",
-        "局部性：内存访问倾向成簇，短时间内只需要少量页。"
+        "局部性：内存访问倾向成簇，短时间内只需要少量页。",
+        "Locality: references cluster",
+        "局部性：访问成簇"
       ],
       [
         "working set",
         "工作集",
         "RELATION: locality keeps the WORKING SET small, so demand paging works; when too many processes share memory, locality breaks, page faults explode and thrashing begins.",
-        "关系：局部性使工作集很小，请求分页才有效；进程过多时局部性被破坏，缺页激增，产生抖动。"
+        "关系：局部性使工作集很小，请求分页才有效；进程过多时局部性被破坏，缺页激增，产生抖动。",
+        "Working set prevents thrashing",
+        "小工作集避免抖动"
       ]
     ]
   },
@@ -606,25 +698,33 @@
         "frame number",
         "页框号",
         "One ENTRY PER PAGE whose main field is the FRAME NUMBER (where that page is in main memory).",
-        "每页一个表项，主字段是该页所在的页框号。"
+        "每页一个表项，主字段是该页所在的页框号。",
+        "Frame number per page",
+        "每页的页框号"
       ],
       [
         "present",
         "存在位",
         "A PRESENT / valid bit: is the page currently in main memory? If not, a page fault occurs.",
-        "存在位（有效位）：该页是否已在主存；不在则缺页。"
+        "存在位（有效位）：该页是否已在主存；不在则缺页。",
+        "Present / valid bit",
+        "存在位/有效位"
       ],
       [
         "modified",
         "修改位",
         "A MODIFIED / dirty bit: has the page been changed, so must it be written back to disk?",
-        "修改位（脏位）：该页是否被改动，是否需要写回磁盘。"
+        "修改位（脏位）：该页是否被改动，是否需要写回磁盘。",
+        "Modified / dirty bit",
+        "修改位/脏位"
       ],
       [
         "protection",
         "保护位",
         "PROTECTION and other control bits (read / write / execute, caching, referenced / use bit).",
-        "保护位及其他控制位（读/写/执行、缓存、引用位）。"
+        "保护位及其他控制位（读/写/执行、缓存、引用位）。",
+        "Protection control bits",
+        "保护控制位"
       ]
     ]
   },
@@ -647,25 +747,33 @@
         "page number",
         "页号",
         "1. Split the virtual address into PAGE NUMBER + OFFSET.",
-        "1. 把虚拟地址拆成页号 + 偏移量。"
+        "1. 把虚拟地址拆成页号 + 偏移量。",
+        "Page number plus offset",
+        "页号加偏移量"
       ],
       [
         "TLB",
         "快表",
         "2. Check the TLB first: a HIT gives the frame number at once (a miss goes to the page table).",
-        "2. 先查 TLB：命中立刻得到页框号；未命中再查页表。"
+        "2. 先查 TLB：命中立刻得到页框号；未命中再查页表。",
+        "Check the TLB first",
+        "先查 TLB"
       ],
       [
         "frame number",
         "页框号",
         "3. The page number indexes the PAGE TABLE (or inverted page table) to obtain the FRAME NUMBER; a missing page causes a page fault.",
-        "3. 页号查页表（或倒排页表）得到页框号；页不在主存则缺页。"
+        "3. 页号查页表（或倒排页表）得到页框号；页不在主存则缺页。",
+        "Page table gives frame",
+        "页表给出页框号"
       ],
       [
         "physical|real",
         "物理地址|实地址|物理",
         "4. FRAME NUMBER + unchanged OFFSET = the REAL / PHYSICAL address.",
-        "4. 页框号 + 不变的偏移量 = 实（物理）地址。"
+        "4. 页框号 + 不变的偏移量 = 实（物理）地址。",
+        "Frame plus offset: real",
+        "页框加偏移=实地址"
       ]
     ]
   },
@@ -688,19 +796,25 @@
         "one entry|per frame",
         "每页框一项|实页框|实存",
         "Instead of one entry per virtual page, there is ONE ENTRY PER REAL FRAME — table size is proportional to real memory, not virtual memory.",
-        "不是每虚页一项，而是每个实页框一项——表大小由实存决定，与虚存无关。"
+        "不是每虚页一项，而是每个实页框一项——表大小由实存决定，与虚存无关。",
+        "One entry per frame",
+        "每页框一项"
       ],
       [
         "process id",
         "进程标识",
         "Each entry holds the PROCESS ID + PAGE NUMBER occupying that frame, plus control bits and a chain pointer.",
-        "每个表项记录占用该页框的进程标识与页号，并含控制位与链指针。"
+        "每个表项记录占用该页框的进程标识与页号，并含控制位与链指针。",
+        "Entry holds PID, page",
+        "表项存 PID 与页号"
       ],
       [
         "hash",
         "哈希",
         "The virtual address (PID + page number) is HASHED to find the entry; chain pointers resolve collisions and the TLB caches recent hits.",
-        "对（进程标识 + 页号）哈希定位表项；链指针解决冲突，TLB 缓存最近结果。"
+        "对（进程标识 + 页号）哈希定位表项；链指针解决冲突，TLB 缓存最近结果。",
+        "Hash PID plus page",
+        "哈希 PID 与页号"
       ]
     ]
   },
@@ -723,19 +837,25 @@
         "cache",
         "高速缓存",
         "A TLB is a SMALL, FAST cache of recently used page-table entries, placed next to the address-translation hardware.",
-        "TLB 是保存最近使用页表项的小型高速缓存，靠近地址转换硬件。"
+        "TLB 是保存最近使用页表项的小型高速缓存，靠近地址转换硬件。",
+        "Small fast PTE cache",
+        "小型高速页表项缓存"
       ],
       [
         "hit",
         "命中",
         "On a HIT the frame number is obtained immediately, so the extra main-memory access to the page table is skipped.",
-        "命中时立刻得到页框号，省去访问页表的那次主存访问。"
+        "命中时立刻得到页框号，省去访问页表的那次主存访问。",
+        "Hit skips page-table access",
+        "命中省去查表"
       ],
       [
         "two|memory accesses",
         "两次访问|性能",
         "Without it every reference needs TWO (or more) memory accesses — one for the table, one for the data — so translation would halve effective speed.",
-        "没有它每次引用至少两次主存访问（查表 + 取数），性能几乎减半；TLB 让转换接近 CPU 速度。"
+        "没有它每次引用至少两次主存访问（查表 + 取数），性能几乎减半；TLB 让转换接近 CPU 速度。",
+        "Avoids two memory accesses",
+        "避免两次主存访问"
       ]
     ]
   },
@@ -758,19 +878,25 @@
         "associative mapping",
         "相联映射",
         "ASSOCIATIVE mapping compares the page number with ALL entries in PARALLEL (content-addressable / special hardware).",
-        "相联映射把页号与所有表项并行比较（按内容寻址，需专用硬件）。"
+        "相联映射把页号与所有表项并行比较（按内容寻址，需专用硬件）。",
+        "All entries compared parallel",
+        "所有表项并行比较"
       ],
       [
         "TLB",
         "快表",
         "The TLB holds a RANDOM SUBSET of pages with no natural index, so it MUST be searched by content in parallel to stay fast.",
-        "TLB 保存的是各页的随机子集、没有天然索引，所以必须并行按内容查找才够快。"
+        "TLB 保存的是各页的随机子集、没有天然索引，所以必须并行按内容查找才够快。",
+        "TLB has no index",
+        "TLB 没有天然索引"
       ],
       [
         "index",
         "索引",
         "A normal PAGE TABLE is INDEXED directly by the page number (page number = offset into the table), so no search is needed at all.",
-        "普通页表直接用页号作索引（页号即表内偏移），根本不需要查找。"
+        "普通页表直接用页号作索引（页号即表内偏移），根本不需要查找。",
+        "Page table is indexed",
+        "页表直接按页号索引"
       ]
     ]
   },
@@ -793,13 +919,17 @@
         "small pages",
         "小页",
         "SMALL pages: less INTERNAL fragmentation and a better match to the working set — less memory is wasted and fewer unnecessary bytes are loaded.",
-        "小页：内部碎片少，更贴合工作集——浪费少、少装入无用数据。"
+        "小页：内部碎片少，更贴合工作集——浪费少、少装入无用数据。",
+        "Small pages: less waste",
+        "小页：浪费少"
       ],
       [
         "large pages",
         "大页",
         "LARGE pages: smaller PAGE TABLES, fewer page faults at first and more efficient disk transfers — but more wasted space when locality is lost.",
-        "大页：页表更小、初期缺页更少、磁盘传输更高效；但局部性减弱时浪费更多空间。"
+        "大页：页表更小、初期缺页更少、磁盘传输更高效；但局部性减弱时浪费更多空间。",
+        "Large pages: smaller tables",
+        "大页：页表更小"
       ]
     ]
   },
@@ -822,25 +952,33 @@
         "cat",
         "显示文件",
         "Display files: cat, more, head -n 10 file, tail -n 20 file; create with cat > file and append with cat >> file.",
-        "显示文件：cat、more、head -n、tail -n；cat > 新建、cat >> 追加。"
+        "显示文件：cat、more、head -n、tail -n；cat > 新建、cat >> 追加。",
+        "cat, head, tail display",
+        "cat、head、tail 显示文件"
       ],
       [
         "grep",
         "搜索",
         "Search contents: grep Jack ex2, grep -i 'display' ex1, grep -i -c pattern file.",
-        "搜索内容：grep 模式 文件、-i 忽略大小写、-c 计数。"
+        "搜索内容：grep 模式 文件、-i 忽略大小写、-c 计数。",
+        "grep searches contents",
+        "grep 搜索文件内容"
       ],
       [
         "pipes",
         "管道",
         "Pipes & redirection: ls | grep '^ex' | wc -l; sort ex2 > ex3.",
-        "管道与重定向：ls | grep '^ex' | wc -l；sort ex2 > ex3。"
+        "管道与重定向：ls | grep '^ex' | wc -l；sort ex2 > ex3。",
+        "Pipes connect commands",
+        "管道连接命令"
       ],
       [
         "chmod",
         "权限",
         "Files/dirs/permissions/processes/help: ls, mkdir, cd, cp, mv, rm, chmod go-rwx ex1, ps, kill %1, man / whatis / apropos.",
-        "文件/目录/权限/进程/帮助：ls、mkdir、cd、cp、mv、rm、chmod、ps、kill、man / whatis / apropos。"
+        "文件/目录/权限/进程/帮助：ls、mkdir、cd、cp、mv、rm、chmod、ps、kill、man / whatis / apropos。",
+        "chmod, ps, kill, man",
+        "chmod、ps、kill、man"
       ]
     ]
   }
@@ -958,7 +1096,10 @@
         list.innerHTML = q.pts.map(function (p, i) {
           return '<li><span class="q2-tick ' + (results[i] ? "ok" : "no") + '">' +
             (results[i] ? "&#10003;" : "&#10007;") + '</span><span><strong>Point ' + (i + 1) +
-            ':</strong> ' + esc(p[2]) + '<span class="q2-model-zh">' + esc(p[3]) + '</span></span></li>';
+            ':</strong> <strong class="q2-short">' + esc(p[4]) + '</strong> ' +
+            '<span class="q2-verbose">(' + esc(p[2]) + ')</span>' +
+            '<span class="q2-model-zh"><strong class="q2-short">' + esc(p[5]) + '</strong> ' +
+            '<span class="q2-verbose">（' + esc(p[3]) + '）</span></span></span></li>';
         }).join("");
         fb.hidden = false;
       }
