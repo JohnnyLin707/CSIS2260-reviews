@@ -10,6 +10,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 
 ## ✨ Latest additions
 
+- **New page — `pages/Quiz2.html`** — the professor's 20 predicted Quiz 2 questions (Chapters 7 and 8) plus a Linux command review question: 21 questions / 69 marks with simplified bilingual model answers, one large answer box and an individual grade button per question, keyword-based marking.
 - **New page — `pages/Quiz2AllQuestions.html`** — the Quiz 2 question bank rebuilt for the new exam scope in textbook order: questions from all 40 Chapter 7 slides and Chapter 8 slides 1-29 — 109 questions and 265 keyword-graded points in total, including 40 supplementary questions that cover the knowledge-point breakdown items.
 - **New page — `pages/Quiz2MockTest.html`** — a Blackboard-style Quiz 2 mock test with 12 essay questions (46 marks) covering all of Chapter 7 and Chapter 8 slides 1-29. One large answer box per question; a scoring point is awarded as soon as the answer contains one or two English or 中文 key words. Instant per-question badges, scores and bilingual model-answer feedback.
 - **New page — `pages/Fall2025MidtermReview.html`** — model answers for all six questions (46 marks) of the Fall 2025 OS Midterm: PCB elements, user vs kernel mode, the 14 resources shared by all threads, ULT vs KLT, a seven-state process transition diagram drawn as circles and labelled arrows, and the Linux command list. Every answer is bilingual and links back to the exact lecture-slide or review page it came from.
@@ -201,6 +202,7 @@ CSIS-2260review/
 │   ├── MidtermMockExam.html             # Deck 16 — interactive mock exam (68 questions, 241 marks)
 │   ├── InstructionCycleDrill.html       # Standalone 10-question instruction-cycle drill
 │   ├── Fall2025MidtermReview.html       # Fall 2025 midterm exam model answers (Q1-Q6)
+│   ├── Quiz2.html                       # Quiz 2 predicted questions (21 / 69 marks)
 │   ├── Quiz2MockTest.html               # Quiz 2 mock test (12 questions / 46 marks)
 │   └── Quiz2AllQuestions.html           # Quiz 2 all questions (109 / 265 marks)
 │   └── Quiz2AllQuestions.html           # Quiz 2 all questions (133 / 375 marks)

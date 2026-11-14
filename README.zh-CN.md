@@ -10,6 +10,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ## ✨ 本次更新
 
+- **新增页面 `pages/Quiz2.html`** —— 教授预测的 Quiz 2 考题（第 7、8 章共 20 题）加 1 道 Linux 命令复习题：共 21 题 / 69 分，参考答案已简化便于记忆；每题一个大输入框与独立评分按钮，按关键词判分。
 - **新增页面 `pages/Quiz2AllQuestions.html`** —— 按新考核范围重建的 Quiz 2 全部题库：覆盖第 7 章全部 40 页、第 8 章 1–29 页的题目，共 109 题 / 265 个关键词判分点，其中含 40 道补充题，覆盖知识点细分的内容。
 - **新增页面 `pages/Quiz2MockTest.html`** —— 仿 Blackboard 界面的 Quiz 2 模拟卷：12 道简答题（共 46 分），覆盖第 7 章全部内容与第 8 章 1–29 页。每题一个大输入框；每个得分点只要答出 1–2 个英文或中文关键词即可得分，提交后立即显示每题徽章、得分与中英对照参考答案反馈。
 - **新增页面 `pages/Fall2025MidtermReview.html`** —— 2025 秋季操作系统期中试卷 Q1–Q6（共 46 分）的完整参考答案：PCB 要素、用户态与内核态、线程共享的 14 类资源、ULT 与 KLT、用圆圈与箭头绘制的七状态进程转换图，以及重新整理后的 Linux 命令题。答案均为中英对照，并附原教材页面链接。
@@ -201,6 +202,7 @@ CSIS-2260review/
 │   ├── MidtermMockExam.html             # 单元 16 —— 期中模拟考试（68 题 / 241 分，交互判分）
 │   ├── InstructionCycleDrill.html       # 独立页面 —— 指令周期填空练习（10 题）
 │   ├── Fall2025MidtermReview.html       # 2025 秋季期中试卷参考答案（Q1-Q6）
+│   ├── Quiz2.html                       # Quiz 2 预测题（21 题 / 69 分）
 │   ├── Quiz2MockTest.html               # Quiz 2 模拟卷（12 题 / 46 分）
 │   └── Quiz2AllQuestions.html           # Quiz 2 全部题目（109 题 / 265 分）
 │   └── Quiz2AllQuestions.html           # Quiz 2 全部题目（133 题 / 375 分）

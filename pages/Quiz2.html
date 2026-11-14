@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Quiz 2 &middot; Predicted Questions | CSIS2260 Review</title>
+  <meta name="description" content="Quiz 2 predicted exam questions: 20 questions from Chapters 7 and 8 plus a Linux command review, with simplified bilingual model answers and keyword-based marking.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="q2-body">
+
+  <div class="q2-topbar">
+    <a class="q2-close" href="../index.html" aria-label="Back to home" title="Back to home">&#10005;</a>
+    <span class="q2-title">Quiz 2 &middot; Predicted Questions</span>
+  </div>
+
+  <div class="q2-gradestrip">
+    <div class="q2-gradestrip-inner">
+      <div class="q2-grade-left">
+        <div class="q2-grade-label">Final Grade <span class="q2-pill" id="q2Final">0 / 0</span></div>
+        <div class="q2-grade-sub">Keyword-based marking &middot; 关键词判分</div>
+      </div>
+      <div class="q2-grade-right">
+        <span class="q2-attempt" id="q2Attempt">ATTEMPT 1 (NOT SUBMITTED)</span>
+        <span class="q2-pill" id="q2TotalPill">0 / 0</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="q2-wrap">
+    <div class="q2-banner">
+      <strong>Quiz 2 &middot; Predicted Questions (21 questions / 69 marks).</strong> Scope: <strong>Ch07v2a.pdf</strong> (memory management), <strong>Ch08v2a.pdf pp.1&ndash;29</strong> (virtual memory), plus the <strong>Linux commands</strong> from <a href="UnixCommands.html">Introduction to UNIX Commands and Scripting</a>. Model answers are simplified for memorising. Write in one big box per question; a scoring point is awarded as soon as your answer contains <strong>one or two key words</strong> (English or 中文).
+      <br><strong>教授预测题</strong>（共 21 题 / 69 分）。范围：第 7 章内存管理、第 8 章 1&ndash;29 页虚拟内存，以及 UNIX 命令讲义中的 Linux 命令。参考答案已简化便于记忆；每个要点只需答出 <strong>1&ndash;2 个关键词</strong>即可得分。
+    </div>
+
+    <details class="q2-overall" id="q2Overall">
+      <summary>Overall Feedback &middot; 总体反馈</summary>
+      <div class="q2-overall-body" id="q2OverallBody">Submit the quiz to see your overall score and feedback.</div>
+    </details>
+
+    <div id="q2Mount"></div>
+
+    <div class="q2-submitbar">
+      <button class="q2-btn q2-btn-primary" id="q2Submit" type="button">Submit quiz / 交卷评分</button>
+      <button class="q2-btn" id="q2Reveal" type="button">Show model answers / 显示参考答案</button>
+      <button class="q2-btn" id="q2Reset" type="button">Reset / 重置</button>
+      <span class="q2-total" id="q2Total" role="status" aria-live="polite"></span>
+    </div>
+
+    <nav class="q2-bottom" aria-label="Page navigation">
+      <a href="../index.html">&#8592; Back to home</a>
+      <a href="UnixCommands.html">UNIX command handout &rarr;</a>
+      <a href="Quiz2MockTest.html">Quiz 2 mock test &rarr;</a>
+    </nav>
+  </main>
+
+  <script>
+  /* =====================================================================
+     Quiz 2 — essay questions with keyword-based marking.
+     Each point: [English key words (1-2), Chinese key words, model EN, model ZH]
+     A point scores when the answer contains ANY ONE of its key words.
+     ===================================================================== */
+  (function () {
+    "use strict";
+
+    var QUIZ = [
+  {
+    "q": "Name and briefly explain three requirements that modern memory management should fulfill. (Any three of the five: relocation, protection, sharing, logical organisation, physical organisation.)",
+    "zh": "写出并简要说明现代内存管理应满足的三项要求（五项中任写三项即可）。",
+    "src": "Ch07v2a.pdf &middot; p.3 Requirements; p.4 Relocation; p.6 Protection; p.7 Sharing; p.8 Logical Organization; p.9 Physical Organization",
+    "links": [
+      [
+        "p.3",
+        "chapter7/page-03.html"
+      ],
+      [
+        "p.6",
+        "chapter7/page-06.html"
+      ],
+      [
+        "p.9",
+        "chapter7/page-09.html"
+      ]
+    ],
+    "pts": [
+      [
+        "relocation",
+        "重定位",
+        "1. RELOCATION — a swapped-out process may come back to a different memory region, so addresses are translated at run time.",
+        "1. 重定位——换出的进程可能回到不同内存区域，地址需在运行时转换。"
+      ],
+      [
+        "protection",
+        "保护",
+        "2. PROTECTION — every memory reference is checked at run time; a process needs permission to read or write a location.",
+        "2. 保护——运行时检查每次内存引用，读写需要权限。"
+      ],
+      [
+        "sharing",
+        "共享",
+        "3. SHARING — controlled access to shared memory (e.g. shared program code) without breaking protection. Also valid: logical organisation (modules) and physical organisation (main + secondary memory).",
+        "3. 共享——在不破坏保护的前提下受控共享内存（如共享代码）。逻辑组织（模块）与物理组织（主存+辅存）也得分。"
+      ]
+    ]
+  },
+  {
+    "q": "Why should memory management support relocation of programs?",
+    "zh": "为什么内存管理要支持程序重定位？",
+    "src": "Ch07v2a.pdf &middot; p.4 Relocation; p.22 Relocating Loader",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ],
+      [
+        "p.22",
+        "chapter7/page-22.html"
+      ]
+    ],
+    "pts": [
+      [
+        "swapped",
+        "换入换出",
+        "Processes are swapped IN and OUT of main memory to keep the processor busy.",
+        "进程会在主存与磁盘之间换入换出，以保持处理器忙碌。"
+      ],
+      [
+        "different|memory region",
+        "不同区域",
+        "A swapped-out process usually returns to a DIFFERENT memory region, not the same one.",
+        "换出的进程通常回到不同的内存区域，而不是原来的位置。"
+      ],
+      [
+        "translated",
+        "运行时转换",
+        "Therefore logical references must be TRANSLATED into physical addresses at run time (by hardware).",
+        "因此逻辑引用必须在运行时由硬件转换成物理地址。"
+      ]
+    ]
+  },
+  {
+    "q": "Briefly explain how fixed partitioning works, and what its main limitations or disadvantages are.",
+    "zh": "简述固定分区的工作方式及其主要局限或缺点。",
+    "src": "Ch07v2a.pdf &middot; p.12 Fixed Partitioning; p.13 Disadvantages; p.14 Unequal Size Partitions",
+    "links": [
+      [
+        "p.12",
+        "chapter7/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ]
+    ],
+    "pts": [
+      [
+        "fixed|partitions",
+        "固定|分区",
+        "HOW: main memory is split into a FIXED number of partitions, equal or unequal in size.",
+        "做法：主存被划分为固定数量的分区，等长或不等长。"
+      ],
+      [
+        "one process",
+        "一个进程",
+        "One process at a time is loaded into each available partition.",
+        "一个分区一次只装入一个进程。"
+      ],
+      [
+        "internal fragmentation",
+        "内部碎片",
+        "LIMIT 1: wasted space INSIDE the assigned partition = INTERNAL fragmentation (small jobs waste space).",
+        "缺点 1：分区内部的浪费 = 内部碎片（小作业浪费空间）。"
+      ],
+      [
+        "overlays",
+        "覆盖技术",
+        "LIMIT 2: a program larger than the largest partition cannot run unless the programmer uses overlays.",
+        "缺点 2：程序超过最大分区时无法运行，除非用覆盖技术。"
+      ]
+    ]
+  },
+  {
+    "q": "Briefly explain dynamic partitioning and its main limitations and disadvantages.",
+    "zh": "简述动态分区及其主要局限与缺点。",
+    "src": "Ch07v2a.pdf &middot; p.17 Dynamic Partitioning; p.18 Effect; p.19 Compaction",
+    "links": [
+      [
+        "p.17",
+        "chapter7/page-17.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "pts": [
+      [
+        "variable length",
+        "可变长度",
+        "HOW: partitions are created dynamically, of VARIABLE length and number, as processes arrive.",
+        "做法：分区按进程到达动态创建，长度与数量都可变。"
+      ],
+      [
+        "exactly",
+        "恰好分配",
+        "Each process is allocated EXACTLY as much memory as it requires.",
+        "按进程实际需要恰好分配。"
+      ],
+      [
+        "external fragmentation",
+        "外部碎片",
+        "LIMIT: holes appear BETWEEN partitions over time = EXTERNAL fragmentation, so utilisation declines.",
+        "缺点：分区之间随时间出现空洞 = 外部碎片，利用率下降。"
+      ],
+      [
+        "compaction",
+        "紧凑处理",
+        "REMEDY: COMPACTION shifts processes to merge holes into one big free block; it costs time and needs dynamic relocation.",
+        "补救：紧凑处理移动进程把空洞并成大空闲块；耗时且需要动态重定位。"
+      ]
+    ]
+  },
+  {
+    "q": "Briefly explain the difference between internal and external fragmentation, and whether fixed and dynamic partitioning are subject to either.",
+    "zh": "简述内部碎片与外部碎片的区别，以及固定分区与动态分区各会产生哪一种。",
+    "src": "Ch07v2a.pdf &middot; p.13 Fixed Partitioning Disadvantages; p.19 Fragmentation; p.26 Paging",
+    "links": [
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "pts": [
+      [
+        "internal",
+        "内部碎片",
+        "INTERNAL = wasted space INSIDE an allocated block (the block is larger than the data).",
+        "内部碎片 = 已分配块内部的浪费（块比数据大）。"
+      ],
+      [
+        "external",
+        "外部碎片",
+        "EXTERNAL = many small free holes OUTSIDE / between allocated blocks; total free memory is enough but no hole is big enough.",
+        "外部碎片 = 分配块之间的小空洞；总空闲够但没有单个足够大的空洞。"
+      ],
+      [
+        "fixed",
+        "固定分区",
+        "FIXED partitioning (and paging) suffers INTERNAL; DYNAMIC partitioning (and segmentation) suffers EXTERNAL.",
+        "固定分区（和分页）产生内部碎片；动态分区（和分段）产生外部碎片。"
+      ]
+    ]
+  },
+  {
+    "q": "Briefly explain three different placement algorithms for dynamic partitioning.",
+    "zh": "简述动态分区的三种放置算法。",
+    "src": "Ch07v2a.pdf &middot; p.20 Placement Algorithms; p.21 Figure 7.5",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter7/page-21.html"
+      ]
+    ],
+    "pts": [
+      [
+        "first-fit",
+        "首次适配",
+        "FIRST-FIT: scan from the beginning, take the FIRST hole that is big enough. Fast and simple.",
+        "首次适配：从头扫描，取第一个足够大的空洞；最快最简单。"
+      ],
+      [
+        "best-fit",
+        "最佳适配",
+        "BEST-FIT: take the SMALLEST hole that is big enough, leaving the smallest leftover (but creates tiny holes).",
+        "最佳适配：取最小的足够大的空洞，剩余最小（但会产生小碎片）。"
+      ],
+      [
+        "next-fit",
+        "邻近适配",
+        "NEXT-FIT: start searching from where the LAST allocation was made, not from the beginning.",
+        "邻近适配：从上次分配的位置开始搜索，而不是从头开始。"
+      ]
+    ]
+  },
+  {
+    "q": "Briefly contrast logical, relative and absolute (or physical) memory addresses.",
+    "zh": "简述逻辑地址、相对地址与绝对（物理）地址的区别。",
+    "src": "Ch07v2a.pdf &middot; p.23 Addresses; p.24 Address Translation",
+    "links": [
+      [
+        "p.23",
+        "chapter7/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ]
+    ],
+    "pts": [
+      [
+        "logical address",
+        "逻辑地址",
+        "LOGICAL address: a reference INDEPENDENT of where the data currently sits in memory.",
+        "逻辑地址：与数据当前所在位置无关的引用。"
+      ],
+      [
+        "relative",
+        "相对地址",
+        "RELATIVE address: a special logical address expressed as a location RELATIVE to the start of the program.",
+        "相对地址：以程序起始位置为基准的逻辑地址。"
+      ],
+      [
+        "physical",
+        "物理地址",
+        "ABSOLUTE / PHYSICAL address: the real main-memory location; translation happens BEFORE the access.",
+        "绝对/物理地址：主存中的真实位置；访问前必须先转换。"
+      ]
+    ]
+  },
+  {
+    "q": "In a dynamic partitioning system that supports relocation, briefly explain the role of the base and bounds registers.",
+    "zh": "在支持重定位的动态分区系统中，简述基址寄存器与界限寄存器的作用。",
+    "src": "Ch07v2a.pdf &middot; p.24 Base and Bounds Registers; p.25 Figure 7.8",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ],
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "pts": [
+      [
+        "base register",
+        "基址寄存器",
+        "BASE register holds the STARTING address of the process; it is ADDED to every relative address (relocation).",
+        "基址寄存器保存进程起始地址；每个相对地址都加上它（实现重定位）。"
+      ],
+      [
+        "bounds register",
+        "界限寄存器",
+        "BOUNDS register holds the END address / length; an address beyond it raises an interrupt (protection).",
+        "界限寄存器保存结束地址/长度；越界即触发中断（实现保护）。"
+      ]
+    ]
+  },
+  {
+    "q": "What is the main idea behind paging? Briefly explain how it works, including how page tables are used. How are logical addresses translated to physical addresses?",
+    "zh": "分页的核心思想是什么？简述其工作方式、页表的作用，以及逻辑地址如何转换为物理地址。",
+    "src": "Ch07v2a.pdf &middot; p.26 Paging; p.28 Page Table; p.30 Logical Addresses; p.31 Address Translation",
+    "links": [
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ],
+      [
+        "p.28",
+        "chapter7/page-28.html"
+      ],
+      [
+        "p.31",
+        "chapter7/page-31.html"
+      ]
+    ],
+    "pts": [
+      [
+        "frames",
+        "页框",
+        "IDEA: split main memory into fixed-size FRAMES and the process into PAGES of the same size — no external fragmentation.",
+        "核心：主存分成固定大小页框，进程分成同样大小的页——没有外部碎片。"
+      ],
+      [
+        "page table",
+        "页表",
+        "A PAGE TABLE per process records which frame holds each page.",
+        "每个进程一张页表，记录每一页放在哪个页框。"
+      ],
+      [
+        "page number",
+        "页号",
+        "A logical address = PAGE NUMBER + OFFSET.",
+        "逻辑地址 = 页号 + 偏移量。"
+      ],
+      [
+        "frame number",
+        "页框号",
+        "TRANSLATION: the page number indexes the page table to obtain a FRAME NUMBER.",
+        "转换：用页号查页表得到页框号。"
+      ],
+      [
+        "physical address",
+        "物理地址",
+        "Frame number + UNCHANGED offset = PHYSICAL address (hardware does this at run time).",
+        "页框号 + 不变的偏移量 = 物理地址（由硬件在运行时完成）。"
+      ]
+    ]
+  },
+  {
+    "q": "What is the main idea behind segmentation? Briefly explain how it works, including how segment tables are used. How are logical addresses translated to physical addresses?",
+    "zh": "分段的核心思想是什么？简述其工作方式、段表的作用，以及逻辑地址如何转换为物理地址。",
+    "src": "Ch07v2a.pdf &middot; p.32 Segmentation; p.34 Address Translation; p.35 Example",
+    "links": [
+      [
+        "p.32",
+        "chapter7/page-32.html"
+      ],
+      [
+        "p.34",
+        "chapter7/page-34.html"
+      ]
+    ],
+    "pts": [
+      [
+        "variable-length",
+        "可变长度",
+        "IDEA: split the program into VARIABLE-length SEGMENTS that match its logical modules (code, data, stack).",
+        "核心：把程序划分为与逻辑模块对应的可变长度的段（代码、数据、栈）。"
+      ],
+      [
+        "segment table",
+        "段表",
+        "A SEGMENT TABLE stores the BASE address and LENGTH of each segment.",
+        "段表保存每一段的基址与长度。"
+      ],
+      [
+        "segment number",
+        "段号",
+        "A logical address = SEGMENT NUMBER + OFFSET.",
+        "逻辑地址 = 段号 + 偏移量。"
+      ],
+      [
+        "base",
+        "基址",
+        "TRANSLATION: segment number → table → BASE + offset, checked against the LENGTH for protection.",
+        "转换：段号查段表 → 基址 + 偏移量，并用长度检查实现保护。"
+      ]
+    ]
+  },
+  {
+    "q": "What are buffer overflow attacks, and what can be done against them?",
+    "zh": "什么是缓冲区溢出攻击？可以采取哪些防御措施？",
+    "src": "Ch07v2a.pdf &middot; p.37 Buffer Overflow Attacks; p.38 Example; p.39 Defending Against Buffer Overflows",
+    "links": [
+      [
+        "p.37",
+        "chapter7/page-37.html"
+      ],
+      [
+        "p.39",
+        "chapter7/page-39.html"
+      ]
+    ],
+    "pts": [
+      [
+        "buffer|overrun",
+        "缓冲区溢出|越界写入",
+        "ATTACK: a process writes data PAST the end of a fixed-size buffer (also called buffer overrun).",
+        "攻击：程序向固定大小缓冲区末尾之外写入数据（又称缓冲区溢出、越界写入）。"
+      ],
+      [
+        "return address",
+        "返回地址",
+        "It can overwrite the function RETURN ADDRESS and redirect execution to injected code.",
+        "可覆盖函数返回地址，把执行转向注入的代码。"
+      ],
+      [
+        "compile-time",
+        "编译时",
+        "DEFENCES: compile-time (stack canaries, safe libraries) AND run-time (ASLR, non-executable stack); plus prevention, detection and aborting.",
+        "防御：编译时（栈保护、安全库）与运行时（地址随机化、不可执行栈）；以及预防、检测与中止。"
+      ]
+    ]
+  },
+  {
+    "q": "What is the key difference between simple paging and virtual memory paging?",
+    "zh": "简单分页与虚拟内存分页的关键区别是什么？",
+    "src": "Ch07v2a.pdf &middot; p.26 Paging; Ch08v2a.pdf &middot; p.12 Paging; p.15 Virtual Address Space",
+    "links": [
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.15",
+        "chapter8/page-15.html"
+      ]
+    ],
+    "pts": [
+      [
+        "all pages",
+        "全部页面",
+        "SIMPLE paging: ALL pages of the process must be in main memory before it can run.",
+        "简单分页：进程的全部页在运行前都必须在主存中。"
+      ],
+      [
+        "resident set",
+        "驻留集",
+        "VIRTUAL memory paging: only a FEW pieces (the RESIDENT SET) are loaded; the rest stays in secondary memory.",
+        "虚拟内存分页：只装入少数块（驻留集），其余留在辅存。"
+      ],
+      [
+        "demand",
+        "按需调入",
+        "Pages are brought in ON DEMAND at a page fault, so a process may be LARGER than real memory.",
+        "页在缺页时按需调入，进程可以比实存大。"
+      ]
+    ]
+  },
+  {
+    "q": "In virtual memory paging, what happens when a process accesses a memory address in a page that is not in main memory?",
+    "zh": "虚拟内存分页中，进程访问不在主存的页时会发生什么？",
+    "src": "Ch08v2a.pdf &middot; p.5 Execution of a Process; p.16 Paging Mechanism; p.22 TLB Sequence",
+    "links": [
+      [
+        "p.5",
+        "chapter8/page-05.html"
+      ],
+      [
+        "p.16",
+        "chapter8/page-16.html"
+      ]
+    ],
+    "pts": [
+      [
+        "page fault",
+        "缺页",
+        "1. The hardware detects a PAGE FAULT; the faulting process is blocked (another process is dispatched).",
+        "1. 硬件检测到缺页；引发缺页的进程被阻塞（调度另一进程）。"
+      ],
+      [
+        "disk",
+        "磁盘",
+        "2. The OS issues a DISK read and loads the required page into a free frame (replacement if none is free).",
+        "2. 操作系统发出磁盘读请求，把所需页装入空闲页框（无空闲时置换）。"
+      ],
+      [
+        "restarted",
+        "重新执行",
+        "3. The page table / TLB is updated and the instruction that caused the fault is RESTARTED.",
+        "3. 更新页表/TLB，并重新执行引发缺页的指令。"
+      ]
+    ]
+  },
+  {
+    "q": "What is thrashing, what is the principle of locality, and how are the two concepts related?",
+    "zh": "什么是抖动？什么是局部性原理？两者有何关系？",
+    "src": "Ch08v2a.pdf &middot; p.9 Thrashing; p.10 Principle of Locality",
+    "links": [
+      [
+        "p.9",
+        "chapter8/page-09.html"
+      ],
+      [
+        "p.10",
+        "chapter8/page-10.html"
+      ]
+    ],
+    "pts": [
+      [
+        "thrashing",
+        "抖动",
+        "THRASHING: the system spends more time swapping pages in and out than executing instructions.",
+        "抖动：系统花在页面换入换出上的时间多于执行指令。"
+      ],
+      [
+        "locality",
+        "局部性",
+        "LOCALITY: memory references tend to CLUSTER, so only a few pages are needed over a short period.",
+        "局部性：内存访问倾向成簇，短时间内只需要少量页。"
+      ],
+      [
+        "working set",
+        "工作集",
+        "RELATION: locality keeps the WORKING SET small, so demand paging works; when too many processes share memory, locality breaks, page faults explode and thrashing begins.",
+        "关系：局部性使工作集很小，请求分页才有效；进程过多时局部性被破坏，缺页激增，产生抖动。"
+      ]
+    ]
+  },
+  {
+    "q": "What does a page table contain?",
+    "zh": "页表包含哪些内容？",
+    "src": "Ch08v2a.pdf &middot; p.12 Paging; p.13 Memory Management Formats; p.31 Segment Table Entry",
+    "links": [
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ]
+    ],
+    "pts": [
+      [
+        "frame number",
+        "页框号",
+        "One ENTRY PER PAGE whose main field is the FRAME NUMBER (where that page is in main memory).",
+        "每页一个表项，主字段是该页所在的页框号。"
+      ],
+      [
+        "present",
+        "存在位",
+        "A PRESENT / valid bit: is the page currently in main memory? If not, a page fault occurs.",
+        "存在位（有效位）：该页是否已在主存；不在则缺页。"
+      ],
+      [
+        "modified",
+        "修改位",
+        "A MODIFIED / dirty bit: has the page been changed, so must it be written back to disk?",
+        "修改位（脏位）：该页是否被改动，是否需要写回磁盘。"
+      ],
+      [
+        "protection",
+        "保护位",
+        "PROTECTION and other control bits (read / write / execute, caching, referenced / use bit).",
+        "保护位及其他控制位（读/写/执行、缓存、引用位）。"
+      ]
+    ]
+  },
+  {
+    "q": "How is a virtual address translated into a physical address in virtual memory paging?",
+    "zh": "虚拟内存分页中，虚拟地址如何转换成物理地址？",
+    "src": "Ch08v2a.pdf &middot; p.14 Figure 8.2; p.20 TLB; p.21 TLB Use",
+    "links": [
+      [
+        "p.14",
+        "chapter8/page-14.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "pts": [
+      [
+        "page number",
+        "页号",
+        "1. Split the virtual address into PAGE NUMBER + OFFSET.",
+        "1. 把虚拟地址拆成页号 + 偏移量。"
+      ],
+      [
+        "TLB",
+        "快表",
+        "2. Check the TLB first: a HIT gives the frame number at once (a miss goes to the page table).",
+        "2. 先查 TLB：命中立刻得到页框号；未命中再查页表。"
+      ],
+      [
+        "frame number",
+        "页框号",
+        "3. The page number indexes the PAGE TABLE (or inverted page table) to obtain the FRAME NUMBER; a missing page causes a page fault.",
+        "3. 页号查页表（或倒排页表）得到页框号；页不在主存则缺页。"
+      ],
+      [
+        "physical|real",
+        "物理地址|实地址|物理",
+        "4. FRAME NUMBER + unchanged OFFSET = the REAL / PHYSICAL address.",
+        "4. 页框号 + 不变的偏移量 = 实（物理）地址。"
+      ]
+    ]
+  },
+  {
+    "q": "What is an inverted page table? Briefly explain how it works.",
+    "zh": "什么是倒排页表？简述其工作原理。",
+    "src": "Ch08v2a.pdf &middot; p.17 Inverted Page Table; p.18 Structure; p.19 Search",
+    "links": [
+      [
+        "p.17",
+        "chapter8/page-17.html"
+      ],
+      [
+        "p.19",
+        "chapter8/page-19.html"
+      ]
+    ],
+    "pts": [
+      [
+        "one entry|per frame",
+        "每页框一项|实页框|实存",
+        "Instead of one entry per virtual page, there is ONE ENTRY PER REAL FRAME — table size is proportional to real memory, not virtual memory.",
+        "不是每虚页一项，而是每个实页框一项——表大小由实存决定，与虚存无关。"
+      ],
+      [
+        "process id",
+        "进程标识",
+        "Each entry holds the PROCESS ID + PAGE NUMBER occupying that frame, plus control bits and a chain pointer.",
+        "每个表项记录占用该页框的进程标识与页号，并含控制位与链指针。"
+      ],
+      [
+        "hash",
+        "哈希",
+        "The virtual address (PID + page number) is HASHED to find the entry; chain pointers resolve collisions and the TLB caches recent hits.",
+        "对（进程标识 + 页号）哈希定位表项；链指针解决冲突，TLB 缓存最近结果。"
+      ]
+    ]
+  },
+  {
+    "q": "What is a Translation Lookaside Buffer, and why is it important for performance?",
+    "zh": "什么是转换检测缓冲区（TLB）？为什么它对性能很重要？",
+    "src": "Ch08v2a.pdf &middot; p.20 Translation Lookaside Buffer; p.21 Use; p.25 TLB and Cache",
+    "links": [
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.25",
+        "chapter8/page-25.html"
+      ]
+    ],
+    "pts": [
+      [
+        "cache",
+        "高速缓存",
+        "A TLB is a SMALL, FAST cache of recently used page-table entries, placed next to the address-translation hardware.",
+        "TLB 是保存最近使用页表项的小型高速缓存，靠近地址转换硬件。"
+      ],
+      [
+        "hit",
+        "命中",
+        "On a HIT the frame number is obtained immediately, so the extra main-memory access to the page table is skipped.",
+        "命中时立刻得到页框号，省去访问页表的那次主存访问。"
+      ],
+      [
+        "two|memory accesses",
+        "两次访问|性能",
+        "Without it every reference needs TWO (or more) memory accesses — one for the table, one for the data — so translation would halve effective speed.",
+        "没有它每次引用至少两次主存访问（查表 + 取数），性能几乎减半；TLB 让转换接近 CPU 速度。"
+      ]
+    ]
+  },
+  {
+    "q": "What is associative mapping, and why does a TLB need it while a page table does not?",
+    "zh": "什么是相联映射？为什么 TLB 需要它而页表不需要？",
+    "src": "Ch08v2a.pdf &middot; p.23 Associative Mapping; p.24 Direct vs Associative Lookup",
+    "links": [
+      [
+        "p.23",
+        "chapter8/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter8/page-24.html"
+      ]
+    ],
+    "pts": [
+      [
+        "associative mapping",
+        "相联映射",
+        "ASSOCIATIVE mapping compares the page number with ALL entries in PARALLEL (content-addressable / special hardware).",
+        "相联映射把页号与所有表项并行比较（按内容寻址，需专用硬件）。"
+      ],
+      [
+        "TLB",
+        "快表",
+        "The TLB holds a RANDOM SUBSET of pages with no natural index, so it MUST be searched by content in parallel to stay fast.",
+        "TLB 保存的是各页的随机子集、没有天然索引，所以必须并行按内容查找才够快。"
+      ],
+      [
+        "index",
+        "索引",
+        "A normal PAGE TABLE is INDEXED directly by the page number (page number = offset into the table), so no search is needed at all.",
+        "普通页表直接用页号作索引（页号即表内偏移），根本不需要查找。"
+      ]
+    ]
+  },
+  {
+    "q": "Please describe one argument each for small and for large page sizes.",
+    "zh": "分别给出一个支持小页和支持大页的理由。",
+    "src": "Ch08v2a.pdf &middot; p.26 Page Size; p.27 Page Fault Rate; p.28 Real Page Sizes; p.29 Trade-offs",
+    "links": [
+      [
+        "p.26",
+        "chapter8/page-26.html"
+      ],
+      [
+        "p.28",
+        "chapter8/page-28.html"
+      ]
+    ],
+    "pts": [
+      [
+        "small pages",
+        "小页",
+        "SMALL pages: less INTERNAL fragmentation and a better match to the working set — less memory is wasted and fewer unnecessary bytes are loaded.",
+        "小页：内部碎片少，更贴合工作集——浪费少、少装入无用数据。"
+      ],
+      [
+        "large pages",
+        "大页",
+        "LARGE pages: smaller PAGE TABLES, fewer page faults at first and more efficient disk transfers — but more wasted space when locality is lost.",
+        "大页：页表更小、初期缺页更少、磁盘传输更高效；但局部性减弱时浪费更多空间。"
+      ]
+    ]
+  },
+  {
+    "q": "Linux review: list the core command groups covered in &ldquo;Introduction to UNIX Commands and Scripting&rdquo; (professor's review list).",
+    "zh": "Linux 复习：写出《Introduction to UNIX Commands and Scripting》中的核心命令组（教授要求复习）。",
+    "src": "Introduction to UNIX Commands and Scripting &middot; 0.0 Getting Help; 1.x Directories; 2.4 Display / 2.6 grep; 4.4 Pipes; 5.2 chmod; 5.3-5.5 Processes",
+    "links": [
+      [
+        "UNIX Commands",
+        "UnixCommands.html"
+      ],
+      [
+        "Linux Drill",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "pts": [
+      [
+        "cat",
+        "显示文件",
+        "Display files: cat, more, head -n 10 file, tail -n 20 file; create with cat > file and append with cat >> file.",
+        "显示文件：cat、more、head -n、tail -n；cat > 新建、cat >> 追加。"
+      ],
+      [
+        "grep",
+        "搜索",
+        "Search contents: grep Jack ex2, grep -i 'display' ex1, grep -i -c pattern file.",
+        "搜索内容：grep 模式 文件、-i 忽略大小写、-c 计数。"
+      ],
+      [
+        "pipes",
+        "管道",
+        "Pipes & redirection: ls | grep '^ex' | wc -l; sort ex2 > ex3.",
+        "管道与重定向：ls | grep '^ex' | wc -l；sort ex2 > ex3。"
+      ],
+      [
+        "chmod",
+        "权限",
+        "Files/dirs/permissions/processes/help: ls, mkdir, cd, cp, mv, rm, chmod go-rwx ex1, ps, kill %1, man / whatis / apropos.",
+        "文件/目录/权限/进程/帮助：ls、mkdir、cd、cp、mv、rm、chmod、ps、kill、man / whatis / apropos。"
+      ]
+    ]
+  }
+];
+
+
+    /* ------------------------------------------------------------ helpers */
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+    function norm(s) {
+      return String(s == null ? "" : s)
+        .toLowerCase()
+        .replace(/[\u2018\u2019\u02bc`\u00b4]/g, "'")
+        .replace(/[\u201c\u201d]/g, '"')
+        .replace(/[^a-z0-9\u3400-\u9fff\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+    function keysOf(point) {
+      return (point[0] + "|" + point[1]).split("|").map(norm).filter(Boolean);
+    }
+
+    var TOTAL = QUIZ.reduce(function (n, q) { return n + q.pts.length; }, 0);
+    var mount = document.getElementById("q2Mount");
+    var html = [];
+
+    QUIZ.forEach(function (q, qi) {
+      var n = qi + 1, m = q.pts.length;
+      var srcLinks = q.links.map(function (l) {
+        return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + '</a>';
+      }).join(" &middot; ");
+      html.push('<section class="q2-card" data-q="' + qi + '">');
+      html.push('  <div class="q2-head">');
+      html.push('    <span class="q2-num">' + n + '</span>');
+      html.push('    <span class="q2-type">ESSAY &middot; ' + m + ' MARKS</span>');
+      html.push('    <span class="q2-badge ungraded" data-badge>NOT GRADED</span>');
+      html.push('    <button class="q2-grade-btn" type="button" data-grade aria-label="Grade question ' + n + '">Grade / 评分</button>');
+      html.push('    <span class="q2-markpill" data-pill>0 / ' + m + '</span>');
+      html.push('  </div>');
+      html.push('  <p class="q2-q">' + esc(q.q) + ' <span class="q2-qzh">&middot; ' + esc(q.zh) + '</span></p>');
+      html.push('  <p class="q2-src">Source &middot; ' + q.src + (srcLinks ? ' &nbsp;[' + srcLinks + ']' : '') + '</p>');
+      html.push('  <div class="q2-answer-label">Answer</div>');
+      html.push('  <textarea class="q2-textarea" data-answer rows="6" placeholder="Type your answer here&hellip; / 在此输入答案" aria-label="Answer for question ' + n + '"></textarea>');
+      html.push('  <div class="q2-feedback" data-feedback hidden>');
+      html.push('    <div class="q2-fb-head">Feedback &middot; 反馈</div>');
+      html.push('    <ul class="q2-pointlist" data-points></ul>');
+      html.push('  </div>');
+      html.push('</section>');
+    });
+    mount.innerHTML = html.join("");
+
+    var cards = Array.prototype.slice.call(mount.querySelectorAll(".q2-card"));
+    var finalEl = document.getElementById("q2Final");
+    var totalPill = document.getElementById("q2TotalPill");
+    var totalEl = document.getElementById("q2Total");
+    var attemptEl = document.getElementById("q2Attempt");
+    var overallBody = document.getElementById("q2OverallBody");
+
+    /* One score per card, so a single question can be graded on its own. */
+    function syncTotals(submitted) {
+      var total = 0, graded = 0;
+      cards.forEach(function (c) {
+        total += +(c.getAttribute("data-score") || 0);
+        if (c.getAttribute("data-graded") === "1") graded++;
+      });
+      var label = total + " / " + TOTAL;
+      finalEl.textContent = label;
+      totalPill.textContent = label;
+      totalEl.textContent = graded ? label + " marks" : "";
+      attemptEl.textContent = submitted ? "ATTEMPT 1 (SUBMITTED)"
+        : (graded ? "ATTEMPT 1 (PARTIALLY GRADED)" : "ATTEMPT 1 (NOT SUBMITTED)");
+      if (submitted || graded) {
+        var pct = Math.round(total / TOTAL * 100);
+        overallBody.innerHTML = '<strong>' + label + ' marks (' + pct + '%).</strong> ' +
+          (submitted
+            ? 'Each point is awarded when the answer contains one or two of its key words. Review the feedback under each question for the model answers.<br>每个得分点只需答出 1–2 个关键词即可得分；请查看每题下方的反馈与参考答案。'
+            : 'Graded ' + graded + ' of ' + QUIZ.length + ' questions so far. Use the button beside any question to grade it, or Submit quiz to grade all of them.<br>已评分 ' + graded + ' / ' + QUIZ.length + ' 题；可点每题旁的评分按钮，或交卷评分全部题目。');
+      } else {
+        overallBody.textContent = "Submit the quiz to see your overall score and feedback.";
+      }
+      return total;
+    }
+    syncTotals(false);
+
+    function gradeCard(card, showFeedback) {
+      var qi = +card.getAttribute("data-q");
+      var q = QUIZ[qi];
+      var value = norm(card.querySelector("[data-answer]").value);
+      var results = q.pts.map(function (p) {
+        return value ? keysOf(p).some(function (k) { return value.indexOf(k) !== -1; }) : false;
+      });
+      var score = results.filter(Boolean).length;
+      var badge = card.querySelector("[data-badge]");
+      var pill = card.querySelector("[data-pill]");
+      pill.textContent = score + " / " + q.pts.length;
+      if (!value) {
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+      } else if (score === q.pts.length) {
+        badge.className = "q2-badge correct";
+        badge.textContent = "CORRECT";
+      } else if (score === 0) {
+        badge.className = "q2-badge incorrect";
+        badge.textContent = "INCORRECT";
+      } else {
+        badge.className = "q2-badge partial";
+        badge.textContent = "PARTIALLY CORRECT";
+      }
+      var fb = card.querySelector("[data-feedback]");
+      if (showFeedback) {
+        var list = card.querySelector("[data-points]");
+        list.innerHTML = q.pts.map(function (p, i) {
+          return '<li><span class="q2-tick ' + (results[i] ? "ok" : "no") + '">' +
+            (results[i] ? "&#10003;" : "&#10007;") + '</span><span><strong>Point ' + (i + 1) +
+            ':</strong> ' + esc(p[2]) + '<span class="q2-model-zh">' + esc(p[3]) + '</span></span></li>';
+        }).join("");
+        fb.hidden = false;
+      }
+      return score;
+    }
+
+    function submit(showFeedback) {
+      cards.forEach(function (c) {
+        var score = gradeCard(c, showFeedback);
+        c.setAttribute("data-score", score);
+        c.setAttribute("data-graded", "1");
+      });
+      return syncTotals(true);
+    }
+
+    function gradeOne(card) {
+      var score = gradeCard(card, true);
+      card.setAttribute("data-score", score);
+      card.setAttribute("data-graded", "1");
+      syncTotals(false);
+    }
+
+    document.getElementById("q2Submit").addEventListener("click", function () { submit(true); });
+    document.getElementById("q2Reveal").addEventListener("click", function () {
+      cards.forEach(function (card) {
+        var qi = +card.getAttribute("data-q");
+        card.querySelector("[data-answer]").value = QUIZ[qi].pts.map(function (p) { return p[2] + ' ' + (p[3] || ''); }).join('\n');
+      });
+      submit(true);
+    });
+    document.getElementById("q2Reset").addEventListener("click", function () {
+      cards.forEach(function (card) {
+        card.querySelector("[data-answer]").value = "";
+        var badge = card.querySelector("[data-badge]");
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+        card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
+        card.querySelector("[data-feedback]").hidden = true;
+        card.setAttribute("data-score", "0");
+        card.setAttribute("data-graded", "0");
+      });
+      syncTotals(false);
+    });
+    cards.forEach(function (card) {
+      card.querySelector("[data-grade]").addEventListener("click", function () { gradeOne(card); });
+      var ta = card.querySelector("[data-answer]");
+      ta.addEventListener("input", function () {
+        card.setAttribute("data-score", "0");
+        card.setAttribute("data-graded", "0");
+        var badge = card.querySelector("[data-badge]");
+        badge.className = "q2-badge ungraded";
+        badge.textContent = "NOT GRADED";
+        card.querySelector("[data-pill]").textContent = "0 / " + QUIZ[+card.getAttribute("data-q")].pts.length;
+        card.querySelector("[data-feedback]").hidden = true;
+        syncTotals(false);
+      });
+      ta.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); submit(true); }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
