@@ -1,0 +1,2977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Quiz 2 &middot; MCQs | CSIS2260 Review</title>
+  <meta name="description" content="Quiz 2 multiple-choice practice: single-choice and multi-choice variants of the 20 predicted questions plus Linux command questions, 1 mark each with bilingual options.">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../javascript/site-nav.js" data-site-nav defer></script>
+</head>
+<body class="q2-body">
+  <div id="siteNavMount"></div>
+
+  <div class="q2-topbar">
+    <a class="q2-close" href="../index.html" aria-label="Back to home" title="Back to home">&#10005;</a>
+    <span class="q2-title">Quiz 2 &middot; MCQs</span>
+  </div>
+
+  <div class="q2-gradestrip">
+    <div class="q2-gradestrip-inner">
+      <div class="q2-grade-left">
+        <div class="q2-grade-label">Final Grade <span class="q2-pill" id="q2Final">0 / 0</span></div>
+        <div class="q2-grade-sub">Keyword-based marking &middot; 关键词判分</div>
+      </div>
+      <div class="q2-grade-right">
+        <span class="q2-attempt" id="q2Attempt">ATTEMPT 1 (NOT SUBMITTED)</span>
+        <span class="q2-pill" id="q2TotalPill">0 / 0</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="q2-wrap">
+    <div class="q2-banner">
+      <strong>Quiz 2 &middot; MCQs (67 questions / 67 marks).</strong> 教授预测的 20 道题各配「单选 + 多选」两个变体（题末标注「变体」），另含 UNIX 命令讲义与 Lab 8 的命令选择题。范围：<strong>Ch07v2a.pdf 全部</strong>、<strong>Ch08v2a.pdf pp.1&ndash;29</strong>、<strong>Introduction to UNIX Commands and Scripting</strong>。题目与每个选项下方均有简体中文翻译；题目下方浅色小字标注教材出处并可点击跳转。单选题选对得 1 分；多选题需选出全部正确项得 1 分。
+      <br><strong>Scope</strong>: all of Chapter 7, Chapter 8 pp.1&ndash;29 and the UNIX command handout. Every question and option carries a simplified Chinese note, and each card names its source chapter / page. Single choice: pick the one correct option. Multi choice: pick exactly the correct set.
+    </div>
+
+    <details class="q2-overall" id="q2Overall">
+      <summary>Overall Feedback &middot; 总体反馈</summary>
+      <div class="q2-overall-body" id="q2OverallBody">Submit the quiz to see your overall score and feedback.</div>
+    </details>
+
+    <div id="q2Mount"></div>
+
+    <div class="q2-submitbar">
+      <button class="q2-btn q2-btn-primary" id="q2Submit" type="button">Submit quiz / 交卷评分</button>
+      <button class="q2-btn" id="q2Reveal" type="button">Show model answers / 显示参考答案</button>
+      <button class="q2-btn" id="q2Reset" type="button">Reset / 重置</button>
+      <span class="q2-total" id="q2Total" role="status" aria-live="polite"></span>
+    </div>
+
+    <nav class="q2-bottom" aria-label="Page navigation">
+      <a href="Quiz2.html">Quiz 2 predicted questions &rarr;</a>
+      <a href="Quiz2AllQuestions.html">Quiz 2 all questions &rarr;</a>
+      <a href="Quiz2MockTest.html">Quiz 2 mock test &rarr;</a>
+      <a href="UnixCommands.html">UNIX command handout &rarr;</a>
+    </nav>
+  </main>
+
+  <script>
+(function () {
+  "use strict";
+  var QUIZ = [
+  {
+    "t": "s",
+    "base": 1,
+    "q": "Which memory-management requirement means that a swapped-out process can be loaded back into a DIFFERENT memory region? (Variant 1 / 变体 1)",
+    "zh": "哪项内存管理需求意味着被换出的进程可以装回不同的内存区域？（变体 1）",
+    "src": "Ch07v2a.pdf · p.4 Relocation · Predicted Q1 · 预测题 1",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Relocation",
+        "重定位",
+        true
+      ],
+      [
+        "Protection",
+        "保护",
+        false
+      ],
+      [
+        "Sharing",
+        "共享",
+        false
+      ],
+      [
+        "Logical organization",
+        "逻辑组织",
+        false
+      ]
+    ],
+    "why": "Relocation: a process may be swapped out and later reloaded into a different region.",
+    "whyz": "重定位：进程换出后可能装回不同的内存区域。"
+  },
+  {
+    "t": "m",
+    "base": 1,
+    "q": "Select ALL requirements of modern memory management (choose three). (Variant 2 / 变体 2)",
+    "zh": "选出现代内存管理的全部需求（选三项）。（变体 2）",
+    "src": "Ch07v2a.pdf · p.3 Requirements; p.8/9 Logical & Physical Organization · Predicted Q1 · 预测题 1",
+    "links": [
+      [
+        "p.3",
+        "chapter7/page-03.html"
+      ],
+      [
+        "p.8",
+        "chapter7/page-08.html"
+      ],
+      [
+        "p.9",
+        "chapter7/page-09.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Relocation",
+        "重定位",
+        true
+      ],
+      [
+        "Protection",
+        "保护",
+        true
+      ],
+      [
+        "Sharing",
+        "共享",
+        true
+      ],
+      [
+        "Prepaging",
+        "预调页",
+        false
+      ],
+      [
+        "Frame locking",
+        "页框锁定",
+        false
+      ]
+    ],
+    "why": "The five requirements are relocation, protection, sharing, logical organisation and physical organisation; prepaging and frame locking are Chapter 8 policies.",
+    "whyz": "五项需求为重定位、保护、共享、逻辑组织与物理组织；预调页与页框锁定属于第 8 章策略。"
+  },
+  {
+    "t": "s",
+    "base": 2,
+    "q": "Why must memory references be translated at run time? (Variant 1 / 变体 1)",
+    "zh": "为什么内存引用必须在运行时转换？（变体 1）",
+    "src": "Ch07v2a.pdf · p.4 Relocation · Predicted Q2 · 预测题 2",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A swapped-out process may return to a different region",
+        "换出的进程可能回到不同的区域",
+        true
+      ],
+      [
+        "Memory is always contiguous",
+        "内存总是连续的",
+        false
+      ],
+      [
+        "Programs are too large to fit",
+        "程序太大装不下",
+        false
+      ],
+      [
+        "The OS needs to save space",
+        "系统需要节省空间",
+        false
+      ]
+    ],
+    "why": "A swapped-out process usually returns to a DIFFERENT memory region, so addresses must be translated at run time.",
+    "whyz": "换出的进程通常回到不同的内存区域，因此地址必须运行时转换。"
+  },
+  {
+    "t": "m",
+    "base": 2,
+    "q": "Select ALL statements that are true about relocation. (Variant 2 / 变体 2)",
+    "zh": "选出关于重定位的所有正确描述。（变体 2）",
+    "src": "Ch07v2a.pdf · p.4 Relocation; p.24-25 Base and Bounds · Predicted Q2 · 预测题 2",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ],
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ],
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A process may occupy different regions at different times",
+        "进程可能在不同时刻占用不同区域",
+        true
+      ],
+      [
+        "Addresses are translated at run time",
+        "地址在运行时转换",
+        true
+      ],
+      [
+        "Hardware support (base and bounds registers) is required",
+        "需要硬件支持（基址与界限寄存器）",
+        true
+      ],
+      [
+        "It removes the need for a page table",
+        "它使页表不再需要",
+        false
+      ]
+    ],
+    "why": "Relocation means a process can be placed anywhere; hardware translates addresses at run time.",
+    "whyz": "重定位意味着进程可放在任意位置；硬件在运行时转换地址。"
+  },
+  {
+    "t": "s",
+    "base": 3,
+    "q": "In fixed partitioning, how many processes can occupy each partition at one time? (Variant 1 / 变体 1)",
+    "zh": "固定分区中，每个分区一次可以容纳多少个进程？（变体 1）",
+    "src": "Ch07v2a.pdf · p.12 Fixed Partitioning · Predicted Q3 · 预测题 3",
+    "links": [
+      [
+        "p.12",
+        "chapter7/page-12.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Exactly one",
+        "恰好一个",
+        true
+      ],
+      [
+        "Two",
+        "两个",
+        false
+      ],
+      [
+        "Depends on the process size",
+        "取决于进程大小",
+        false
+      ],
+      [
+        "Unlimited",
+        "无限个",
+        false
+      ]
+    ],
+    "why": "One process at a time is loaded into each available partition.",
+    "whyz": "每个可用分区一次只装入一个进程。"
+  },
+  {
+    "t": "m",
+    "base": 3,
+    "q": "Select ALL limitations of fixed partitioning. (Variant 2 / 变体 2)",
+    "zh": "选出固定分区的所有局限。（变体 2）",
+    "src": "Ch07v2a.pdf · p.13 Disadvantages · Predicted Q3 · 预测题 3",
+    "links": [
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.16",
+        "chapter7/page-16.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Internal fragmentation wastes space",
+        "内部碎片浪费空间",
+        true
+      ],
+      [
+        "A program may be too big for any partition",
+        "程序可能超过任何分区大小",
+        true
+      ],
+      [
+        "The programmer may need to use overlays",
+        "程序员可能需要使用覆盖技术",
+        true
+      ],
+      [
+        "It requires compaction to merge holes",
+        "它需要紧凑处理来合并空洞",
+        false
+      ]
+    ],
+    "why": "Fixed partitioning wastes space inside partitions, may not fit large programs, and may force overlay design; compaction is a dynamic-partitioning remedy.",
+    "whyz": "固定分区在分区内浪费空间、大程序装不下、可能需要覆盖技术；紧凑处理是动态分区的补救手段。"
+  },
+  {
+    "t": "s",
+    "base": 4,
+    "q": "In dynamic partitioning, how much memory is allocated to each process? (Variant 1 / 变体 1)",
+    "zh": "动态分区中，每个进程分配多少内存？（变体 1）",
+    "src": "Ch07v2a.pdf · p.17 Dynamic Partitioning · Predicted Q4 · 预测题 4",
+    "links": [
+      [
+        "p.17",
+        "chapter7/page-17.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Exactly as much as it requires",
+        "恰好等于它所需的大小",
+        true
+      ],
+      [
+        "A fixed amount set in advance",
+        "事先设定的固定量",
+        false
+      ],
+      [
+        "One page frame",
+        "一个页框",
+        false
+      ],
+      [
+        "Half of the largest partition",
+        "最大分区的一半",
+        false
+      ]
+    ],
+    "why": "Partitions are created dynamically, of variable length and number; each process gets exactly what it needs.",
+    "whyz": "分区按进程到达动态创建，长度与数量可变；每个进程恰好获得所需内存。"
+  },
+  {
+    "t": "m",
+    "base": 4,
+    "q": "Select ALL statements that are true about dynamic partitioning. (Variant 2 / 变体 2)",
+    "zh": "选出关于动态分区的所有正确描述。（变体 2）",
+    "src": "Ch07v2a.pdf · p.17 Dynamic Partitioning; p.19 Compaction · Predicted Q4 · 预测题 4",
+    "links": [
+      [
+        "p.17",
+        "chapter7/page-17.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Partitions are created as processes arrive",
+        "分区按进程到达时创建",
+        true
+      ],
+      [
+        "Partitions have variable length and number",
+        "分区长度与数量可变",
+        true
+      ],
+      [
+        "External fragmentation accumulates over time",
+        "外部碎片随时间累积",
+        true
+      ],
+      [
+        "It never needs compaction",
+        "它从不需要紧凑处理",
+        false
+      ]
+    ],
+    "why": "Dynamic partitioning creates variable partitions on demand, but holes accumulate and compaction is needed.",
+    "whyz": "动态分区按需创建可变分区，但空洞会累积，需要紧凑处理。"
+  },
+  {
+    "t": "s",
+    "base": 5,
+    "q": "Internal fragmentation is wasted space that occurs… (Variant 1 / 变体 1)",
+    "zh": "内部碎片是发生在……的浪费空间。（变体 1）",
+    "src": "Ch07v2a.pdf · p.13; p.19 Fragmentation · Predicted Q5 · 预测题 5",
+    "links": [
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Inside an allocated block",
+        "已分配块内部",
+        true
+      ],
+      [
+        "Between allocated blocks",
+        "已分配块之间",
+        false
+      ],
+      [
+        "On the disk",
+        "磁盘上",
+        false
+      ],
+      [
+        "In the page table",
+        "页表中",
+        false
+      ]
+    ],
+    "why": "Internal fragmentation = wasted space INSIDE an allocated block (the block is larger than the data).",
+    "whyz": "内部碎片 = 已分配块内部的浪费空间（块比数据大）。"
+  },
+  {
+    "t": "m",
+    "base": 5,
+    "q": "Which schemes suffer INTERNAL fragmentation? (choose two) (Variant 2 / 变体 2)",
+    "zh": "哪些方案会产生内部碎片？（选两项）（变体 2）",
+    "src": "Ch07v2a.pdf · p.11 Table 7.2; p.13; p.26 Paging · Predicted Q5 · 预测题 5",
+    "links": [
+      [
+        "p.11",
+        "chapter7/page-11.html"
+      ],
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Fixed partitioning",
+        "固定分区",
+        true
+      ],
+      [
+        "Paging",
+        "分页",
+        true
+      ],
+      [
+        "Dynamic partitioning",
+        "动态分区",
+        false
+      ],
+      [
+        "Segmentation",
+        "分段",
+        false
+      ]
+    ],
+    "why": "Fixed partitioning and paging waste space inside a block; dynamic partitioning and segmentation waste space between blocks (external).",
+    "whyz": "固定分区与分页在块内浪费空间；动态分区与分段在块间浪费空间（外部碎片）。"
+  },
+  {
+    "t": "s",
+    "base": 6,
+    "q": "Which placement algorithm scans from the beginning and takes the FIRST hole that is big enough? (Variant 1 / 变体 1)",
+    "zh": "哪种放置算法从头扫描并取第一个足够大的空洞？（变体 1）",
+    "src": "Ch07v2a.pdf · p.20 Placement Algorithms · Predicted Q6 · 预测题 6",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ]
+    ],
+    "opts": [
+      [
+        "First-fit",
+        "首次适配",
+        true
+      ],
+      [
+        "Best-fit",
+        "最佳适配",
+        false
+      ],
+      [
+        "Next-fit",
+        "邻近适配",
+        false
+      ],
+      [
+        "Worst-fit",
+        "最差适配",
+        false
+      ]
+    ],
+    "why": "FIRST-FIT scans from the beginning and takes the first hole that is large enough.",
+    "whyz": "首次适配：从头扫描，取第一个足够大的空洞。"
+  },
+  {
+    "t": "m",
+    "base": 6,
+    "q": "Select ALL placement algorithms used with dynamic partitioning. (Variant 2 / 变体 2)",
+    "zh": "选出动态分区使用的所有放置算法。（变体 2）",
+    "src": "Ch07v2a.pdf · p.20-21 Placement Algorithms · Predicted Q6 · 预测题 6",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter7/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "First-fit",
+        "首次适配",
+        true
+      ],
+      [
+        "Best-fit",
+        "最佳适配",
+        true
+      ],
+      [
+        "Next-fit",
+        "邻近适配",
+        true
+      ],
+      [
+        "LRU",
+        "最近最少使用",
+        false
+      ],
+      [
+        "Optimal",
+        "最佳置换",
+        false
+      ]
+    ],
+    "why": "The three placement algorithms are first-fit, best-fit and next-fit; LRU and Optimal are Chapter 8 page replacement algorithms.",
+    "whyz": "三种放置算法为首次适配、最佳适配与邻近适配；LRU 与最佳置换是第 8 章的页面置换算法。"
+  },
+  {
+    "t": "s",
+    "base": 7,
+    "q": "Which address is the REAL location in main memory? (Variant 1 / 变体 1)",
+    "zh": "哪种地址是主存中的真实位置？（变体 1）",
+    "src": "Ch07v2a.pdf · p.23 Addresses · Predicted Q7 · 预测题 7",
+    "links": [
+      [
+        "p.23",
+        "chapter7/page-23.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Physical / absolute address",
+        "物理（绝对）地址",
+        true
+      ],
+      [
+        "Relative address",
+        "相对地址",
+        false
+      ],
+      [
+        "Logical address",
+        "逻辑地址",
+        false
+      ],
+      [
+        "Virtual address",
+        "虚拟地址",
+        false
+      ]
+    ],
+    "why": "The physical (absolute) address is the real main-memory location.",
+    "whyz": "物理（绝对）地址是主存中的真实位置。"
+  },
+  {
+    "t": "m",
+    "base": 7,
+    "q": "Select ALL statements that are true about LOGICAL addresses. (Variant 2 / 变体 2)",
+    "zh": "选出关于逻辑地址的所有正确描述。（变体 2）",
+    "src": "Ch07v2a.pdf · p.23-24 Addresses · Predicted Q7 · 预测题 7",
+    "links": [
+      [
+        "p.23",
+        "chapter7/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Independent of the current memory assignment",
+        "与当前内存分配无关",
+        true
+      ],
+      [
+        "Must be translated before the access",
+        "访问前必须转换",
+        true
+      ],
+      [
+        "Always equal to the physical address",
+        "总是等于物理地址",
+        false
+      ],
+      [
+        "Used only in virtual memory systems",
+        "仅用于虚拟内存系统",
+        false
+      ]
+    ],
+    "why": "Logical addresses are independent of the current placement and must be translated before each access.",
+    "whyz": "逻辑地址与当前分配无关，访问前必须转换。"
+  },
+  {
+    "t": "s",
+    "base": 8,
+    "q": "Which register holds the STARTING address of the process in main memory? (Variant 1 / 变体 1)",
+    "zh": "哪个寄存器保存进程在主存中的起始地址？（变体 1）",
+    "src": "Ch07v2a.pdf · p.24 Base and Bounds Registers · Predicted Q8 · 预测题 8",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Base register",
+        "基址寄存器",
+        true
+      ],
+      [
+        "Bounds register",
+        "界限寄存器",
+        false
+      ],
+      [
+        "Program counter",
+        "程序计数器",
+        false
+      ],
+      [
+        "Stack pointer",
+        "栈指针",
+        false
+      ]
+    ],
+    "why": "The BASE register holds the starting address and is added to every relative address.",
+    "whyz": "基址寄存器保存起始地址，并加到每个相对地址上。"
+  },
+  {
+    "t": "m",
+    "base": 8,
+    "q": "Select ALL statements that are true about base and bounds registers. (Variant 2 / 变体 2)",
+    "zh": "选出关于基址与界限寄存器的所有正确描述。（变体 2）",
+    "src": "Ch07v2a.pdf · p.24-25 Base and Bounds · Predicted Q8 · 预测题 8",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ],
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The base register is added to every relative address",
+        "基址寄存器加到每个相对地址上",
+        true
+      ],
+      [
+        "The bounds register holds the end location / length",
+        "界限寄存器保存结束位置（长度）",
+        true
+      ],
+      [
+        "An address beyond the bounds raises an interrupt",
+        "越界地址会触发中断",
+        true
+      ],
+      [
+        "The bounds register stores the page frame number",
+        "界限寄存器保存页框号",
+        false
+      ]
+    ],
+    "why": "Base = relocation (start address added to references); bounds = protection (interrupt on violation).",
+    "whyz": "基址负责重定位（起始地址加到引用上）；界限负责保护（越界触发中断）。"
+  },
+  {
+    "t": "s",
+    "base": 9,
+    "q": "What does a page table entry mainly contain? (Variant 1 / 变体 1)",
+    "zh": "页表项主要包含什么？（变体 1）",
+    "src": "Ch07v2a.pdf · p.28 Page Table · Predicted Q9 · 预测题 9",
+    "links": [
+      [
+        "p.28",
+        "chapter7/page-28.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The frame number where that page resides",
+        "该页所在的页框号",
+        true
+      ],
+      [
+        "The process ID",
+        "进程标识",
+        false
+      ],
+      [
+        "The page offset",
+        "页偏移量",
+        false
+      ],
+      [
+        "The page contents",
+        "页内容",
+        false
+      ]
+    ],
+    "why": "A page table entry contains the frame number where that page resides in main memory.",
+    "whyz": "页表项包含该页在主存中所在的页框号。"
+  },
+  {
+    "t": "m",
+    "base": 9,
+    "q": "Select ALL statements that are true about paging. (Variant 2 / 变体 2)",
+    "zh": "选出关于分页的所有正确描述。（变体 2）",
+    "src": "Ch07v2a.pdf · p.26 Paging; p.30-31 Translation · Predicted Q9 · 预测题 9",
+    "links": [
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ],
+      [
+        "p.30",
+        "chapter7/page-30.html"
+      ],
+      [
+        "p.31",
+        "chapter7/page-31.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Main memory is divided into fixed-size frames",
+        "主存划分为固定大小的页框",
+        true
+      ],
+      [
+        "The process is divided into pages of the same size",
+        "进程划分为同样大小的页",
+        true
+      ],
+      [
+        "There is no external fragmentation",
+        "没有外部碎片",
+        true
+      ],
+      [
+        "A logical address is a segment number plus offset",
+        "逻辑地址是段号加偏移量",
+        false
+      ]
+    ],
+    "why": "Paging uses equal-size frames and pages, so there is no external fragmentation; a logical address is page number + offset.",
+    "whyz": "分页使用等大页框与页，因此没有外部碎片；逻辑地址是页号加偏移量。"
+  },
+  {
+    "t": "s",
+    "base": 10,
+    "q": "In segmentation, what does a segment table entry contain? (Variant 1 / 变体 1)",
+    "zh": "分段中，段表项包含什么？（变体 1）",
+    "src": "Ch07v2a.pdf · p.32 Segmentation; p.34 Translation · Predicted Q10 · 预测题 10",
+    "links": [
+      [
+        "p.32",
+        "chapter7/page-32.html"
+      ],
+      [
+        "p.34",
+        "chapter7/page-34.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The base address and length of the segment",
+        "该段的基址与长度",
+        true
+      ],
+      [
+        "The frame number",
+        "页框号",
+        false
+      ],
+      [
+        "The process ID",
+        "进程标识",
+        false
+      ],
+      [
+        "The page number",
+        "页号",
+        false
+      ]
+    ],
+    "why": "A segment table entry stores the BASE address and LENGTH of each segment.",
+    "whyz": "段表项保存每段的基址与长度。"
+  },
+  {
+    "t": "m",
+    "base": 10,
+    "q": "Select ALL advantages of segmentation. (Variant 2 / 变体 2)",
+    "zh": "选出分段的全部优点。（变体 2）",
+    "src": "Ch07v2a.pdf · p.33-34 Segmentation · Predicted Q10 · 预测题 10",
+    "links": [
+      [
+        "p.33",
+        "chapter7/page-33.html"
+      ],
+      [
+        "p.34",
+        "chapter7/page-34.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Logical organisation is visible to the programmer",
+        "逻辑组织对程序员可见",
+        true
+      ],
+      [
+        "Eliminates internal fragmentation",
+        "消除内部碎片",
+        true
+      ],
+      [
+        "The length check provides protection",
+        "长度检查提供保护",
+        true
+      ],
+      [
+        "It has no external fragmentation",
+        "它没有外部碎片",
+        false
+      ]
+    ],
+    "why": "Segmentation is programmer-visible, has no internal fragmentation and checks the offset against the length; but it DOES suffer external fragmentation.",
+    "whyz": "分段对程序员可见、无内部碎片并用长度检查保护；但它有外部碎片。"
+  },
+  {
+    "t": "s",
+    "base": 11,
+    "q": "What is a buffer overflow attack? (Variant 1 / 变体 1)",
+    "zh": "什么是缓冲区溢出攻击？（变体 1）",
+    "src": "Ch07v2a.pdf · p.37-38 Buffer Overflow · Predicted Q11 · 预测题 11",
+    "links": [
+      [
+        "p.37",
+        "chapter7/page-37.html"
+      ],
+      [
+        "p.38",
+        "chapter7/page-38.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Writing data past the end of a fixed-size buffer",
+        "向固定大小缓冲区末尾之外写入数据",
+        true
+      ],
+      [
+        "Reading a buffer too slowly",
+        "从缓冲区读取太慢",
+        false
+      ],
+      [
+        "Filling memory with too many pages",
+        "用过多页填满内存",
+        false
+      ],
+      [
+        "Running too many processes at once",
+        "同时运行过多进程",
+        false
+      ]
+    ],
+    "why": "A buffer overflow stores data BEYOND the limits of a fixed-size buffer.",
+    "whyz": "缓冲区溢出：向固定大小缓冲区的限制之外写入数据。"
+  },
+  {
+    "t": "m",
+    "base": 11,
+    "q": "Select ALL categories of defence against buffer overflow. (Variant 2 / 变体 2)",
+    "zh": "选出缓冲区溢出防御的所有类别。（变体 2）",
+    "src": "Ch07v2a.pdf · p.39 Defending Against Buffer Overflows · Predicted Q11 · 预测题 11",
+    "links": [
+      [
+        "p.39",
+        "chapter7/page-39.html"
+      ],
+      [
+        "p.38",
+        "chapter7/page-38.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Compile-time defences",
+        "编译时防御",
+        true
+      ],
+      [
+        "Run-time defences",
+        "运行时防御",
+        true
+      ],
+      [
+        "Prevention, detection and aborting unwanted writes",
+        "预防、检测并中止非预期写入",
+        true
+      ],
+      [
+        "Simply increasing the buffer size",
+        "单纯增大缓冲区",
+        false
+      ]
+    ],
+    "why": "Defences fall into compile-time and run-time categories that prevent, detect and abort unwanted writes.",
+    "whyz": "防御分为编译时与运行时两类，用于预防、检测并中止非预期写入。"
+  },
+  {
+    "t": "s",
+    "base": 12,
+    "q": "What is the KEY difference between simple paging and virtual memory paging? (Variant 1 / 变体 1)",
+    "zh": "简单分页与虚拟内存分页的关键区别是什么？（变体 1）",
+    "src": "Ch07v2a.pdf p.26; Ch08v2a.pdf p.12, p.15 · Predicted Q12 · 预测题 12",
+    "links": [
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ],
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.15",
+        "chapter8/page-15.html"
+      ]
+    ],
+    "opts": [
+      [
+        "In virtual memory paging only a FEW pieces (the resident set) are loaded",
+        "虚拟内存分页只装入少数块（驻留集）",
+        true
+      ],
+      [
+        "In virtual memory paging ALL pages must be resident",
+        "虚拟内存分页要求全部页驻留",
+        false
+      ],
+      [
+        "There is no difference between them",
+        "两者没有区别",
+        false
+      ],
+      [
+        "Simple paging uses segmentation",
+        "简单分页使用分段",
+        false
+      ]
+    ],
+    "why": "Simple paging: all pages resident before running; VM paging: only the resident set.",
+    "whyz": "简单分页运行前全部页驻留；虚拟内存分页只装入驻留集。"
+  },
+  {
+    "t": "m",
+    "base": 12,
+    "q": "Select ALL characteristics of virtual memory paging. (Variant 2 / 变体 2)",
+    "zh": "选出虚拟内存分页的所有特征。（变体 2）",
+    "src": "Ch08v2a.pdf p.2, p.6-7 Implications · Predicted Q12 · 预测题 12",
+    "links": [
+      [
+        "p.2",
+        "chapter8/page-02.html"
+      ],
+      [
+        "p.6",
+        "chapter8/page-06.html"
+      ],
+      [
+        "p.7",
+        "chapter8/page-07.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Only part of the process is in main memory",
+        "只有部分进程在主存中",
+        true
+      ],
+      [
+        "Pages are brought in on demand",
+        "页按需调入",
+        true
+      ],
+      [
+        "ALL pages must be resident before execution",
+        "执行前所有页必须驻留",
+        false
+      ],
+      [
+        "The process is limited to real memory size",
+        "进程受限于实存大小",
+        false
+      ]
+    ],
+    "why": "Only part is resident and pages load on demand, so a process can exceed real memory.",
+    "whyz": "只有部分驻留且按需调页，进程可超过实存大小。"
+  },
+  {
+    "t": "s",
+    "base": 13,
+    "q": "What is detected when a process accesses an address in a page that is NOT in main memory? (Variant 1 / 变体 1)",
+    "zh": "当进程访问不在主存中的页时，会检测到什么？（变体 1）",
+    "src": "Ch08v2a.pdf p.5; p.16 Paging Mechanism · Predicted Q13 · 预测题 13",
+    "links": [
+      [
+        "p.5",
+        "chapter8/page-05.html"
+      ],
+      [
+        "p.16",
+        "chapter8/page-16.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A page fault",
+        "缺页",
+        true
+      ],
+      [
+        "A system call",
+        "系统调用",
+        false
+      ],
+      [
+        "An I/O interrupt",
+        "I/O 中断",
+        false
+      ],
+      [
+        "A clock interrupt",
+        "时钟中断",
+        false
+      ]
+    ],
+    "why": "A PAGE FAULT is detected: the referenced page is not in main memory.",
+    "whyz": "检测到缺页：被引用的页不在主存中。"
+  },
+  {
+    "t": "m",
+    "base": 13,
+    "q": "Select ALL events that happen during a page fault. (Variant 2 / 变体 2)",
+    "zh": "选出缺页期间发生的所有事件。（变体 2）",
+    "src": "Ch08v2a.pdf p.5; p.16; p.22 · Predicted Q13 · 预测题 13",
+    "links": [
+      [
+        "p.5",
+        "chapter8/page-05.html"
+      ],
+      [
+        "p.16",
+        "chapter8/page-16.html"
+      ],
+      [
+        "p.22",
+        "chapter8/page-22.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The faulting process is blocked",
+        "引发缺页的进程被阻塞",
+        true
+      ],
+      [
+        "A disk read is issued for the required page",
+        "为所需页发出磁盘读请求",
+        true
+      ],
+      [
+        "Another process is dispatched while waiting",
+        "等待期间调度另一个进程",
+        true
+      ],
+      [
+        "The instruction is permanently discarded",
+        "指令被永久丢弃",
+        false
+      ]
+    ],
+    "why": "The process blocks, the page is read from disk, another process runs, and the instruction is RESTARTED.",
+    "whyz": "进程阻塞、从磁盘读页、调度另一进程，指令随后重新执行。"
+  },
+  {
+    "t": "s",
+    "base": 14,
+    "q": "What is thrashing? (Variant 1 / 变体 1)",
+    "zh": "什么是抖动？（变体 1）",
+    "src": "Ch08v2a.pdf p.9 Thrashing · Predicted Q14 · 预测题 14",
+    "links": [
+      [
+        "p.9",
+        "chapter8/page-09.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The system spends more time swapping pages than executing instructions",
+        "系统花在换页上的时间多于执行指令",
+        true
+      ],
+      [
+        "Running out of disk space",
+        "磁盘空间耗尽",
+        false
+      ],
+      [
+        "Too many processes in the ready state",
+        "就绪态进程过多",
+        false
+      ],
+      [
+        "Running out of page table entries",
+        "页表项耗尽",
+        false
+      ]
+    ],
+    "why": "Thrashing: the system spends more time swapping pages in and out than executing.",
+    "whyz": "抖动：换页时间多于执行时间。"
+  },
+  {
+    "t": "m",
+    "base": 14,
+    "q": "Select ALL statements that describe thrashing and locality correctly. (Variant 2 / 变体 2)",
+    "zh": "选出正确描述抖动与局部性关系的所有表述。（变体 2）",
+    "src": "Ch08v2a.pdf p.9 Thrashing; p.10 Principle of Locality · Predicted Q14 · 预测题 14",
+    "links": [
+      [
+        "p.9",
+        "chapter8/page-09.html"
+      ],
+      [
+        "p.10",
+        "chapter8/page-10.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Locality keeps the working set small, so demand paging works",
+        "局部性使工作集很小，请求分页才有效",
+        true
+      ],
+      [
+        "Broken locality increases page faults and can cause thrashing",
+        "局部性被破坏会增加缺页并导致抖动",
+        true
+      ],
+      [
+        "Thrashing proves that locality is strong",
+        "抖动证明局部性很强",
+        false
+      ],
+      [
+        "Locality is the cause of thrashing",
+        "局部性是抖动的原因",
+        false
+      ]
+    ],
+    "why": "Locality keeps the working set small; when it breaks, faults explode and thrashing begins.",
+    "whyz": "局部性使工作集很小；局部性被破坏时缺页激增并开始抖动。"
+  },
+  {
+    "t": "s",
+    "base": 15,
+    "q": "What is the main field in a page table entry? (Variant 1 / 变体 1)",
+    "zh": "页表项的主要字段是什么？（变体 1）",
+    "src": "Ch08v2a.pdf p.12 Paging; p.13 Memory Management Formats · Predicted Q15 · 预测题 15",
+    "links": [
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The frame number where that page resides",
+        "该页所在的页框号",
+        true
+      ],
+      [
+        "The process ID",
+        "进程标识",
+        false
+      ],
+      [
+        "The offset",
+        "偏移量",
+        false
+      ],
+      [
+        "The page contents",
+        "页内容",
+        false
+      ]
+    ],
+    "why": "A page table entry's main field is the frame number.",
+    "whyz": "页表项的主字段是页框号。"
+  },
+  {
+    "t": "m",
+    "base": 15,
+    "q": "Select ALL items found in a page table entry. (Variant 2 / 变体 2)",
+    "zh": "选出页表项中包含的所有内容。（变体 2）",
+    "src": "Ch08v2a.pdf p.12-13 Memory Management Formats · Predicted Q15 · 预测题 15",
+    "links": [
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The frame number",
+        "页框号",
+        true
+      ],
+      [
+        "A present / valid bit",
+        "存在位（有效位）",
+        true
+      ],
+      [
+        "A modified / dirty bit",
+        "修改位（脏位）",
+        true
+      ],
+      [
+        "The page's actual data contents",
+        "页的实际数据内容",
+        false
+      ]
+    ],
+    "why": "An entry holds the frame number plus present, modified and protection bits — not the page data.",
+    "whyz": "表项保存页框号与存在位、修改位、保护位——不保存页数据。"
+  },
+  {
+    "t": "s",
+    "base": 16,
+    "q": "What are the two parts of a virtual address in paging? (Variant 1 / 变体 1)",
+    "zh": "分页中虚拟地址的两个部分是什么？（变体 1）",
+    "src": "Ch08v2a.pdf p.13; p.14 Figure 8.2 · Predicted Q16 · 预测题 16",
+    "links": [
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ],
+      [
+        "p.14",
+        "chapter8/page-14.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Page number + offset",
+        "页号 + 偏移量",
+        true
+      ],
+      [
+        "Segment number + offset",
+        "段号 + 偏移量",
+        false
+      ],
+      [
+        "Base + bounds",
+        "基址 + 界限",
+        false
+      ],
+      [
+        "Frame number + page number",
+        "页框号 + 页号",
+        false
+      ]
+    ],
+    "why": "The virtual address is split into a page number and an offset.",
+    "whyz": "虚拟地址拆分为页号与偏移量。"
+  },
+  {
+    "t": "m",
+    "base": 16,
+    "q": "Select ALL steps that occur during virtual address translation. (Variant 2 / 变体 2)",
+    "zh": "选出虚拟地址转换期间发生的所有步骤。（变体 2）",
+    "src": "Ch08v2a.pdf p.14 Figure 8.2; p.20-21 TLB · Predicted Q16 · 预测题 16",
+    "links": [
+      [
+        "p.14",
+        "chapter8/page-14.html"
+      ],
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Split the address into page number + offset",
+        "把地址拆成页号 + 偏移量",
+        true
+      ],
+      [
+        "Check the TLB first",
+        "先查 TLB",
+        true
+      ],
+      [
+        "Index the page table to obtain the frame number",
+        "查页表得到页框号",
+        true
+      ],
+      [
+        "The offset is modified during translation",
+        "偏移量在转换中被修改",
+        false
+      ]
+    ],
+    "why": "Split, check TLB, index the page table, then frame + UNCHANGED offset = physical address.",
+    "whyz": "拆分、查 TLB、查页表，然后页框号 + 不变的偏移量 = 物理地址。"
+  },
+  {
+    "t": "s",
+    "base": 17,
+    "q": "How many entries does an INVERTED page table have? (Variant 1 / 变体 1)",
+    "zh": "倒排页表有多少个表项？（变体 1）",
+    "src": "Ch08v2a.pdf p.17 Inverted Page Table · Predicted Q17 · 预测题 17",
+    "links": [
+      [
+        "p.17",
+        "chapter8/page-17.html"
+      ],
+      [
+        "p.15",
+        "chapter8/page-15.html"
+      ]
+    ],
+    "opts": [
+      [
+        "One entry per frame of real memory",
+        "每个实页框一项",
+        true
+      ],
+      [
+        "One entry per virtual page",
+        "每个虚页一项",
+        false
+      ],
+      [
+        "One entry per process",
+        "每个进程一项",
+        false
+      ],
+      [
+        "One entry per page fault",
+        "每次缺页一项",
+        false
+      ]
+    ],
+    "why": "One entry per frame of real memory; size tracks real memory, not virtual.",
+    "whyz": "每个实页框一项；大小与实存成正比。"
+  },
+  {
+    "t": "m",
+    "base": 17,
+    "q": "Select ALL statements that are true about inverted page tables. (Variant 2 / 变体 2)",
+    "zh": "选出关于倒排页表的所有正确描述。（变体 2）",
+    "src": "Ch08v2a.pdf p.17-19 Inverted Page Table · Predicted Q17 · 预测题 17",
+    "links": [
+      [
+        "p.17",
+        "chapter8/page-17.html"
+      ],
+      [
+        "p.18",
+        "chapter8/page-18.html"
+      ],
+      [
+        "p.19",
+        "chapter8/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "One entry per frame of real memory",
+        "每个实页框一项",
+        true
+      ],
+      [
+        "Entries are found by hashing the process ID and page number",
+        "通过哈希进程标识与页号查找",
+        true
+      ],
+      [
+        "Chain pointers resolve collisions",
+        "链指针解决冲突",
+        true
+      ],
+      [
+        "Table size is proportional to virtual memory",
+        "表大小与虚存成正比",
+        false
+      ]
+    ],
+    "why": "One entry per frame, hashed PID + page search, chain pointers; size tracks real memory.",
+    "whyz": "每实页框一项、哈希查找、链指针；大小与实存成正比。"
+  },
+  {
+    "t": "s",
+    "base": 18,
+    "q": "What is a Translation Lookaside Buffer (TLB)? (Variant 1 / 变体 1)",
+    "zh": "什么是转换检测缓冲区（TLB）？（变体 1）",
+    "src": "Ch08v2a.pdf p.20 TLB · Predicted Q18 · 预测题 18",
+    "links": [
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A small fast cache of recently used page-table entries",
+        "保存最近使用页表项的小型高速缓存",
+        true
+      ],
+      [
+        "A type of disk buffer",
+        "一种磁盘缓冲区",
+        false
+      ],
+      [
+        "A page replacement algorithm",
+        "一种页面置换算法",
+        false
+      ],
+      [
+        "A segment table",
+        "一种段表",
+        false
+      ]
+    ],
+    "why": "A TLB is a small fast cache of recent page-table entries next to the translation hardware.",
+    "whyz": "TLB 是紧邻转换硬件、保存最近页表项的小型高速缓存。"
+  },
+  {
+    "t": "m",
+    "base": 18,
+    "q": "Select ALL statements that are true about the TLB. (Variant 2 / 变体 2)",
+    "zh": "选出关于 TLB 的所有正确描述。（变体 2）",
+    "src": "Ch08v2a.pdf p.20-22 TLB · Predicted Q18 · 预测题 18",
+    "links": [
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ],
+      [
+        "p.22",
+        "chapter8/page-22.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A small fast cache of recent page-table entries",
+        "保存最近页表项的小型高速缓存",
+        true
+      ],
+      [
+        "Checked FIRST, before the page table",
+        "先于页表查询",
+        true
+      ],
+      [
+        "A hit skips the page-table access",
+        "命中省去查表访问",
+        true
+      ],
+      [
+        "It stores the entire process image",
+        "它保存整个进程映像",
+        false
+      ]
+    ],
+    "why": "The TLB is checked first; a hit supplies the frame number and skips the table access.",
+    "whyz": "先查 TLB；命中直接得到页框号，省去查表。"
+  },
+  {
+    "t": "s",
+    "base": 19,
+    "q": "What is associative mapping? (Variant 1 / 变体 1)",
+    "zh": "什么是相联映射？（变体 1）",
+    "src": "Ch08v2a.pdf p.23 Associative Mapping · Predicted Q19 · 预测题 19",
+    "links": [
+      [
+        "p.23",
+        "chapter8/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter8/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The page number is compared with ALL TLB entries in parallel",
+        "页号与所有 TLB 表项并行比较",
+        true
+      ],
+      [
+        "Entries are compared one by one sequentially",
+        "表项按顺序逐一比较",
+        false
+      ],
+      [
+        "The page number is used as an index",
+        "页号被用作索引",
+        false
+      ],
+      [
+        "The page number is hashed",
+        "页号被哈希",
+        false
+      ]
+    ],
+    "why": "Associative mapping compares the page number with ALL TLB entries in parallel.",
+    "whyz": "相联映射把页号与所有 TLB 表项并行比较。"
+  },
+  {
+    "t": "m",
+    "base": 19,
+    "q": "Select ALL reasons why a normal page table does NOT need associative mapping. (Variant 2 / 变体 2)",
+    "zh": "选出普通页表不需要相联映射的所有原因。（变体 2）",
+    "src": "Ch08v2a.pdf p.23-24 Direct vs Associative Lookup · Predicted Q19 · 预测题 19",
+    "links": [
+      [
+        "p.23",
+        "chapter8/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter8/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "It is indexed directly by the page number",
+        "它直接用页号作索引",
+        true
+      ],
+      [
+        "The page number IS the offset into the table",
+        "页号就是表内偏移",
+        true
+      ],
+      [
+        "Its entries are a random subset of pages",
+        "它的表项是各页的随机子集",
+        false
+      ],
+      [
+        "It uses hashing to find entries",
+        "它用哈希查找表项",
+        false
+      ]
+    ],
+    "why": "A page table is indexed directly by the page number; only the TLB (a random subset) needs associative search.",
+    "whyz": "页表直接用页号索引；只有 TLB（随机子集）才需要相联查找。"
+  },
+  {
+    "t": "s",
+    "base": 20,
+    "q": "Which is an argument for SMALL page sizes? (Variant 1 / 变体 1)",
+    "zh": "哪个是支持小页的理由？（变体 1）",
+    "src": "Ch08v2a.pdf p.26 Page Size; p.29 · Predicted Q20 · 预测题 20",
+    "links": [
+      [
+        "p.26",
+        "chapter8/page-26.html"
+      ],
+      [
+        "p.29",
+        "chapter8/page-29.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Less internal fragmentation",
+        "内部碎片更少",
+        true
+      ],
+      [
+        "Smaller page tables",
+        "页表更小",
+        false
+      ],
+      [
+        "More efficient disk transfers",
+        "磁盘传输更高效",
+        false
+      ],
+      [
+        "Fewer page table entries",
+        "页表项更少",
+        false
+      ]
+    ],
+    "why": "Small pages fit the working set better and waste less space inside a page.",
+    "whyz": "小页更贴合工作集，页内浪费更少。"
+  },
+  {
+    "t": "m",
+    "base": 20,
+    "q": "Select ALL trade-offs of page size. (Variant 2 / 变体 2)",
+    "zh": "选出页大小的所有权衡。（变体 2）",
+    "src": "Ch08v2a.pdf p.26-29 Page Size · Predicted Q20 · 预测题 20",
+    "links": [
+      [
+        "p.26",
+        "chapter8/page-26.html"
+      ],
+      [
+        "p.27",
+        "chapter8/page-27.html"
+      ],
+      [
+        "p.29",
+        "chapter8/page-29.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Small pages reduce internal fragmentation",
+        "小页减少内部碎片",
+        true
+      ],
+      [
+        "Small pages need larger page tables",
+        "小页需要更大的页表",
+        true
+      ],
+      [
+        "Large pages reduce faults at first but raise them as locality is lost",
+        "大页初期缺页少，局部性减弱后缺页增多",
+        true
+      ],
+      [
+        "Larger pages are always better",
+        "大页总是更好",
+        false
+      ]
+    ],
+    "why": "Small pages: less waste but bigger tables; large pages: fewer early faults but more later.",
+    "whyz": "小页浪费少但页表大；大页初期缺页少、后期缺页多。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command displays the ENTIRE contents of a file? (Variant 1 / 变体 1)",
+    "zh": "哪条命令显示文件的全部内容？（变体 1）",
+    "src": "Introduction to UNIX Commands and Scripting §2.4 · Lab 8 task a",
+    "links": [
+      [
+        "§2.4 cat",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task a",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex2",
+        "cat ex2",
+        true
+      ],
+      [
+        "ls ex2",
+        "ls ex2",
+        false
+      ],
+      [
+        "mkdir ex2",
+        "mkdir ex2",
+        false
+      ],
+      [
+        "man ex2",
+        "man ex2",
+        false
+      ]
+    ],
+    "why": "cat ex2 prints the whole file on screen.",
+    "whyz": "cat ex2 在屏幕上显示整个文件。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command displays the FIRST 10 lines of a file? (Variant 1 / 变体 1)",
+    "zh": "哪条命令显示文件的前 10 行？（变体 1）",
+    "src": "§2.4 head · Lab 8 task b",
+    "links": [
+      [
+        "§2.4 head",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "head -n 10 ex1",
+        "head -n 10 ex1",
+        true
+      ],
+      [
+        "tail -n 10 ex1",
+        "tail -n 10 ex1",
+        false
+      ],
+      [
+        "cat -n 10 ex1",
+        "cat -n 10 ex1",
+        false
+      ],
+      [
+        "more -10 ex1",
+        "more -10 ex1",
+        false
+      ]
+    ],
+    "why": "head -n 10 ex1 shows the first 10 lines.",
+    "whyz": "head -n 10 ex1 显示前 10 行。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command displays the LAST 20 lines of a file? (Variant 1 / 变体 1)",
+    "zh": "哪条命令显示文件的最后 20 行？（变体 1）",
+    "src": "§2.4 tail · Lab 8 task c",
+    "links": [
+      [
+        "§2.4 tail",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task c",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "tail -n 20 ex1",
+        "tail -n 20 ex1",
+        true
+      ],
+      [
+        "head -n 20 ex1",
+        "head -n 20 ex1",
+        false
+      ],
+      [
+        "cat -20 ex1",
+        "cat -20 ex1",
+        false
+      ],
+      [
+        "more -20 ex1",
+        "more -20 ex1",
+        false
+      ]
+    ],
+    "why": "tail -n 20 ex1 shows the last 20 lines.",
+    "whyz": "tail -n 20 ex1 显示最后 20 行。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command searches a file for a word and shows the matching lines? (Variant 1 / 变体 1)",
+    "zh": "哪条命令在文件中搜索单词并显示匹配行？（变体 1）",
+    "src": "§2.6 grep · Lab 8 task d",
+    "links": [
+      [
+        "§2.6 grep",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task d",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "grep Jack ex2",
+        "grep Jack ex2",
+        true
+      ],
+      [
+        "grep ex2 Jack",
+        "grep ex2 Jack",
+        false
+      ],
+      [
+        "search Jack ex2",
+        "search Jack ex2",
+        false
+      ],
+      [
+        "find Jack ex2",
+        "find Jack ex2",
+        false
+      ]
+    ],
+    "why": "grep pattern file — the filename comes last.",
+    "whyz": "grep 模式 文件——文件名放在最后。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which grep option IGNORES the case distinction? (Variant 1 / 变体 1)",
+    "zh": "grep 的哪个选项忽略大小写？（变体 1）",
+    "src": "§2.6 grep · Lab 8 task f",
+    "links": [
+      [
+        "§2.6 grep -i",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task f",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "-i",
+        "-i",
+        true
+      ],
+      [
+        "-c",
+        "-c",
+        false
+      ],
+      [
+        "-v",
+        "-v",
+        false
+      ],
+      [
+        "-n",
+        "-n",
+        false
+      ]
+    ],
+    "why": "grep -i matches Display and display alike.",
+    "whyz": "grep -i 同时匹配 Display 与 display。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which grep option COUNTS the number of matching lines? (Variant 1 / 变体 1)",
+    "zh": "grep 的哪个选项统计匹配行数？（变体 1）",
+    "src": "§2.6 grep · Lab 8 task g",
+    "links": [
+      [
+        "§2.6 grep -c",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task g",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "-c",
+        "-c",
+        true
+      ],
+      [
+        "-i",
+        "-i",
+        false
+      ],
+      [
+        "-v",
+        "-v",
+        false
+      ],
+      [
+        "-n",
+        "-n",
+        false
+      ]
+    ],
+    "why": "grep -c prints the count of matching lines.",
+    "whyz": "grep -c 输出匹配行数。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command creates a NEW file and waits for you to type text into it? (Variant 1 / 变体 1)",
+    "zh": "哪条命令创建新文件并等待输入文本？（变体 1）",
+    "src": "§4.2 Redirecting output · Lab 8 task h",
+    "links": [
+      [
+        "§4.2 cat >",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task h",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat > ex2",
+        "cat > ex2",
+        true
+      ],
+      [
+        "cat >> ex2",
+        "cat >> ex2",
+        false
+      ],
+      [
+        "sort > ex2",
+        "sort > ex2",
+        false
+      ],
+      [
+        "ls > ex2",
+        "ls > ex2",
+        false
+      ]
+    ],
+    "why": "cat > ex2 creates the file; type records then press Ctrl+D.",
+    "whyz": "cat > ex2 创建文件；输入记录后按 Ctrl+D 结束。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command APPENDS typed text to the END of an existing file? (Variant 1 / 变体 1)",
+    "zh": "哪条命令把输入文本追加到已有文件末尾？（变体 1）",
+    "src": "§4.2 Redirecting output (>>) · Lab 8 task j",
+    "links": [
+      [
+        "§4.2 >>",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task j",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat >> ex2",
+        "cat >> ex2",
+        true
+      ],
+      [
+        "cat > ex2",
+        "cat > ex2",
+        false
+      ],
+      [
+        "sort >> ex2",
+        "sort >> ex2",
+        false
+      ],
+      [
+        "ls >> ex2",
+        "ls >> ex2",
+        false
+      ]
+    ],
+    "why": ">> appends; > overwrites. So cat >> ex2 adds to the end.",
+    "whyz": ">> 追加；> 覆盖。因此 cat >> ex2 追加到末尾。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command sorts the lines of a file alphabetically? (Variant 1 / 变体 1)",
+    "zh": "哪条命令按字母顺序排序文件的行？（变体 1）",
+    "src": "§6.1 Other useful commands (sort) · Lab 8 task k",
+    "links": [
+      [
+        "§6.1 sort",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task k",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sort ex2",
+        "sort ex2",
+        true
+      ],
+      [
+        "sort -r ex2",
+        "sort -r ex2",
+        false
+      ],
+      [
+        "wc ex2",
+        "wc ex2",
+        false
+      ],
+      [
+        "grep ex2",
+        "grep ex2",
+        false
+      ]
+    ],
+    "why": "sort ex2 sorts the lines of ex2.",
+    "whyz": "sort ex2 对 ex2 的行排序。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command counts the LINES, WORDS and CHARACTERS of its input? (Variant 1 / 变体 1)",
+    "zh": "哪条命令统计输入的行数、单词数和字符数？（变体 1）",
+    "src": "§4.4 Pipes · Lab 8 task m",
+    "links": [
+      [
+        "§4.4 wc",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task m",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "wc",
+        "wc",
+        true
+      ],
+      [
+        "sort",
+        "sort",
+        false
+      ],
+      [
+        "grep",
+        "grep",
+        false
+      ],
+      [
+        "cat",
+        "cat",
+        false
+      ]
+    ],
+    "why": "wc counts lines, words and characters.",
+    "whyz": "wc 统计行、单词和字符。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "q": "Select ALL true statements about PIPES in UNIX. (Variant 1 / 变体 1)",
+    "zh": "选出关于 UNIX 管道的所有正确描述。（变体 1）",
+    "src": "§4.4 Pipes · Lab 8 task m",
+    "links": [
+      [
+        "§4.4 pipes",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task m",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A pipe connects the output of one command to the input of the next",
+        "管道把一个命令的输出连接到下一个命令的输入",
+        true
+      ],
+      [
+        "ls | grep '^ex' | wc -l counts files starting with ex",
+        "ls | grep '^ex' | wc -l 统计以 ex 开头的文件数",
+        true
+      ],
+      [
+        "Pipes modify the contents of files on disk",
+        "管道会修改磁盘上的文件内容",
+        false
+      ],
+      [
+        "Only one command can be used per pipe",
+        "每个管道只能用一个命令",
+        false
+      ]
+    ],
+    "why": "A pipe feeds one command's standard output into the next command's standard input; files on disk are untouched.",
+    "whyz": "管道把前一个命令的标准输出接到下一个命令的标准输入；不改动磁盘文件。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command creates a DIRECTORY? (Variant 1 / 变体 1)",
+    "zh": "哪条命令创建目录？（变体 1）",
+    "src": "§1.2 Making directories",
+    "links": [
+      [
+        "§1.2 mkdir",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mkdir",
+        "mkdir",
+        true
+      ],
+      [
+        "rmdir",
+        "rmdir",
+        false
+      ],
+      [
+        "cd",
+        "cd",
+        false
+      ],
+      [
+        "md",
+        "md",
+        false
+      ]
+    ],
+    "why": "mkdir makes a directory; rmdir removes an empty one.",
+    "whyz": "mkdir 创建目录；rmdir 删除空目录。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "How do you create a directory whose name contains a SPACE, such as Windows 11? (Variant 1 / 变体 1)",
+    "zh": "如何创建名称含空格的目录（如 Windows 11）？（变体 1）",
+    "src": "§1.2 Making directories",
+    "links": [
+      [
+        "§1.2 mkdir",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mkdir \"Windows 11\"",
+        "mkdir \"Windows 11\"",
+        true
+      ],
+      [
+        "mkdir Windows 11",
+        "mkdir Windows 11",
+        false
+      ],
+      [
+        "md Windows 11",
+        "md Windows 11",
+        false
+      ],
+      [
+        "cd Windows 11",
+        "cd Windows 11",
+        false
+      ]
+    ],
+    "why": "Quotes keep the two words as ONE argument.",
+    "whyz": "引号让两个词作为一个参数。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command changes the CURRENT working directory? (Variant 1 / 变体 1)",
+    "zh": "哪条命令改变当前工作目录？（变体 1）",
+    "src": "§1.3 Changing to a different directory",
+    "links": [
+      [
+        "§1.3 cd",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cd",
+        "cd",
+        true
+      ],
+      [
+        "pwd",
+        "pwd",
+        false
+      ],
+      [
+        "ls",
+        "ls",
+        false
+      ],
+      [
+        "mv",
+        "mv",
+        false
+      ]
+    ],
+    "why": "cd changes directory; pwd prints the current one.",
+    "whyz": "cd 切换目录；pwd 显示当前目录。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command LISTS the files in a directory? (Variant 1 / 变体 1)",
+    "zh": "哪条命令列出目录中的文件？（变体 1）",
+    "src": "§1.1 Listing files and directories",
+    "links": [
+      [
+        "§1.1 ls",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls",
+        "ls",
+        true
+      ],
+      [
+        "cd",
+        "cd",
+        false
+      ],
+      [
+        "cat",
+        "cat",
+        false
+      ],
+      [
+        "pwd",
+        "pwd",
+        false
+      ]
+    ],
+    "why": "ls lists directory contents.",
+    "whyz": "ls 列出目录内容。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command CHANGES the access permissions of a file? (Variant 1 / 变体 1)",
+    "zh": "哪条命令改变文件的访问权限？（变体 1）",
+    "src": "§5.2 Changing access rights (chmod) · Lab 8 task o",
+    "links": [
+      [
+        "§5.2 chmod",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task o",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "chmod",
+        "chmod",
+        true
+      ],
+      [
+        "chown",
+        "chown",
+        false
+      ],
+      [
+        "chgrp",
+        "chgrp",
+        false
+      ],
+      [
+        "perm",
+        "perm",
+        false
+      ]
+    ],
+    "why": "chmod changes read/write/execute permissions.",
+    "whyz": "chmod 修改读/写/执行权限。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "What does the command chmod go-rwx ex1 do? (Variant 1 / 变体 1)",
+    "zh": "命令 chmod go-rwx ex1 做什么？（变体 1）",
+    "src": "§5.2 chmod · Lab 8 task o",
+    "links": [
+      [
+        "§5.2 chmod",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task o",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Removes read/write/execute for group and other users",
+        "移除组和其他用户的读/写/执行权限",
+        true
+      ],
+      [
+        "Adds read/write for all users",
+        "为所有用户添加读/写权限",
+        false
+      ],
+      [
+        "Changes the file owner",
+        "改变文件所有者",
+        false
+      ],
+      [
+        "Moves the file to another directory",
+        "把文件移到另一目录",
+        false
+      ]
+    ],
+    "why": "go-rwx REMOVES r/w/x for Group and Others; only the owner keeps access.",
+    "whyz": "go-rwx 用减号移除组与其他用户的 r/w/x；只有所有者保留。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command shows the processes the system is currently running? (Variant 1 / 变体 1)",
+    "zh": "哪条命令显示系统当前运行的进程？（变体 1）",
+    "src": "§5.3 Processes and jobs · Lab 8 task s",
+    "links": [
+      [
+        "§5.3 ps",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task s",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ps",
+        "ps",
+        true
+      ],
+      [
+        "kill",
+        "kill",
+        false
+      ],
+      [
+        "bg",
+        "bg",
+        false
+      ],
+      [
+        "top",
+        "top",
+        false
+      ]
+    ],
+    "why": "ps reports running processes.",
+    "whyz": "ps 显示正在运行的进程。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command TERMINATES a process? (Variant 1 / 变体 1)",
+    "zh": "哪条命令终止进程？（变体 1）",
+    "src": "§5.5 Killing a process · Lab 8 task t",
+    "links": [
+      [
+        "§5.5 kill",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task t",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "kill",
+        "kill",
+        true
+      ],
+      [
+        "ps",
+        "ps",
+        false
+      ],
+      [
+        "bg",
+        "bg",
+        false
+      ],
+      [
+        "sleep",
+        "sleep",
+        false
+      ]
+    ],
+    "why": "kill %1 terminates job 1.",
+    "whyz": "kill %1 终止 1 号作业。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command shows the MANUAL page for a command? (Variant 1 / 变体 1)",
+    "zh": "哪条命令显示命令的手册页？（变体 1）",
+    "src": "§0.0 Getting Help (man)",
+    "links": [
+      [
+        "§0.0 man",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "man",
+        "man",
+        true
+      ],
+      [
+        "ls",
+        "ls",
+        false
+      ],
+      [
+        "cd",
+        "cd",
+        false
+      ],
+      [
+        "cat",
+        "cat",
+        false
+      ]
+    ],
+    "why": "man tail shows the full manual page for tail.",
+    "whyz": "man tail 显示 tail 的完整手册页。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command gives a ONE-LINE description of a command? (Variant 1 / 变体 1)",
+    "zh": "哪条命令给出命令的一行简述？（变体 1）",
+    "src": "§0.0 Getting Help (whatis)",
+    "links": [
+      [
+        "§0.0 whatis",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "whatis",
+        "whatis",
+        true
+      ],
+      [
+        "man",
+        "man",
+        false
+      ],
+      [
+        "apropos",
+        "apropos",
+        false
+      ],
+      [
+        "which",
+        "which",
+        false
+      ]
+    ],
+    "why": "whatis shows a one-line summary from the whatis database.",
+    "whyz": "whatis 从 whatis 数据库给出一行摘要。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "Which command searches for commands by KEYWORD? (Variant 1 / 变体 1)",
+    "zh": "哪条命令按关键词搜索命令？（变体 1）",
+    "src": "§0.0 Getting Help (apropos)",
+    "links": [
+      [
+        "§0.0 apropos",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "apropos",
+        "apropos",
+        true
+      ],
+      [
+        "whatis",
+        "whatis",
+        false
+      ],
+      [
+        "man",
+        "man",
+        false
+      ],
+      [
+        "ls",
+        "ls",
+        false
+      ]
+    ],
+    "why": "apropos copy finds commands related to copying.",
+    "whyz": "apropos copy 找到与复制相关的命令。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "q": "Select ALL commands that DISPLAY the contents of a file. (Variant 1 / 变体 1)",
+    "zh": "选出所有显示文件内容的命令。（变体 1）",
+    "src": "§2.4 Displaying file contents",
+    "links": [
+      [
+        "§2.4 cat more less",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat",
+        "cat",
+        true
+      ],
+      [
+        "more",
+        "more",
+        true
+      ],
+      [
+        "less",
+        "less",
+        true
+      ],
+      [
+        "ls",
+        "ls",
+        false
+      ],
+      [
+        "mkdir",
+        "mkdir",
+        false
+      ]
+    ],
+    "why": "cat, more and less all print file contents.",
+    "whyz": "cat、more、less 都能显示文件内容。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "What does the command sort ex2 > ex3 do? (Variant 1 / 变体 1)",
+    "zh": "命令 sort ex2 > ex3 做什么？（变体 1）",
+    "src": "§6.1 (sort) and §4.2 redirection · Lab 8 task k",
+    "links": [
+      [
+        "§6.1 sort",
+        "UnixCommands.html"
+      ],
+      [
+        "§4.2 redirect",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task k",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Sorts ex2 and saves the output to a NEW file ex3",
+        "对 ex2 排序并把输出保存到新文件 ex3",
+        true
+      ],
+      [
+        "Sorts ex3 and saves the output to ex2",
+        "对 ex3 排序并保存到 ex2",
+        false
+      ],
+      [
+        "Sorts both files in place",
+        "原地排序两个文件",
+        false
+      ],
+      [
+        "Deletes both files",
+        "删除两个文件",
+        false
+      ]
+    ],
+    "why": "sort ex2 > ex3 writes the sorted output of ex2 into the new file ex3.",
+    "whyz": "sort ex2 > ex3 把 ex2 的排序输出写入新文件 ex3。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "How do you STOP a running job and MOVE it to the background? (Variant 1 / 变体 1)",
+    "zh": "如何停止运行中的作业并把它移到后台？（变体 1）",
+    "src": "§5.4 Suspended and background processes · Lab 8 task r",
+    "links": [
+      [
+        "§5.4 jobs bg",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task r",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Press Ctrl+Z, then type bg",
+        "按 Ctrl+Z 然后输入 bg",
+        true
+      ],
+      [
+        "Press Ctrl+C, then type fg",
+        "按 Ctrl+C 然后输入 fg",
+        false
+      ],
+      [
+        "Type stop, then bg",
+        "输入 stop 然后 bg",
+        false
+      ],
+      [
+        "Type kill, then bg",
+        "输入 kill 然后 bg",
+        false
+      ]
+    ],
+    "why": "Ctrl+Z suspends the job; bg resumes it in the background.",
+    "whyz": "Ctrl+Z 挂起作业；bg 让它在后台继续。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "q": "What does the command sleep 500 do? (Variant 1 / 变体 1)",
+    "zh": "命令 sleep 500 做什么？（变体 1）",
+    "src": "§5.3 Processes and jobs · Lab 8 task q",
+    "links": [
+      [
+        "§5.3 sleep",
+        "UnixCommands.html"
+      ],
+      [
+        "Lab 8 task q",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Creates a job that does nothing for 500 seconds",
+        "创建一个空转 500 秒的作业",
+        true
+      ],
+      [
+        "Puts the whole computer to sleep",
+        "让整台计算机休眠",
+        false
+      ],
+      [
+        "Delays the system boot by 500 seconds",
+        "延迟系统启动 500 秒",
+        false
+      ],
+      [
+        "Ends the session after 500 milliseconds",
+        "500 毫秒后结束会话",
+        false
+      ]
+    ],
+    "why": "sleep 500 is an idle job used to practise job control.",
+    "whyz": "sleep 500 是用于练习作业控制的空转作业。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "q": "Select ALL commands that need a FILENAME as an argument. (Variant 1 / 变体 1)",
+    "zh": "选出所有需要文件名作为参数的命令。（变体 1）",
+    "src": "§2.4 and §2.6 · Lab 8 tasks a-g",
+    "links": [
+      [
+        "§2.4 cat head",
+        "UnixCommands.html"
+      ],
+      [
+        "§2.6 grep",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex2",
+        "cat ex2",
+        true
+      ],
+      [
+        "head -n 2 ex2",
+        "head -n 2 ex2",
+        true
+      ],
+      [
+        "grep Jack ex2",
+        "grep Jack ex2",
+        true
+      ],
+      [
+        "ps",
+        "ps",
+        false
+      ],
+      [
+        "mkdir",
+        "mkdir",
+        false
+      ]
+    ],
+    "why": "cat, head and grep take a filename; ps lists processes and mkdir takes a directory name.",
+    "whyz": "cat、head、grep 需要文件名；ps 显示进程，mkdir 用目录名。"
+  }
+];
+  var LETTERS = "ABCDEFG";
+  var mount = document.getElementById("q2Mount");
+  var finalEl = document.getElementById("q2Final");
+  var pillEl = document.getElementById("q2TotalPill");
+  var attemptEl = document.getElementById("q2Attempt");
+  var totalEl = document.getElementById("q2Total");
+  var overallBody = document.getElementById("q2OverallBody");
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  var cards = [];
+  function render() {
+    var html = [];
+    QUIZ.forEach(function (q, qi) {
+      var multi = q.t === "m";
+      html.push('<article class="q2-card" data-qi="' + qi + '" data-score="0" data-graded="0">');
+      html.push('<div class="q2-head">');
+      html.push('<span class="q2-num">' + (qi + 1) + '</span>');
+      html.push('<span class="q2-type">' + (multi ? "MULTI CHOICE &middot; 多选题" : "SINGLE CHOICE &middot; 单选题") + ' &middot; ' + (q.base ? "预测题 " + q.base : "Linux 命令") + '</span>');
+      html.push('<span class="q2-badge ungraded" data-badge>NOT GRADED</span>');
+      html.push('<button class="q2-grade-btn" type="button" data-grade>Grade / 评分</button>');
+      html.push('<span class="q2-markpill" data-pill>0 / 1</span>');
+      html.push('</div>');
+      html.push('<p class="q2-q">' + esc(q.q) + '</p>');
+      html.push('<p class="q2-qzh">' + esc(q.zh) + '</p>');
+      html.push('<p class="q2-src">Source &middot; 出处: ' + esc(q.src) + ' ' + q.links.map(function (l) {
+        return '<a href="' + esc(l[1]) + '">' + esc(l[0]) + '</a>';
+      }).join(" ") + '</p>');
+      html.push('<div class="q2-answer-label">Answer &middot; 选择答案' + (multi ? "（多选 · 选出全部正确项）" : "（单选 · 选一项）") + '</div>');
+      html.push('<div class="mcq-opts" data-opts>');
+      q.opts.forEach(function (o, oi) {
+        html.push('<label class="mcq-opt"><input type="' + (multi ? "checkbox" : "radio") + '" name="mcq' + qi + '" value="' + oi + '"><span class="mcq-letter">' + LETTERS[oi] + '.</span><span class="mcq-text">' + esc(o[0]) + '<span class="mcq-zh">' + esc(o[1]) + '</span></span></label>');
+      });
+      html.push('</div>');
+      html.push('<div class="q2-feedback" data-feedback hidden><p class="q2-fb-head">Feedback &middot; 反馈</p><ul class="q2-pointlist" data-points></ul></div>');
+      html.push('</article>');
+    });
+    mount.innerHTML = html.join("");
+    cards = Array.prototype.slice.call(mount.querySelectorAll(".q2-card"));
+  }
+  function correctIdx(q) {
+    var out = [];
+    q.opts.forEach(function (o, i) { if (o[2]) out.push(i); });
+    return out;
+  }
+  function pickedIdx(card) {
+    var out = [];
+    Array.prototype.forEach.call(card.querySelectorAll("input"), function (inp, i) { if (inp.checked) out.push(i); });
+    return out;
+  }
+  function syncTotals(submitted) {
+    var total = 0, graded = 0;
+    cards.forEach(function (c) {
+      total += parseInt(c.getAttribute("data-score"), 10) || 0;
+      if (c.getAttribute("data-graded") === "1") graded++;
+    });
+    var label = total + " / " + QUIZ.length;
+    finalEl.textContent = label;
+    pillEl.textContent = label;
+    totalEl.textContent = graded ? graded + " / " + QUIZ.length + " graded · " + label + " marks" : "";
+    attemptEl.textContent = submitted ? "ATTEMPT 1 (SUBMITTED)" : (graded ? "ATTEMPT 1 (PARTIALLY GRADED)" : "ATTEMPT 1 (NOT SUBMITTED)");
+    if (submitted || graded) {
+      var pct = Math.round((total / QUIZ.length) * 100);
+      overallBody.innerHTML = "<strong>" + label + " marks (" + pct + "%).</strong> " + (submitted
+        ? "Each question is worth 1 mark; multi-choice questions need the exact set of correct options. Review the feedback under each question.<br>每题 1 分；多选题需选出全部正确项。请查看每题下方的反馈。"
+        : "Graded " + graded + " of " + QUIZ.length + " questions. Use each question's Grade button or Submit quiz.<br>已评分 " + graded + " / " + QUIZ.length + " 题；可点每题旁的评分按钮或交卷。");
+    } else {
+      overallBody.textContent = "Submit the quiz to see your overall score and feedback.";
+    }
+  }
+  function gradeCard(card, show) {
+    var qi = parseInt(card.getAttribute("data-qi"), 10);
+    var q = QUIZ[qi];
+    var multi = q.t === "m";
+    var picked = pickedIdx(card);
+    var correct = correctIdx(q);
+    var ok = multi
+      ? (picked.length === correct.length && correct.every(function (c) { return picked.indexOf(c) !== -1; }))
+      : (picked.length === 1 && picked[0] === correct[0]);
+    var score = ok ? 1 : 0;
+    card.setAttribute("data-score", String(score));
+    card.setAttribute("data-graded", "1");
+    var badge = card.querySelector("[data-badge]");
+    badge.textContent = ok ? "CORRECT" : "INCORRECT";
+    badge.className = "q2-badge " + (ok ? "correct" : "incorrect");
+    card.querySelector("[data-pill]").textContent = score + " / 1";
+    Array.prototype.forEach.call(card.querySelectorAll(".mcq-opt"), function (lab, i) {
+      lab.classList.remove("correct", "wrong", "picked");
+      if (correct.indexOf(i) !== -1) lab.classList.add("correct");
+      else if (picked.indexOf(i) !== -1) lab.classList.add("wrong");
+    });
+    if (show !== false) {
+      var items = [];
+      q.opts.forEach(function (o, i) {
+        var mark = correct.indexOf(i) !== -1 ? '<span class="q2-tick ok">&#10003;</span>'
+          : (picked.indexOf(i) !== -1 ? '<span class="q2-tick no">&#10007;</span>' : '<span class="q2-tick">&middot;</span>');
+        items.push("<li>" + mark + "<span><strong>" + LETTERS[i] + ". " + esc(o[0]) + '</strong><span class="q2-model-zh">' + esc(o[1]) + "</span></span></li>");
+      });
+      items.push('<li><span class="q2-tick ok">&#10003;</span><span><strong>Why &middot; 解析:</strong> ' + esc(q.why) + '<span class="q2-model-zh">' + esc(q.whyz) + "</span></span></li>");
+      card.querySelector("[data-points]").innerHTML = items.join("");
+      card.querySelector("[data-feedback]").hidden = false;
+    }
+    return score;
+  }
+  function gradeOne(card) { gradeCard(card, true); syncTotals(false); }
+  function submitAll() {
+    cards.forEach(function (c) { gradeCard(c, true); });
+    syncTotals(true);
+  }
+  function revealAll() {
+    cards.forEach(function (card, qi) {
+      var correct = correctIdx(QUIZ[qi]);
+      Array.prototype.forEach.call(card.querySelectorAll("input"), function (inp, i) { inp.checked = correct.indexOf(i) !== -1; });
+      gradeCard(card, true);
+    });
+    syncTotals(true);
+  }
+  function resetAll() {
+    cards.forEach(function (card) {
+      Array.prototype.forEach.call(card.querySelectorAll("input"), function (inp) { inp.checked = false; });
+      Array.prototype.forEach.call(card.querySelectorAll(".mcq-opt"), function (lab) { lab.classList.remove("correct", "wrong", "picked"); });
+      card.setAttribute("data-score", "0");
+      card.setAttribute("data-graded", "0");
+      var badge = card.querySelector("[data-badge]");
+      badge.textContent = "NOT GRADED";
+      badge.className = "q2-badge ungraded";
+      card.querySelector("[data-pill]").textContent = "0 / 1";
+      card.querySelector("[data-feedback]").hidden = true;
+    });
+    syncTotals(false);
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    render();
+    syncTotals(false);
+    document.getElementById("q2Submit").addEventListener("click", submitAll);
+    document.getElementById("q2Reveal").addEventListener("click", revealAll);
+    document.getElementById("q2Reset").addEventListener("click", resetAll);
+    mount.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-grade]");
+      if (btn) gradeOne(btn.closest(".q2-card"));
+    });
+    mount.addEventListener("change", function (e) {
+      if (!e.target.matches("input")) return;
+      var card = e.target.closest(".q2-card");
+      card.setAttribute("data-score", "0");
+      card.setAttribute("data-graded", "0");
+      var badge = card.querySelector("[data-badge]");
+      badge.textContent = "NOT GRADED";
+      badge.className = "q2-badge ungraded";
+      card.querySelector("[data-pill]").textContent = "0 / 1";
+      card.querySelector("[data-feedback]").hidden = true;
+      Array.prototype.forEach.call(card.querySelectorAll(".mcq-opt"), function (lab) { lab.classList.remove("correct", "wrong"); });
+      syncTotals(false);
+    });
+    mount.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === "Enter") { e.preventDefault(); submitAll(); }
+    });
+  });
+})();
+
+    </script>
+</body>
+</html>
