@@ -71,7 +71,7 @@
     "              <a href=\"__BASE__pages/Quiz1Fall2026.html\">Quiz 1 Fall 2026<span class=\"dd-zh\">2026 秋季真题</span><span class=\"dd-n\">5</span></a>",
     "              <a href=\"__BASE__pages/InstructionCycleDrill.html\">Instruction Cycle Drill<span class=\"dd-zh\">指令周期填空练习</span><span class=\"dd-n\">10</span></a>",
     "              <a href=\"__BASE__pages/Quiz2.html\">Quiz 2<span class=\"dd-zh\">预测题精练</span><span class=\"dd-n\">21</span></a>",
-    "              <a href=\"__BASE__pages/Quiz2MCQs.html\">Quiz 2 MCQs<span class=\"dd-zh\">测验 2 选择题</span><span class=\"dd-n\">67</span></a>",
+    "              <a href=\"__BASE__pages/Quiz2MCQs.html\">Quiz 2 MCQs<span class=\"dd-zh\">测验 2 选择题</span><span class=\"dd-n\">107</span></a>",
     "            </div>",
     "          </li>",
     "          <li class=\"nav-item\">",

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
   <title>Quiz 2 &middot; MCQs | CSIS2260 Review</title>
-  <meta name="description" content="Quiz 2 multiple-choice practice: single-choice and multi-choice variants of the 20 predicted questions plus Linux command questions, 1 mark each with bilingual options.">
+  <meta name="description" content="Quiz 2 multiple-choice practice: the 20 predicted questions in original wording plus rephrased variants, each as single- and multi-choice, plus Linux command questions, 1 mark each with bilingual options.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../javascript/site-nav.js" data-site-nav defer></script>
 </head>
@@ -32,8 +32,8 @@
 
   <main class="q2-wrap">
     <div class="q2-banner">
-      <strong>Quiz 2 &middot; MCQs (67 questions / 67 marks).</strong> 教授预测的 20 道题各配「单选 + 多选」两个变体（题末标注「变体」），另含 UNIX 命令讲义与 Lab 8 的命令选择题。范围：<strong>Ch07v2a.pdf 全部</strong>、<strong>Ch08v2a.pdf pp.1&ndash;29</strong>、<strong>Introduction to UNIX Commands and Scripting</strong>。题目与每个选项下方均有简体中文翻译；题目下方浅色小字标注教材出处并可点击跳转。单选题选对得 1 分；多选题需选出全部正确项得 1 分。
-      <br><strong>Scope</strong>: all of Chapter 7, Chapter 8 pp.1&ndash;29 and the UNIX command handout. Every question and option carries a simplified Chinese note, and each card names its source chapter / page. Single choice: pick the one correct option. Multi choice: pick exactly the correct set.
+      <strong>Quiz 2 &middot; MCQs (107 questions / 107 marks).</strong> 每道教授预测题先给出<strong>原题</strong>（题干为教授原话，单选 + 多选各一张），随后是<strong>变体</strong>（单选 + 多选，题末标注「变体」）；另含 UNIX 命令讲义与 Lab 8 的 27 道命令选择题。范围：<strong>Ch07v2a.pdf 全部</strong>、<strong>Ch08v2a.pdf pp.1&ndash;29</strong>、<strong>Introduction to UNIX Commands and Scripting</strong>。题目与每个选项下方均有简体中文翻译；题目下方浅色小字标注教材出处并可点击跳转。单选题选对得 1 分；多选题需选出全部正确项得 1 分。
+      <br><strong>Scope</strong>: all of Chapter 7, Chapter 8 pp.1&ndash;29 and the UNIX command handout. For each predicted question the ORIGINAL wording comes first (one single- and one multi-choice card), followed by its rephrased variants; 27 Linux command cards follow. Every question and option carries a simplified Chinese note. Single choice: pick the one correct option. Multi choice: pick exactly the correct set.
     </div>
 
     <details class="q2-overall" id="q2Overall">
@@ -51,10 +51,10 @@
     </div>
 
     <nav class="q2-bottom" aria-label="Page navigation">
-      <a href="Quiz2.html">Quiz 2 predicted questions &rarr;</a>
+      <a href="../index.html">&#8592; Back to home</a>
       <a href="Quiz2AllQuestions.html">Quiz 2 all questions &rarr;</a>
-      <a href="Quiz2MockTest.html">Quiz 2 mock test &rarr;</a>
-      <a href="UnixCommands.html">UNIX command handout &rarr;</a>
+      <a href="Quiz2MCQs.html">Quiz 2 MCQs &rarr;</a>
+      <a href="Fall2025MidtermReview.html">Fall 2025 midterm answers &#8594;</a>
     </nav>
   </main>
 
@@ -65,6 +65,104 @@
   {
     "t": "s",
     "base": 1,
+    "tag": "原题 Original · 预测题 1",
+    "q": "Name and briefly explain three requirements that modern memory management should fulfill. (Original / 原题)",
+    "zh": "说出并简要解释现代内存管理应满足的三项需求。（原题）",
+    "src": "Ch07v2a.pdf · p.3-9 · Predicted Q1 · 原题",
+    "links": [
+      [
+        "p.3",
+        "chapter7/page-03.html"
+      ],
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Relocation, protection and sharing",
+        "重定位、保护与共享",
+        true
+      ],
+      [
+        "Prepaging, frame locking and page cleaning",
+        "预调页、页框锁定与页面清洗",
+        false
+      ],
+      [
+        "Fetch, placement and replacement",
+        "调入、放置与置换",
+        false
+      ],
+      [
+        "Segmentation, paging and TLB buffering",
+        "分段、分页与 TLB 缓冲",
+        false
+      ]
+    ],
+    "why": "The three requirements are relocation, protection and sharing (the textbook adds logical and physical organisation).",
+    "whyz": "三项需求为重定位、保护与共享（教材另列逻辑组织与物理组织）。"
+  },
+  {
+    "t": "m",
+    "base": 1,
+    "tag": "原题 Original · 预测题 1",
+    "q": "Name and briefly explain three requirements that modern memory management should fulfill. (Original / 原题)",
+    "zh": "说出并简要解释现代内存管理应满足的三项需求。（原题）",
+    "src": "Ch07v2a.pdf · p.3-9 · Predicted Q1 · 原题",
+    "links": [
+      [
+        "p.3",
+        "chapter7/page-03.html"
+      ],
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ],
+      [
+        "p.6",
+        "chapter7/page-06.html"
+      ],
+      [
+        "p.8",
+        "chapter7/page-08.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Relocation: a swapped process may return to a different region",
+        "重定位：换出的进程可能回到不同区域",
+        true
+      ],
+      [
+        "Protection: memory references are checked at run time",
+        "保护：内存引用在运行时检查",
+        true
+      ],
+      [
+        "Sharing: some memory may be shared safely between processes",
+        "共享：部分内存可被进程安全共享",
+        true
+      ],
+      [
+        "Buffer overflow prevention",
+        "缓冲区溢出防护",
+        false
+      ],
+      [
+        "Load control (degree of multiprogramming)",
+        "负载控制（多道程序度）",
+        false
+      ]
+    ],
+    "why": "Only relocation, protection and sharing are requirements; the other two items are not.",
+    "whyz": "只有重定位、保护与共享是需求；其余两项不是。"
+  },
+  {
+    "t": "s",
+    "base": 1,
+    "tag": "变体 1 · 预测题 1",
     "q": "Which memory-management requirement means that a swapped-out process can be loaded back into a DIFFERENT memory region? (Variant 1 / 变体 1)",
     "zh": "哪项内存管理需求意味着被换出的进程可以装回不同的内存区域？（变体 1）",
     "src": "Ch07v2a.pdf · p.4 Relocation · Predicted Q1 · 预测题 1",
@@ -102,6 +200,7 @@
   {
     "t": "m",
     "base": 1,
+    "tag": "变体 2 · 预测题 1",
     "q": "Select ALL requirements of modern memory management (choose three). (Variant 2 / 变体 2)",
     "zh": "选出现代内存管理的全部需求（选三项）。（变体 2）",
     "src": "Ch07v2a.pdf · p.3 Requirements; p.8/9 Logical & Physical Organization · Predicted Q1 · 预测题 1",
@@ -152,6 +251,91 @@
   {
     "t": "s",
     "base": 2,
+    "tag": "原题 Original · 预测题 2",
+    "q": "Why should memory management support relocation of programs? (Original / 原题)",
+    "zh": "为什么内存管理应支持程序重定位？（原题）",
+    "src": "Ch07v2a.pdf · p.4 Relocation · Predicted Q2 · 原题",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A swapped-out process usually returns to a different memory region",
+        "换出的进程通常回到不同的内存区域",
+        true
+      ],
+      [
+        "Relocation makes programs smaller on disk",
+        "重定位让程序在磁盘上更小",
+        false
+      ],
+      [
+        "It removes the need for memory protection",
+        "它使内存保护不再需要",
+        false
+      ],
+      [
+        "It lets several processes share one partition",
+        "它让多个进程共用一个分区",
+        false
+      ]
+    ],
+    "why": "A swapped process usually cannot return to the same region, so references must be translated at run time.",
+    "whyz": "换出的进程通常无法回到原区域，因此引用必须运行时转换。"
+  },
+  {
+    "t": "m",
+    "base": 2,
+    "tag": "原题 Original · 预测题 2",
+    "q": "Why should memory management support relocation of programs? (Original / 原题)",
+    "zh": "为什么内存管理应支持程序重定位？（原题）",
+    "src": "Ch07v2a.pdf · p.4; p.24-25 · Predicted Q2 · 原题",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ],
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ],
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A process may be swapped out and back into a different region",
+        "进程可能换出后再装回不同的区域",
+        true
+      ],
+      [
+        "The loader cannot know the final address in advance",
+        "装入程序无法预先知道最终地址",
+        true
+      ],
+      [
+        "Memory references must be translated at run time",
+        "内存引用必须在运行时转换",
+        true
+      ],
+      [
+        "Relocation eliminates external fragmentation",
+        "重定位消除了外部碎片",
+        false
+      ]
+    ],
+    "why": "Relocation is needed because placement is unknown until run time and may change on every swap.",
+    "whyz": "重定位的原因：位置直到运行时才确定，且每次换出换入都可能变化。"
+  },
+  {
+    "t": "s",
+    "base": 2,
+    "tag": "变体 1 · 预测题 2",
     "q": "Why must memory references be translated at run time? (Variant 1 / 变体 1)",
     "zh": "为什么内存引用必须在运行时转换？（变体 1）",
     "src": "Ch07v2a.pdf · p.4 Relocation · Predicted Q2 · 预测题 2",
@@ -189,6 +373,7 @@
   {
     "t": "m",
     "base": 2,
+    "tag": "变体 2 · 预测题 2",
     "q": "Select ALL statements that are true about relocation. (Variant 2 / 变体 2)",
     "zh": "选出关于重定位的所有正确描述。（变体 2）",
     "src": "Ch07v2a.pdf · p.4 Relocation; p.24-25 Base and Bounds · Predicted Q2 · 预测题 2",
@@ -234,6 +419,95 @@
   {
     "t": "s",
     "base": 3,
+    "tag": "原题 Original · 预测题 3",
+    "q": "Briefly explain how fixed partitioning works, and what its main limitations or disadvantages are. (Original / 原题)",
+    "zh": "简述固定分区的工作方式及其主要局限或缺点。（原题）",
+    "src": "Ch07v2a.pdf · p.12-13 · Predicted Q3 · 原题",
+    "links": [
+      [
+        "p.12",
+        "chapter7/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Memory is split into a fixed number of partitions; one process each; internal fragmentation wastes space",
+        "主存划分为固定数量的分区；一区一进程；内部碎片浪费空间",
+        true
+      ],
+      [
+        "Partitions are created on demand and merged later by compaction",
+        "分区按需创建并随后由紧凑处理合并",
+        false
+      ],
+      [
+        "Memory is divided into fixed-size frames and pages",
+        "主存划分为等大的页框与页",
+        false
+      ],
+      [
+        "Memory is divided into variable logical segments",
+        "主存划分为可变长度的逻辑段",
+        false
+      ]
+    ],
+    "why": "Fixed partitioning pre-divides memory; one process per partition; internal fragmentation is the main drawback.",
+    "whyz": "固定分区预先划分内存；一区一进程；主要缺点是内部碎片。"
+  },
+  {
+    "t": "m",
+    "base": 3,
+    "tag": "原题 Original · 预测题 3",
+    "q": "Briefly explain how fixed partitioning works, and what its main limitations or disadvantages are. (Original / 原题)",
+    "zh": "简述固定分区的工作方式及其主要局限或缺点。（原题）",
+    "src": "Ch07v2a.pdf · p.12-13, p.16 · Predicted Q3 · 原题",
+    "links": [
+      [
+        "p.12",
+        "chapter7/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.16",
+        "chapter7/page-16.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The number of partitions and their sizes are fixed in advance",
+        "分区数量与大小事先固定",
+        true
+      ],
+      [
+        "Each partition holds exactly one process",
+        "每个分区恰好容纳一个进程",
+        true
+      ],
+      [
+        "A small job wastes most of its partition (internal fragmentation)",
+        "小作业浪费大部分分区（内部碎片）",
+        true
+      ],
+      [
+        "Holes between partitions are merged by compaction",
+        "分区之间的空洞由紧凑处理合并",
+        false
+      ]
+    ],
+    "why": "Fixed partitioning: pre-divided memory, one process per partition, internal fragmentation; compaction belongs to dynamic partitioning.",
+    "whyz": "固定分区：预划分、一区一进程、内部碎片；紧凑处理属于动态分区。"
+  },
+  {
+    "t": "s",
+    "base": 3,
+    "tag": "变体 1 · 预测题 3",
     "q": "In fixed partitioning, how many processes can occupy each partition at one time? (Variant 1 / 变体 1)",
     "zh": "固定分区中，每个分区一次可以容纳多少个进程？（变体 1）",
     "src": "Ch07v2a.pdf · p.12 Fixed Partitioning · Predicted Q3 · 预测题 3",
@@ -271,6 +545,7 @@
   {
     "t": "m",
     "base": 3,
+    "tag": "变体 2 · 预测题 3",
     "q": "Select ALL limitations of fixed partitioning. (Variant 2 / 变体 2)",
     "zh": "选出固定分区的所有局限。（变体 2）",
     "src": "Ch07v2a.pdf · p.13 Disadvantages · Predicted Q3 · 预测题 3",
@@ -312,6 +587,91 @@
   {
     "t": "s",
     "base": 4,
+    "tag": "原题 Original · 预测题 4",
+    "q": "Briefly explain dynamic partitioning and its main limitations and disadvantages. (Original / 原题)",
+    "zh": "简述动态分区及其主要局限与缺点。（原题）",
+    "src": "Ch07v2a.pdf · p.17-19 · Predicted Q4 · 原题",
+    "links": [
+      [
+        "p.17",
+        "chapter7/page-17.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Partitions are created to fit each process exactly, but external fragmentation accumulates",
+        "分区按进程恰好创建，但外部碎片会累积",
+        true
+      ],
+      [
+        "Partitions are fixed in advance and suffer internal fragmentation",
+        "分区事先固定并产生内部碎片",
+        false
+      ],
+      [
+        "Memory is divided into equal frames with page tables",
+        "主存分为等大页框并使用页表",
+        false
+      ],
+      [
+        "Programs are divided into logical segments only",
+        "程序只划分为逻辑段",
+        false
+      ]
+    ],
+    "why": "Dynamic partitioning allocates exactly what each process needs; holes accumulate = external fragmentation.",
+    "whyz": "动态分区按需精确分配；空洞累积形成外部碎片。"
+  },
+  {
+    "t": "m",
+    "base": 4,
+    "tag": "原题 Original · 预测题 4",
+    "q": "Briefly explain dynamic partitioning and its main limitations and disadvantages. (Original / 原题)",
+    "zh": "简述动态分区及其主要局限与缺点。（原题）",
+    "src": "Ch07v2a.pdf · p.17-19 · Predicted Q4 · 原题",
+    "links": [
+      [
+        "p.17",
+        "chapter7/page-17.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Partitions are created as processes arrive",
+        "分区按进程到达创建",
+        true
+      ],
+      [
+        "Partition length and number vary over time",
+        "分区长度与数量随时间变化",
+        true
+      ],
+      [
+        "External fragmentation builds up and needs compaction",
+        "外部碎片累积并需要紧凑处理",
+        true
+      ],
+      [
+        "Each partition holds several small processes",
+        "每个分区容纳多个小进程",
+        false
+      ]
+    ],
+    "why": "Dynamic partitioning creates variable partitions on demand; its main drawback is external fragmentation.",
+    "whyz": "动态分区按需创建可变分区；主要缺点是外部碎片。"
+  },
+  {
+    "t": "s",
+    "base": 4,
+    "tag": "变体 1 · 预测题 4",
     "q": "In dynamic partitioning, how much memory is allocated to each process? (Variant 1 / 变体 1)",
     "zh": "动态分区中，每个进程分配多少内存？（变体 1）",
     "src": "Ch07v2a.pdf · p.17 Dynamic Partitioning · Predicted Q4 · 预测题 4",
@@ -349,6 +709,7 @@
   {
     "t": "m",
     "base": 4,
+    "tag": "变体 2 · 预测题 4",
     "q": "Select ALL statements that are true about dynamic partitioning. (Variant 2 / 变体 2)",
     "zh": "选出关于动态分区的所有正确描述。（变体 2）",
     "src": "Ch07v2a.pdf · p.17 Dynamic Partitioning; p.19 Compaction · Predicted Q4 · 预测题 4",
@@ -390,6 +751,91 @@
   {
     "t": "s",
     "base": 5,
+    "tag": "原题 Original · 预测题 5",
+    "q": "Briefly explain the difference between internal and external fragmentation, and whether fixed and dynamic partitioning are subject to either. (Original / 原题)",
+    "zh": "简述内部碎片与外部碎片的区别，以及固定分区与动态分区各自会出现哪种碎片。（原题）",
+    "src": "Ch07v2a.pdf · p.13; p.19 · Predicted Q5 · 原题",
+    "links": [
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Internal fragmentation is waste inside a block (fixed partitioning); external fragmentation is waste between blocks (dynamic partitioning)",
+        "内部碎片是块内浪费（固定分区）；外部碎片是块间浪费（动态分区）",
+        true
+      ],
+      [
+        "Internal fragmentation is waste between blocks; external fragmentation is waste inside a block",
+        "内部碎片是块间浪费；外部碎片是块内浪费",
+        false
+      ],
+      [
+        "Both fragmentation types only occur in paging",
+        "两种碎片都只出现在分页中",
+        false
+      ],
+      [
+        "Neither fixed nor dynamic partitioning suffers fragmentation",
+        "固定与动态分区都不会产生碎片",
+        false
+      ]
+    ],
+    "why": "Internal = inside an allocated block (fixed partitioning); external = holes between blocks (dynamic partitioning).",
+    "whyz": "内部 = 已分配块内（固定分区）；外部 = 块间空洞（动态分区）。"
+  },
+  {
+    "t": "m",
+    "base": 5,
+    "tag": "原题 Original · 预测题 5",
+    "q": "Briefly explain the difference between internal and external fragmentation, and whether fixed and dynamic partitioning are subject to either. (Original / 原题)",
+    "zh": "简述内部碎片与外部碎片的区别，以及固定分区与动态分区各自会出现哪种碎片。（原题）",
+    "src": "Ch07v2a.pdf · p.13; p.19 · Predicted Q5 · 原题",
+    "links": [
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Internal fragmentation is wasted space inside an allocated block",
+        "内部碎片是已分配块内的浪费空间",
+        true
+      ],
+      [
+        "External fragmentation is free holes between allocated blocks",
+        "外部碎片是已分配块之间的空闲空洞",
+        true
+      ],
+      [
+        "Fixed partitioning suffers internal fragmentation",
+        "固定分区产生内部碎片",
+        true
+      ],
+      [
+        "Dynamic partitioning suffers internal fragmentation",
+        "动态分区产生内部碎片",
+        false
+      ]
+    ],
+    "why": "Fixed partitioning → internal; dynamic partitioning → external (compaction is the remedy).",
+    "whyz": "固定分区→内部碎片；动态分区→外部碎片（用紧凑处理补救）。"
+  },
+  {
+    "t": "s",
+    "base": 5,
+    "tag": "变体 1 · 预测题 5",
     "q": "Internal fragmentation is wasted space that occurs… (Variant 1 / 变体 1)",
     "zh": "内部碎片是发生在……的浪费空间。（变体 1）",
     "src": "Ch07v2a.pdf · p.13; p.19 Fragmentation · Predicted Q5 · 预测题 5",
@@ -431,6 +877,7 @@
   {
     "t": "m",
     "base": 5,
+    "tag": "变体 2 · 预测题 5",
     "q": "Which schemes suffer INTERNAL fragmentation? (choose two) (Variant 2 / 变体 2)",
     "zh": "哪些方案会产生内部碎片？（选两项）（变体 2）",
     "src": "Ch07v2a.pdf · p.11 Table 7.2; p.13; p.26 Paging · Predicted Q5 · 预测题 5",
@@ -476,6 +923,91 @@
   {
     "t": "s",
     "base": 6,
+    "tag": "原题 Original · 预测题 6",
+    "q": "Briefly explain three different placement algorithms for dynamic partitioning. (Original / 原题)",
+    "zh": "简述动态分区的三种不同放置算法。（原题）",
+    "src": "Ch07v2a.pdf · p.20-21 · Predicted Q6 · 原题",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter7/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "First-fit takes the first big enough hole; best-fit the smallest; next-fit starts from the last allocation",
+        "首次适配取第一个够大的洞；最佳适配取最小够用的洞；邻近适配从上次分配处开始",
+        true
+      ],
+      [
+        "LRU, Optimal and FIFO replace pages by fault behaviour",
+        "LRU、最佳与 FIFO 按缺页表现置换页面",
+        false
+      ],
+      [
+        "Buddy system, slab allocator and garbage collection",
+        "伙伴系统、slab 分配器与垃圾回收",
+        false
+      ],
+      [
+        "Demand paging, prepaging and page buffering",
+        "请求分页、预调页与页缓冲",
+        false
+      ]
+    ],
+    "why": "The three placement algorithms are first-fit, best-fit and next-fit.",
+    "whyz": "三种放置算法为首次适配、最佳适配与邻近适配。"
+  },
+  {
+    "t": "m",
+    "base": 6,
+    "tag": "原题 Original · 预测题 6",
+    "q": "Briefly explain three different placement algorithms for dynamic partitioning. (Original / 原题)",
+    "zh": "简述动态分区的三种不同放置算法。（原题）",
+    "src": "Ch07v2a.pdf · p.20-21 · Predicted Q6 · 原题",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter7/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "First-fit scans from the beginning for the first hole that fits",
+        "首次适配从头找第一个可容纳的洞",
+        true
+      ],
+      [
+        "Best-fit chooses the smallest hole that is large enough",
+        "最佳适配选择最小但够用的洞",
+        true
+      ],
+      [
+        "Next-fit starts searching from the location of the last allocation",
+        "邻近适配从上次分配位置开始搜索",
+        true
+      ],
+      [
+        "Optimal replaces the page not needed for the longest time",
+        "最佳置换淘汰最长时间不需要的页",
+        false
+      ]
+    ],
+    "why": "first-fit / best-fit / next-fit are placement algorithms; Optimal is a page replacement algorithm.",
+    "whyz": "first/best/next-fit 是放置算法；最佳置换是页面置换算法。"
+  },
+  {
+    "t": "s",
+    "base": 6,
+    "tag": "变体 1 · 预测题 6",
     "q": "Which placement algorithm scans from the beginning and takes the FIRST hole that is big enough? (Variant 1 / 变体 1)",
     "zh": "哪种放置算法从头扫描并取第一个足够大的空洞？（变体 1）",
     "src": "Ch07v2a.pdf · p.20 Placement Algorithms · Predicted Q6 · 预测题 6",
@@ -513,6 +1045,7 @@
   {
     "t": "m",
     "base": 6,
+    "tag": "变体 2 · 预测题 6",
     "q": "Select ALL placement algorithms used with dynamic partitioning. (Variant 2 / 变体 2)",
     "zh": "选出动态分区使用的所有放置算法。（变体 2）",
     "src": "Ch07v2a.pdf · p.20-21 Placement Algorithms · Predicted Q6 · 预测题 6",
@@ -559,6 +1092,91 @@
   {
     "t": "s",
     "base": 7,
+    "tag": "原题 Original · 预测题 7",
+    "q": "Briefly contrast logical, relative and absolute (or physical) memory addresses. (Original / 原题)",
+    "zh": "简要对比逻辑地址、相对地址与绝对（物理）地址。（原题）",
+    "src": "Ch07v2a.pdf · p.23-24 · Predicted Q7 · 原题",
+    "links": [
+      [
+        "p.23",
+        "chapter7/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Logical addresses are independent of assignment; relative addresses count from the program start; physical addresses are real memory locations",
+        "逻辑地址与分配无关；相对地址从程序起点计；物理地址是主存真实位置",
+        true
+      ],
+      [
+        "Logical addresses are real locations; physical addresses are compiler-generated",
+        "逻辑地址是真实位置；物理地址由编译器生成",
+        false
+      ],
+      [
+        "All three address types are identical in a compiled program",
+        "三种地址在编译后的程序中完全相同",
+        false
+      ],
+      [
+        "Relative addresses only exist in virtual memory systems",
+        "相对地址只存在于虚拟内存系统",
+        false
+      ]
+    ],
+    "why": "Logical = independent of assignment; relative = offset from program start; physical = real memory location.",
+    "whyz": "逻辑 = 与分配无关；相对 = 相对程序起点；物理 = 主存真实位置。"
+  },
+  {
+    "t": "m",
+    "base": 7,
+    "tag": "原题 Original · 预测题 7",
+    "q": "Briefly contrast logical, relative and absolute (or physical) memory addresses. (Original / 原题)",
+    "zh": "简要对比逻辑地址、相对地址与绝对（物理）地址。（原题）",
+    "src": "Ch07v2a.pdf · p.23-24 · Predicted Q7 · 原题",
+    "links": [
+      [
+        "p.23",
+        "chapter7/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A logical address is independent of the current memory assignment",
+        "逻辑地址与当前内存分配无关",
+        true
+      ],
+      [
+        "A relative address is expressed as a location relative to the program start",
+        "相对地址以程序起点为基准表示",
+        true
+      ],
+      [
+        "A physical (absolute) address is the real main-memory location",
+        "物理（绝对）地址是主存中的真实位置",
+        true
+      ],
+      [
+        "Physical addresses are produced directly by the compiler",
+        "物理地址由编译器直接生成",
+        false
+      ]
+    ],
+    "why": "The compiler produces logical/relative addresses; hardware maps them to physical addresses.",
+    "whyz": "编译器产生逻辑/相对地址；硬件将其映射为物理地址。"
+  },
+  {
+    "t": "s",
+    "base": 7,
+    "tag": "变体 1 · 预测题 7",
     "q": "Which address is the REAL location in main memory? (Variant 1 / 变体 1)",
     "zh": "哪种地址是主存中的真实位置？（变体 1）",
     "src": "Ch07v2a.pdf · p.23 Addresses · Predicted Q7 · 预测题 7",
@@ -596,6 +1214,7 @@
   {
     "t": "m",
     "base": 7,
+    "tag": "变体 2 · 预测题 7",
     "q": "Select ALL statements that are true about LOGICAL addresses. (Variant 2 / 变体 2)",
     "zh": "选出关于逻辑地址的所有正确描述。（变体 2）",
     "src": "Ch07v2a.pdf · p.23-24 Addresses · Predicted Q7 · 预测题 7",
@@ -637,6 +1256,91 @@
   {
     "t": "s",
     "base": 8,
+    "tag": "原题 Original · 预测题 8",
+    "q": "In a dynamic partitioning system that supports relocation, briefly explain the role of the base and bounds registers. (Original / 原题)",
+    "zh": "在支持重定位的动态分区系统中，简述基址寄存器与界限寄存器的作用。（原题）",
+    "src": "Ch07v2a.pdf · p.24-25 · Predicted Q8 · 原题",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ],
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The base register is added to every reference for relocation; the bounds register checks the limit and raises an interrupt on violation",
+        "基址寄存器加到每个引用上实现重定位；界限寄存器检查上限，越界触发中断",
+        true
+      ],
+      [
+        "Both registers store the page frame number of the process",
+        "两个寄存器都保存进程的页框号",
+        false
+      ],
+      [
+        "The base register stores the program counter; the bounds register stores the stack pointer",
+        "基址寄存器保存程序计数器；界限寄存器保存栈指针",
+        false
+      ],
+      [
+        "They hold the page table address and the TLB size",
+        "它们保存页表地址与 TLB 大小",
+        false
+      ]
+    ],
+    "why": "Base = relocation (start address added to references); bounds = protection (interrupt on violation).",
+    "whyz": "基址负责重定位（起始地址）；界限负责保护（越界中断）。"
+  },
+  {
+    "t": "m",
+    "base": 8,
+    "tag": "原题 Original · 预测题 8",
+    "q": "In a dynamic partitioning system that supports relocation, briefly explain the role of the base and bounds registers. (Original / 原题)",
+    "zh": "在支持重定位的动态分区系统中，简述基址寄存器与界限寄存器的作用。（原题）",
+    "src": "Ch07v2a.pdf · p.24-25 · Predicted Q8 · 原题",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ],
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The base register holds the starting address of the process in memory",
+        "基址寄存器保存进程在内存中的起始地址",
+        true
+      ],
+      [
+        "The base value is added to every relative address",
+        "基址值加到每个相对地址上",
+        true
+      ],
+      [
+        "The bounds register holds the end location and triggers an interrupt when exceeded",
+        "界限寄存器保存结束位置，越界时触发中断",
+        true
+      ],
+      [
+        "The bounds register stores the frame number in the page table",
+        "界限寄存器在页表中保存页框号",
+        false
+      ]
+    ],
+    "why": "Base gives relocation; bounds gives protection with an interrupt on violation.",
+    "whyz": "基址实现重定位；界限实现保护，越界触发中断。"
+  },
+  {
+    "t": "s",
+    "base": 8,
+    "tag": "变体 1 · 预测题 8",
     "q": "Which register holds the STARTING address of the process in main memory? (Variant 1 / 变体 1)",
     "zh": "哪个寄存器保存进程在主存中的起始地址？（变体 1）",
     "src": "Ch07v2a.pdf · p.24 Base and Bounds Registers · Predicted Q8 · 预测题 8",
@@ -674,6 +1378,7 @@
   {
     "t": "m",
     "base": 8,
+    "tag": "变体 2 · 预测题 8",
     "q": "Select ALL statements that are true about base and bounds registers. (Variant 2 / 变体 2)",
     "zh": "选出关于基址与界限寄存器的所有正确描述。（变体 2）",
     "src": "Ch07v2a.pdf · p.24-25 Base and Bounds · Predicted Q8 · 预测题 8",
@@ -715,6 +1420,103 @@
   {
     "t": "s",
     "base": 9,
+    "tag": "原题 Original · 预测题 9",
+    "q": "What is the main idea behind paging? Briefly explain how it works, including how page tables are used. How are logical addresses translated to physical addresses? (Original / 原题)",
+    "zh": "分页的主要思想是什么？简述其工作方式（包括页表的使用），以及逻辑地址如何转换为物理地址。（原题）",
+    "src": "Ch07v2a.pdf · p.26-31 · Predicted Q9 · 原题",
+    "links": [
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ],
+      [
+        "p.28",
+        "chapter7/page-28.html"
+      ],
+      [
+        "p.31",
+        "chapter7/page-31.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Equal-size pages map to any free frames via a page table; the page number finds the frame and the offset stays unchanged",
+        "等大的页经页表映射到任意空闲页框；页号查页框，偏移量保持不变",
+        true
+      ],
+      [
+        "Variable-length segments are located by a segment table",
+        "可变长度段由段表定位",
+        false
+      ],
+      [
+        "Each process occupies one fixed partition from boot to exit",
+        "每个进程从启动到退出占用一个固定分区",
+        false
+      ],
+      [
+        "Addresses are translated by the compiler before loading",
+        "地址在装入前由编译器完成转换",
+        false
+      ]
+    ],
+    "why": "Paging: equal-size pages map to any free frame via the page table; frame + offset = physical address.",
+    "whyz": "分页：等大的页经页表映射到任意空闲页框；页框号+偏移量=物理地址。"
+  },
+  {
+    "t": "m",
+    "base": 9,
+    "tag": "原题 Original · 预测题 9",
+    "q": "What is the main idea behind paging? Briefly explain how it works, including how page tables are used. How are logical addresses translated to physical addresses? (Original / 原题)",
+    "zh": "分页的主要思想是什么？简述其工作方式（包括页表的使用），以及逻辑地址如何转换为物理地址。（原题）",
+    "src": "Ch07v2a.pdf · p.26-31 · Predicted Q9 · 原题",
+    "links": [
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ],
+      [
+        "p.28",
+        "chapter7/page-28.html"
+      ],
+      [
+        "p.30",
+        "chapter7/page-30.html"
+      ],
+      [
+        "p.31",
+        "chapter7/page-31.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Memory is divided into equal-size frames and the process into equal-size pages",
+        "主存分为等大页框，进程分为等大页",
+        true
+      ],
+      [
+        "The page table maps each page number to a frame number",
+        "页表把每个页号映射为页框号",
+        true
+      ],
+      [
+        "The page number indexes the table; the offset is unchanged",
+        "页号用于查表；偏移量保持不变",
+        true
+      ],
+      [
+        "The offset indexes the page table to find the frame",
+        "偏移量用于查页表找页框",
+        false
+      ]
+    ],
+    "why": "Frames and pages are equal size; page number → frame number via the table; offset unchanged.",
+    "whyz": "页框与页等大；页号查表得页框号；偏移量不变。"
+  },
+  {
+    "t": "s",
+    "base": 9,
+    "tag": "变体 1 · 预测题 9",
     "q": "What does a page table entry mainly contain? (Variant 1 / 变体 1)",
     "zh": "页表项主要包含什么？（变体 1）",
     "src": "Ch07v2a.pdf · p.28 Page Table · Predicted Q9 · 预测题 9",
@@ -752,6 +1554,7 @@
   {
     "t": "m",
     "base": 9,
+    "tag": "变体 2 · 预测题 9",
     "q": "Select ALL statements that are true about paging. (Variant 2 / 变体 2)",
     "zh": "选出关于分页的所有正确描述。（变体 2）",
     "src": "Ch07v2a.pdf · p.26 Paging; p.30-31 Translation · Predicted Q9 · 预测题 9",
@@ -797,6 +1600,95 @@
   {
     "t": "s",
     "base": 10,
+    "tag": "原题 Original · 预测题 10",
+    "q": "What is the main idea behind segmentation? Briefly explain how it works, including how segment tables are used. How are logical addresses translated to physical addresses? (Original / 原题)",
+    "zh": "分段的主要思想是什么？简述其工作方式（包括段表的使用），以及逻辑地址如何转换为物理地址。（原题）",
+    "src": "Ch07v2a.pdf · p.32-34 · Predicted Q10 · 原题",
+    "links": [
+      [
+        "p.32",
+        "chapter7/page-32.html"
+      ],
+      [
+        "p.34",
+        "chapter7/page-34.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Programs are split into variable-length logical segments; the segment table stores base and length, and the offset must be within the length",
+        "程序划分为可变长逻辑段；段表保存基址与长度，偏移量必须在长度之内",
+        true
+      ],
+      [
+        "Memory is split into equal frames; a page table maps pages to frames",
+        "主存分为等大页框；页表把页映射到页框",
+        false
+      ],
+      [
+        "A TLB stores all segments of every process",
+        "TLB 保存每个进程的全部段",
+        false
+      ],
+      [
+        "Segments are always the same size as pages",
+        "段的大小总是与页相同",
+        false
+      ]
+    ],
+    "why": "Segmentation uses variable-length logical segments; the segment table holds base + length for translation and protection.",
+    "whyz": "分段使用可变长逻辑段；段表保存基址与长度，用于转换与保护。"
+  },
+  {
+    "t": "m",
+    "base": 10,
+    "tag": "原题 Original · 预测题 10",
+    "q": "What is the main idea behind segmentation? Briefly explain how it works, including how segment tables are used. How are logical addresses translated to physical addresses? (Original / 原题)",
+    "zh": "分段的主要思想是什么？简述其工作方式（包括段表的使用），以及逻辑地址如何转换为物理地址。（原题）",
+    "src": "Ch07v2a.pdf · p.32-34 · Predicted Q10 · 原题",
+    "links": [
+      [
+        "p.32",
+        "chapter7/page-32.html"
+      ],
+      [
+        "p.33",
+        "chapter7/page-33.html"
+      ],
+      [
+        "p.34",
+        "chapter7/page-34.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Segments are variable-length logical units (code, data, stack)",
+        "段是可变长度的逻辑单元（代码、数据、栈）",
+        true
+      ],
+      [
+        "A logical address is a segment number plus an offset",
+        "逻辑地址是段号加偏移量",
+        true
+      ],
+      [
+        "The segment table entry holds the base address and length",
+        "段表项保存基址与长度",
+        true
+      ],
+      [
+        "Segmentation has no external fragmentation",
+        "分段没有外部碎片",
+        false
+      ]
+    ],
+    "why": "Segment number + offset; table gives base + length; the offset is checked against the length. External fragmentation still occurs.",
+    "whyz": "段号+偏移量；表给出基址与长度；偏移量与长度比较。外部碎片依然存在。"
+  },
+  {
+    "t": "s",
+    "base": 10,
+    "tag": "变体 1 · 预测题 10",
     "q": "In segmentation, what does a segment table entry contain? (Variant 1 / 变体 1)",
     "zh": "分段中，段表项包含什么？（变体 1）",
     "src": "Ch07v2a.pdf · p.32 Segmentation; p.34 Translation · Predicted Q10 · 预测题 10",
@@ -838,6 +1730,7 @@
   {
     "t": "m",
     "base": 10,
+    "tag": "变体 2 · 预测题 10",
     "q": "Select ALL advantages of segmentation. (Variant 2 / 变体 2)",
     "zh": "选出分段的全部优点。（变体 2）",
     "src": "Ch07v2a.pdf · p.33-34 Segmentation · Predicted Q10 · 预测题 10",
@@ -879,6 +1772,95 @@
   {
     "t": "s",
     "base": 11,
+    "tag": "原题 Original · 预测题 11",
+    "q": "What are buffer overflow attacks, and what can be done against them? (Original / 原题)",
+    "zh": "什么是缓冲区溢出攻击？可以对它做些什么？（原题）",
+    "src": "Ch07v2a.pdf · p.37-39 · Predicted Q11 · 原题",
+    "links": [
+      [
+        "p.37",
+        "chapter7/page-37.html"
+      ],
+      [
+        "p.39",
+        "chapter7/page-39.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Writing past the end of a fixed-size buffer; defended by compile-time and run-time defences",
+        "向固定大小缓冲区末尾之外写入；用编译时与运行时防御",
+        true
+      ],
+      [
+        "Reading a buffer faster than it fills; defended by larger disks",
+        "读取缓冲区比填充快；用更大磁盘防御",
+        false
+      ],
+      [
+        "Storing too many pages in memory; defended by load control",
+        "内存中存放过多页；用负载控制防御",
+        false
+      ],
+      [
+        "Sharing memory between processes; defended by disabling sharing",
+        "进程间共享内存；用禁用共享防御",
+        false
+      ]
+    ],
+    "why": "A buffer overflow writes beyond a fixed-size buffer; defences are compile-time and run-time.",
+    "whyz": "缓冲区溢出是越过缓冲区边界的写入；防御分为编译时与运行时。"
+  },
+  {
+    "t": "m",
+    "base": 11,
+    "tag": "原题 Original · 预测题 11",
+    "q": "What are buffer overflow attacks, and what can be done against them? (Original / 原题)",
+    "zh": "什么是缓冲区溢出攻击？可以对它做些什么？（原题）",
+    "src": "Ch07v2a.pdf · p.37-39 · Predicted Q11 · 原题",
+    "links": [
+      [
+        "p.37",
+        "chapter7/page-37.html"
+      ],
+      [
+        "p.38",
+        "chapter7/page-38.html"
+      ],
+      [
+        "p.39",
+        "chapter7/page-39.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The attack writes data past the end of a fixed-size buffer",
+        "攻击向固定大小缓冲区末尾之外写入数据",
+        true
+      ],
+      [
+        "It can overwrite the function return address to redirect execution",
+        "它能覆盖函数返回地址以改变执行流程",
+        true
+      ],
+      [
+        "Compile-time defences and run-time defences can prevent or detect it",
+        "编译时与运行时防御可预防或检测它",
+        true
+      ],
+      [
+        "Increasing the buffer size removes the risk completely",
+        "增大缓冲区即可彻底消除风险",
+        false
+      ]
+    ],
+    "why": "Overflow writes past the buffer and can hijack the return address; compile-time/run-time defences mitigate it.",
+    "whyz": "溢出越过缓冲区并可能劫持返回地址；编译时/运行时防御可缓解。"
+  },
+  {
+    "t": "s",
+    "base": 11,
+    "tag": "变体 1 · 预测题 11",
     "q": "What is a buffer overflow attack? (Variant 1 / 变体 1)",
     "zh": "什么是缓冲区溢出攻击？（变体 1）",
     "src": "Ch07v2a.pdf · p.37-38 Buffer Overflow · Predicted Q11 · 预测题 11",
@@ -920,6 +1902,7 @@
   {
     "t": "m",
     "base": 11,
+    "tag": "变体 2 · 预测题 11",
     "q": "Select ALL categories of defence against buffer overflow. (Variant 2 / 变体 2)",
     "zh": "选出缓冲区溢出防御的所有类别。（变体 2）",
     "src": "Ch07v2a.pdf · p.39 Defending Against Buffer Overflows · Predicted Q11 · 预测题 11",
@@ -961,6 +1944,99 @@
   {
     "t": "s",
     "base": 12,
+    "tag": "原题 Original · 预测题 12",
+    "q": "What is the key difference between simple paging and virtual memory paging? (Original / 原题)",
+    "zh": "简单分页与虚拟内存分页的关键区别是什么？（原题）",
+    "src": "Ch07v2a.pdf p.26; Ch08v2a.pdf p.12, p.15 · Predicted Q12 · 原题",
+    "links": [
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ],
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.15",
+        "chapter8/page-15.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Simple paging needs ALL pages resident; virtual memory paging keeps only a resident set",
+        "简单分页要求全部页驻留；虚拟内存分页只保留驻留集",
+        true
+      ],
+      [
+        "Simple paging uses segmentation; virtual memory paging does not",
+        "简单分页使用分段；虚拟内存分页不用",
+        false
+      ],
+      [
+        "Virtual memory paging requires all pages to be resident",
+        "虚拟内存分页要求全部页驻留",
+        false
+      ],
+      [
+        "There is no difference; both need the whole process in memory",
+        "没有区别；两者都需要整个进程在内存",
+        false
+      ]
+    ],
+    "why": "Simple paging: all pages resident. Virtual memory paging: only a few pieces (resident set).",
+    "whyz": "简单分页全部页驻留；虚拟内存分页只装驻留集。"
+  },
+  {
+    "t": "m",
+    "base": 12,
+    "tag": "原题 Original · 预测题 12",
+    "q": "What is the key difference between simple paging and virtual memory paging? (Original / 原题)",
+    "zh": "简单分页与虚拟内存分页的关键区别是什么？（原题）",
+    "src": "Ch08v2a.pdf p.2, p.6-7, p.12 · Predicted Q12 · 原题",
+    "links": [
+      [
+        "p.2",
+        "chapter8/page-02.html"
+      ],
+      [
+        "p.6",
+        "chapter8/page-06.html"
+      ],
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ]
+    ],
+    "opts": [
+      [
+        "In simple paging all pages must be in memory before the process runs",
+        "简单分页在进程运行前全部页必须在内存",
+        true
+      ],
+      [
+        "In virtual memory paging only part of the process is resident",
+        "虚拟内存分页只有部分进程驻留",
+        true
+      ],
+      [
+        "Virtual memory pages are brought in on demand",
+        "虚拟内存的页按需调入",
+        true
+      ],
+      [
+        "A virtual memory process can never exceed real memory",
+        "虚拟内存进程不可能超过实存",
+        false
+      ]
+    ],
+    "why": "Simple = all resident; VM = partial resident set with demand loading, so processes can exceed real memory.",
+    "whyz": "简单分页全部驻留；虚拟内存部分驻留且按需调页，进程可超实存。"
+  },
+  {
+    "t": "s",
+    "base": 12,
+    "tag": "变体 1 · 预测题 12",
     "q": "What is the KEY difference between simple paging and virtual memory paging? (Variant 1 / 变体 1)",
     "zh": "简单分页与虚拟内存分页的关键区别是什么？（变体 1）",
     "src": "Ch07v2a.pdf p.26; Ch08v2a.pdf p.12, p.15 · Predicted Q12 · 预测题 12",
@@ -1006,6 +2082,7 @@
   {
     "t": "m",
     "base": 12,
+    "tag": "变体 2 · 预测题 12",
     "q": "Select ALL characteristics of virtual memory paging. (Variant 2 / 变体 2)",
     "zh": "选出虚拟内存分页的所有特征。（变体 2）",
     "src": "Ch08v2a.pdf p.2, p.6-7 Implications · Predicted Q12 · 预测题 12",
@@ -1051,6 +2128,95 @@
   {
     "t": "s",
     "base": 13,
+    "tag": "原题 Original · 预测题 13",
+    "q": "In virtual memory paging, what happens when a process accesses a memory address in a page that is not in main memory? (Original / 原题)",
+    "zh": "虚拟内存分页中，当进程访问的地址所在的页不在主存中时，会发生什么？（原题）",
+    "src": "Ch08v2a.pdf · p.5, p.16 · Predicted Q13 · 原题",
+    "links": [
+      [
+        "p.5",
+        "chapter8/page-05.html"
+      ],
+      [
+        "p.16",
+        "chapter8/page-16.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A page fault occurs: the process is blocked, the page is read from disk, and the instruction is restarted",
+        "发生缺页：进程被阻塞，从磁盘读入该页，指令重新执行",
+        true
+      ],
+      [
+        "The process is terminated immediately by the kernel",
+        "内核立即终止该进程",
+        false
+      ],
+      [
+        "The reference is silently ignored and execution continues",
+        "引用被静默忽略，执行继续",
+        false
+      ],
+      [
+        "The whole system reboots to reload the page",
+        "系统重启以重新载入该页",
+        false
+      ]
+    ],
+    "why": "Page fault → block the process, read the page from disk, dispatch another process, restart the instruction.",
+    "whyz": "缺页 → 阻塞进程、从磁盘读页、调度另一进程、重新执行指令。"
+  },
+  {
+    "t": "m",
+    "base": 13,
+    "tag": "原题 Original · 预测题 13",
+    "q": "In virtual memory paging, what happens when a process accesses a memory address in a page that is not in main memory? (Original / 原题)",
+    "zh": "虚拟内存分页中，当进程访问的地址所在的页不在主存中时，会发生什么？（原题）",
+    "src": "Ch08v2a.pdf · p.5, p.16, p.22 · Predicted Q13 · 原题",
+    "links": [
+      [
+        "p.5",
+        "chapter8/page-05.html"
+      ],
+      [
+        "p.16",
+        "chapter8/page-16.html"
+      ],
+      [
+        "p.22",
+        "chapter8/page-22.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The hardware detects a page fault",
+        "硬件检测到缺页",
+        true
+      ],
+      [
+        "The faulting process is blocked and the page is read from disk",
+        "引发缺页的进程被阻塞并从磁盘读页",
+        true
+      ],
+      [
+        "Another process is dispatched while the I/O takes place",
+        "I/O 期间调度另一个进程",
+        true
+      ],
+      [
+        "The instruction is permanently discarded",
+        "指令被永久丢弃",
+        false
+      ]
+    ],
+    "why": "Fault → block, disk read, dispatch another process, restart the instruction (not discard).",
+    "whyz": "缺页 → 阻塞、读盘、调度另一进程、重新执行指令（不是丢弃）。"
+  },
+  {
+    "t": "s",
+    "base": 13,
+    "tag": "变体 1 · 预测题 13",
     "q": "What is detected when a process accesses an address in a page that is NOT in main memory? (Variant 1 / 变体 1)",
     "zh": "当进程访问不在主存中的页时，会检测到什么？（变体 1）",
     "src": "Ch08v2a.pdf p.5; p.16 Paging Mechanism · Predicted Q13 · 预测题 13",
@@ -1092,6 +2258,7 @@
   {
     "t": "m",
     "base": 13,
+    "tag": "变体 2 · 预测题 13",
     "q": "Select ALL events that happen during a page fault. (Variant 2 / 变体 2)",
     "zh": "选出缺页期间发生的所有事件。（变体 2）",
     "src": "Ch08v2a.pdf p.5; p.16; p.22 · Predicted Q13 · 预测题 13",
@@ -1137,6 +2304,91 @@
   {
     "t": "s",
     "base": 14,
+    "tag": "原题 Original · 预测题 14",
+    "q": "What is thrashing, what is the principle of locality, and how are the two concepts related? (Original / 原题)",
+    "zh": "什么是抖动？什么是局部性原理？两者如何关联？（原题）",
+    "src": "Ch08v2a.pdf · p.9-10 · Predicted Q14 · 原题",
+    "links": [
+      [
+        "p.9",
+        "chapter8/page-09.html"
+      ],
+      [
+        "p.10",
+        "chapter8/page-10.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Thrashing = swapping dominates execution; locality = references cluster; strong locality prevents thrashing",
+        "抖动=换页多于执行；局部性=访问成簇；强局部性避免抖动",
+        true
+      ],
+      [
+        "Thrashing = too many ready processes; locality = pages are contiguous",
+        "抖动=就绪进程过多；局部性=页连续",
+        false
+      ],
+      [
+        "Thrashing = disk full; locality = disk access is faster",
+        "抖动=磁盘满；局部性=磁盘访问更快",
+        false
+      ],
+      [
+        "Thrashing and locality are unrelated concepts",
+        "抖动与局部性是无关的概念",
+        false
+      ]
+    ],
+    "why": "Thrashing: swapping dominates execution. Locality: references cluster. Locality keeps the working set small, preventing thrashing.",
+    "whyz": "抖动：换页多于执行。局部性：访问成簇。局部性使工作集小，避免抖动。"
+  },
+  {
+    "t": "m",
+    "base": 14,
+    "tag": "原题 Original · 预测题 14",
+    "q": "What is thrashing, what is the principle of locality, and how are the two concepts related? (Original / 原题)",
+    "zh": "什么是抖动？什么是局部性原理？两者如何关联？（原题）",
+    "src": "Ch08v2a.pdf · p.9-10 · Predicted Q14 · 原题",
+    "links": [
+      [
+        "p.9",
+        "chapter8/page-09.html"
+      ],
+      [
+        "p.10",
+        "chapter8/page-10.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Thrashing means the system spends more time swapping than executing",
+        "抖动指系统花在换页上的时间多于执行",
+        true
+      ],
+      [
+        "The principle of locality says memory references tend to cluster",
+        "局部性原理指内存访问倾向成簇",
+        true
+      ],
+      [
+        "Strong locality keeps the working set small and avoids thrashing",
+        "强局部性使工作集小，避免抖动",
+        true
+      ],
+      [
+        "Locality is the cause of thrashing",
+        "局部性是抖动的原因",
+        false
+      ]
+    ],
+    "why": "Locality enables demand paging; when locality breaks under too many processes, faults explode into thrashing.",
+    "whyz": "局部性使请求分页有效；进程过多导致局部性破坏时，缺页激增形成抖动。"
+  },
+  {
+    "t": "s",
+    "base": 14,
+    "tag": "变体 1 · 预测题 14",
     "q": "What is thrashing? (Variant 1 / 变体 1)",
     "zh": "什么是抖动？（变体 1）",
     "src": "Ch08v2a.pdf p.9 Thrashing · Predicted Q14 · 预测题 14",
@@ -1174,6 +2426,7 @@
   {
     "t": "m",
     "base": 14,
+    "tag": "变体 2 · 预测题 14",
     "q": "Select ALL statements that describe thrashing and locality correctly. (Variant 2 / 变体 2)",
     "zh": "选出正确描述抖动与局部性关系的所有表述。（变体 2）",
     "src": "Ch08v2a.pdf p.9 Thrashing; p.10 Principle of Locality · Predicted Q14 · 预测题 14",
@@ -1215,6 +2468,91 @@
   {
     "t": "s",
     "base": 15,
+    "tag": "原题 Original · 预测题 15",
+    "q": "What does a page table contain? (Original / 原题)",
+    "zh": "页表包含什么？（原题）",
+    "src": "Ch08v2a.pdf · p.12-13 · Predicted Q15 · 原题",
+    "links": [
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "One entry per page: the frame number plus present, modified and protection bits",
+        "每页一项：页框号以及存在位、修改位和保护位",
+        true
+      ],
+      [
+        "The full contents of every page in memory",
+        "内存中每一页的完整内容",
+        false
+      ],
+      [
+        "Only the process identifier and its state",
+        "只有进程标识及其状态",
+        false
+      ],
+      [
+        "Only the disk block addresses of the swap space",
+        "只有交换空间的磁盘块地址",
+        false
+      ]
+    ],
+    "why": "A page table has one entry per page: frame number + control bits (present, modified, protection).",
+    "whyz": "页表每页一项：页框号+控制位（存在、修改、保护）。"
+  },
+  {
+    "t": "m",
+    "base": 15,
+    "tag": "原题 Original · 预测题 15",
+    "q": "What does a page table contain? (Original / 原题)",
+    "zh": "页表包含什么？（原题）",
+    "src": "Ch08v2a.pdf · p.12-13 · Predicted Q15 · 原题",
+    "links": [
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The frame number where the page resides in memory",
+        "该页在内存中所在的页框号",
+        true
+      ],
+      [
+        "A present / valid bit showing whether the page is in memory",
+        "标识页是否在内存的存在位",
+        true
+      ],
+      [
+        "A modified / dirty bit showing whether the page has been written",
+        "标识页是否被写过的修改位",
+        true
+      ],
+      [
+        "The actual data bytes of the page",
+        "页的实际数据字节",
+        false
+      ]
+    ],
+    "why": "Entries hold the frame number and control bits, not the page's data contents.",
+    "whyz": "表项保存页框号与控制位，不保存页数据。"
+  },
+  {
+    "t": "s",
+    "base": 15,
+    "tag": "变体 1 · 预测题 15",
     "q": "What is the main field in a page table entry? (Variant 1 / 变体 1)",
     "zh": "页表项的主要字段是什么？（变体 1）",
     "src": "Ch08v2a.pdf p.12 Paging; p.13 Memory Management Formats · Predicted Q15 · 预测题 15",
@@ -1256,6 +2594,7 @@
   {
     "t": "m",
     "base": 15,
+    "tag": "变体 2 · 预测题 15",
     "q": "Select ALL items found in a page table entry. (Variant 2 / 变体 2)",
     "zh": "选出页表项中包含的所有内容。（变体 2）",
     "src": "Ch08v2a.pdf p.12-13 Memory Management Formats · Predicted Q15 · 预测题 15",
@@ -1297,6 +2636,99 @@
   {
     "t": "s",
     "base": 16,
+    "tag": "原题 Original · 预测题 16",
+    "q": "How is a virtual address translated into a physical address in virtual memory paging? (Original / 原题)",
+    "zh": "虚拟内存分页中，虚拟地址如何转换为物理地址？（原题）",
+    "src": "Ch08v2a.pdf · p.14, p.20-21 · Predicted Q16 · 原题",
+    "links": [
+      [
+        "p.14",
+        "chapter8/page-14.html"
+      ],
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Split into page number + offset; check TLB, then the page table; frame number + unchanged offset = physical address",
+        "拆成页号+偏移量；先查 TLB 再查页表；页框号+不变的偏移量=物理地址",
+        true
+      ],
+      [
+        "The offset is replaced by the frame number during translation",
+        "转换时偏移量被页框号替换",
+        false
+      ],
+      [
+        "The compiler translates virtual addresses at compile time",
+        "编译器在编译期完成虚拟地址转换",
+        false
+      ],
+      [
+        "The segment table maps the whole address in one step",
+        "段表一步映射整个地址",
+        false
+      ]
+    ],
+    "why": "Page number → TLB/page table → frame number; frame + offset = physical address.",
+    "whyz": "页号 → TLB/页表 → 页框号；页框号+偏移量=物理地址。"
+  },
+  {
+    "t": "m",
+    "base": 16,
+    "tag": "原题 Original · 预测题 16",
+    "q": "How is a virtual address translated into a physical address in virtual memory paging? (Original / 原题)",
+    "zh": "虚拟内存分页中，虚拟地址如何转换为物理地址？（原题）",
+    "src": "Ch08v2a.pdf · p.14, p.20-21 · Predicted Q16 · 原题",
+    "links": [
+      [
+        "p.14",
+        "chapter8/page-14.html"
+      ],
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The virtual address is split into page number and offset",
+        "虚拟地址拆分为页号与偏移量",
+        true
+      ],
+      [
+        "The TLB is checked first for a recent translation",
+        "先查 TLB 是否有最近的转换",
+        true
+      ],
+      [
+        "On a miss the page table provides the frame number",
+        "未命中时由页表给出页框号",
+        true
+      ],
+      [
+        "The offset is modified before being combined with the frame",
+        "偏移量在与页框号组合前被修改",
+        false
+      ]
+    ],
+    "why": "Split → TLB → page table → frame number + unchanged offset.",
+    "whyz": "拆分 → TLB → 页表 → 页框号+不变的偏移量。"
+  },
+  {
+    "t": "s",
+    "base": 16,
+    "tag": "变体 1 · 预测题 16",
     "q": "What are the two parts of a virtual address in paging? (Variant 1 / 变体 1)",
     "zh": "分页中虚拟地址的两个部分是什么？（变体 1）",
     "src": "Ch08v2a.pdf p.13; p.14 Figure 8.2 · Predicted Q16 · 预测题 16",
@@ -1338,6 +2770,7 @@
   {
     "t": "m",
     "base": 16,
+    "tag": "变体 2 · 预测题 16",
     "q": "Select ALL steps that occur during virtual address translation. (Variant 2 / 变体 2)",
     "zh": "选出虚拟地址转换期间发生的所有步骤。（变体 2）",
     "src": "Ch08v2a.pdf p.14 Figure 8.2; p.20-21 TLB · Predicted Q16 · 预测题 16",
@@ -1383,6 +2816,99 @@
   {
     "t": "s",
     "base": 17,
+    "tag": "原题 Original · 预测题 17",
+    "q": "What is an inverted page table? Briefly explain how it works. (Original / 原题)",
+    "zh": "什么是倒排页表？简述其工作方式。（原题）",
+    "src": "Ch08v2a.pdf · p.17-19 · Predicted Q17 · 原题",
+    "links": [
+      [
+        "p.17",
+        "chapter8/page-17.html"
+      ],
+      [
+        "p.18",
+        "chapter8/page-18.html"
+      ],
+      [
+        "p.19",
+        "chapter8/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "One entry per frame of real memory, holding the process ID and page number; found by hashing with chain pointers",
+        "每个实页框一项，保存进程标识与页号；用哈希加链指针查找",
+        true
+      ],
+      [
+        "One entry per virtual page of every process",
+        "每个进程的每个虚页一项",
+        false
+      ],
+      [
+        "A table that maps segments to frames instead of pages",
+        "把段映射到页框而非页的表",
+        false
+      ],
+      [
+        "A cache that stores the entire page table of one process",
+        "缓存单个进程整张页表的缓存",
+        false
+      ]
+    ],
+    "why": "Inverted page table: one entry per real frame; entry = PID + page number; hash search with chain pointers.",
+    "whyz": "倒排页表：每实页框一项；表项=PID+页号；哈希查找加链指针。"
+  },
+  {
+    "t": "m",
+    "base": 17,
+    "tag": "原题 Original · 预测题 17",
+    "q": "What is an inverted page table? Briefly explain how it works. (Original / 原题)",
+    "zh": "什么是倒排页表？简述其工作方式。（原题）",
+    "src": "Ch08v2a.pdf · p.17-19 · Predicted Q17 · 原题",
+    "links": [
+      [
+        "p.17",
+        "chapter8/page-17.html"
+      ],
+      [
+        "p.18",
+        "chapter8/page-18.html"
+      ],
+      [
+        "p.19",
+        "chapter8/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "It has one entry per frame of real memory",
+        "每个实页框一项",
+        true
+      ],
+      [
+        "Each entry holds the process ID and page number occupying that frame",
+        "每个表项保存占用该页框的进程标识与页号",
+        true
+      ],
+      [
+        "Lookup hashes the PID and page number; chain pointers resolve collisions",
+        "查找时哈希 PID 与页号；链指针解决冲突",
+        true
+      ],
+      [
+        "Its size grows with the size of virtual memory",
+        "其大小随虚拟内存增大而增长",
+        false
+      ]
+    ],
+    "why": "One entry per frame (size proportional to real memory), hashed by PID + page, chains for collisions.",
+    "whyz": "每实页框一项（大小与实存成正比），按 PID+页号哈希，链指针处理冲突。"
+  },
+  {
+    "t": "s",
+    "base": 17,
+    "tag": "变体 1 · 预测题 17",
     "q": "How many entries does an INVERTED page table have? (Variant 1 / 变体 1)",
     "zh": "倒排页表有多少个表项？（变体 1）",
     "src": "Ch08v2a.pdf p.17 Inverted Page Table · Predicted Q17 · 预测题 17",
@@ -1424,6 +2950,7 @@
   {
     "t": "m",
     "base": 17,
+    "tag": "变体 2 · 预测题 17",
     "q": "Select ALL statements that are true about inverted page tables. (Variant 2 / 变体 2)",
     "zh": "选出关于倒排页表的所有正确描述。（变体 2）",
     "src": "Ch08v2a.pdf p.17-19 Inverted Page Table · Predicted Q17 · 预测题 17",
@@ -1469,6 +2996,91 @@
   {
     "t": "s",
     "base": 18,
+    "tag": "原题 Original · 预测题 18",
+    "q": "What is a Translation Lookaside Buffer, and why is it important for performance? (Original / 原题)",
+    "zh": "什么是转换检测缓冲区（TLB）？它为什么对性能重要？（原题）",
+    "src": "Ch08v2a.pdf · p.20-21 · Predicted Q18 · 原题",
+    "links": [
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A small fast cache of recent page-table entries; a hit skips the extra memory access to the page table",
+        "保存最近页表项的小型高速缓存；命中省去访问页表的额外主存访问",
+        true
+      ],
+      [
+        "A disk cache that stores swapped-out pages",
+        "存储换出页面的磁盘缓存",
+        false
+      ],
+      [
+        "A replacement algorithm that picks victim pages",
+        "挑选牺牲页的置换算法",
+        false
+      ],
+      [
+        "A register that holds the entire page table",
+        "保存整张页表的寄存器",
+        false
+      ]
+    ],
+    "why": "TLB = small fast cache of recent translations; a hit avoids the second memory access.",
+    "whyz": "TLB=最近转换的小型高速缓存；命中避免第二次主存访问。"
+  },
+  {
+    "t": "m",
+    "base": 18,
+    "tag": "原题 Original · 预测题 18",
+    "q": "What is a Translation Lookaside Buffer, and why is it important for performance? (Original / 原题)",
+    "zh": "什么是转换检测缓冲区（TLB）？它为什么对性能重要？（原题）",
+    "src": "Ch08v2a.pdf · p.20-21 · Predicted Q18 · 原题",
+    "links": [
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter8/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "It is a small, fast cache of recently used page-table entries",
+        "它是保存最近使用页表项的小型高速缓存",
+        true
+      ],
+      [
+        "Without it every reference needs two or more memory accesses",
+        "没有它每次引用需要两次或更多主存访问",
+        true
+      ],
+      [
+        "A TLB hit supplies the frame number immediately",
+        "TLB 命中立刻得到页框号",
+        true
+      ],
+      [
+        "It stores the complete process image in fast memory",
+        "它把完整进程映像存入高速内存",
+        false
+      ]
+    ],
+    "why": "TLB avoids the double memory access per reference, keeping translation close to CPU speed.",
+    "whyz": "TLB 避免每次引用的两次主存访问，使转换接近 CPU 速度。"
+  },
+  {
+    "t": "s",
+    "base": 18,
+    "tag": "变体 1 · 预测题 18",
     "q": "What is a Translation Lookaside Buffer (TLB)? (Variant 1 / 变体 1)",
     "zh": "什么是转换检测缓冲区（TLB）？（变体 1）",
     "src": "Ch08v2a.pdf p.20 TLB · Predicted Q18 · 预测题 18",
@@ -1510,6 +3122,7 @@
   {
     "t": "m",
     "base": 18,
+    "tag": "变体 2 · 预测题 18",
     "q": "Select ALL statements that are true about the TLB. (Variant 2 / 变体 2)",
     "zh": "选出关于 TLB 的所有正确描述。（变体 2）",
     "src": "Ch08v2a.pdf p.20-22 TLB · Predicted Q18 · 预测题 18",
@@ -1555,6 +3168,91 @@
   {
     "t": "s",
     "base": 19,
+    "tag": "原题 Original · 预测题 19",
+    "q": "What is associative mapping, and why does a TLB need it, and a page table doesn't? (Original / 原题)",
+    "zh": "什么是相联映射？为什么 TLB 需要它而页表不需要？（原题）",
+    "src": "Ch08v2a.pdf · p.23-24 · Predicted Q19 · 原题",
+    "links": [
+      [
+        "p.23",
+        "chapter8/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter8/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "All TLB entries are compared in parallel; the TLB has no natural index, while a page table is indexed directly by the page number",
+        "TLB 全部表项并行比较；TLB 没有天然索引，而页表直接用页号索引",
+        true
+      ],
+      [
+        "Both the TLB and the page table are searched entry by entry",
+        "TLB 与页表都逐项搜索",
+        false
+      ],
+      [
+        "Associative mapping means hashing both structures",
+        "相联映射指对两种结构都做哈希",
+        false
+      ],
+      [
+        "The page table needs associative mapping; the TLB does not",
+        "页表需要相联映射；TLB 不需要",
+        false
+      ]
+    ],
+    "why": "Associative = parallel compare by content; TLB entries are a random subset (no index), page tables are indexed by page number.",
+    "whyz": "相联=按内容并行比较；TLB 表项是随机子集（无索引），页表用页号直接索引。"
+  },
+  {
+    "t": "m",
+    "base": 19,
+    "tag": "原题 Original · 预测题 19",
+    "q": "What is associative mapping, and why does a TLB need it, and a page table doesn't? (Original / 原题)",
+    "zh": "什么是相联映射？为什么 TLB 需要它而页表不需要？（原题）",
+    "src": "Ch08v2a.pdf · p.23-24 · Predicted Q19 · 原题",
+    "links": [
+      [
+        "p.23",
+        "chapter8/page-23.html"
+      ],
+      [
+        "p.24",
+        "chapter8/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Associative mapping compares the page number with ALL TLB entries in parallel",
+        "相联映射把页号与所有 TLB 表项并行比较",
+        true
+      ],
+      [
+        "TLB entries are a random subset of pages with no natural index",
+        "TLB 表项是各页的随机子集，没有天然索引",
+        true
+      ],
+      [
+        "A page table is indexed directly by the page number, so no search is needed",
+        "页表直接用页号索引，无需搜索",
+        true
+      ],
+      [
+        "A page table's entries are a random subset, like the TLB",
+        "页表的表项和 TLB 一样是随机子集",
+        false
+      ]
+    ],
+    "why": "TLB needs content search; page tables are indexed by page number.",
+    "whyz": "TLB 需要按内容查找；页表用页号索引。"
+  },
+  {
+    "t": "s",
+    "base": 19,
+    "tag": "变体 1 · 预测题 19",
     "q": "What is associative mapping? (Variant 1 / 变体 1)",
     "zh": "什么是相联映射？（变体 1）",
     "src": "Ch08v2a.pdf p.23 Associative Mapping · Predicted Q19 · 预测题 19",
@@ -1596,6 +3294,7 @@
   {
     "t": "m",
     "base": 19,
+    "tag": "变体 2 · 预测题 19",
     "q": "Select ALL reasons why a normal page table does NOT need associative mapping. (Variant 2 / 变体 2)",
     "zh": "选出普通页表不需要相联映射的所有原因。（变体 2）",
     "src": "Ch08v2a.pdf p.23-24 Direct vs Associative Lookup · Predicted Q19 · 预测题 19",
@@ -1637,6 +3336,95 @@
   {
     "t": "s",
     "base": 20,
+    "tag": "原题 Original · 预测题 20",
+    "q": "Please describe an argument each for small and for large page sizes. (Original / 原题)",
+    "zh": "请分别给出支持较小页与较大页的一个理由。（原题）",
+    "src": "Ch08v2a.pdf · p.26-29 · Predicted Q20 · 原题",
+    "links": [
+      [
+        "p.26",
+        "chapter8/page-26.html"
+      ],
+      [
+        "p.29",
+        "chapter8/page-29.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Small pages: less internal fragmentation; large pages: smaller page tables and more efficient disk transfers",
+        "小页：内部碎片少；大页：页表更小、磁盘传输更高效",
+        true
+      ],
+      [
+        "Small pages: smaller page tables; large pages: less internal fragmentation",
+        "小页：页表更小；大页：内部碎片更少",
+        false
+      ],
+      [
+        "Small pages always outperform large pages",
+        "小页总是优于大页",
+        false
+      ],
+      [
+        "Page size has no effect on fragmentation or tables",
+        "页大小对碎片与页表没有影响",
+        false
+      ]
+    ],
+    "why": "Small = less internal waste but larger tables; large = smaller tables and better transfers but more waste.",
+    "whyz": "小页=内部浪费少但页表大；大页=页表小、传输好但浪费多。"
+  },
+  {
+    "t": "m",
+    "base": 20,
+    "tag": "原题 Original · 预测题 20",
+    "q": "Please describe an argument each for small and for large page sizes. (Original / 原题)",
+    "zh": "请分别给出支持较小页与较大页的一个理由。（原题）",
+    "src": "Ch08v2a.pdf · p.26-29 · Predicted Q20 · 原题",
+    "links": [
+      [
+        "p.26",
+        "chapter8/page-26.html"
+      ],
+      [
+        "p.27",
+        "chapter8/page-27.html"
+      ],
+      [
+        "p.29",
+        "chapter8/page-29.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Small pages reduce internal fragmentation",
+        "小页减少内部碎片",
+        true
+      ],
+      [
+        "Small pages require larger page tables",
+        "小页需要更大的页表",
+        true
+      ],
+      [
+        "Large pages give smaller page tables and more efficient disk transfers",
+        "大页页表更小、磁盘传输更高效",
+        true
+      ],
+      [
+        "Large pages always reduce the page fault rate",
+        "大页总能降低缺页率",
+        false
+      ]
+    ],
+    "why": "Trade-off: small pages save space but grow tables; large pages shrink tables but waste space and can raise faults later.",
+    "whyz": "权衡：小页省空间但页表变大；大页页表小但浪费空间且后期缺页增多。"
+  },
+  {
+    "t": "s",
+    "base": 20,
+    "tag": "变体 1 · 预测题 20",
     "q": "Which is an argument for SMALL page sizes? (Variant 1 / 变体 1)",
     "zh": "哪个是支持小页的理由？（变体 1）",
     "src": "Ch08v2a.pdf p.26 Page Size; p.29 · Predicted Q20 · 预测题 20",
@@ -1678,6 +3466,7 @@
   {
     "t": "m",
     "base": 20,
+    "tag": "变体 2 · 预测题 20",
     "q": "Select ALL trade-offs of page size. (Variant 2 / 变体 2)",
     "zh": "选出页大小的所有权衡。（变体 2）",
     "src": "Ch08v2a.pdf p.26-29 Page Size · Predicted Q20 · 预测题 20",
@@ -1723,6 +3512,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command displays the ENTIRE contents of a file? (Variant 1 / 变体 1)",
     "zh": "哪条命令显示文件的全部内容？（变体 1）",
     "src": "Introduction to UNIX Commands and Scripting §2.4 · Lab 8 task a",
@@ -1764,6 +3554,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command displays the FIRST 10 lines of a file? (Variant 1 / 变体 1)",
     "zh": "哪条命令显示文件的前 10 行？（变体 1）",
     "src": "§2.4 head · Lab 8 task b",
@@ -1805,6 +3596,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command displays the LAST 20 lines of a file? (Variant 1 / 变体 1)",
     "zh": "哪条命令显示文件的最后 20 行？（变体 1）",
     "src": "§2.4 tail · Lab 8 task c",
@@ -1846,6 +3638,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command searches a file for a word and shows the matching lines? (Variant 1 / 变体 1)",
     "zh": "哪条命令在文件中搜索单词并显示匹配行？（变体 1）",
     "src": "§2.6 grep · Lab 8 task d",
@@ -1887,6 +3680,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which grep option IGNORES the case distinction? (Variant 1 / 变体 1)",
     "zh": "grep 的哪个选项忽略大小写？（变体 1）",
     "src": "§2.6 grep · Lab 8 task f",
@@ -1928,6 +3722,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which grep option COUNTS the number of matching lines? (Variant 1 / 变体 1)",
     "zh": "grep 的哪个选项统计匹配行数？（变体 1）",
     "src": "§2.6 grep · Lab 8 task g",
@@ -1969,6 +3764,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command creates a NEW file and waits for you to type text into it? (Variant 1 / 变体 1)",
     "zh": "哪条命令创建新文件并等待输入文本？（变体 1）",
     "src": "§4.2 Redirecting output · Lab 8 task h",
@@ -2010,6 +3806,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command APPENDS typed text to the END of an existing file? (Variant 1 / 变体 1)",
     "zh": "哪条命令把输入文本追加到已有文件末尾？（变体 1）",
     "src": "§4.2 Redirecting output (>>) · Lab 8 task j",
@@ -2051,6 +3848,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command sorts the lines of a file alphabetically? (Variant 1 / 变体 1)",
     "zh": "哪条命令按字母顺序排序文件的行？（变体 1）",
     "src": "§6.1 Other useful commands (sort) · Lab 8 task k",
@@ -2092,6 +3890,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command counts the LINES, WORDS and CHARACTERS of its input? (Variant 1 / 变体 1)",
     "zh": "哪条命令统计输入的行数、单词数和字符数？（变体 1）",
     "src": "§4.4 Pipes · Lab 8 task m",
@@ -2133,6 +3932,7 @@
   {
     "t": "m",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Select ALL true statements about PIPES in UNIX. (Variant 1 / 变体 1)",
     "zh": "选出关于 UNIX 管道的所有正确描述。（变体 1）",
     "src": "§4.4 Pipes · Lab 8 task m",
@@ -2174,6 +3974,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command creates a DIRECTORY? (Variant 1 / 变体 1)",
     "zh": "哪条命令创建目录？（变体 1）",
     "src": "§1.2 Making directories",
@@ -2211,6 +4012,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "How do you create a directory whose name contains a SPACE, such as Windows 11? (Variant 1 / 变体 1)",
     "zh": "如何创建名称含空格的目录（如 Windows 11）？（变体 1）",
     "src": "§1.2 Making directories",
@@ -2248,6 +4050,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command changes the CURRENT working directory? (Variant 1 / 变体 1)",
     "zh": "哪条命令改变当前工作目录？（变体 1）",
     "src": "§1.3 Changing to a different directory",
@@ -2285,6 +4088,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command LISTS the files in a directory? (Variant 1 / 变体 1)",
     "zh": "哪条命令列出目录中的文件？（变体 1）",
     "src": "§1.1 Listing files and directories",
@@ -2322,6 +4126,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command CHANGES the access permissions of a file? (Variant 1 / 变体 1)",
     "zh": "哪条命令改变文件的访问权限？（变体 1）",
     "src": "§5.2 Changing access rights (chmod) · Lab 8 task o",
@@ -2363,6 +4168,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "What does the command chmod go-rwx ex1 do? (Variant 1 / 变体 1)",
     "zh": "命令 chmod go-rwx ex1 做什么？（变体 1）",
     "src": "§5.2 chmod · Lab 8 task o",
@@ -2404,6 +4210,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command shows the processes the system is currently running? (Variant 1 / 变体 1)",
     "zh": "哪条命令显示系统当前运行的进程？（变体 1）",
     "src": "§5.3 Processes and jobs · Lab 8 task s",
@@ -2445,6 +4252,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command TERMINATES a process? (Variant 1 / 变体 1)",
     "zh": "哪条命令终止进程？（变体 1）",
     "src": "§5.5 Killing a process · Lab 8 task t",
@@ -2486,6 +4294,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command shows the MANUAL page for a command? (Variant 1 / 变体 1)",
     "zh": "哪条命令显示命令的手册页？（变体 1）",
     "src": "§0.0 Getting Help (man)",
@@ -2523,6 +4332,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command gives a ONE-LINE description of a command? (Variant 1 / 变体 1)",
     "zh": "哪条命令给出命令的一行简述？（变体 1）",
     "src": "§0.0 Getting Help (whatis)",
@@ -2560,6 +4370,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Which command searches for commands by KEYWORD? (Variant 1 / 变体 1)",
     "zh": "哪条命令按关键词搜索命令？（变体 1）",
     "src": "§0.0 Getting Help (apropos)",
@@ -2597,6 +4408,7 @@
   {
     "t": "m",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Select ALL commands that DISPLAY the contents of a file. (Variant 1 / 变体 1)",
     "zh": "选出所有显示文件内容的命令。（变体 1）",
     "src": "§2.4 Displaying file contents",
@@ -2639,6 +4451,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "What does the command sort ex2 > ex3 do? (Variant 1 / 变体 1)",
     "zh": "命令 sort ex2 > ex3 做什么？（变体 1）",
     "src": "§6.1 (sort) and §4.2 redirection · Lab 8 task k",
@@ -2684,6 +4497,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "How do you STOP a running job and MOVE it to the background? (Variant 1 / 变体 1)",
     "zh": "如何停止运行中的作业并把它移到后台？（变体 1）",
     "src": "§5.4 Suspended and background processes · Lab 8 task r",
@@ -2725,6 +4539,7 @@
   {
     "t": "s",
     "base": null,
+    "tag": "Linux 命令",
     "q": "What does the command sleep 500 do? (Variant 1 / 变体 1)",
     "zh": "命令 sleep 500 做什么？（变体 1）",
     "src": "§5.3 Processes and jobs · Lab 8 task q",
@@ -2766,6 +4581,7 @@
   {
     "t": "m",
     "base": null,
+    "tag": "Linux 命令",
     "q": "Select ALL commands that need a FILENAME as an argument. (Variant 1 / 变体 1)",
     "zh": "选出所有需要文件名作为参数的命令。（变体 1）",
     "src": "§2.4 and §2.6 · Lab 8 tasks a-g",
@@ -2830,7 +4646,7 @@
       html.push('<article class="q2-card" data-qi="' + qi + '" data-score="0" data-graded="0">');
       html.push('<div class="q2-head">');
       html.push('<span class="q2-num">' + (qi + 1) + '</span>');
-      html.push('<span class="q2-type">' + (multi ? "MULTI CHOICE &middot; 多选题" : "SINGLE CHOICE &middot; 单选题") + ' &middot; ' + (q.base ? "预测题 " + q.base : "Linux 命令") + '</span>');
+      html.push('<span class="q2-type">' + (multi ? "MULTI CHOICE &middot; 多选题" : "SINGLE CHOICE &middot; 单选题") + ' &middot; ' + (q.tag || (q.base ? "预测题 " + q.base : "Linux 命令")) + '</span>');
       html.push('<span class="q2-badge ungraded" data-badge>NOT GRADED</span>');
       html.push('<button class="q2-grade-btn" type="button" data-grade>Grade / 评分</button>');
       html.push('<span class="q2-markpill" data-pill>0 / 1</span>');

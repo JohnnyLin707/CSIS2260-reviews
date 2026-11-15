@@ -10,7 +10,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 
 ## ✨ Latest additions
 
-- **New page — `pages/Quiz2MCQs.html`** — multiple-choice version of the Quiz 2 scope: the 20 predicted questions each get a single-choice and a multi-choice variant (labelled 变体), plus 27 Linux command questions from the UNIX handout and Lab 8 — 67 questions / 67 marks total. Every question and option carries a simplified Chinese note, each card names its source chapter / page with clickable links, and grading is option-based (exact set for multi-choice).
+- **New page — `pages/Quiz2MCQs.html`** — multiple-choice version of the Quiz 2 scope: each of the 20 predicted questions appears FIRST in the professor's ORIGINAL wording (one single-choice and one multi-choice card), followed by its rephrased single/multi variants (labelled 变体); plus 27 Linux command questions from the UNIX handout and Lab 8 — 107 questions / 107 marks total. Every question and option carries a simplified Chinese note, each card names its source chapter / page with clickable links, and grading is option-based (exact set for multi-choice).
 - **New page — `pages/Quiz2.html`** — the professor's 20 predicted Quiz 2 questions (Chapters 7 and 8) plus a Linux command review question: 21 questions / 69 marks with simplified bilingual model answers, one large answer box and an individual grade button per question, keyword-based marking.
 - **New page — `pages/Quiz2AllQuestions.html`** — the Quiz 2 question bank rebuilt for the new exam scope in textbook order: questions from all 40 Chapter 7 slides and Chapter 8 slides 1-29 — 109 questions and 265 keyword-graded points in total, including 40 supplementary questions that cover the knowledge-point breakdown items.
 - **New page — `pages/Quiz2MockTest.html`** — a Blackboard-style Quiz 2 mock test with 12 essay questions (46 marks) covering all of Chapter 7 and Chapter 8 slides 1-29. One large answer box per question; a scoring point is awarded as soon as the answer contains one or two English or 中文 key words. Instant per-question badges, scores and bilingual model-answer feedback.
@@ -204,7 +204,7 @@ CSIS-2260review/
 │   ├── MidtermMockExam.html             # Deck 16 — interactive mock exam (68 questions, 241 marks)
 │   ├── InstructionCycleDrill.html       # Standalone 10-question instruction-cycle drill
 │   ├── Fall2025MidtermReview.html       # Fall 2025 midterm exam model answers (Q1-Q6)
-│   ├── Quiz2MCQs.html                   # Quiz 2 MCQ bank — single + multi variants (67 / 67 marks)
+│   ├── Quiz2MCQs.html                   # Quiz 2 MCQ bank — originals + variants (107 / 107 marks)
 │   ├── Quiz2.html                       # Quiz 2 predicted questions (21 / 69 marks)
 │   ├── Quiz2MockTest.html               # Quiz 2 mock test (12 questions / 46 marks)
 │   └── Quiz2AllQuestions.html           # Quiz 2 all questions (109 / 265 marks)
