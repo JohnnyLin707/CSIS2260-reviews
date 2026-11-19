@@ -10,6 +10,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 
 ## ✨ Latest additions
 
+- **New page — `pages/Quiz2AllQuestionsMCQs.html`** — every one of the 109 essay questions in `Quiz2AllQuestions.html` rebuilt as FOUR multiple-choice cards: ORIGINAL single, ORIGINAL multi, VARIANT A (single) and VARIANT B (multi), with the letter appended to the question number (e.g. Q12A / Q12B) — 436 questions / 436 marks, bilingual options and keyword-free option grading.
 - **New page — `pages/Quiz2MCQs.html`** — multiple-choice version of the Quiz 2 scope: each of the 20 predicted questions appears FIRST in the professor's ORIGINAL wording (one single-choice and one multi-choice card), followed by its rephrased single/multi variants (labelled 变体); plus 27 Linux command questions from the UNIX handout and Lab 8 — 107 questions / 107 marks total. Every question and option carries a simplified Chinese note, each card names its source chapter / page with clickable links, and grading is option-based (exact set for multi-choice).
 - **New page — `pages/Quiz2.html`** — the professor's 20 predicted Quiz 2 questions (Chapters 7 and 8) plus a Linux command review question: 21 questions / 69 marks with simplified bilingual model answers, one large answer box and an individual grade button per question, keyword-based marking.
 - **New page — `pages/Quiz2AllQuestions.html`** — the Quiz 2 question bank rebuilt for the new exam scope in textbook order: questions from all 40 Chapter 7 slides and Chapter 8 slides 1-29 — 109 questions and 265 keyword-graded points in total, including 40 supplementary questions that cover the knowledge-point breakdown items.
@@ -204,6 +205,7 @@ CSIS-2260review/
 │   ├── MidtermMockExam.html             # Deck 16 — interactive mock exam (68 questions, 241 marks)
 │   ├── InstructionCycleDrill.html       # Standalone 10-question instruction-cycle drill
 │   ├── Fall2025MidtermReview.html       # Fall 2025 midterm exam model answers (Q1-Q6)
+│   ├── Quiz2AllQuestionsMCQs.html      # 109 questions × 4 MCQs (436 / 436 marks)
 │   ├── Quiz2MCQs.html                   # Quiz 2 MCQ bank — originals + variants (107 / 107 marks)
 │   ├── Quiz2.html                       # Quiz 2 predicted questions (21 / 69 marks)
 │   ├── Quiz2MockTest.html               # Quiz 2 mock test (12 questions / 46 marks)

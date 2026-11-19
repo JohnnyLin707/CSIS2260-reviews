@@ -10,6 +10,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 ## ✨ 本次更新
 
+- **新增页面 `pages/Quiz2AllQuestionsMCQs.html`** —— 将 `Quiz2AllQuestions.html` 的 109 道简答题每题改做成 4 道选择题：原题单选、原题多选、变体 A（单选）、变体 B（多选），变体字母加在原题目号之后（如 Q12A / Q12B），共 436 题 / 436 分；题目与选项均带简体中文翻译，按选项判分。
 - **新增页面 `pages/Quiz2MCQs.html`** —— Quiz 2 范围的选择题版：教授预测的 20 道题先以原题呈现（教授原话，单选 + 多选各一张，排在变体之前），随后是重新表述的单选/多选变体（题末标注变体）；另含 UNIX 命令讲义与 Lab 8 的 27 道命令选择题，共 107 题 / 107 分。题目与每个选项下方均有简体中文翻译，每题浅色小字标注教材出处并可点击跳转；单选选对得 1 分，多选需选出全部正确项得 1 分。
 - **新增页面 `pages/Quiz2.html`** —— 教授预测的 Quiz 2 考题（第 7、8 章共 20 题）加 1 道 Linux 命令复习题：共 21 题 / 69 分，参考答案已简化便于记忆；每题一个大输入框与独立评分按钮，按关键词判分。
 - **新增页面 `pages/Quiz2AllQuestions.html`** —— 按新考核范围重建的 Quiz 2 全部题库：覆盖第 7 章全部 40 页、第 8 章 1–29 页的题目，共 109 题 / 265 个关键词判分点，其中含 40 道补充题，覆盖知识点细分的内容。
@@ -204,6 +205,7 @@ CSIS-2260review/
 │   ├── MidtermMockExam.html             # 单元 16 —— 期中模拟考试（68 题 / 241 分，交互判分）
 │   ├── InstructionCycleDrill.html       # 独立页面 —— 指令周期填空练习（10 题）
 │   ├── Fall2025MidtermReview.html       # 2025 秋季期中试卷参考答案（Q1-Q6）
+│   ├── Quiz2AllQuestionsMCQs.html      # 109 题 × 4 种选择题考法（436 题 / 436 分）
 │   ├── Quiz2MCQs.html                   # Quiz 2 选择题库——原题 + 变体（107 题 / 107 分）
 │   ├── Quiz2.html                       # Quiz 2 预测题（21 题 / 69 分）
 │   ├── Quiz2MockTest.html               # Quiz 2 模拟卷（12 题 / 46 分）

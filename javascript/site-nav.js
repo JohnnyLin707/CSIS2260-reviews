@@ -84,6 +84,7 @@
     "              <a href=\"__BASE__pages/Fall2025MidtermReview.html\">Fall 2025 Midterm<span class=\"dd-zh\">2025 秋季期中答案</span><span class=\"dd-n\">6</span></a>",
     "              <a href=\"__BASE__pages/Quiz2MockTest.html\">Quiz 2 Mock Test<span class=\"dd-zh\">测验 2 模拟卷</span><span class=\"dd-n\">12</span></a>",
     "              <a href=\"__BASE__pages/Quiz2AllQuestions.html\">Quiz 2 All Questions<span class=\"dd-zh\">测验 2 全部题目</span><span class=\"dd-n\">109</span></a>",
+    "              <a href=\"__BASE__pages/Quiz2AllQuestionsMCQs.html\">Quiz 2 All Q MCQs<span class=\"dd-zh\">全部题目选择题</span><span class=\"dd-n\">436</span></a>",
     "            </div>",
     "          </li>",
     "        </ul>",
