@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
   <title>Quiz 2 &middot; MCQs | CSIS2260 Review</title>
-  <meta name="description" content="Quiz 2 multiple-choice practice: the 20 predicted questions in original wording plus rephrased variants, each as single- and multi-choice, plus Linux command questions, 1 mark each with bilingual options.">
+  <meta name="description" content="Quiz 2 multiple-choice practice: the 20 predicted questions in original wording plus rephrased variants, each as single- and multi-choice, plus 159 Linux command questions from Labs 5-8, 1 mark each with bilingual options.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../javascript/site-nav.js" data-site-nav defer></script>
 </head>
@@ -32,8 +32,8 @@
 
   <main class="q2-wrap">
     <div class="q2-banner">
-      <strong>Quiz 2 &middot; MCQs (107 questions / 107 marks).</strong> 每道教授预测题先给出<strong>原题</strong>（题干为教授原话，单选 + 多选各一张），随后是<strong>变体</strong>（单选 + 多选，题末标注「变体」）；另含 UNIX 命令讲义与 Lab 8 的 27 道命令选择题。范围：<strong>Ch07v2a.pdf 全部</strong>、<strong>Ch08v2a.pdf pp.1&ndash;29</strong>、<strong>Introduction to UNIX Commands and Scripting</strong>。题目与每个选项下方均有简体中文翻译；题目下方浅色小字标注教材出处并可点击跳转。单选题选对得 1 分；多选题需选出全部正确项得 1 分。
-      <br><strong>Scope</strong>: all of Chapter 7, Chapter 8 pp.1&ndash;29 and the UNIX command handout. For each predicted question the ORIGINAL wording comes first (one single- and one multi-choice card), followed by its rephrased variants; 27 Linux command cards follow. Every question and option carries a simplified Chinese note. Single choice: pick the one correct option. Multi choice: pick exactly the correct set.
+      <strong>Quiz 2 &middot; MCQs (239 questions / 239 marks).</strong> 每道教授预测题先给出<strong>原题</strong>（题干为教授原话，单选 + 多选各一张），随后是<strong>变体</strong>（单选 + 多选，题末标注「变体」）；另含 UNIX 命令讲义与 Linux Labs 5&ndash;8 的 159 道命令选择题。范围：<strong>Ch07v2a.pdf 全部</strong>、<strong>Ch08v2a.pdf pp.1&ndash;29</strong>、<strong>Introduction to UNIX Commands and Scripting</strong>。题目与每个选项下方均有简体中文翻译；题目下方浅色小字标注教材出处并可点击跳转。单选题选对得 1 分；多选题需选出全部正确项得 1 分。
+      <br><strong>Scope</strong>: all of Chapter 7, Chapter 8 pp.1&ndash;29 and the UNIX command handout. For each predicted question the ORIGINAL wording comes first (one single- and one multi-choice card), followed by its rephrased variants; 159 Linux command cards follow. Every question and option carries a simplified Chinese note. Single choice: pick the one correct option. Multi choice: pick exactly the correct set.
     </div>
 
     <details class="q2-overall" id="q2Overall">
@@ -4624,8 +4624,5355 @@
     ],
     "why": "cat, head and grep take a filename; ps lists processes and mkdir takes a directory name.",
     "whyz": "cat、head、grep 需要文件名；ps 显示进程，mkdir 用目录名。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-1 V1 Single",
+    "q": "In Lab 5 (A-1), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-1）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-1",
+    "links": [
+      [
+        "Lab 5 task A-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ],
+      [
+        "4096 MB, 4 CPUs",
+        "4096 MB, 4 CPUs",
+        false
+      ]
+    ],
+    "why": "Ubuntu USB",
+    "whyz": "打开 Oracle VM VirtualBox，点击 Machine > New 新建 Ubuntu（64 位）虚拟机。把虚拟机命名为 Ubuntu USB；在 Machine Folder 下点击 Other，指定 C: 盘上的 VM 文"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-1 V2 Multi",
+    "q": "In Lab 5 (A-1), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-1）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-1",
+    "links": [
+      [
+        "Lab 5 task A-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Ubuntu USB Related: ubuntu ISO, Uncheck Proceed with Unattended Installation",
+    "whyz": "打开 Oracle VM VirtualBox，点击 Machine > New 新建 Ubuntu（64 位）虚拟机。把虚拟机命名为 Ubuntu USB；在 Machine Folder 下点击 Other，指定 C: 盘上的 VM 文"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-2 V1 Single",
+    "q": "In Lab 5 (A-2), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-2）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-2",
+    "links": [
+      [
+        "Lab 5 task A-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ],
+      [
+        "4096 MB, 4 CPUs",
+        "4096 MB, 4 CPUs",
+        false
+      ]
+    ],
+    "why": "ubuntu ISO",
+    "whyz": "点击 \"ISO Image\" 框右侧的下拉箭头，选择 \"Other\"，定位到 X:\\CSIS\\Michael\\2260\\ubuntu n 文件夹（n 为 1–3，课堂上会分配）。选中 ubuntu ISO 文件后点击 \"Open\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-2 V2 Multi",
+    "q": "In Lab 5 (A-2), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-2）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-2",
+    "links": [
+      [
+        "Lab 5 task A-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "ubuntu ISO Related: Ubuntu USB, Uncheck Proceed with Unattended Installation",
+    "whyz": "点击 \"ISO Image\" 框右侧的下拉箭头，选择 \"Other\"，定位到 X:\\CSIS\\Michael\\2260\\ubuntu n 文件夹（n 为 1–3，课堂上会分配）。选中 ubuntu ISO 文件后点击 \"Open\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-3 V1 Single",
+    "q": "In Lab 5 (A-3), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-3）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-3",
+    "links": [
+      [
+        "Lab 5 task A-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "4096 MB, 4 CPUs",
+        "4096 MB, 4 CPUs",
+        false
+      ]
+    ],
+    "why": "Uncheck Proceed with Unattended Installation",
+    "whyz": "取消勾选 \"Proceed with Unattended Installation\"（无人值守安装）复选框。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-3 V2 Multi",
+    "q": "In Lab 5 (A-3), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-3）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-3",
+    "links": [
+      [
+        "Lab 5 task A-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Uncheck Proceed with Unattended Installation Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "取消勾选 \"Proceed with Unattended Installation\"（无人值守安装）复选框。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-4 V1 Single",
+    "q": "In Lab 5 (A-4), which value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 5（A-4）：该任务的正确答案是什么？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-4",
+    "links": [
+      [
+        "Lab 5 task A-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "4096 MB, 4 CPUs",
+        "4096 MB, 4 CPUs",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "4096 MB, 4 CPUs",
+    "whyz": "展开 \"Specify virtual hardware\"，把 Base Memory 改为 4096 MB，CPU 数量改为 4。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-4 V2 Multi",
+    "q": "In Lab 5 (A-4), which value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-4）：该任务的正确答案是什么？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-4",
+    "links": [
+      [
+        "Lab 5 task A-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "4096 MB, 4 CPUs",
+        "4096 MB, 4 CPUs",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "4096 MB, 4 CPUs Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "展开 \"Specify virtual hardware\"，把 Base Memory 改为 4096 MB，CPU 数量改为 4。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-5 V1 Single",
+    "q": "In Lab 5 (A-5), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-5）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-5",
+    "links": [
+      [
+        "Lab 5 task A-5",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Finish",
+        "Finish",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Finish",
+    "whyz": "其余保持默认设置，点击 \"Finish\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-5 V2 Multi",
+    "q": "In Lab 5 (A-5), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-5）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-5",
+    "links": [
+      [
+        "Lab 5 task A-5",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Finish",
+        "Finish",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Finish Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "其余保持默认设置，点击 \"Finish\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-6 V1 Single",
+    "q": "In Lab 5 (A-6), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-6）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-6",
+    "links": [
+      [
+        "Lab 5 task A-6",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Start",
+        "Start",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Start",
+    "whyz": "点击 \"Start\" 启动 Ubuntu 系统并开始安装。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-6 V2 Multi",
+    "q": "In Lab 5 (A-6), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-6）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-6",
+    "links": [
+      [
+        "Lab 5 task A-6",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Start",
+        "Start",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Start Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "点击 \"Start\" 启动 Ubuntu 系统并开始安装。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-7 V1 Single",
+    "q": "In Lab 5 (A-7), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-7）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-7",
+    "links": [
+      [
+        "Lab 5 task A-7",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Enter",
+        "Enter",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Enter",
+    "whyz": "在虚拟机窗口中按 Enter 键启动 Ubuntu。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-7 V2 Multi",
+    "q": "In Lab 5 (A-7), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-7）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-7",
+    "links": [
+      [
+        "Lab 5 task A-7",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Enter",
+        "Enter",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Enter Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "在虚拟机窗口中按 Enter 键启动 Ubuntu。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-8 V1 Single",
+    "q": "In Lab 5 (A-8), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-8）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-8",
+    "links": [
+      [
+        "Lab 5 task A-8",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "F6",
+        "F6",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "F6",
+    "whyz": "若使用实验室电脑（或没有右 Ctrl 键的电脑）：安装过程中点击 \"Input\" > \"Keyboard\" > \"Keyboard Settings\"，点击 \"Right Ctrl\" 框并按 F6，再按 Enter。这样就把鼠标脱离虚拟机的"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-8 V2 Multi",
+    "q": "In Lab 5 (A-8), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-8）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-8",
+    "links": [
+      [
+        "Lab 5 task A-8",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "F6",
+        "F6",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "F6 Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "若使用实验室电脑（或没有右 Ctrl 键的电脑）：安装过程中点击 \"Input\" > \"Keyboard\" > \"Keyboard Settings\"，点击 \"Right Ctrl\" 框并按 F6，再按 Enter。这样就把鼠标脱离虚拟机的"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-9 V1 Single",
+    "q": "In Lab 5 (A-9), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-9）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-9",
+    "links": [
+      [
+        "Lab 5 task A-9",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Install Ubuntu / English",
+        "Install Ubuntu / English",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Install Ubuntu / English",
+    "whyz": "出现提示时点击 \"Install Ubuntu\"，选择 English 后点击 Next。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-9 V2 Multi",
+    "q": "In Lab 5 (A-9), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-9）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-9",
+    "links": [
+      [
+        "Lab 5 task A-9",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Install Ubuntu / English",
+        "Install Ubuntu / English",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Install Ubuntu / English Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "出现提示时点击 \"Install Ubuntu\"，选择 English 后点击 Next。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-10 V1 Single",
+    "q": "In Lab 5 (A-10), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-10）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-10",
+    "links": [
+      [
+        "Lab 5 task A-10",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Next",
+        "Next",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Next",
+    "whyz": "在接下来的几个界面中点击 Next。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-10 V2 Multi",
+    "q": "In Lab 5 (A-10), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-10）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-10",
+    "links": [
+      [
+        "Lab 5 task A-10",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Next",
+        "Next",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Next Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "在接下来的几个界面中点击 Next。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-11 V1 Single",
+    "q": "In Lab 5 (A-11), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-11）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-11",
+    "links": [
+      [
+        "Lab 5 task A-11",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Install Ubuntu",
+        "Install Ubuntu",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Install Ubuntu",
+    "whyz": "选择 \"Install Ubuntu\" 并点击 \"Next\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-11 V2 Multi",
+    "q": "In Lab 5 (A-11), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-11）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-11",
+    "links": [
+      [
+        "Lab 5 task A-11",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Install Ubuntu",
+        "Install Ubuntu",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Install Ubuntu Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "选择 \"Install Ubuntu\" 并点击 \"Next\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-12 V1 Single",
+    "q": "In Lab 5 (A-12), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-12）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-12",
+    "links": [
+      [
+        "Lab 5 task A-12",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Next",
+        "Next",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Next",
+    "whyz": "接下来几个界面继续点击 \"Next\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-12 V2 Multi",
+    "q": "In Lab 5 (A-12), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-12）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-12",
+    "links": [
+      [
+        "Lab 5 task A-12",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Next",
+        "Next",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Next Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "接下来几个界面继续点击 \"Next\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-13 V1 Single",
+    "q": "In Lab 5 (A-13), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-13）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-13",
+    "links": [
+      [
+        "Lab 5 task A-13",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Erase disk and install Ubuntu",
+        "Erase disk and install Ubuntu",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Erase disk and install Ubuntu",
+    "whyz": "当提示 \"How do you want to install Ubuntu?\" 时，选择 Erase disk and install Ubuntu（只会擦除虚拟硬盘，不会擦除物理硬盘）。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-13 V2 Multi",
+    "q": "In Lab 5 (A-13), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-13）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-13",
+    "links": [
+      [
+        "Lab 5 task A-13",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Erase disk and install Ubuntu",
+        "Erase disk and install Ubuntu",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Erase disk and install Ubuntu Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "当提示 \"How do you want to install Ubuntu?\" 时，选择 Erase disk and install Ubuntu（只会擦除虚拟硬盘，不会擦除物理硬盘）。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-14 V1 Single",
+    "q": "In Lab 5 (A-14), which value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 5（A-14）：该任务的正确答案是什么？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-14",
+    "links": [
+      [
+        "Lab 5 task A-14",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "csis2260",
+        "csis2260",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "csis2260",
+    "whyz": "在 \"Your name\" 中输入你的名字，账户密码设为 csis2260，其余接受建议设置并点击 \"Next\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-14 V2 Multi",
+    "q": "In Lab 5 (A-14), which value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-14）：该任务的正确答案是什么？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-14",
+    "links": [
+      [
+        "Lab 5 task A-14",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "csis2260",
+        "csis2260",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "csis2260 Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "在 \"Your name\" 中输入你的名字，账户密码设为 csis2260，其余接受建议设置并点击 \"Next\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-15 V1 Single",
+    "q": "In Lab 5 (A-15), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-15）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-15",
+    "links": [
+      [
+        "Lab 5 task A-15",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Time zone / Next",
+        "Time zone / Next",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Time zone / Next",
+    "whyz": "确认时区正确后点击 \"Next\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-15 V2 Multi",
+    "q": "In Lab 5 (A-15), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-15）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-15",
+    "links": [
+      [
+        "Lab 5 task A-15",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Time zone / Next",
+        "Time zone / Next",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Time zone / Next Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "确认时区正确后点击 \"Next\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-16 V1 Single",
+    "q": "In Lab 5 (A-16), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-16）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-16",
+    "links": [
+      [
+        "Lab 5 task A-16",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Install",
+        "Install",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Install",
+    "whyz": "检查所选设置后点击 \"Install\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-16 V2 Multi",
+    "q": "In Lab 5 (A-16), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-16）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-16",
+    "links": [
+      [
+        "Lab 5 task A-16",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Install",
+        "Install",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Install Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "检查所选设置后点击 \"Install\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-17 V1 Single",
+    "q": "In Lab 5 (A-17), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-17）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-17",
+    "links": [
+      [
+        "Lab 5 task A-17",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Restart now",
+        "Restart now",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Restart now",
+    "whyz": "安装完成后点击 \"Restart now\"；提示移除安装介质时按 ENTER。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-17 V2 Multi",
+    "q": "In Lab 5 (A-17), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-17）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-17",
+    "links": [
+      [
+        "Lab 5 task A-17",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Restart now",
+        "Restart now",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Restart now Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "安装完成后点击 \"Restart now\"；提示移除安装介质时按 ENTER。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-18 V1 Single",
+    "q": "In Lab 5 (A-18), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-18）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-18",
+    "links": [
+      [
+        "Lab 5 task A-18",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "csis2260",
+        "csis2260",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "csis2260",
+    "whyz": "Ubuntu 重启后输入密码登录，跳过所有可能出现的新手介绍／设置页面。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-18 V2 Multi",
+    "q": "In Lab 5 (A-18), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-18）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-18",
+    "links": [
+      [
+        "Lab 5 task A-18",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "csis2260",
+        "csis2260",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "csis2260 Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "Ubuntu 重启后输入密码登录，跳过所有可能出现的新手介绍／设置页面。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-19 V1 Single",
+    "q": "In Lab 5 (A-19), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 5（A-19）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-19",
+    "links": [
+      [
+        "Lab 5 task A-19",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Don't Upgrade",
+        "Don't Upgrade",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "Don't Upgrade",
+    "whyz": "若提示是否升级到 Ubuntu 26.04，点击 \"Don't Upgrade\"。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-19 V2 Multi",
+    "q": "In Lab 5 (A-19), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-19）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-19",
+    "links": [
+      [
+        "Lab 5 task A-19",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Don't Upgrade",
+        "Don't Upgrade",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "Don't Upgrade Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "若提示是否升级到 Ubuntu 26.04，点击 \"Don't Upgrade\"。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-20a V1 Single",
+    "q": "In Lab 5 (A-20a), which value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 5（A-20a）：该任务的正确答案是什么？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-20a",
+    "links": [
+      [
+        "Lab 5 task A-20a",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "4.9%, 1.3 GB, 31.8%",
+        "4.9%, 1.3 GB, 31.8%",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "4.9%, 1.3 GB, 31.8%",
+    "whyz": "20. 比较 Ubuntu（客户机）与 Windows 10/11（宿主机）的系统资源占用。a. 在 Ubuntu 点击左下角 Show Applications，打开 System monitor 并切换到 Resources 标签。b."
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-20a V2 Multi",
+    "q": "In Lab 5 (A-20a), which value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-20a）：该任务的正确答案是什么？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-20a",
+    "links": [
+      [
+        "Lab 5 task A-20a",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "4.9%, 1.3 GB, 31.8%",
+        "4.9%, 1.3 GB, 31.8%",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "4.9%, 1.3 GB, 31.8% Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "20. 比较 Ubuntu（客户机）与 Windows 10/11（宿主机）的系统资源占用。a. 在 Ubuntu 点击左下角 Show Applications，打开 System monitor 并切换到 Resources 标签。b."
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-20b V1 Single",
+    "q": "In Lab 5 (A-20b), which value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 5（A-20b）：该任务的正确答案是什么？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-20b",
+    "links": [
+      [
+        "Lab 5 task A-20b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "12%, 12.1 GB, 77%",
+        "12%, 12.1 GB, 77%",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "12%, 12.1 GB, 77%",
+    "whyz": "【表格 Windows 10/11 一行：CPU 使用率 (%) / 内存使用量 (GB, %)】"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-20b V2 Multi",
+    "q": "In Lab 5 (A-20b), which value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-20b）：该任务的正确答案是什么？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-20b",
+    "links": [
+      [
+        "Lab 5 task A-20b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "12%, 12.1 GB, 77%",
+        "12%, 12.1 GB, 77%",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "12%, 12.1 GB, 77% Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "【表格 Windows 10/11 一行：CPU 使用率 (%) / 内存使用量 (GB, %)】"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab5-A-21 V1 Single",
+    "q": "In Lab 5 (A-21), which value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 5（A-21）：该任务的正确答案是什么？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-21",
+    "links": [
+      [
+        "Lab 5 task A-21",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "9.1 GB, 58%",
+        "9.1 GB, 58%",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ],
+      [
+        "Uncheck Proceed with Unattended Installation",
+        "Uncheck Proceed with Unattended Installation",
+        false
+      ]
+    ],
+    "why": "9.1 GB, 58%",
+    "whyz": "21. 关闭 Ubuntu（电源按钮在窗口右上角）。此时在 Windows 10/11 的任务管理器中，主内存占用 (GB, %) 是多少？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab5-A-21 V2 Multi",
+    "q": "In Lab 5 (A-21), which value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 5（A-21）：该任务的正确答案是什么？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 5 · task A-21",
+    "links": [
+      [
+        "Lab 5 task A-21",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "9.1 GB, 58%",
+        "9.1 GB, 58%",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        true
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        true
+      ],
+      [
+        "Ubuntu USB",
+        "Ubuntu USB",
+        false
+      ],
+      [
+        "ubuntu ISO",
+        "ubuntu ISO",
+        false
+      ]
+    ],
+    "why": "9.1 GB, 58% Related: Ubuntu USB, ubuntu ISO",
+    "whyz": "21. 关闭 Ubuntu（电源按钮在窗口右上角）。此时在 Windows 10/11 的任务管理器中，主内存占用 (GB, %) 是多少？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-A-1 V1 Single",
+    "q": "In Lab 6 (A-1), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 6（A-1）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task A-1",
+    "links": [
+      [
+        "Lab 6 task A-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ],
+      [
+        "adduser: Only root may add a user or group to the system",
+        "adduser: Only root may add a user or group to the system",
+        false
+      ]
+    ],
+    "why": "Settings > Appearance > Background",
+    "whyz": "A. 使用 Ubuntu 窗口环境 [4 分] 1. 打开上次实验安装的 Ubuntu 并登录，点击左下角 Show Applications，找到并打开 Settings。查看左侧菜单中的设置项，在 Appearance 中选择 Back"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-A-1 V2 Multi",
+    "q": "In Lab 6 (A-1), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（A-1）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task A-1",
+    "links": [
+      [
+        "Lab 6 task A-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "Settings > Appearance > Background Related: Image Viewer; Software Updater; System Monitor; Terminal, Files > Home",
+    "whyz": "A. 使用 Ubuntu 窗口环境 [4 分] 1. 打开上次实验安装的 Ubuntu 并登录，点击左下角 Show Applications，找到并打开 Settings。查看左侧菜单中的设置项，在 Appearance 中选择 Back"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-A-2 V1 Single",
+    "q": "In Lab 6 (A-2), which value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（A-2）：该任务的正确答案是什么？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task A-2",
+    "links": [
+      [
+        "Lab 6 task A-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ],
+      [
+        "adduser: Only root may add a user or group to the system",
+        "adduser: Only root may add a user or group to the system",
+        false
+      ]
+    ],
+    "why": "Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "2. 再次点击 Show Applications 查看其它可用应用，列出其中四个。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-A-2 V2 Multi",
+    "q": "In Lab 6 (A-2), which value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（A-2）：该任务的正确答案是什么？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task A-2",
+    "links": [
+      [
+        "Lab 6 task A-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "Image Viewer; Software Updater; System Monitor; Terminal Related: Settings > Appearance > Background, Files > Home",
+    "whyz": "2. 再次点击 Show Applications 查看其它可用应用，列出其中四个。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-A-3 V1 Single",
+    "q": "In Lab 6 (A-3), which action/setting is required by the task? (Variant 1 / Single)",
+    "zh": "实验 6（A-3）：该任务需要执行哪个操作或设置？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task A-3",
+    "links": [
+      [
+        "Lab 6 task A-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Files > Home",
+        "Files > Home",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "adduser: Only root may add a user or group to the system",
+        "adduser: Only root may add a user or group to the system",
+        false
+      ]
+    ],
+    "why": "Files > Home",
+    "whyz": "3. 点击 Files 图标打开文件管理器，在左侧选择 Home 查看个人文件与子目录，然后关闭 Files 窗口。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-A-3 V2 Multi",
+    "q": "In Lab 6 (A-3), which action/setting is required by the task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（A-3）：该任务需要执行哪个操作或设置？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task A-3",
+    "links": [
+      [
+        "Lab 6 task A-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Files > Home",
+        "Files > Home",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "Files > Home Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "3. 点击 Files 图标打开文件管理器，在左侧选择 Home 查看个人文件与子目录，然后关闭 Files 窗口。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-B-2 V1 Single",
+    "q": "In Lab 6 (B-2), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（B-2）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-2",
+    "links": [
+      [
+        "Lab 6 task B-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "adduser: Only root may add a user or group to the system",
+        "adduser: Only root may add a user or group to the system",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "adduser: Only root may add a user or group to the system.",
+    "whyz": "B. 使用终端 [10 分] 2. 创建密码为 hello 的新用户 c2260。先输入命令 adduser c2260，屏幕上出现什么信息？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-B-2 V2 Multi",
+    "q": "In Lab 6 (B-2), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（B-2）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-2",
+    "links": [
+      [
+        "Lab 6 task B-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "adduser: Only root may add a user or group to the system",
+        "adduser: Only root may add a user or group to the system",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "adduser: Only root may add a user or group to the system. Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "B. 使用终端 [10 分] 2. 创建密码为 hello 的新用户 c2260。先输入命令 adduser c2260，屏幕上出现什么信息？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-B-2b V1 Single",
+    "q": "In Lab 6 (B-2b), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（B-2b）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-2b",
+    "links": [
+      [
+        "Lab 6 task B-2b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sudo adduser c2260",
+        "sudo adduser c2260",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "sudo adduser c2260",
+    "whyz": "接着输入命令 sudo adduser c2260；先输入你的密码 (csis2260)，再为新用户输入 opsys2260。注意：输入密码时屏幕不会显示任何内容，直接输入后按 Enter 即可。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-B-2b V2 Multi",
+    "q": "In Lab 6 (B-2b), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（B-2b）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-2b",
+    "links": [
+      [
+        "Lab 6 task B-2b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sudo adduser c2260",
+        "sudo adduser c2260",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "sudo adduser c2260 Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "接着输入命令 sudo adduser c2260；先输入你的密码 (csis2260)，再为新用户输入 opsys2260。注意：输入密码时屏幕不会显示任何内容，直接输入后按 Enter 即可。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-B-3 V1 Single",
+    "q": "In Lab 6 (B-3), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（B-3）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-3",
+    "links": [
+      [
+        "Lab 6 task B-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "c2260 is not in the sudoers file. This incident will be reported",
+        "c2260 is not in the sudoers file. This incident will be reported",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "c2260 is not in the sudoers file. This incident will be reported.",
+    "whyz": "3. 点击 Ubuntu 窗口右上角的向下箭头，选择 Power off/Log out > Switch User，登录 c2260 账户并跳过介绍页面。打开终端，输入 sudo adduser test 尝试创建用户 test，按提示输"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-B-3 V2 Multi",
+    "q": "In Lab 6 (B-3), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（B-3）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-3",
+    "links": [
+      [
+        "Lab 6 task B-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "c2260 is not in the sudoers file. This incident will be reported",
+        "c2260 is not in the sudoers file. This incident will be reported",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "c2260 is not in the sudoers file. This incident will be reported. Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "3. 点击 Ubuntu 窗口右上角的向下箭头，选择 Power off/Log out > Switch User，登录 c2260 账户并跳过介绍页面。打开终端，输入 sudo adduser test 尝试创建用户 test，按提示输"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-B-3b V1 Single",
+    "q": "In Lab 6 (B-3b), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（B-3b）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-3b",
+    "links": [
+      [
+        "Lab 6 task B-3b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sudo /usr/sbin/visudo",
+        "sudo /usr/sbin/visudo",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "sudo /usr/sbin/visudo",
+    "whyz": "切回原账户，在终端输入 sudo /usr/sbin/visudo（若报错可试 sudo visudo）。在 \"User privilege specification\" 下、root 行之后加入 c2260 ALL=(ALL:ALL) A"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-B-3b V2 Multi",
+    "q": "In Lab 6 (B-3b), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（B-3b）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-3b",
+    "links": [
+      [
+        "Lab 6 task B-3b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sudo /usr/sbin/visudo",
+        "sudo /usr/sbin/visudo",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "sudo /usr/sbin/visudo Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "切回原账户，在终端输入 sudo /usr/sbin/visudo（若报错可试 sudo visudo）。在 \"User privilege specification\" 下、root 行之后加入 c2260 ALL=(ALL:ALL) A"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-B-3c V1 Single",
+    "q": "In Lab 6 (B-3c), which value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（B-3c）：该任务的正确答案是什么？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-3c",
+    "links": [
+      [
+        "Lab 6 task B-3c",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Yes",
+        "Yes",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "Yes",
+    "whyz": "切换到 c2260 账户，尝试创建密码为 opsys1357 的新用户 test。账户是否创建成功？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-B-3c V2 Multi",
+    "q": "In Lab 6 (B-3c), which value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（B-3c）：该任务的正确答案是什么？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-3c",
+    "links": [
+      [
+        "Lab 6 task B-3c",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Yes",
+        "Yes",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "Yes Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "切换到 c2260 账户，尝试创建密码为 opsys1357 的新用户 test。账户是否创建成功？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-B-4 V1 Single",
+    "q": "In Lab 6 (B-4), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（B-4）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-4",
+    "links": [
+      [
+        "Lab 6 task B-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sudo deluser test",
+        "sudo deluser test",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "sudo deluser test",
+    "whyz": "4. 删除刚创建的 test 账户（自己推测所需命令）。删除用户 test 的命令是什么？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-B-4 V2 Multi",
+    "q": "In Lab 6 (B-4), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（B-4）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task B-4",
+    "links": [
+      [
+        "Lab 6 task B-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sudo deluser test",
+        "sudo deluser test",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "sudo deluser test Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "4. 删除刚创建的 test 账户（自己推测所需命令）。删除用户 test 的命令是什么？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-C-1b-1 V1 Single",
+    "q": "In Lab 6 (C-1b-1), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（C-1b-1）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task C-1b-1",
+    "links": [
+      [
+        "Lab 6 task C-1b-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls ~ — the contents of your home directory",
+        "ls ~ — the contents of your home directory",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "ls ~ — the contents of your home directory",
+    "whyz": "C. UNIX 教程 [6 分] 练习 1b：你认为 ls ~ 会列出什么？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-C-1b-1 V2 Multi",
+    "q": "In Lab 6 (C-1b-1), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（C-1b-1）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task C-1b-1",
+    "links": [
+      [
+        "Lab 6 task C-1b-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls ~ — the contents of your home directory",
+        "ls ~ — the contents of your home directory",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "ls ~ — the contents of your home directory Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "C. UNIX 教程 [6 分] 练习 1b：你认为 ls ~ 会列出什么？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab6-C-1b-2 V1 Single",
+    "q": "In Lab 6 (C-1b-2), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 6（C-1b-2）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task C-1b-2",
+    "links": [
+      [
+        "Lab 6 task C-1b-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls ~/.. — the parent directory of your home directory",
+        "ls ~/.. — the parent directory of your home directory",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ],
+      [
+        "Files > Home",
+        "Files > Home",
+        false
+      ]
+    ],
+    "why": "ls ~/.. — the parent directory of your home directory",
+    "whyz": "你认为 ls ~/.. 会列出什么？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab6-C-1b-2 V2 Multi",
+    "q": "In Lab 6 (C-1b-2), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 6（C-1b-2）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 6 · task C-1b-2",
+    "links": [
+      [
+        "Lab 6 task C-1b-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls ~/.. — the parent directory of your home directory",
+        "ls ~/.. — the parent directory of your home directory",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        true
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        true
+      ],
+      [
+        "Settings > Appearance > Background",
+        "Settings > Appearance > Background",
+        false
+      ],
+      [
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        "Image Viewer; Software Updater; System Monitor; Terminal",
+        false
+      ]
+    ],
+    "why": "ls ~/.. — the parent directory of your home directory Related: Settings > Appearance > Background, Image Viewer; Software Updater; System Monitor; Terminal",
+    "whyz": "你认为 ls ~/.. 会列出什么？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-A-2c V1 Single",
+    "q": "In Lab 7 (A-2c), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（A-2c）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task A-2c",
+    "links": [
+      [
+        "Lab 7 task A-2c",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ],
+      [
+        "man ls > test.txt",
+        "man ls > test.txt",
+        false
+      ]
+    ],
+    "why": "tail -n 15 filename",
+    "whyz": "A. UNIX 教程。练习 2c [4 分]：如何查看文件的最后 15 行？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-A-2c V2 Multi",
+    "q": "In Lab 7 (A-2c), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（A-2c）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task A-2c",
+    "links": [
+      [
+        "Lab 7 task A-2c",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "tail -n 15 filename Related: mkdir csislab, cd ~/csislab",
+    "whyz": "A. UNIX 教程。练习 2c [4 分]：如何查看文件的最后 15 行？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-1 V1 Single",
+    "q": "In Lab 7 (B-1), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-1）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-1",
+    "links": [
+      [
+        "Lab 7 task B-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ],
+      [
+        "man ls > test.txt",
+        "man ls > test.txt",
+        false
+      ]
+    ],
+    "why": "mkdir csislab",
+    "whyz": "B. 复习练习 [16 分] 1. 在主目录下创建文件夹 csislab。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-1 V2 Multi",
+    "q": "In Lab 7 (B-1), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-1）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-1",
+    "links": [
+      [
+        "Lab 7 task B-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "mkdir csislab Related: tail -n 15 filename, cd ~/csislab",
+    "whyz": "B. 复习练习 [16 分] 1. 在主目录下创建文件夹 csislab。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-2 V1 Single",
+    "q": "In Lab 7 (B-2), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-2）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-2",
+    "links": [
+      [
+        "Lab 7 task B-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "man ls > test.txt",
+        "man ls > test.txt",
+        false
+      ]
+    ],
+    "why": "cd ~/csislab",
+    "whyz": "2. 进入 csislab 文件夹。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-2 V2 Multi",
+    "q": "In Lab 7 (B-2), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-2）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-2",
+    "links": [
+      [
+        "Lab 7 task B-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "cd ~/csislab Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "2. 进入 csislab 文件夹。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-3 V1 Single",
+    "q": "In Lab 7 (B-3), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-3）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-3",
+    "links": [
+      [
+        "Lab 7 task B-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "man ls > test.txt",
+        "man ls > test.txt",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "man ls > test.txt",
+    "whyz": "3. 在 csislab 下，用右侧命令创建文件 test.txt［man ls > test.txt］。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-3 V2 Multi",
+    "q": "In Lab 7 (B-3), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-3）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-3",
+    "links": [
+      [
+        "Lab 7 task B-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "man ls > test.txt",
+        "man ls > test.txt",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "man ls > test.txt Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "3. 在 csislab 下，用右侧命令创建文件 test.txt［man ls > test.txt］。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-4 V1 Single",
+    "q": "In Lab 7 (B-4), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-4）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-4",
+    "links": [
+      [
+        "Lab 7 task B-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cp test.txt test1.txt",
+        "cp test.txt test1.txt",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "cp test.txt test1.txt",
+    "whyz": "4. 复制 test.txt，副本命名为 test1.txt。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-4 V2 Multi",
+    "q": "In Lab 7 (B-4), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-4）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-4",
+    "links": [
+      [
+        "Lab 7 task B-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cp test.txt test1.txt",
+        "cp test.txt test1.txt",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "cp test.txt test1.txt Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "4. 复制 test.txt，副本命名为 test1.txt。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-5 V1 Single",
+    "q": "In Lab 7 (B-5), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-5）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-5",
+    "links": [
+      [
+        "Lab 7 task B-5",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mkdir temp",
+        "mkdir temp",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "mkdir temp",
+    "whyz": "5. 在 csislab 下创建子文件夹 temp。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-5 V2 Multi",
+    "q": "In Lab 7 (B-5), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-5）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-5",
+    "links": [
+      [
+        "Lab 7 task B-5",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mkdir temp",
+        "mkdir temp",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "mkdir temp Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "5. 在 csislab 下创建子文件夹 temp。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-6 V1 Single",
+    "q": "In Lab 7 (B-6), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-6）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-6",
+    "links": [
+      [
+        "Lab 7 task B-6",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cp test.txt test.bak",
+        "cp test.txt test.bak",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "cp test.txt test.bak",
+    "whyz": "6. 再次复制 test.txt，副本命名为 test.bak。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-6 V2 Multi",
+    "q": "In Lab 7 (B-6), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-6）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-6",
+    "links": [
+      [
+        "Lab 7 task B-6",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cp test.txt test.bak",
+        "cp test.txt test.bak",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "cp test.txt test.bak Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "6. 再次复制 test.txt，副本命名为 test.bak。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-7 V1 Single",
+    "q": "In Lab 7 (B-7), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-7）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-7",
+    "links": [
+      [
+        "Lab 7 task B-7",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls",
+        "ls",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "ls",
+    "whyz": "7. 显示 csislab 中的文件与目录。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-7 V2 Multi",
+    "q": "In Lab 7 (B-7), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-7）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-7",
+    "links": [
+      [
+        "Lab 7 task B-7",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls",
+        "ls",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "ls Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "7. 显示 csislab 中的文件与目录。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-8 V1 Single",
+    "q": "In Lab 7 (B-8), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-8）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-8",
+    "links": [
+      [
+        "Lab 7 task B-8",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mv test.bak temp/",
+        "mv test.bak temp/",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "mv test.bak temp/",
+    "whyz": "8. 把 test.bak 移动到 temp 文件夹。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-8 V2 Multi",
+    "q": "In Lab 7 (B-8), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-8）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-8",
+    "links": [
+      [
+        "Lab 7 task B-8",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "mv test.bak temp/",
+        "mv test.bak temp/",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "mv test.bak temp/ Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "8. 把 test.bak 移动到 temp 文件夹。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-9 V1 Single",
+    "q": "In Lab 7 (B-9), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-9）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-9",
+    "links": [
+      [
+        "Lab 7 task B-9",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls temp/",
+        "ls temp/",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "ls temp/",
+    "whyz": "9. 显示 temp 中的文件与目录，确认 test.bak 已被移动进去。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-9 V2 Multi",
+    "q": "In Lab 7 (B-9), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-9）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-9",
+    "links": [
+      [
+        "Lab 7 task B-9",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls temp/",
+        "ls temp/",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "ls temp/ Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "9. 显示 temp 中的文件与目录，确认 test.bak 已被移动进去。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-10 V1 Single",
+    "q": "In Lab 7 (B-10), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-10）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-10",
+    "links": [
+      [
+        "Lab 7 task B-10",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "rm temp/test.bak; rmdir temp/",
+        "rm temp/test.bak; rmdir temp/",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "rm temp/test.bak; rmdir temp/",
+    "whyz": "10. 删除子文件夹 temp。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-10 V2 Multi",
+    "q": "In Lab 7 (B-10), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-10）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-10",
+    "links": [
+      [
+        "Lab 7 task B-10",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "rm temp/test.bak; rmdir temp/",
+        "rm temp/test.bak; rmdir temp/",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "rm temp/test.bak; rmdir temp/ Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "10. 删除子文件夹 temp。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab7-B-11 V1 Single",
+    "q": "In Lab 7 (B-11), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 7（B-11）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-11",
+    "links": [
+      [
+        "Lab 7 task B-11",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls ~/csislab",
+        "ls ~/csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ],
+      [
+        "cd ~/csislab",
+        "cd ~/csislab",
+        false
+      ]
+    ],
+    "why": "ls ~/csislab",
+    "whyz": "11. 显示 csislab 中的文件与目录，确认 temp 文件夹已被删除。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab7-B-11 V2 Multi",
+    "q": "In Lab 7 (B-11), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 7（B-11）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 7 · task B-11",
+    "links": [
+      [
+        "Lab 7 task B-11",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls ~/csislab",
+        "ls ~/csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        true
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        true
+      ],
+      [
+        "tail -n 15 filename",
+        "tail -n 15 filename",
+        false
+      ],
+      [
+        "mkdir csislab",
+        "mkdir csislab",
+        false
+      ]
+    ],
+    "why": "ls ~/csislab Related: tail -n 15 filename, mkdir csislab",
+    "whyz": "11. 显示 csislab 中的文件与目录，确认 temp 文件夹已被删除。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-A-4b V1 Single",
+    "q": "In Lab 8 (A-4b), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（A-4b）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task A-4b",
+    "links": [
+      [
+        "Lab 8 task A-4b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ],
+      [
+        "head -n 10 ex1",
+        "head -n 10 ex1",
+        false
+      ]
+    ],
+    "why": "cat list1 list2 | grep p | sort",
+    "whyz": "A. UNIX 教程。练习 4b [4 分]：用管道显示 list1 与 list2 中所有含字母 'p' 的行，并对结果排序。写出所用命令。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-A-4b V2 Multi",
+    "q": "In Lab 8 (A-4b), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（A-4b）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task A-4b",
+    "links": [
+      [
+        "Lab 8 task A-4b",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "cat list1 list2 | grep p | sort Related: man less > ex1, cat ex1",
+    "whyz": "A. UNIX 教程。练习 4b [4 分]：用管道显示 list1 与 list2 中所有含字母 'p' 的行，并对结果排序。写出所用命令。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-1 V1 Single",
+    "q": "In Lab 8 (B-1), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-1）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-1",
+    "links": [
+      [
+        "Lab 8 task B-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ],
+      [
+        "head -n 10 ex1",
+        "head -n 10 ex1",
+        false
+      ]
+    ],
+    "why": "man less > ex1",
+    "whyz": "B. 复习练习 [16 分] 1. 用右侧命令在主目录下创建文件 ex1［man less > ex1］。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-1 V2 Multi",
+    "q": "In Lab 8 (B-1), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-1）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-1",
+    "links": [
+      [
+        "Lab 8 task B-1",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "man less > ex1 Related: cat list1 list2 | grep p | sort, cat ex1",
+    "whyz": "B. 复习练习 [16 分] 1. 用右侧命令在主目录下创建文件 ex1［man less > ex1］。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-2 V1 Single",
+    "q": "In Lab 8 (B-2), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-2）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-2",
+    "links": [
+      [
+        "Lab 8 task B-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex1",
+        "cat ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "head -n 10 ex1",
+        "head -n 10 ex1",
+        false
+      ]
+    ],
+    "why": "cat ex1",
+    "whyz": "2. 用右侧命令显示该文件［cat］。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-2 V2 Multi",
+    "q": "In Lab 8 (B-2), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-2）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-2",
+    "links": [
+      [
+        "Lab 8 task B-2",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex1",
+        "cat ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "cat ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "2. 用右侧命令显示该文件［cat］。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-3 V1 Single",
+    "q": "In Lab 8 (B-3), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-3）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-3",
+    "links": [
+      [
+        "Lab 8 task B-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "head -n 10 ex1",
+        "head -n 10 ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "head -n 10 ex1",
+    "whyz": "3. 显示 ex1 的前 10 行。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-3 V2 Multi",
+    "q": "In Lab 8 (B-3), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-3）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-3",
+    "links": [
+      [
+        "Lab 8 task B-3",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "head -n 10 ex1",
+        "head -n 10 ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "head -n 10 ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "3. 显示 ex1 的前 10 行。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-4 V1 Single",
+    "q": "In Lab 8 (B-4), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-4）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-4",
+    "links": [
+      [
+        "Lab 8 task B-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "tail -n 20 ex1",
+        "tail -n 20 ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "tail -n 20 ex1",
+    "whyz": "4. 显示 ex1 的最后 20 行。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-4 V2 Multi",
+    "q": "In Lab 8 (B-4), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-4）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-4",
+    "links": [
+      [
+        "Lab 8 task B-4",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "tail -n 20 ex1",
+        "tail -n 20 ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "tail -n 20 ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "4. 显示 ex1 的最后 20 行。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-5 V1 Single",
+    "q": "In Lab 8 (B-5), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-5）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-5",
+    "links": [
+      [
+        "Lab 8 task B-5",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "grep Display ex1",
+        "grep Display ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "grep Display ex1",
+    "whyz": "5. 在 ex1 中搜索单词 Display 并显示匹配的行。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-5 V2 Multi",
+    "q": "In Lab 8 (B-5), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-5）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-5",
+    "links": [
+      [
+        "Lab 8 task B-5",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "grep Display ex1",
+        "grep Display ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "grep Display ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "5. 在 ex1 中搜索单词 Display 并显示匹配的行。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-6 V1 Single",
+    "q": "In Lab 8 (B-6), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-6）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-6",
+    "links": [
+      [
+        "Lab 8 task B-6",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "grep -i 'display' ex1",
+        "grep -i 'display' ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "grep -i 'display' ex1",
+    "whyz": "6. 在 ex1 中同时搜索 Display 与 display（忽略大小写），并显示匹配的行。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-6 V2 Multi",
+    "q": "In Lab 8 (B-6), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-6）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-6",
+    "links": [
+      [
+        "Lab 8 task B-6",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "grep -i 'display' ex1",
+        "grep -i 'display' ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "grep -i 'display' ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "6. 在 ex1 中同时搜索 Display 与 display（忽略大小写），并显示匹配的行。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-7 V1 Single",
+    "q": "In Lab 8 (B-7), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-7）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-7",
+    "links": [
+      [
+        "Lab 8 task B-7",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "grep -i -c 'display' ex1",
+        "grep -i -c 'display' ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "grep -i -c 'display' ex1",
+    "whyz": "7. 忽略大小写统计 ex1 中含 display/Display 的行数。共有多少行？（标准答案文档记录为 68 行）"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-7 V2 Multi",
+    "q": "In Lab 8 (B-7), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-7）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-7",
+    "links": [
+      [
+        "Lab 8 task B-7",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "grep -i -c 'display' ex1",
+        "grep -i -c 'display' ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "grep -i -c 'display' ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "7. 忽略大小写统计 ex1 中含 display/Display 的行数。共有多少行？（标准答案文档记录为 68 行）"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-8 V1 Single",
+    "q": "In Lab 8 (B-8), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-8）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-8",
+    "links": [
+      [
+        "Lab 8 task B-8",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat > ex2 (then Mary / Jack / Alice, Ctrl+D)",
+        "cat > ex2 (then Mary / Jack / Alice, Ctrl+D)",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "cat > ex2 (then Mary / Jack / Alice, Ctrl+D)",
+    "whyz": "8. 新建文件 ex2 并写入 Mary、Jack、Alice 三行。创建该文件用了什么命令？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-8 V2 Multi",
+    "q": "In Lab 8 (B-8), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-8）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-8",
+    "links": [
+      [
+        "Lab 8 task B-8",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat > ex2 (then Mary / Jack / Alice, Ctrl+D)",
+        "cat > ex2 (then Mary / Jack / Alice, Ctrl+D)",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "cat > ex2 (then Mary / Jack / Alice, Ctrl+D) Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "8. 新建文件 ex2 并写入 Mary、Jack、Alice 三行。创建该文件用了什么命令？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-9 V1 Single",
+    "q": "In Lab 8 (B-9), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-9）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-9",
+    "links": [
+      [
+        "Lab 8 task B-9",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex2",
+        "cat ex2",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "cat ex2",
+    "whyz": "9. 显示 ex2 的内容。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-9 V2 Multi",
+    "q": "In Lab 8 (B-9), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-9）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-9",
+    "links": [
+      [
+        "Lab 8 task B-9",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex2",
+        "cat ex2",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "cat ex2 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "9. 显示 ex2 的内容。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-10 V1 Single",
+    "q": "In Lab 8 (B-10), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-10）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-10",
+    "links": [
+      [
+        "Lab 8 task B-10",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat >> ex2 (then Nelson / Betty / Kim, Ctrl+D)",
+        "cat >> ex2 (then Nelson / Betty / Kim, Ctrl+D)",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "cat >> ex2 (then Nelson / Betty / Kim, Ctrl+D)",
+    "whyz": "10. 把 Nelson、Betty、Kim 追加到 ex2。追加内容用了什么命令？"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-10 V2 Multi",
+    "q": "In Lab 8 (B-10), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-10）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-10",
+    "links": [
+      [
+        "Lab 8 task B-10",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat >> ex2 (then Nelson / Betty / Kim, Ctrl+D)",
+        "cat >> ex2 (then Nelson / Betty / Kim, Ctrl+D)",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "cat >> ex2 (then Nelson / Betty / Kim, Ctrl+D) Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "10. 把 Nelson、Betty、Kim 追加到 ex2。追加内容用了什么命令？"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-11 V1 Single",
+    "q": "In Lab 8 (B-11), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-11）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-11",
+    "links": [
+      [
+        "Lab 8 task B-11",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sort ex2 > ex3",
+        "sort ex2 > ex3",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "sort ex2 > ex3",
+    "whyz": "11. 对 ex2 中的内容排序，并把结果保存到新文件 ex3。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-11 V2 Multi",
+    "q": "In Lab 8 (B-11), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-11）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-11",
+    "links": [
+      [
+        "Lab 8 task B-11",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sort ex2 > ex3",
+        "sort ex2 > ex3",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "sort ex2 > ex3 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "11. 对 ex2 中的内容排序，并把结果保存到新文件 ex3。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-12 V1 Single",
+    "q": "In Lab 8 (B-12), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-12）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-12",
+    "links": [
+      [
+        "Lab 8 task B-12",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex3",
+        "cat ex3",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "cat ex3",
+    "whyz": "12. 显示 ex3 的内容。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-12 V2 Multi",
+    "q": "In Lab 8 (B-12), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-12）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-12",
+    "links": [
+      [
+        "Lab 8 task B-12",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "cat ex3",
+        "cat ex3",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "cat ex3 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "12. 显示 ex3 的内容。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-13 V1 Single",
+    "q": "In Lab 8 (B-13), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-13）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-13",
+    "links": [
+      [
+        "Lab 8 task B-13",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls -l | grep '^ex' | wc -l",
+        "ls -l | grep '^ex' | wc -l",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "ls -l | grep '^ex' | wc -l",
+    "whyz": "13. 用管道统计主目录下以字符 ex 开头的文件数量。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-13 V2 Multi",
+    "q": "In Lab 8 (B-13), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-13）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-13",
+    "links": [
+      [
+        "Lab 8 task B-13",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls -l | grep '^ex' | wc -l",
+        "ls -l | grep '^ex' | wc -l",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "ls -l | grep '^ex' | wc -l Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "13. 用管道统计主目录下以字符 ex 开头的文件数量。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-14 V1 Single",
+    "q": "In Lab 8 (B-14), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-14）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-14",
+    "links": [
+      [
+        "Lab 8 task B-14",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls",
+        "ls",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "ls",
+    "whyz": "14. 列出当前目录的文件以确认答案。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-14 V2 Multi",
+    "q": "In Lab 8 (B-14), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-14）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-14",
+    "links": [
+      [
+        "Lab 8 task B-14",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls",
+        "ls",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "ls Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "14. 列出当前目录的文件以确认答案。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-15 V1 Single",
+    "q": "In Lab 8 (B-15), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-15）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-15",
+    "links": [
+      [
+        "Lab 8 task B-15",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "chmod go-rwx ex1",
+        "chmod go-rwx ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "chmod go-rwx ex1",
+    "whyz": "15. 修改 ex1 的权限，使只有你本人对该文件拥有读／写权限。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-15 V2 Multi",
+    "q": "In Lab 8 (B-15), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-15）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-15",
+    "links": [
+      [
+        "Lab 8 task B-15",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "chmod go-rwx ex1",
+        "chmod go-rwx ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "chmod go-rwx ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "15. 修改 ex1 的权限，使只有你本人对该文件拥有读／写权限。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-16 V1 Single",
+    "q": "In Lab 8 (B-16), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-16）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-16",
+    "links": [
+      [
+        "Lab 8 task B-16",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls -l ex1",
+        "ls -l ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "ls -l ex1",
+    "whyz": "16. 列出文件以确认权限修改结果。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-16 V2 Multi",
+    "q": "In Lab 8 (B-16), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-16）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-16",
+    "links": [
+      [
+        "Lab 8 task B-16",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ls -l ex1",
+        "ls -l ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "ls -l ex1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "16. 列出文件以确认权限修改结果。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-17 V1 Single",
+    "q": "In Lab 8 (B-17), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-17）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-17",
+    "links": [
+      [
+        "Lab 8 task B-17",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sleep 500",
+        "sleep 500",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "sleep 500",
+    "whyz": "17. 创建一个 sleep 500 作业。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-17 V2 Multi",
+    "q": "In Lab 8 (B-17), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-17）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-17",
+    "links": [
+      [
+        "Lab 8 task B-17",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "sleep 500",
+        "sleep 500",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "sleep 500 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "17. 创建一个 sleep 500 作业。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-18 V1 Single",
+    "q": "In Lab 8 (B-18), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-18）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-18",
+    "links": [
+      [
+        "Lab 8 task B-18",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Ctrl+Z then bg",
+        "Ctrl+Z then bg",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "Ctrl+Z then bg",
+    "whyz": "18. 暂停该作业并把它移到后台。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-18 V2 Multi",
+    "q": "In Lab 8 (B-18), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-18）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-18",
+    "links": [
+      [
+        "Lab 8 task B-18",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Ctrl+Z then bg",
+        "Ctrl+Z then bg",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "Ctrl+Z then bg Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "18. 暂停该作业并把它移到后台。"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-19 V1 Single",
+    "q": "In Lab 8 (B-19), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-19）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-19",
+    "links": [
+      [
+        "Lab 8 task B-19",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ps",
+        "ps",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "ps",
+    "whyz": "19. 用 ps 查看系统正在运行的进程。［ps］"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-19 V2 Multi",
+    "q": "In Lab 8 (B-19), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-19）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-19",
+    "links": [
+      [
+        "Lab 8 task B-19",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "ps",
+        "ps",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "ps Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "19. 用 ps 查看系统正在运行的进程。［ps］"
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "Lab8-B-20 V1 Single",
+    "q": "In Lab 8 (B-20), which command or value is the correct answer for this task? (Variant 1 / Single)",
+    "zh": "实验 8（B-20）：该任务应使用哪条命令或取值？（变体1 · 单选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-20",
+    "links": [
+      [
+        "Lab 8 task B-20",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "kill %1",
+        "kill %1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ],
+      [
+        "cat ex1",
+        "cat ex1",
+        false
+      ]
+    ],
+    "why": "kill %1",
+    "whyz": "20. 终止 sleep 进程。"
+  },
+  {
+    "t": "m",
+    "base": null,
+    "tag": "Lab8-B-20 V2 Multi",
+    "q": "In Lab 8 (B-20), which command or value is the correct answer for this task? (Variant 2 / Multi — select ALL correct answers)",
+    "zh": "实验 8（B-20）：该任务应使用哪条命令或取值？（变体2 · 多选）",
+    "src": "LinuxLabsPractice.html · Lab 8 · task B-20",
+    "links": [
+      [
+        "Lab 8 task B-20",
+        "LinuxLabsPractice.html"
+      ]
+    ],
+    "opts": [
+      [
+        "kill %1",
+        "kill %1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        true
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        true
+      ],
+      [
+        "cat list1 list2 | grep p | sort",
+        "cat list1 list2 | grep p | sort",
+        false
+      ],
+      [
+        "man less > ex1",
+        "man less > ex1",
+        false
+      ]
+    ],
+    "why": "kill %1 Related: cat list1 list2 | grep p | sort, man less > ex1",
+    "whyz": "20. 终止 sleep 进程。"
   }
 ];
+
   var LETTERS = "ABCDEFG";
   var mount = document.getElementById("q2Mount");
   var finalEl = document.getElementById("q2Final");
