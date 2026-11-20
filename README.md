@@ -12,6 +12,7 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 
 - **New page — `pages/Quiz2AllQuestionsMCQs.html`** — every one of the 109 essay questions in `Quiz2AllQuestions.html` rebuilt as FOUR multiple-choice cards: ORIGINAL single, ORIGINAL multi, VARIANT A (single) and VARIANT B (multi), with the letter appended to the question number (e.g. Q12A / Q12B) — 436 questions / 436 marks, bilingual options and keyword-free option grading.
 - **New page — `pages/Quiz2MCQs.html`** — multiple-choice version of the Quiz 2 scope: each of the 20 predicted questions appears FIRST in the professor's ORIGINAL wording (one single-choice and one multi-choice card), followed by its rephrased single/multi variants (labelled 变体); plus 27 Linux command questions from the UNIX handout and Lab 8 — 107 questions / 107 marks total. Every question and option carries a simplified Chinese note, each card names its source chapter / page with clickable links, and grading is option-based (exact set for multi-choice).
+- **New pages — `pages/Quiz2mock1A.html` and `pages/Quiz2mock1B.html`** — English-only MCQ mock exams based on the Quiz 2 predicted questions and their model answers. Mock 1A: 25 single-choice questions; Mock 1B: 21 multi-choice questions (select ALL correct options). Same Blackboard-style CSS and option-based grading, 1 mark per question, source chapter / page under each question.
 - **New page — `pages/Quiz2.html`** — the professor's 20 predicted Quiz 2 questions (Chapters 7 and 8) plus a Linux command review question: 21 questions / 69 marks with simplified bilingual model answers, one large answer box and an individual grade button per question, keyword-based marking.
 - **New page — `pages/Quiz2AllQuestions.html`** — the Quiz 2 question bank rebuilt for the new exam scope in textbook order: questions from all 40 Chapter 7 slides and Chapter 8 slides 1-29 — 109 questions and 265 keyword-graded points in total, including 40 supplementary questions that cover the knowledge-point breakdown items.
 - **New page — `pages/Quiz2MockTest.html`** — a Blackboard-style Quiz 2 mock test with 12 essay questions (46 marks) covering all of Chapter 7 and Chapter 8 slides 1-29. One large answer box per question; a scoring point is awarded as soon as the answer contains one or two English or 中文 key words. Instant per-question badges, scores and bilingual model-answer feedback.
@@ -207,6 +208,8 @@ CSIS-2260review/
 │   ├── Fall2025MidtermReview.html       # Fall 2025 midterm exam model answers (Q1-Q6)
 │   ├── Quiz2AllQuestionsMCQs.html      # 109 questions × 4 MCQs (436 / 436 marks)
 │   ├── Quiz2MCQs.html                   # Quiz 2 MCQ bank — originals + variants (107 / 107 marks)
+│   ├── Quiz2mock1A.html                 # Quiz 2 English single-choice mock (25 / 25 marks)
+│   ├── Quiz2mock1B.html                 # Quiz 2 English multi-choice mock (21 / 21 marks)
 │   ├── Quiz2.html                       # Quiz 2 predicted questions (21 / 69 marks)
 │   ├── Quiz2MockTest.html               # Quiz 2 mock test (12 questions / 46 marks)
 │   └── Quiz2AllQuestions.html           # Quiz 2 all questions (109 / 265 marks)

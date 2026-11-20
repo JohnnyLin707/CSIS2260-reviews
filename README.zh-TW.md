@@ -12,6 +12,7 @@ https://johnnylin707.github.io/CSIS2260-reviews/index.html
 
 - **新增頁面 `pages/Quiz2AllQuestionsMCQs.html`** —— 將 `Quiz2AllQuestions.html` 的 109 道簡答題每題改做成 4 道選擇題：原題單選、原題多選、變體 A（單選）、變體 B（多選），變體字母加在原題號之後（如 Q12A / Q12B），共 436 題 / 436 分；題目與選項均附簡體中文翻譯，按選項評分。
 - **新增頁面 `pages/Quiz2MCQs.html`** —— Quiz 2 範圍的選擇題版：教授預測的 20 道題先以原題呈現（教授原話，單選 + 多選各一張，排在變體之前），隨後是重新表述的單選/多選變體（題末標註變體）；另含 UNIX 命令講義與 Lab 8 的 27 道命令選擇題，共 107 題 / 107 分。題目與每個選項下方均有簡體中文翻譯，每題淺色小字標註教材出處並可點擊跳轉；單選選對得 1 分，多選需選出全部正確項得 1 分。
+- **新增頁面 `pages/Quiz2mock1A.html` 與 `pages/Quiz2mock1B.html`** —— 依據 Quiz 2 預測題原題與標準答案製作的純英文 MCQ 模擬卷：1A 為 25 道單選題，1B 為 21 道多選題（須選出全部正確項）。沿用相同的 Blackboard 淺色 CSS 與選項評分，每題 1 分，題目下方淺色小字標註教材章節頁碼。
 - **新增頁面 `pages/Quiz2.html`** —— 教授預測的 Quiz 2 考題（第 7、8 章共 20 題）加 1 道 Linux 命令複習題：共 21 題 / 69 分，參考答案已簡化便於記憶；每題一個大輸入框與獨立評分按鈕，依關鍵詞評分。
 - **新增頁面 `pages/Quiz2AllQuestions.html`** —— 依新考核範圍重建的 Quiz 2 完整題庫：涵蓋第 7 章全部 40 頁、第 8 章 1–29 頁的題目，共 109 題 / 265 個關鍵詞評分點，其中含 40 道補充題，涵蓋知識點細分的內容。
 - **新增頁面 `pages/Quiz2MockTest.html`** —— 仿 Blackboard 介面的 Quiz 2 模擬卷：12 道簡答題（共 46 分），涵蓋第 7 章全部內容與第 8 章 1–29 頁。每題一個大輸入框；每個得分點只要答出 1–2 個英文或中文關鍵詞即可得分，交卷後立即顯示每題徽章、得分與中英對照參考答案回饋。
@@ -207,6 +208,8 @@ CSIS-2260review/
 │   ├── Fall2025MidtermReview.html       # 2025 秋季期中試卷參考答案（Q1-Q6）
 │   ├── Quiz2AllQuestionsMCQs.html      # 109 題 × 4 種選擇題考法（436 題 / 436 分）
 │   ├── Quiz2MCQs.html                   # Quiz 2 選擇題庫——原題 + 變體（107 題 / 107 分）
+│   ├── Quiz2mock1A.html                 # Quiz 2 英文單選模擬卷（25 題 / 25 分）
+│   ├── Quiz2mock1B.html                 # Quiz 2 英文多選模擬卷（21 題 / 21 分）
 │   ├── Quiz2.html                       # Quiz 2 預測題（21 題 / 69 分）
 │   ├── Quiz2MockTest.html               # Quiz 2 模擬卷（12 題 / 46 分）
 │   └── Quiz2AllQuestions.html           # Quiz 2 全部題目（109 題 / 265 分）

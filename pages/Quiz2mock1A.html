@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b2b2f'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Quiz 2 · Mock 1A (Single Choice) | CSIS2260 Review</title>
+  <meta name="description" content="Quiz 2 single-choice mock exam: 25 English MCQs based on the professor's predicted questions and model answers.">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../javascript/site-nav.js" data-site-nav defer></script>
+</head>
+<body class="q2-body">
+  <div id="siteNavMount"></div>
+
+  <div class="q2-topbar">
+    <a class="q2-close" href="../index.html" aria-label="Back to home" title="Back to home">&#10005;</a>
+    <span class="q2-title">Quiz 2 · Mock 1A (Single Choice)</span>
+  </div>
+
+  <div class="q2-gradestrip">
+    <div class="q2-gradestrip-inner">
+      <div class="q2-grade-left">
+        <div class="q2-grade-label">Final Grade <span class="q2-pill" id="q2Final">0 / 0</span></div>
+        <div class="q2-grade-sub">Option-based marking &middot; 1 mark per question</div>
+      </div>
+      <div class="q2-grade-right">
+        <span class="q2-attempt" id="q2Attempt">ATTEMPT 1 (NOT SUBMITTED)</span>
+        <span class="q2-pill" id="q2TotalPill">0 / 0</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="q2-wrap">
+    <div class="q2-banner"><strong>Quiz 2 &middot; Mock 1A &mdash; Single Choice (25 questions / 25 marks).</strong> English-only multiple-choice questions on the most likely exam points from the <strong>Quiz 2 predicted questions</strong> and their model answers: Chapter 7 memory management (requirements, partitioning, fragmentation, placement, addresses, base/bounds, paging, segmentation, buffer overflow) and Chapter 8 virtual memory (page faults, thrashing, locality, page tables, translation, TLB, page size), plus a UNIX command question. Each question is worth 1 mark. Pick the ONE best answer.<br><strong>Scope</strong>: Ch07v2a.pdf, Ch08v2a.pdf pp.1&ndash;29, and the UNIX command handout. Source chapter / page is shown in light text under each question.</div>
+
+    <details class="q2-overall" id="q2Overall">
+      <summary>Overall Feedback</summary>
+      <div class="q2-overall-body" id="q2OverallBody">Submit the quiz to see your overall score and feedback.</div>
+    </details>
+
+    <div id="q2Mount"></div>
+
+    <div class="q2-submitbar">
+      <button class="q2-btn q2-btn-primary" id="q2Submit" type="button">Submit quiz</button>
+      <button class="q2-btn" id="q2Reveal" type="button">Show model answers</button>
+      <button class="q2-btn" id="q2Reset" type="button">Reset</button>
+      <span class="q2-total" id="q2Total" role="status" aria-live="polite"></span>
+    </div>
+
+    <nav class="q2-bottom" aria-label="Page navigation">
+      <a href="../index.html">&#8592; Back to home</a>
+      <a href="Quiz2.html">Quiz 2 predicted questions &rarr;</a>
+      <a href="Quiz2MCQs.html">Quiz 2 MCQs &rarr;</a>
+    </nav>
+  </main>
+
+  <script>
+(function () {
+  "use strict";
+  var QUIZ = [
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which THREE requirements should modern memory management fulfill?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.3-9",
+    "links": [
+      [
+        "p.3",
+        "chapter7/page-03.html"
+      ],
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ],
+      [
+        "p.6",
+        "chapter7/page-06.html"
+      ],
+      [
+        "p.8",
+        "chapter7/page-08.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Relocation, protection and sharing",
+        "",
+        true
+      ],
+      [
+        "Prepaging, page locking and cleaning",
+        "",
+        false
+      ],
+      [
+        "Fetch, placement and replacement",
+        "",
+        false
+      ],
+      [
+        "Thrashing, locality and working set",
+        "",
+        false
+      ]
+    ],
+    "why": "Relocation lets a process return to a different region; protection checks every reference; sharing allows controlled access to common code.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Why must logical addresses be translated at run time?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.4",
+    "links": [
+      [
+        "p.4",
+        "chapter7/page-04.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A swapped-out process usually returns to a different memory region",
+        "",
+        true
+      ],
+      [
+        "The compiler cannot produce addresses",
+        "",
+        false
+      ],
+      [
+        "Physical memory is always contiguous",
+        "",
+        false
+      ],
+      [
+        "Disk transfers are faster than memory",
+        "",
+        false
+      ]
+    ],
+    "why": "Processes are swapped in and out and may return to a different region, so references must be translated at run time.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "In fixed partitioning, how is main memory organised?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.12-13",
+    "links": [
+      [
+        "p.12",
+        "chapter7/page-12.html"
+      ],
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A fixed number of equal or unequal partitions, one process each",
+        "",
+        true
+      ],
+      [
+        "Variable partitions created as processes arrive",
+        "",
+        false
+      ],
+      [
+        "Equal-size frames mapped by a page table",
+        "",
+        false
+      ],
+      [
+        "Variable-length logical segments",
+        "",
+        false
+      ]
+    ],
+    "why": "Fixed partitioning splits memory into a fixed number of partitions and loads one process per partition.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What is the main limitation of EQUAL-size fixed partitions?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.13",
+    "links": [
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Too much internal fragmentation",
+        "",
+        true
+      ],
+      [
+        "External fragmentation only",
+        "",
+        false
+      ],
+      [
+        "No multiprogramming possible",
+        "",
+        false
+      ],
+      [
+        "Page tables become too large",
+        "",
+        false
+      ]
+    ],
+    "why": "Small jobs waste most of a fixed partition: wasted space inside a block is internal fragmentation.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Dynamic partitioning allocates how much memory to each process?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.17",
+    "links": [
+      [
+        "p.17",
+        "chapter7/page-17.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Exactly as much as the process requires",
+        "",
+        true
+      ],
+      [
+        "A fixed amount chosen in advance",
+        "",
+        false
+      ],
+      [
+        "One page frame per process",
+        "",
+        false
+      ],
+      [
+        "Half of the largest partition",
+        "",
+        false
+      ]
+    ],
+    "why": "Partitions are created dynamically with variable length and number, exactly matching process needs.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which fragmentation type does DYNAMIC partitioning mainly suffer from?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.19",
+    "links": [
+      [
+        "p.19",
+        "chapter7/page-19.html"
+      ]
+    ],
+    "opts": [
+      [
+        "External fragmentation",
+        "",
+        true
+      ],
+      [
+        "Internal fragmentation",
+        "",
+        false
+      ],
+      [
+        "Both equally",
+        "",
+        false
+      ],
+      [
+        "Neither",
+        "",
+        false
+      ]
+    ],
+    "why": "Holes appear between partitions; compaction is needed to merge them.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which scheme suffers INTERNAL fragmentation?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.11, p.13, p.26",
+    "links": [
+      [
+        "p.11",
+        "chapter7/page-11.html"
+      ],
+      [
+        "p.13",
+        "chapter7/page-13.html"
+      ],
+      [
+        "p.26",
+        "chapter7/page-26.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Fixed partitioning and paging",
+        "",
+        true
+      ],
+      [
+        "Dynamic partitioning and segmentation",
+        "",
+        false
+      ],
+      [
+        "Paging only, never fixed partitioning",
+        "",
+        false
+      ],
+      [
+        "Segmentation and dynamic partitioning",
+        "",
+        false
+      ]
+    ],
+    "why": "Fixed partitions waste space inside a block; paging wastes the last part of a page.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which placement algorithm takes the SMALLEST hole that is large enough?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.20",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Best-fit",
+        "",
+        true
+      ],
+      [
+        "First-fit",
+        "",
+        false
+      ],
+      [
+        "Next-fit",
+        "",
+        false
+      ],
+      [
+        "Worst-fit",
+        "",
+        false
+      ]
+    ],
+    "why": "Best-fit chooses the smallest adequate hole, leaving the smallest leftover.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which placement algorithm starts searching from the last allocation point?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.20-21",
+    "links": [
+      [
+        "p.20",
+        "chapter7/page-20.html"
+      ],
+      [
+        "p.21",
+        "chapter7/page-21.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Next-fit",
+        "",
+        true
+      ],
+      [
+        "First-fit",
+        "",
+        false
+      ],
+      [
+        "Best-fit",
+        "",
+        false
+      ],
+      [
+        "Optimal",
+        "",
+        false
+      ]
+    ],
+    "why": "Next-fit continues scanning from where the last allocation was made.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which address is the real main-memory location?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.23",
+    "links": [
+      [
+        "p.23",
+        "chapter7/page-23.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Physical (absolute) address",
+        "",
+        true
+      ],
+      [
+        "Logical address",
+        "",
+        false
+      ],
+      [
+        "Relative address",
+        "",
+        false
+      ],
+      [
+        "Virtual address",
+        "",
+        false
+      ]
+    ],
+    "why": "The physical address is the actual location in main memory after translation.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which register holds the starting address of a process in memory?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.24",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Base register",
+        "",
+        true
+      ],
+      [
+        "Bounds register",
+        "",
+        false
+      ],
+      [
+        "Program counter",
+        "",
+        false
+      ],
+      [
+        "Stack pointer",
+        "",
+        false
+      ]
+    ],
+    "why": "The base register holds the starting address and is added to every relative address.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What happens when a generated address exceeds the bounds register?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.24-25",
+    "links": [
+      [
+        "p.24",
+        "chapter7/page-24.html"
+      ],
+      [
+        "p.25",
+        "chapter7/page-25.html"
+      ]
+    ],
+    "opts": [
+      [
+        "An interrupt is raised",
+        "",
+        true
+      ],
+      [
+        "The address wraps around",
+        "",
+        false
+      ],
+      [
+        "The process continues normally",
+        "",
+        false
+      ],
+      [
+        "The page table is cleared",
+        "",
+        false
+      ]
+    ],
+    "why": "The bounds register protects memory by raising an interrupt on an out-of-range reference.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What does a page table entry mainly contain?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.28",
+    "links": [
+      [
+        "p.28",
+        "chapter7/page-28.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The frame number of that page",
+        "",
+        true
+      ],
+      [
+        "The process ID",
+        "",
+        false
+      ],
+      [
+        "The page offset",
+        "",
+        false
+      ],
+      [
+        "The page contents",
+        "",
+        false
+      ]
+    ],
+    "why": "A page table maps a page number to the frame number where that page resides.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "How are logical addresses translated to physical addresses in paging?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.30-31",
+    "links": [
+      [
+        "p.30",
+        "chapter7/page-30.html"
+      ],
+      [
+        "p.31",
+        "chapter7/page-31.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Page number indexes the page table; frame number + offset = physical address",
+        "",
+        true
+      ],
+      [
+        "Offset indexes the page table; page number is discarded",
+        "",
+        false
+      ],
+      [
+        "Segment number indexes a segment table",
+        "",
+        false
+      ],
+      [
+        "Base register is added to the offset only",
+        "",
+        false
+      ]
+    ],
+    "why": "The page number finds the frame; the unchanged offset is appended to the frame number.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What does a segment table entry contain?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.32-34",
+    "links": [
+      [
+        "p.32",
+        "chapter7/page-32.html"
+      ],
+      [
+        "p.34",
+        "chapter7/page-34.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Base address and length of the segment",
+        "",
+        true
+      ],
+      [
+        "Frame number only",
+        "",
+        false
+      ],
+      [
+        "Process ID and priority",
+        "",
+        false
+      ],
+      [
+        "Page number and offset",
+        "",
+        false
+      ]
+    ],
+    "why": "The base gives the start and the length gives protection by checking the offset.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What is a buffer overflow attack?",
+    "zh": "",
+    "src": "Ch07v2a.pdf · p.37-38",
+    "links": [
+      [
+        "p.37",
+        "chapter7/page-37.html"
+      ],
+      [
+        "p.38",
+        "chapter7/page-38.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Writing data past the end of a fixed-size buffer",
+        "",
+        true
+      ],
+      [
+        "Reading a buffer too slowly",
+        "",
+        false
+      ],
+      [
+        "Filling memory with too many pages",
+        "",
+        false
+      ],
+      [
+        "Running too many processes",
+        "",
+        false
+      ]
+    ],
+    "why": "The attack writes beyond buffer bounds and can overwrite the function return address.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What is the KEY difference between simple paging and virtual memory paging?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.1-2, p.12",
+    "links": [
+      [
+        "p.1",
+        "chapter8/page-01.html"
+      ],
+      [
+        "p.2",
+        "chapter8/page-02.html"
+      ],
+      [
+        "p.12",
+        "chapter8/page-12.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Virtual memory loads only part (the resident set); simple paging needs all pages",
+        "",
+        true
+      ],
+      [
+        "Virtual memory requires all pages resident",
+        "",
+        false
+      ],
+      [
+        "Simple paging uses segmentation",
+        "",
+        false
+      ],
+      [
+        "There is no difference",
+        "",
+        false
+      ]
+    ],
+    "why": "Virtual memory paging uses a resident set and demand loading, so a process can exceed real memory.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What is detected when a process accesses a page not in main memory?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.5, p.16",
+    "links": [
+      [
+        "p.5",
+        "chapter8/page-05.html"
+      ],
+      [
+        "p.16",
+        "chapter8/page-16.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A page fault",
+        "",
+        true
+      ],
+      [
+        "A system call",
+        "",
+        false
+      ],
+      [
+        "A clock interrupt",
+        "",
+        false
+      ],
+      [
+        "A disk format error",
+        "",
+        false
+      ]
+    ],
+    "why": "The hardware detects a page fault; the OS reads the page from disk and restarts the instruction.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What is thrashing?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.9",
+    "links": [
+      [
+        "p.9",
+        "chapter8/page-09.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The system spends more time swapping than executing",
+        "",
+        true
+      ],
+      [
+        "The disk is full",
+        "",
+        false
+      ],
+      [
+        "Page tables are exhausted",
+        "",
+        false
+      ],
+      [
+        "Too many processes are ready",
+        "",
+        false
+      ]
+    ],
+    "why": "Thrashing occurs when swapping dominates execution because the working sets are too large.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which bit indicates that a page is currently in main memory?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.13",
+    "links": [
+      [
+        "p.13",
+        "chapter8/page-13.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Present / valid bit",
+        "",
+        true
+      ],
+      [
+        "Modified / dirty bit",
+        "",
+        false
+      ],
+      [
+        "Protection bit",
+        "",
+        false
+      ],
+      [
+        "Referenced / use bit",
+        "",
+        false
+      ]
+    ],
+    "why": "The present bit tells whether the page is resident; a missing page causes a page fault.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "How many entries does an INVERTED page table have?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.17",
+    "links": [
+      [
+        "p.17",
+        "chapter8/page-17.html"
+      ]
+    ],
+    "opts": [
+      [
+        "One per frame of real memory",
+        "",
+        true
+      ],
+      [
+        "One per virtual page",
+        "",
+        false
+      ],
+      [
+        "One per process",
+        "",
+        false
+      ],
+      [
+        "One per page fault",
+        "",
+        false
+      ]
+    ],
+    "why": "An inverted page table is indexed by frames, so its size follows real memory.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What is a Translation Lookaside Buffer (TLB)?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.20",
+    "links": [
+      [
+        "p.20",
+        "chapter8/page-20.html"
+      ]
+    ],
+    "opts": [
+      [
+        "A small fast cache of recent page-table entries",
+        "",
+        true
+      ],
+      [
+        "A disk buffer for swapped pages",
+        "",
+        false
+      ],
+      [
+        "A page replacement algorithm",
+        "",
+        false
+      ],
+      [
+        "A segment table",
+        "",
+        false
+      ]
+    ],
+    "why": "A TLB hit supplies the frame number immediately and skips the page-table access.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "What is associative mapping?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.23",
+    "links": [
+      [
+        "p.23",
+        "chapter8/page-23.html"
+      ]
+    ],
+    "opts": [
+      [
+        "The page number is compared with all TLB entries in parallel",
+        "",
+        true
+      ],
+      [
+        "Entries are searched one by one",
+        "",
+        false
+      ],
+      [
+        "The page number is used as an index",
+        "",
+        false
+      ],
+      [
+        "The page number is hashed",
+        "",
+        false
+      ]
+    ],
+    "why": "TLB entries are a random subset with no natural index, so content comparison is done in parallel.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which is an argument for SMALL page sizes?",
+    "zh": "",
+    "src": "Ch08v2a.pdf · p.26-29",
+    "links": [
+      [
+        "p.26",
+        "chapter8/page-26.html"
+      ],
+      [
+        "p.29",
+        "chapter8/page-29.html"
+      ]
+    ],
+    "opts": [
+      [
+        "Less internal fragmentation",
+        "",
+        true
+      ],
+      [
+        "Smaller page tables",
+        "",
+        false
+      ],
+      [
+        "Fewer page table entries",
+        "",
+        false
+      ],
+      [
+        "Faster disk transfers",
+        "",
+        false
+      ]
+    ],
+    "why": "Small pages waste less space inside a page, at the cost of a larger page table.",
+    "whyz": ""
+  },
+  {
+    "t": "s",
+    "base": null,
+    "tag": "",
+    "q": "Which command displays the first 10 lines of file ex1?",
+    "zh": "",
+    "src": "UNIX Commands · §2.4",
+    "links": [
+      [
+        "§2.4",
+        "UnixCommands.html"
+      ]
+    ],
+    "opts": [
+      [
+        "head -n 10 ex1",
+        "",
+        true
+      ],
+      [
+        "tail -n 10 ex1",
+        "",
+        false
+      ],
+      [
+        "cat -n 10 ex1",
+        "",
+        false
+      ],
+      [
+        "grep -n 10 ex1",
+        "",
+        false
+      ]
+    ],
+    "why": "head prints the first n lines; tail prints the last n lines.",
+    "whyz": ""
+  }
+];
+  var LETTERS = "ABCDEFG";
+  var mount = document.getElementById("q2Mount");
+  var finalEl = document.getElementById("q2Final");
+  var pillEl = document.getElementById("q2TotalPill");
+  var attemptEl = document.getElementById("q2Attempt");
+  var totalEl = document.getElementById("q2Total");
+  var overallBody = document.getElementById("q2OverallBody");
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  var cards = [];
+  function render() {
+    var html = [];
+    QUIZ.forEach(function (q, qi) {
+      var multi = q.t === "m";
+      html.push('<article class="q2-card" data-qi="' + qi + '" data-score="0" data-graded="0">');
+      html.push('<div class="q2-head">');
+      html.push('<span class="q2-num">' + (qi + 1) + '</span>');
+      html.push('<span class="q2-type">' + (multi ? "MULTI CHOICE" : "SINGLE CHOICE") + ' &middot; ' + (q.tag || (q.base ? "Question " + q.base : "Linux Command")) + '</span>');
+      html.push('<span class="q2-badge ungraded" data-badge>NOT GRADED</span>');
+      html.push('<button class="q2-grade-btn" type="button" data-grade>Grade</button>');
+      html.push('<span class="q2-markpill" data-pill>0 / 1</span>');
+      html.push('</div>');
+      html.push('<p class="q2-q">' + esc(q.q) + '</p>');
+      html.push('<p class="q2-qzh">' + esc(q.zh) + '</p>');
+      html.push('<p class="q2-src">Source: ' + esc(q.src) + ' ' + q.links.map(function (l) {
+        return '<a href="' + esc(l[1]) + '">' + esc(l[0]) + '</a>';
+      }).join(" ") + '</p>');
+      html.push('<div class="q2-answer-label">Answer' + (multi ? " (select ALL correct options)" : " (select ONE option)") + '</div>');
+      html.push('<div class="mcq-opts" data-opts>');
+      q.opts.forEach(function (o, oi) {
+        html.push('<label class="mcq-opt"><input type="' + (multi ? "checkbox" : "radio") + '" name="mcq' + qi + '" value="' + oi + '"><span class="mcq-letter">' + LETTERS[oi] + '.</span><span class="mcq-text">' + esc(o[0]) + '<span class="mcq-zh">' + esc(o[1]) + '</span></span></label>');
+      });
+      html.push('</div>');
+      html.push('<div class="q2-feedback" data-feedback hidden><p class="q2-fb-head">Feedback</p><ul class="q2-pointlist" data-points></ul></div>');
+      html.push('</article>');
+    });
+    mount.innerHTML = html.join("");
+    cards = Array.prototype.slice.call(mount.querySelectorAll(".q2-card"));
+  }
+  function correctIdx(q) {
+    var out = [];
+    q.opts.forEach(function (o, i) { if (o[2]) out.push(i); });
+    return out;
+  }
+  function pickedIdx(card) {
+    var out = [];
+    Array.prototype.forEach.call(card.querySelectorAll("input"), function (inp, i) { if (inp.checked) out.push(i); });
+    return out;
+  }
+  function syncTotals(submitted) {
+    var total = 0, graded = 0;
+    cards.forEach(function (c) {
+      total += parseInt(c.getAttribute("data-score"), 10) || 0;
+      if (c.getAttribute("data-graded") === "1") graded++;
+    });
+    var label = total + " / " + QUIZ.length;
+    finalEl.textContent = label;
+    pillEl.textContent = label;
+    totalEl.textContent = graded ? graded + " / " + QUIZ.length + " graded · " + label + " marks" : "";
+    attemptEl.textContent = submitted ? "ATTEMPT 1 (SUBMITTED)" : (graded ? "ATTEMPT 1 (PARTIALLY GRADED)" : "ATTEMPT 1 (NOT SUBMITTED)");
+    if (submitted || graded) {
+      var pct = Math.round((total / QUIZ.length) * 100);
+      overallBody.innerHTML = "<strong>" + label + " marks (" + pct + "%).</strong> " + (submitted
+        ? "Each question is worth 1 mark; multi-choice questions need the exact set of correct options. Review the feedback under each question."
+        : "Graded " + graded + " of " + QUIZ.length + " questions. Use each question's Grade button or Submit quiz.");
+    } else {
+      overallBody.textContent = "Submit the quiz to see your overall score and feedback.";
+    }
+  }
+  function gradeCard(card, show) {
+    var qi = parseInt(card.getAttribute("data-qi"), 10);
+    var q = QUIZ[qi];
+    var multi = q.t === "m";
+    var picked = pickedIdx(card);
+    var correct = correctIdx(q);
+    var ok = multi
+      ? (picked.length === correct.length && correct.every(function (c) { return picked.indexOf(c) !== -1; }))
+      : (picked.length === 1 && picked[0] === correct[0]);
+    var score = ok ? 1 : 0;
+    card.setAttribute("data-score", String(score));
+    card.setAttribute("data-graded", "1");
+    var badge = card.querySelector("[data-badge]");
+    badge.textContent = ok ? "CORRECT" : "INCORRECT";
+    badge.className = "q2-badge " + (ok ? "correct" : "incorrect");
+    card.querySelector("[data-pill]").textContent = score + " / 1";
+    Array.prototype.forEach.call(card.querySelectorAll(".mcq-opt"), function (lab, i) {
+      lab.classList.remove("correct", "wrong", "picked");
+      if (correct.indexOf(i) !== -1) lab.classList.add("correct");
+      else if (picked.indexOf(i) !== -1) lab.classList.add("wrong");
+    });
+    if (show !== false) {
+      var items = [];
+      q.opts.forEach(function (o, i) {
+        var mark = correct.indexOf(i) !== -1 ? '<span class="q2-tick ok">&#10003;</span>'
+          : (picked.indexOf(i) !== -1 ? '<span class="q2-tick no">&#10007;</span>' : '<span class="q2-tick">&middot;</span>');
+        items.push("<li>" + mark + "<span><strong>" + LETTERS[i] + ". " + esc(o[0]) + '</strong><span class="q2-model-zh">' + esc(o[1]) + "</span></span></li>");
+      });
+      items.push('<li><span class="q2-tick ok">&#10003;</span><span><strong>Why:</strong> ' + esc(q.why) + '<span class="q2-model-zh">' + esc(q.whyz) + "</span></span></li>");
+      card.querySelector("[data-points]").innerHTML = items.join("");
+      card.querySelector("[data-feedback]").hidden = false;
+    }
+    return score;
+  }
+  function gradeOne(card) { gradeCard(card, true); syncTotals(false); }
+  function submitAll() {
+    cards.forEach(function (c) { gradeCard(c, true); });
+    syncTotals(true);
+  }
+  function revealAll() {
+    cards.forEach(function (card, qi) {
+      var correct = correctIdx(QUIZ[qi]);
+      Array.prototype.forEach.call(card.querySelectorAll("input"), function (inp, i) { inp.checked = correct.indexOf(i) !== -1; });
+      gradeCard(card, true);
+    });
+    syncTotals(true);
+  }
+  function resetAll() {
+    cards.forEach(function (card) {
+      Array.prototype.forEach.call(card.querySelectorAll("input"), function (inp) { inp.checked = false; });
+      Array.prototype.forEach.call(card.querySelectorAll(".mcq-opt"), function (lab) { lab.classList.remove("correct", "wrong", "picked"); });
+      card.setAttribute("data-score", "0");
+      card.setAttribute("data-graded", "0");
+      var badge = card.querySelector("[data-badge]");
+      badge.textContent = "NOT GRADED";
+      badge.className = "q2-badge ungraded";
+      card.querySelector("[data-pill]").textContent = "0 / 1";
+      card.querySelector("[data-feedback]").hidden = true;
+    });
+    syncTotals(false);
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    render();
+    syncTotals(false);
+    document.getElementById("q2Submit").addEventListener("click", submitAll);
+    document.getElementById("q2Reveal").addEventListener("click", revealAll);
+    document.getElementById("q2Reset").addEventListener("click", resetAll);
+    mount.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-grade]");
+      if (btn) gradeOne(btn.closest(".q2-card"));
+    });
+    mount.addEventListener("change", function (e) {
+      if (!e.target.matches("input")) return;
+      var card = e.target.closest(".q2-card");
+      card.setAttribute("data-score", "0");
+      card.setAttribute("data-graded", "0");
+      var badge = card.querySelector("[data-badge]");
+      badge.textContent = "NOT GRADED";
+      badge.className = "q2-badge ungraded";
+      card.querySelector("[data-pill]").textContent = "0 / 1";
+      card.querySelector("[data-feedback]").hidden = true;
+      Array.prototype.forEach.call(card.querySelectorAll(".mcq-opt"), function (lab) { lab.classList.remove("correct", "wrong"); });
+      syncTotals(false);
+    });
+    mount.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === "Enter") { e.preventDefault(); submitAll(); }
+    });
+  });
+})();
+
+    </script>
+</body>
+</html>
